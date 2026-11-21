@@ -1,11 +1,11 @@
 {
   "schema": "claim-autopsy/receipt/1",
-  "generated_at": "2026-11-21T12:04:04Z",
+  "generated_at": "2026-11-21T15:36:17Z",
   "run_tag": "final",
   "command": "python.exe -m core.audit final",
   "exit_code": 0,
   "bootstrap": false,
-  "stdout_sha256": "85b514f5f1163139bec7266356c635b1b29531736ce66d8a6546565ec40e6949",
+  "stdout_sha256": "0d489f4057e8311a6fe0de4bc8d20c192623fc4598b0e954c593365cb337ce16",
   "stdout_tail": [
     "------------------------------------------------------------",
     "Result 48/48  all_pass=True",
@@ -62,12 +62,12 @@
     "tools/build_court_batch_replay.py": "f7b1b16cfb1646486b84d00fb2ee972abefaf06fa9af00282a21a3ee4999fe6c",
     "tools/run_ai_uplift.py": "34aa05944a79bc26d1fde59a6d8ceaff8842cd871d53ee203bccaaeaf079e955",
     "README.md": "b501273d8b9bf53be9a259d9a3c969fa7bf799f4bcb00b123c8b562752595a34",
-    "SUBMISSION.md": "4b1a35ceb0b32098de9c69cbad510c2400a1ec922a20cd17eeb34c9cb519cf1f",
+    "SUBMISSION.md": "3a0950a3e2885b08d71bb563d48c2d2e3a7ff097a9504a7600513a77275d343e",
     "COMPETITION_SCORECARD_CN.md": "921c78f403ddc4b4623fd4ae7c3468461d1871f3084ab8d87b407cfdfa674a42",
     "evidence/screenshots/23-court-static-ai.png": "fae48c17e1c66b21f4b2a1078b7c782b254c23bc19aa9169c40afa06ddc51526",
     "evidence/screenshots/24-court-struck.png": "164d059958c335cc71db280e2577e1bc875cfbd76ba9551d7732c70f22cf4b03",
     "evidence/screenshots/25-court-live.png": "9bfc4ca4c6080b19f3f2ebbd9e790fa4c883f416178106f27673d73fa1c30441",
     "evidence/screenshots/26-court-batch.png": "42ba50428bc3f490dbf619a2cd1fb5e321cf62bed371698943cd6f4382fa02da"
   },
-  "receipt_id": "381962469c3fb77140ef05664b5edc20"
+  "receipt_id": "9978e9c0e682c17c0ee5c161d57bb181"
 }

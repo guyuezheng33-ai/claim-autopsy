@@ -37,7 +37,7 @@ A33  PASS 5 probes: a two-step chain is derived and labelled, an agreeing third 
 A34  PASS 97/112 cards carry an archived paragraph: 97 verified, 13 unresolved, 1 page_changed, 1 source_changed; exc...
 A35  PASS 5 external dev datasets recomputed from the frozen slice; accuracy and refusal match the published run with...
 A36  PASS risk/cure classified and kept apart, risk/prevention kept together, harm/harm still decided; susceptibility...
-A37  PASS the acceptance run carries a receipt (381962469c3fb77140ef05664b5edc20) that binds 46 artefacts by SHA-256,...
+A37  PASS the acceptance run carries a receipt (9978e9c0e682c17c0ee5c161d57bb181) that binds 46 artefacts by SHA-256,...
 A38  PASS the built page ran in edge; the court docket plus 10 corpus demos and 3 citation demos were clicked, each r...
 A39  PASS the external table carries a receipt (f618f0cb0d2ddb7191378509675325c2): two runs with exit codes and outpu...
 A3   PASS comma input -> 3 atoms; enumeration input -> 3 atoms; compound subject -> 1 atom(s), first noun kept=True
@@ -179,7 +179,7 @@ project file not listed in its own table — it cannot hash itself.
 | DATA_PLAN.md | 23831 | 38bb51e3baed1104 |
 | Dockerfile | 294 | 6da19eeaf6e7c68f |
 | evidence/_cards_evidence_backup.jsonl | 98792 | 19cbc8e885f9e17e |
-| evidence/acceptance_final.json | 14740 | 1e22b192b3a2f057 |
+| evidence/acceptance_final.json | 14740 | 5d9f6fa085092598 |
 | evidence/ai_lift.json | 12123 | 6c3d3d77a0ac80d3 |
 | evidence/ai_uplift.json | 14722 | 0107c24d1c6eb0ac |
 | evidence/cards_evidence.jsonl | 110368 | e48986cd0aabaa48 |
@@ -196,11 +196,11 @@ project file not listed in its own table — it cannot hash itself.
 | evidence/holdback_ledger.json | 980 | 8ac57eef6d1a3558 |
 | evidence/label_conflicts.json | 53977 | 9c776ba54d443594 |
 | evidence/link_check.json | 12476 | 1d05cf321aa418f1 |
-| evidence/local_llm.log | 207448 | c804f28b592227db |
+| evidence/local_llm.log | 216348 | 35e1de250b90bbe7 |
 | evidence/oracle_eval.json | 48940 | a297b4780629f86c |
 | evidence/paragraphs.jsonl | 2000248 | 0ce605a42abeef50 |
 | evidence/retractions.jsonl | 13631 | a6e72415f240b003 |
-| evidence/run_receipt.json | 5573 | 09c901f063de71f2 |
+| evidence/run_receipt.json | 5573 | e29e2dc3a80080c9 |
 | evidence/screenshots/01-ai-contrast.png | 99016 | d1e1543f70d8a7db |
 | evidence/screenshots/02-result-demo1.png | 84045 | 8a21d5e6be8c8b0a |
 | evidence/screenshots/03-conflict-demo4.png | 110226 | 970e22dc872279fa |
