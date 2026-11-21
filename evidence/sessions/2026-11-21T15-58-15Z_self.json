@@ -1,0 +1,45 @@
+{
+  "schema": "claim-autopsy/session/1",
+  "operator": "self",
+  "channel": "cli",
+  "note": "Post-normalization replay check on the current kernel.",
+  "reviewer": null,
+  "started_at": "2026-11-21T15:58:15Z",
+  "environment": {
+    "kernel": {
+      "core/evidence.py": "8897247eb4dcb7db522fa32c32e5a22a31d81689eac856e4fac3cdaa553c0033",
+      "core/decompose.py": "6888d52d70ebbc923967cd7b4021be8dba7a1a95be1e7d7b0390180ca49084b0",
+      "core/pipeline.py": "78ec484310f2446e1cfe7c3fdc6bef34adc474fcec14d45a87b7b11545a57325",
+      "core/adjudicate.py": "910e59c341d71ed58777892ecf74abc28ed1b6392ba19812db1e585ae2022116",
+      "core/negation.py": "66d32f992a548b0a4d874f5f3ea98f159e010cf6bc64b7d660448ed015caf1b1",
+      "core/semantic.py": "320fe9fa0f4af8b3ffbdf589f836c6aae2f88b2c9fd73191512c0df3e35d4356",
+      "core/snapshots.py": "58eb6396db43a1ba26774d462bdc62938259ce5b795f5ba3a08f9560e4ca39df"
+    },
+    "corpus_sha256": "0c96925411fed34a68461b488c7125dd78641216fc9a0fcef81e05e5914a3017",
+    "python": "3.13.18"
+  },
+  "turns": [
+    {
+      "input": "The Eiffel Tower is located in Paris.",
+      "verdicts": [
+        {
+          "claim": "The Eiffel Tower is located in Paris.",
+          "verdict": "undetermined",
+          "sources": [],
+          "reason": "No matching evidence card in this corpus; the claim cannot be decided."
+        }
+      ],
+      "claims_detected": 0,
+      "unsupported_input": null,
+      "runtime_ms": 8
+    }
+  ],
+  "summary": {
+    "inputs": 1,
+    "atoms": 1,
+    "answered_atoms": 0,
+    "undetermined_atoms": 1,
+    "no_claim_inputs": 1
+  },
+  "session_id": "3d5b7807006a335b16f601fd89ff0d1d"
+}

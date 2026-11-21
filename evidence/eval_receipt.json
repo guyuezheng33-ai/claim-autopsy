@@ -1,19 +1,19 @@
 {
   "schema": "claim-autopsy/eval-receipt/1",
-  "generated_at": "2026-11-20T18:01:39Z",
+  "generated_at": "2026-11-21T15:58:08Z",
   "split": "dev",
   "seed": 20261120,
-  "evaluated_at": "2026-11-20T18:01:14Z",
+  "evaluated_at": "2026-11-21T15:57:58Z",
   "kernel": "offline deterministic core (use_llm=False)",
   "python": "3.13.18",
   "runs": [
     {
       "command": "C:\\Users\\Admin\\AppData\\Local\\Doubao\\User Data\\sandbox_runtime\\bases\\fa694f517e5995233c80a9a8db5212c2\\python\\python.exe tools/eval_external.py --split dev --out evidence\\external_eval_v4.json",
       "exit_code": 0,
-      "stdout_sha256": "c5ad5dddd2ca8f8cb4d65b4019c8e4c57a062dbbf5f876fb89a4cea7d8bfc3e2",
+      "stdout_sha256": "185e551e961bf371fe921b3f96cdbe3963bc71e92a342422e136abada6aafd9f",
       "stdout_tail": [
-        "[pubhealth] n=143 acc=0.0559 macroF1=0.0353 refusal=1.0 answers=0 correct=0 wrong=0 2.164s",
-        "[vitaminc] n=131 acc=0.1756 macroF1=0.0996 refusal=1.0 answers=0 correct=0 wrong=0 1.945s",
+        "[pubhealth] n=143 acc=0.0559 macroF1=0.0353 refusal=1.0 answers=0 correct=0 wrong=0 0.859s",
+        "[vitaminc] n=131 acc=0.1756 macroF1=0.0996 refusal=1.0 answers=0 correct=0 wrong=0 0.755s",
         "out: evidence\\external_eval_v4.json"
       ]
     },
@@ -161,18 +161,18 @@
     "data/external/samples/averitec.jsonl": "f15c13f487ab869b1083760dc82b454b930715dfcdd9017b853c5179a766bfdb",
     "data/external/samples/pubhealth.jsonl": "b92d60453c352bdfc211cbc4cc0ba042d12b53ca510473ce5e1fbbca15870da3",
     "data/external/samples/vitaminc.jsonl": "b56940a16a60a2e0ddf38842ea438d2d52b9fcee45ab785138c465fe68cd48d2",
-    "data/external/samples/samples_index.json": "f3bdd43095bf66e116e805f52c2f1320f83ed1ab45f85a805c84e08e213060e8",
-    "evidence/external_eval_v4.json": "95650f8382c2cd3f754a74f14f21126ef811671e79f8b1f2ca29cc9f198433fd",
+    "data/external/samples/samples_index.json": "c32077dba578ef2aa83281cf074eb57e22327140d99a6429b3453ea5eeeb597a",
+    "evidence/external_eval_v4.json": "6c20141135970da201476edd28f7ed28733cac4f32a4a3e1be803270ef8d59f4",
     "evidence/external_dev_detail.json": "b6fff9d8545acd73dad77384c7282b0ee08c5b8f50be40bf68746184f2dcff35",
     "evidence/external_eval_holdback.json": "3e28d0465a407849a8a22eb77de0a6a81543f2619ba05a03c160651a125d3102",
-    "evidence/holdback_ledger.json": "8ac57eef6d1a3558a45503ea9c3bdb7f5f6806dd759c02d1b92d09add03a91cf",
+    "evidence/holdback_ledger.json": "b183e15b298a151d91eb1d569f40ebeedf1be32a215a5b35ed6dadb745b744e7",
     "data/claims.json": "0c96925411fed34a68461b488c7125dd78641216fc9a0fcef81e05e5914a3017",
-    "core/evidence.py": "807bf0c1444fa1dc12bb319aaa929ebd78fbe133c5b3b058d3ef41ab19105e1c",
+    "core/evidence.py": "8897247eb4dcb7db522fa32c32e5a22a31d81689eac856e4fac3cdaa553c0033",
     "core/pipeline.py": "78ec484310f2446e1cfe7c3fdc6bef34adc474fcec14d45a87b7b11545a57325",
-    "core/decompose.py": "5d179890a87cf2e3618b4c737f65b72c9fa26d464759e609e62812a3907e873f",
-    "core/adjudicate.py": "e826227a3cc5b2402d66e2cab6ae9ddcbfbd9b8b77f7677dd6091bda761c2274",
-    "core/negation.py": "bdcd2edf1d45810c2b8a8720228d7bf790a214958667ff4f2b07994f43129f5b",
-    "core/semantic.py": "17740087a6d79afe7e005c8dba98a3cde20c5b32d95e96f9447876b0b28dc6aa"
+    "core/decompose.py": "6888d52d70ebbc923967cd7b4021be8dba7a1a95be1e7d7b0390180ca49084b0",
+    "core/adjudicate.py": "910e59c341d71ed58777892ecf74abc28ed1b6392ba19812db1e585ae2022116",
+    "core/negation.py": "66d32f992a548b0a4d874f5f3ea98f159e010cf6bc64b7d660448ed015caf1b1",
+    "core/semantic.py": "320fe9fa0f4af8b3ffbdf589f836c6aae2f88b2c9fd73191512c0df3e35d4356"
   },
-  "receipt_id": "f618f0cb0d2ddb7191378509675325c2"
+  "receipt_id": "8d381b4a0b0627cd90bac5257c27f869"
 }

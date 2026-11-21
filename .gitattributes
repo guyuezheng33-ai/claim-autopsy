@@ -1,3 +1,4 @@
-# Freeze exact bytes: disable Git EOL conversion so FINAL_MANIFEST.md hashes
-# survive a fresh clone on Windows (default core.autocrlf=true rewrites LF to CRLF).
-* -text
+# The evidence receipts were produced on Windows and bind CRLF bytes.
+# Force CRLF checkout so a fresh clone on Windows, macOS or Linux reproduces
+# the same SHA-256 hashes that FINAL_MANIFEST.md and the receipts record.
+* text=auto eol=crlf

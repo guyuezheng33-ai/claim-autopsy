@@ -7,7 +7,7 @@ screen / reviewer access. The local product is already built and verified.
 
 - `python -m core.audit final` → **48/48, all_pass=True**
 - run receipt → `381962469c3fb77140ef05664b5edc20`, **46 artefacts**, exit 0
-- `FINAL_MANIFEST.md` → **209 files**, 0 problems
+- `FINAL_MANIFEST.md` → **210 files**, 0 problems
 - court fixtures → **33/33**; batch fixtures → **6/6**; browser checks → static **ok**, live **ok**
 - live 3B → **20–35 s** per docket; the page shows four real stages instead of a blank spinner
 - 7B → **explicitly out of scope for this build**
@@ -194,7 +194,7 @@ Numbers to paste, exactly:
 | Court fixtures | 33/33 |
 | Batch fixtures | 6/6 |
 | Run receipt | 46 artefacts |
-| Final manifest | 209 files |
+| Final manifest | 210 files |
 
 Do not round these into larger claims. Do not describe the static court as live.
 

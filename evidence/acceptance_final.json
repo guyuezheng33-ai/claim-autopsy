@@ -181,7 +181,7 @@
     },
     "A37_run_receipt": {
       "pass": true,
-      "detail": "the acceptance run carries a receipt (66c9fe84feb621c75d6932681b5cdb8f) that binds 46 artefacts by SHA-256, records the command, exit code 0, interpreter and output hash, and is green at 47/47; every hash recomputed; 0 violations",
+      "detail": "the acceptance run carries a receipt (f07505e316193e29a4552efae0f959a5) that binds 46 artefacts by SHA-256, records the command, exit code 0, interpreter and output hash, and is green at 47/47; every hash recomputed; 0 violations",
       "bad": [],
       "notes": []
     },
@@ -192,12 +192,12 @@
     },
     "A39_eval_receipt": {
       "pass": true,
-      "detail": "the external table carries a receipt (f618f0cb0d2ddb7191378509675325c2): two runs with exit codes and output hashes, per-dataset numbers re-read from the file it wrote, 17 artefact hashes (samples, results, corpus, six kernel modules), and the hold-back slice recorded as opened 1 time(s) from a frozen file; 0 violations",
+      "detail": "the external table carries a receipt (8d381b4a0b0627cd90bac5257c27f869): two runs with exit codes and output hashes, per-dataset numbers re-read from the file it wrote, 17 artefact hashes (samples, results, corpus, six kernel modules), and the hold-back slice recorded as opened 1 time(s) from a frozen file; 0 violations",
       "bad": []
     },
     "A40_session_evidence": {
       "pass": true,
-      "detail": "4 recorded session(s), 1 of them replayable against the current kernel and corpus, 0 by an external operator; each replay compares atom boundaries, verdicts and cited source ids; reviewer outcomes none recorded; 0 violations",
+      "detail": "5 recorded session(s), 1 of them replayable against the current kernel and corpus, 0 by an external operator; each replay compares atom boundaries, verdicts and cited source ids; reviewer outcomes none recorded; 0 violations",
       "bad": [],
       "sessions": [
         {
@@ -236,6 +236,17 @@
         {
           "file": "evidence/sessions/2026-11-20T18-01-06Z_self.json",
           "session_id": "c87bc8d82cc86a65d9820e926100fd8f",
+          "operator": "self",
+          "channel": "cli",
+          "status": "historical:kernel_changed",
+          "bad": [],
+          "reviewer_outcome": null,
+          "would_pay": null,
+          "bad_count": 0
+        },
+        {
+          "file": "evidence/sessions/2026-11-21T15-58-15Z_self.json",
+          "session_id": "3d5b7807006a335b16f601fd89ff0d1d",
           "operator": "self",
           "channel": "cli",
           "status": "replay_match",

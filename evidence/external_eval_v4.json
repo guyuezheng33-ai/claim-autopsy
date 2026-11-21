@@ -44,7 +44,7 @@
         }
       },
       "refusal_rate": 0.9799,
-      "runtime_s": 2.07,
+      "runtime_s": 0.96,
       "seed": 20261120,
       "selective_accuracy": {
         "100": 0.094,
@@ -99,7 +99,7 @@
         }
       },
       "refusal_rate": 1.0,
-      "runtime_s": 2.393,
+      "runtime_s": 0.926,
       "seed": 20261120,
       "selective_accuracy": {
         "100": 0.3153,
@@ -154,7 +154,7 @@
         }
       },
       "refusal_rate": 0.9626,
-      "runtime_s": 3.887,
+      "runtime_s": 1.634,
       "seed": 20261120,
       "selective_accuracy": {
         "100": 0.5561,
@@ -224,7 +224,7 @@
         }
       },
       "refusal_rate": 1.0,
-      "runtime_s": 2.164,
+      "runtime_s": 0.859,
       "seed": 20261120,
       "selective_accuracy": {
         "100": 0.0559,
@@ -282,7 +282,7 @@
         }
       },
       "refusal_rate": 1.0,
-      "runtime_s": 1.945,
+      "runtime_s": 0.755,
       "seed": 20261120,
       "selective_accuracy": {
         "100": 0.1756,
@@ -295,7 +295,7 @@
       "wrong_cases": []
     }
   },
-  "evaluated_at": "2026-11-20T18:01:14Z",
+  "evaluated_at": "2026-11-21T15:57:58Z",
   "kernel": "offline deterministic core (use_llm=False)",
   "samples_dir": "data/external/samples",
   "seed": 20261120,
