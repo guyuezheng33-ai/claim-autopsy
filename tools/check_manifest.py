@@ -8,6 +8,7 @@ on drift, so "has this been edited since the freeze?" is a command, not a memory
 import hashlib
 import json
 import pathlib
+import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -21,18 +22,24 @@ SKIP_FILES = {
     "evidence/llama_stdout.log",
     "evidence/llama_stderr.log",
     "evidence/local_llm.log",
+    "serve.pid",
 }
 
 
 def tracked():
+    """Only files a clone actually receives. Ignored scrape cache is not a deliverable."""
+    try:
+        raw = subprocess.check_output(["git", "ls-files", "-z"], cwd=str(ROOT))
+        files = [p for p in raw.decode("utf-8").split("\0") if p]
+    except Exception:
+        files = [p.relative_to(ROOT).as_posix() for p in sorted(ROOT.rglob("*")) if p.is_file()]
     out = []
-    for p in sorted(ROOT.rglob("*")):
-        if not p.is_file():
-            continue
-        rel = p.relative_to(ROOT).as_posix()
+    for rel in files:
         if rel == "FINAL_MANIFEST.md" or rel in SKIP_FILES:
             continue
         if any(rel.startswith(d + "/") for d in SKIP_DIRS):
+            continue
+        if rel.startswith("data/external/pages/") and rel.endswith(".html"):
             continue
         if rel.startswith("evidence/acceptance_") and rel != "evidence/acceptance_final.json":
             continue

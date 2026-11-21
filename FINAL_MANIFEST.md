@@ -37,7 +37,7 @@ A33  PASS 5 probes: a two-step chain is derived and labelled, an agreeing third 
 A34  PASS 97/112 cards carry an archived paragraph: 97 verified, 13 unresolved, 1 page_changed, 1 source_changed; exc...
 A35  PASS 5 external dev datasets recomputed from the frozen slice; accuracy and refusal match the published run with...
 A36  PASS risk/cure classified and kept apart, risk/prevention kept together, harm/harm still decided; susceptibility...
-A37  PASS the acceptance run carries a receipt (f07505e316193e29a4552efae0f959a5) that binds 46 artefacts by SHA-256,...
+A37  PASS the acceptance run carries a receipt (185eb6cbe3b25db5f65c8d7643232418) that binds 46 artefacts by SHA-256,...
 A38  PASS the built page ran in edge; the court docket plus 10 corpus demos and 3 citation demos were clicked, each r...
 A39  PASS the external table carries a receipt (8d381b4a0b0627cd90bac5257c27f869): two runs with exit codes and outpu...
 A3   PASS comma input -> 3 atoms; enumeration input -> 3 atoms; compound subject -> 1 atom(s), first noun kept=True
@@ -112,47 +112,6 @@ project file not listed in its own table — it cannot hash itself.
 | data/error_review.json | 4065 | c8911f33b4db1202 |
 | data/external/cards_evidence_review.json | 4504 | 0edf5ad950d0d3ba |
 | data/external/pages/.gitignore | 78 | 780664a5ab2d78cd |
-| data/external/pages/0283b9f79e5e3a97.html | 20488 | 62c235f937a23f0b |
-| data/external/pages/0575eb8a7ba8989f.html | 145440 | a13733825106d1e0 |
-| data/external/pages/0a5f9ca57bd3b31f.html | 288531 | 5e7b2dc9327cd3dd |
-| data/external/pages/21a96505c92d8027.html | 304381 | bbfd0ad9ca6efb0f |
-| data/external/pages/2d24a53da0db8ad0.html | 64499 | be5037197ad6b019 |
-| data/external/pages/2e5fb500819c3523.html | 62561 | 2fbdfa0e8535c9e8 |
-| data/external/pages/3a556ae0866278eb.html | 59071 | 2b6f282615cc4207 |
-| data/external/pages/3b144ad160a97226.html | 113292 | 42712af44040e20b |
-| data/external/pages/450fd8c9b7049844.html | 487731 | c814dc80b8bd4d9f |
-| data/external/pages/4e18ed093affa0ab.html | 58252 | 87044bd15f1be7a1 |
-| data/external/pages/4e3b84d0bdd978bd.html | 373530 | c7060f92a82bf044 |
-| data/external/pages/537289d65f98ac7b.html | 52507 | ed4fff5a02b59851 |
-| data/external/pages/552ec8819479e0ca.html | 136489 | bdbccb513a6c842e |
-| data/external/pages/60b007e3dc16da33.html | 46672 | d4e6ba5e722d40db |
-| data/external/pages/6435cde393af3bb7.html | 60706 | e4661901a6192033 |
-| data/external/pages/6df649adff80ca67.html | 34797 | e482993aa4208093 |
-| data/external/pages/781d02e67e9dac35.html | 183450 | 73762aed19104557 |
-| data/external/pages/7b6022e6541b52e6.html | 91139 | 1d4d0c51671636e4 |
-| data/external/pages/7d90636550eaddd5.html | 67907 | fa596bd228dcba15 |
-| data/external/pages/8d9b2dac8fba0518.html | 53749 | cfbcc7a8b36cf9af |
-| data/external/pages/9578be24123e8ed3.html | 64825 | e523c0532da5093c |
-| data/external/pages/9994b0d40576fd4f.html | 88308 | 1d7e08b85da2cc98 |
-| data/external/pages/a0f0a3c0f92deb94.html | 159018 | e116587301120df0 |
-| data/external/pages/a3c4eae74bf135c4.html | 58423 | 8c4f894ad0103826 |
-| data/external/pages/aa21df5ea57e1a30.html | 124601 | aaa38d6ecc6d4f33 |
-| data/external/pages/b0c4995da17b9f8d.html | 60499 | ba03c38fdb39296e |
-| data/external/pages/b15be5f785171eeb.html | 96718 | 4e6cf40beb7f463c |
-| data/external/pages/b2b1d483f118a3e8.html | 58241 | f8e6b2c711c5b8ad |
-| data/external/pages/b5f59eefdcdedc14.html | 45254 | 24e39104de93f137 |
-| data/external/pages/b74b256cd0f0200d.html | 53440 | ba0e04f736715b61 |
-| data/external/pages/b95595a719874220.html | 55487 | ac6f5f94f1bebd4d |
-| data/external/pages/bca0460d29dbe271.html | 52806 | deaffd2da8553aaf |
-| data/external/pages/c1eb2b7cf105c47d.html | 59650 | 0604b8bc52455a48 |
-| data/external/pages/c53686a1fca4e288.html | 50753 | a24fbab3fdce84f8 |
-| data/external/pages/d56015e847f173f4.html | 489947 | 73d371936618be5a |
-| data/external/pages/df0d71c93f773b5a.html | 64596 | 98d5d1a7f3adc611 |
-| data/external/pages/e979225fc93f357e.html | 53449 | 5665f220bc9074c6 |
-| data/external/pages/ea0acfa9c1430b20.html | 27814 | 39e3ee3874586c11 |
-| data/external/pages/ea68bf66cd2b5e99.html | 282505 | bdea3f6d505f2431 |
-| data/external/pages/ef7f17eef654b29c.html | 527710 | ef19d3eeb9a4190c |
-| data/external/pages/fcd3a2a989fb60fe.html | 29947 | 283107346225b09c |
 | data/external/pages/pages_index.json | 26660 | fff99d4a089da23d |
 | data/external/README.md | 1409 | da74d3616e714f5c |
 | data/external/samples/averitec.jsonl | 250867 | f15c13f487ab869b |
@@ -180,7 +139,7 @@ project file not listed in its own table — it cannot hash itself.
 | DATA_PLAN.md | 23831 | 38bb51e3baed1104 |
 | Dockerfile | 307 | 1d774a1f5f6ab839 |
 | evidence/_cards_evidence_backup.jsonl | 98892 | e19d83bf947e708a |
-| evidence/acceptance_final.json | 15120 | e9db6b796c18b204 |
+| evidence/acceptance_final.json | 15120 | 7f6fe71d6aae428d |
 | evidence/ai_lift.json | 12123 | 6c3d3d77a0ac80d3 |
 | evidence/ai_uplift.json | 14722 | 0107c24d1c6eb0ac |
 | evidence/cards_evidence.jsonl | 110368 | e48986cd0aabaa48 |
@@ -200,7 +159,7 @@ project file not listed in its own table — it cannot hash itself.
 | evidence/oracle_eval.json | 48940 | a297b4780629f86c |
 | evidence/paragraphs.jsonl | 2002060 | 084ada8b29201374 |
 | evidence/retractions.jsonl | 13672 | ddacb0349a16890d |
-| evidence/run_receipt.json | 5573 | 0fcab6b734e92acf |
+| evidence/run_receipt.json | 5573 | d8dd49c052dde8d0 |
 | evidence/screenshots/01-ai-contrast.png | 99016 | d1e1543f70d8a7db |
 | evidence/screenshots/02-result-demo1.png | 84045 | 8a21d5e6be8c8b0a |
 | evidence/screenshots/03-conflict-demo4.png | 110226 | 970e22dc872279fa |
@@ -238,9 +197,8 @@ project file not listed in its own table — it cannot hash itself.
 | PRODUCT.md | 11029 | d63729aeff272e79 |
 | README.md | 14391 | 56bb4b2ae3c861f3 |
 | REFACTOR_PLAN_CN.md | 30946 | afa4be15516a34da |
-| serve.pid | 7 | 40ab831b408ac316 |
 | serve.py | 16140 | 6d05a817e95fc6ad |
-| SUBMISSION.md | 15680 | f7ab21b09140738c |
+| SUBMISSION.md | 15680 | ecac6581236bde50 |
 | tools/add_cards_v10.py | 8774 | bb79546d968c0a02 |
 | tools/add_cards_v8.py | 4247 | 30f4e0a327206fb7 |
 | tools/add_cards_v9.py | 11431 | b342d65377342ac1 |
@@ -255,7 +213,7 @@ project file not listed in its own table — it cannot hash itself.
 | tools/build_frontend.py | 4479 | 7ea739687409a62d |
 | tools/check_label_noise.py | 5069 | a28b138b2a2c381f |
 | tools/check_links.py | 6084 | 66019380e615d19c |
-| tools/check_manifest.py | 5467 | 02212235072f5f80 |
+| tools/check_manifest.py | 5862 | e5406873bdb47711 |
 | tools/check_retractions.py | 978 | 2e9a406f94a491ca |
 | tools/coverage_headroom.py | 5772 | 254fb5f874dc02fa |
 | tools/eval_external.py | 8752 | 09b6bf185fd7c714 |
@@ -280,7 +238,7 @@ project file not listed in its own table — it cannot hash itself.
 | tools/session_log.py | 7287 | 740af53575e8c6c0 |
 | tools/sync_frontend.py | 1878 | d35474348af483d5 |
 | tools/verify_sessions.py | 7275 | f20043e5a0f456a7 |
-| USER_TODO.md | 8017 | 1644701fa282c183 |
+| USER_TODO.md | 8017 | 51325a716cb8ae76 |
 | web/app.js | 81124 | 3c3ba3cca8bb95ff |
 | web/court.js | 39603 | 01b0ff2c31ee6e88 |
 | web/court_batch_replay.js | 12351 | 7518b86559b14af3 |

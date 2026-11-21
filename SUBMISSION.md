@@ -182,7 +182,7 @@ Numbers used in the Devpost form:
 | Court fixtures | 33/33 |
 | Batch fixtures | 6/6 |
 | Run receipt | 46 artefacts |
-| Final manifest | 210 files |
+| Final manifest | 168 files |
 
 The static page is a recording; the live court is `python serve.py`. Do not describe the static
 page as a live model call.
