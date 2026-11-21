@@ -155,6 +155,8 @@ Python, `llama.cpp`, Qwen2.5-3B-Instruct-GGUF, HTML, CSS, JavaScript, SHA-256 co
 - Video: `[FILL BEFORE SUBMIT: unlisted 60-second walkthrough URL]`
 
 These are the only three fields that require the author's accounts. No URL is fabricated.
+Devpost normally embeds video only from YouTube or Vimeo; the event text also accepts a visual
+walkthrough, so a Pages walkthrough is a fallback if the form allows it.
 
 Local:
 

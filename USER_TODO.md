@@ -6,7 +6,7 @@ screen / reviewer access. The local product is already built and verified.
 **Current state**
 
 - `python -m core.audit final` → **48/48, all_pass=True**
-- run receipt → `b27a5ff305a1fce700536eedc5d89136`, **46 artefacts**, exit 0
+- run receipt → `381962469c3fb77140ef05664b5edc20`, **46 artefacts**, exit 0
 - `FINAL_MANIFEST.md` → **209 files**, 0 problems
 - court fixtures → **33/33**; batch fixtures → **6/6**; browser checks → static **ok**, live **ok**
 - live 3B → **20–35 s** per docket; the page shows four real stages instead of a blank spinner
@@ -28,45 +28,37 @@ Red lines:
 holder or any tracked file, run `python tools/check_manifest.py --write` so the manifest matches
 the file you will publish.
 
-1.2 Check Git is installed:
+1.2 Git is already installed at `C:\Program Files\Git\cmd\git.exe` (2.56.0). The current agent shell
+does not see it on `PATH`, so in a terminal either reopen the terminal or use the full path:
 
 ```powershell
-git --version
+& 'C:\Program Files\Git\cmd\git.exe' --version
 ```
 
-If missing, install Git for Windows first (`winget install --id Git.Git -e --source winget`), then
-open a new terminal.
-
-1.3 From the project root:
+1.3 The local repository is already initialized on `main` with commit `08a1660`, author
+`HUCHAOZHENG <guyuezheng33@gmail.com>`. Do **not** run `git init` again. Verify it is clean:
 
 ```powershell
-git init
-git add .
-git status
-```
-
-`git status` must not contain `__pycache__`, `.venv`, `.env`, `*.pyc`, `serve.pid`, or any model
-file. `.gitignore` already blocks most of these; `serve.pid` is a runtime file and is ignored too.
-
-1.4 Before the first commit, run:
-
-```powershell
+& 'C:\Program Files\Git\cmd\git.exe' status --short
 python -m core.audit final
 ```
 
-Expect **48/48**, including `A8_no_secrets keys=0` and `A37_run_receipt` with receipt
-`b27a5ff305a1fce700536eedc5d89136`.
+`git status --short` should print nothing. Expect **48/48**, including `A8_no_secrets keys=0` and
+`A37_run_receipt` with receipt `381962469c3fb77140ef05664b5edc20`.
 
-1.5 Commit and push:
+1.4 Create the empty public repo at `https://github.com/new` (name `claim-autopsy`, Public, no
+README), then add the remote and push:
 
 ```powershell
-git commit -m "Claim Autopsy: citation court with AI advocates and a deterministic judge"
-git branch -M main
-git remote add origin https://github.com/<your-username>/claim-autopsy.git
-git push -u origin main
+& 'C:\Program Files\Git\cmd\git.exe' remote add origin https://github.com/<your-username>/claim-autopsy.git
+& 'C:\Program Files\Git\cmd\git.exe' push -u origin main
 ```
 
-1.6 Open the repository in a signed-out window. Confirm the README title and screenshots render,
+The first push opens a browser for GitHub login / Git Credential Manager. Sign in as
+`guyuezheng33-ai` if that is your account, approve the credential, and wait for
+`branch 'main' set up to track 'origin/main'`.
+
+1.5 Open the repository in a signed-out window. Confirm the README title and screenshots render,
 and the repository is **Public** (Settings → General → Danger zone).
 
 ---
@@ -135,14 +127,17 @@ restart `serve.py`. Do not use a GPU backend; this build is pinned to `-ngl 0`.
 
 ## Step 4. Record the 60-second video (45–60 min)
 
-Follow `evidence/video_script.md`. The current script is written for the court, not the old legacy
-screen. Record browser-only at 1920×1080, notifications off.
+Follow `evidence/video_script.md`; it contains the six English voiceover lines. The current script is
+written for the court, not the old legacy screen. Record browser-only at 1920×1080, notifications
+off. No face camera is required; speak the six English lines or put them on screen as captions.
 
 If you record a full 3B wait, keep 3–4 seconds of the progress panel and jump-cut to the completed
 docket. Say “about 20 seconds on CPU” rather than speeding up the UI.
 
-Upload as an **unlisted** YouTube video, then open the link signed out. Paste it into
-`SUBMISSION.md` section 14.
+Upload to **Vimeo (free)** or **YouTube (unlisted)**; do not upload a raw MP4 as the only copy. Devpost
+normally embeds video only from YouTube or Vimeo. The event text also accepts a “visual walkthrough”,
+so a captioned screenshot walkthrough on Pages is a fallback if the form allows it, but check the
+actual Devpost field before relying on that. Paste the public link into `SUBMISSION.md` section 14.
 
 ---
 
