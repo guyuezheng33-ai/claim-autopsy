@@ -150,9 +150,9 @@ Python, `llama.cpp`, Qwen2.5-3B-Instruct-GGUF, HTML, CSS, JavaScript, SHA-256 co
 
 ## 14. Try it
 
-- Repository: `[FILL BEFORE SUBMIT: public GitHub URL]`
-- Live demo: `[FILL BEFORE SUBMIT: public Pages URL ending in /web/index.html]`
-- Video: `[FILL BEFORE SUBMIT: unlisted 60-second walkthrough URL]`
+- Repository: `https://github.com/guyuezheng33-ai/claim-autopsy`
+- Live demo: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html`
+- Video: `https://aka.doubaocdn.com/s/OVFalOSwhn`
 
 These are the only three fields that require the author's accounts. No URL is fabricated.
 Devpost normally embeds video only from YouTube or Vimeo; the event text also accepts a visual

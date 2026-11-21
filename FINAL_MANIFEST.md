@@ -196,7 +196,7 @@ project file not listed in its own table — it cannot hash itself.
 | evidence/holdback_ledger.json | 980 | 8ac57eef6d1a3558 |
 | evidence/label_conflicts.json | 53977 | 9c776ba54d443594 |
 | evidence/link_check.json | 12476 | 1d05cf321aa418f1 |
-| evidence/local_llm.log | 189756 | 8b4edabfd31f6de5 |
+| evidence/local_llm.log | 207448 | c804f28b592227db |
 | evidence/oracle_eval.json | 48940 | a297b4780629f86c |
 | evidence/paragraphs.jsonl | 2000248 | 0ce605a42abeef50 |
 | evidence/retractions.jsonl | 13631 | a6e72415f240b003 |
@@ -239,7 +239,7 @@ project file not listed in its own table — it cannot hash itself.
 | REFACTOR_PLAN_CN.md | 30394 | 85736141e8683262 |
 | serve.pid | 7 | 40ab831b408ac316 |
 | serve.py | 16140 | 6d05a817e95fc6ad |
-| SUBMISSION.md | 15482 | 4b1a35ceb0b32098 |
+| SUBMISSION.md | 15471 | 3a0950a3e2885b08 |
 | tools/add_cards_v10.py | 8614 | f1651481a62f3042 |
 | tools/add_cards_v8.py | 4172 | 0317ab6013bb1a2e |
 | tools/add_cards_v9.py | 11288 | fcad815f25a29e2f |
