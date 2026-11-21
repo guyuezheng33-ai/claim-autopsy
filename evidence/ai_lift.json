@@ -1,0 +1,498 @@
+{
+  "status": "MEASURED",
+  "rule_only": {
+    "shallow_consistency": {
+      "consistent": 12,
+      "total": 12,
+      "rate": 1.0,
+      "details": [
+        {
+          "id": "P01",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P02",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P03",
+          "same": true,
+          "a": "supported",
+          "b": "supported"
+        },
+        {
+          "id": "P04",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P05",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P06",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P07",
+          "same": true,
+          "a": "undetermined",
+          "b": "undetermined"
+        },
+        {
+          "id": "P08",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P09",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P10",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P11",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P12",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        }
+      ]
+    },
+    "deep_recall": {
+      "correct": 1,
+      "total": 14,
+      "rate": 0.0714,
+      "details": [
+        {
+          "id": "DP01",
+          "correct": false,
+          "expected": "refuted",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP02",
+          "correct": false,
+          "expected": "supported",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP03",
+          "correct": false,
+          "expected": "refuted",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP04",
+          "correct": false,
+          "expected": "refuted",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP06",
+          "correct": false,
+          "expected": "refuted",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP08",
+          "correct": false,
+          "expected": "refuted",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP09",
+          "correct": false,
+          "expected": "refuted",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP12",
+          "correct": false,
+          "expected": "refuted",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP15",
+          "correct": false,
+          "expected": "supported",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP19",
+          "correct": false,
+          "expected": "refuted",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP20",
+          "correct": false,
+          "expected": "refuted",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP16",
+          "correct": false,
+          "expected": "undetermined",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP17",
+          "correct": false,
+          "expected": "undetermined",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP18",
+          "correct": true,
+          "expected": "undetermined",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        }
+      ]
+    }
+  },
+  "rule_plus_ai": {
+    "shallow_consistency": {
+      "consistent": 12,
+      "total": 12,
+      "rate": 1.0,
+      "details": [
+        {
+          "id": "P01",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P02",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P03",
+          "same": true,
+          "a": "supported",
+          "b": "supported"
+        },
+        {
+          "id": "P04",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P05",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P06",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P07",
+          "same": true,
+          "a": "undetermined",
+          "b": "undetermined"
+        },
+        {
+          "id": "P08",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P09",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P10",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P11",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        },
+        {
+          "id": "P12",
+          "same": true,
+          "a": "refuted",
+          "b": "refuted"
+        }
+      ]
+    },
+    "deep_recall": {
+      "correct": 14,
+      "total": 14,
+      "rate": 1.0,
+      "details": [
+        {
+          "id": "DP01",
+          "correct": true,
+          "expected": "refuted",
+          "got": "refuted",
+          "origin": "semantic_recall",
+          "cited": [
+            "E070"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP02",
+          "correct": true,
+          "expected": "supported",
+          "got": "supported",
+          "origin": "semantic_recall",
+          "cited": [
+            "E004",
+            "E049"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP03",
+          "correct": true,
+          "expected": "refuted",
+          "got": "refuted",
+          "origin": "semantic_recall",
+          "cited": [
+            "E036",
+            "E050"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP04",
+          "correct": true,
+          "expected": "refuted",
+          "got": "refuted",
+          "origin": "semantic_recall",
+          "cited": [
+            "E072"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP06",
+          "correct": true,
+          "expected": "refuted",
+          "got": "refuted",
+          "origin": "semantic_recall",
+          "cited": [
+            "E074"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP08",
+          "correct": true,
+          "expected": "refuted",
+          "got": "refuted",
+          "origin": "semantic_recall",
+          "cited": [
+            "E075"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP09",
+          "correct": true,
+          "expected": "refuted",
+          "got": "refuted",
+          "origin": "semantic_recall",
+          "cited": [
+            "E023"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP12",
+          "correct": true,
+          "expected": "refuted",
+          "got": "refuted",
+          "origin": "semantic_recall",
+          "cited": [
+            "E079"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP15",
+          "correct": true,
+          "expected": "supported",
+          "got": "supported",
+          "origin": "semantic_recall",
+          "cited": [
+            "E024"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP19",
+          "correct": true,
+          "expected": "refuted",
+          "got": "refuted",
+          "origin": "semantic_recall",
+          "cited": [
+            "E040"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP20",
+          "correct": true,
+          "expected": "refuted",
+          "got": "refuted",
+          "origin": "semantic_recall",
+          "cited": [
+            "E041"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP16",
+          "correct": true,
+          "expected": "undetermined",
+          "got": "undetermined",
+          "origin": "semantic_recall",
+          "cited": [
+            "E037"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP17",
+          "correct": true,
+          "expected": "undetermined",
+          "got": "undetermined",
+          "origin": "semantic_recall",
+          "cited": [
+            "E016"
+          ],
+          "real_ids": true,
+          "stance_from_card": true
+        },
+        {
+          "id": "DP18",
+          "correct": true,
+          "expected": "undetermined",
+          "got": "undetermined",
+          "origin": "lexical",
+          "cited": [],
+          "real_ids": true,
+          "stance_from_card": true
+        }
+      ]
+    }
+  },
+  "delta": {
+    "shallow_consistency": 0.0,
+    "deep_recall": 0.9286
+  },
+  "provenance": {
+    "producer": "tools/measure_ai_lift.py",
+    "captured_at": "2026-11-19T15:39:38.203398+00:00",
+    "runs": 1,
+    "note": "One live measurement against the configured LLM provider. The offline half is bit-reproducible (gate A7); the AI half is model-dependent, so it is recorded once rather than averaged over repeats. Rerun with a key to produce a new snapshot.",
+    "honesty": "single-run snapshot; not an average"
+  }
+}

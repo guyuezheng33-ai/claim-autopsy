@@ -1,0 +1,29 @@
+{
+  "after": {
+    "confidence": 0.35,
+    "missing_reason": {
+      "reason": "retracted_evidence_removed",
+      "removed_cards": [
+        "E077"
+      ]
+    },
+    "n_verified": 1,
+    "notes": [
+      "retracted_evidence_removed"
+    ],
+    "status": "suspect",
+    "verdict": "undetermined"
+  },
+  "before": {
+    "confidence": 0.7,
+    "n_verified": 1,
+    "status": "single_source",
+    "verdict": "refuted"
+  },
+  "card_id": "E077",
+  "claim_text": "A positive attitude determines whether you get cancer",
+  "demo": true,
+  "disclaimer": "撤稿信号为机制演示构造，不是对该来源的真实指控；真实撤稿需 Crossref + Europe PMC 双源确认。",
+  "mechanism": "撤稿来源先从可用引用集合剔除，再用剩余引用重算结论；无剩余引用时降级为 not_found。",
+  "source_id": "NCI-MYTHS"
+}

@@ -1,0 +1,529 @@
+{
+  "generated_at": "2026-11-21T10:45:41.196894+00:00",
+  "benchmark": "rules-lose / anchored-AI-wins",
+  "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+  "cases": [
+    {
+      "id": "uplift-01-aspirin",
+      "claim": "Aspirin reduces the risk of a second heart attack.",
+      "source": "Daily acetylsalicylic acid lowers the chance of recurrent myocardial infarction.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "rules_verdict": "not_in_source",
+      "reference_verdict": "supported",
+      "reference_bridge": {
+        "original_claim": "Aspirin reduces the risk of a second heart attack.",
+        "bridged_claim": "acetylsalicylic acid reduces the chance of a recurrent myocardial infarction.",
+        "anchors": [
+          [
+            "Aspirin",
+            "acetylsalicylic acid"
+          ],
+          [
+            "heart attack",
+            "myocardial infarction"
+          ],
+          [
+            "risk",
+            "chance"
+          ],
+          [
+            "second",
+            "recurrent"
+          ]
+        ]
+      },
+      "reference_ok": true,
+      "live_verdict": "supported",
+      "live_uplift": true,
+      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "latency_ms": 32650,
+      "ai_arguments": 2,
+      "accepted_ai_arguments": 1,
+      "bridge_count": 1,
+      "bridge": {
+        "original_claim": "Aspirin reduces the risk of a second heart attack.",
+        "bridged_claim": "acetylsalicylic acid reduces the chance of a recurrent myocardial infarction.",
+        "anchors": [
+          [
+            "Aspirin",
+            "acetylsalicylic acid"
+          ],
+          [
+            "second heart attack",
+            "recurrent myocardial infarction"
+          ],
+          [
+            "risk",
+            "chance"
+          ]
+        ]
+      },
+      "struck": [
+        {
+          "side": "prosecution",
+          "codes": [
+            "side_mismatch"
+          ],
+          "anchors_requested": [
+            [
+              "Aspirin",
+              "acetylsalicylic acid"
+            ],
+            [
+              "second heart attack",
+              "recurrent myocardial infarction"
+            ],
+            [
+              "risk",
+              "chance"
+            ]
+          ]
+        }
+      ],
+      "without_anchors_verdict": "not_in_source",
+      "anchor_is_causal": true
+    },
+    {
+      "id": "uplift-02-antibiotics",
+      "claim": "Antibiotics cure bacterial pneumonia.",
+      "source": "Antibacterial medicines cure bacterial lung infection.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "rules_verdict": "not_in_source",
+      "reference_verdict": "supported",
+      "reference_bridge": {
+        "original_claim": "Antibiotics cure bacterial pneumonia.",
+        "bridged_claim": "Antibacterial medicines cure bacterial lung infection.",
+        "anchors": [
+          [
+            "Antibiotics",
+            "Antibacterial medicines"
+          ],
+          [
+            "pneumonia",
+            "lung infection"
+          ]
+        ]
+      },
+      "reference_ok": true,
+      "live_verdict": "supported",
+      "live_uplift": true,
+      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "latency_ms": 27341,
+      "ai_arguments": 2,
+      "accepted_ai_arguments": 1,
+      "bridge_count": 1,
+      "bridge": {
+        "original_claim": "Antibiotics cure bacterial pneumonia.",
+        "bridged_claim": "Antibacterial medicines cure bacterial lung infection.",
+        "anchors": [
+          [
+            "Antibiotics",
+            "Antibacterial medicines"
+          ],
+          [
+            "bacterial pneumonia",
+            "bacterial lung infection"
+          ]
+        ]
+      },
+      "struck": [
+        {
+          "side": "prosecution",
+          "codes": [
+            "side_mismatch"
+          ],
+          "anchors_requested": [
+            [
+              "Antibiotics",
+              "Antibacterial medicines"
+            ],
+            [
+              "bacterial pneumonia",
+              "bacterial lung infection"
+            ]
+          ]
+        }
+      ],
+      "without_anchors_verdict": "not_in_source",
+      "anchor_is_causal": true
+    },
+    {
+      "id": "uplift-03-vitamin-c",
+      "claim": "Vitamin C shortens colds.",
+      "source": "Ascorbic acid shortens colds.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "rules_verdict": "not_in_source",
+      "reference_verdict": "supported",
+      "reference_bridge": {
+        "original_claim": "Vitamin C shortens colds.",
+        "bridged_claim": "Ascorbic acid shortens colds.",
+        "anchors": [
+          [
+            "Vitamin C",
+            "Ascorbic acid"
+          ]
+        ]
+      },
+      "reference_ok": true,
+      "live_verdict": "supported",
+      "live_uplift": true,
+      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "latency_ms": 25779,
+      "ai_arguments": 2,
+      "accepted_ai_arguments": 1,
+      "bridge_count": 1,
+      "bridge": {
+        "original_claim": "Vitamin C shortens colds.",
+        "bridged_claim": "Ascorbic acid shortens colds.",
+        "anchors": [
+          [
+            "Vitamin C",
+            "Ascorbic acid"
+          ]
+        ]
+      },
+      "struck": [
+        {
+          "side": "prosecution",
+          "codes": [
+            "side_mismatch"
+          ],
+          "anchors_requested": [
+            [
+              "Vitamin C",
+              "Ascorbic acid"
+            ]
+          ]
+        }
+      ],
+      "without_anchors_verdict": "not_in_source",
+      "anchor_is_causal": true
+    },
+    {
+      "id": "uplift-04-paracetamol",
+      "claim": "Paracetamol treats fever.",
+      "source": "Acetaminophen treats fever.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "rules_verdict": "not_in_source",
+      "reference_verdict": "supported",
+      "reference_bridge": {
+        "original_claim": "Paracetamol treats fever.",
+        "bridged_claim": "Acetaminophen treats fever.",
+        "anchors": [
+          [
+            "Paracetamol",
+            "Acetaminophen"
+          ]
+        ]
+      },
+      "reference_ok": true,
+      "live_verdict": "supported",
+      "live_uplift": true,
+      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "latency_ms": 26584,
+      "ai_arguments": 2,
+      "accepted_ai_arguments": 1,
+      "bridge_count": 1,
+      "bridge": {
+        "original_claim": "Paracetamol treats fever.",
+        "bridged_claim": "Acetaminophen treats fever.",
+        "anchors": [
+          [
+            "Paracetamol",
+            "Acetaminophen"
+          ]
+        ]
+      },
+      "struck": [
+        {
+          "side": "prosecution",
+          "codes": [
+            "side_mismatch"
+          ],
+          "anchors_requested": [
+            [
+              "Paracetamol",
+              "Acetaminophen"
+            ]
+          ]
+        }
+      ],
+      "without_anchors_verdict": "not_in_source",
+      "anchor_is_causal": true
+    },
+    {
+      "id": "uplift-05-kidney",
+      "claim": "High blood pressure damages kidneys.",
+      "source": "Hypertension damages the kidneys.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "rules_verdict": "not_in_source",
+      "reference_verdict": "supported",
+      "reference_bridge": {
+        "original_claim": "High blood pressure damages kidneys.",
+        "bridged_claim": "Hypertension damages kidneys.",
+        "anchors": [
+          [
+            "High blood pressure",
+            "Hypertension"
+          ]
+        ]
+      },
+      "reference_ok": true,
+      "live_verdict": "supported",
+      "live_uplift": true,
+      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "latency_ms": 26058,
+      "ai_arguments": 2,
+      "accepted_ai_arguments": 1,
+      "bridge_count": 1,
+      "bridge": {
+        "original_claim": "High blood pressure damages kidneys.",
+        "bridged_claim": "Hypertension damages kidneys.",
+        "anchors": [
+          [
+            "High blood pressure",
+            "Hypertension"
+          ],
+          [
+            "kidneys",
+            "kidneys"
+          ]
+        ]
+      },
+      "struck": [
+        {
+          "side": "prosecution",
+          "codes": [
+            "side_mismatch"
+          ],
+          "anchors_requested": [
+            [
+              "High blood pressure",
+              "Hypertension"
+            ],
+            [
+              "kidneys",
+              "kidneys"
+            ]
+          ]
+        }
+      ],
+      "without_anchors_verdict": "not_in_source",
+      "anchor_is_causal": true
+    },
+    {
+      "id": "uplift-06-heart-attack",
+      "claim": "Heart attack risk rises with smoking.",
+      "source": "Myocardial infarction risk increases with smoking.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "rules_verdict": "not_in_source",
+      "reference_verdict": "supported",
+      "reference_bridge": {
+        "original_claim": "Heart attack risk rises with smoking.",
+        "bridged_claim": "Myocardial infarction risk rises with smoking.",
+        "anchors": [
+          [
+            "Heart attack",
+            "Myocardial infarction"
+          ]
+        ]
+      },
+      "reference_ok": true,
+      "live_verdict": "supported",
+      "live_uplift": true,
+      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "latency_ms": 29692,
+      "ai_arguments": 2,
+      "accepted_ai_arguments": 1,
+      "bridge_count": 1,
+      "bridge": {
+        "original_claim": "Heart attack risk rises with smoking.",
+        "bridged_claim": "Myocardial infarction risk rises with smoking.",
+        "anchors": [
+          [
+            "Heart attack risk",
+            "Myocardial infarction risk"
+          ],
+          [
+            "Heart attack",
+            "Myocardial infarction"
+          ],
+          [
+            "smoking",
+            "smoking"
+          ]
+        ]
+      },
+      "struck": [
+        {
+          "side": "prosecution",
+          "codes": [
+            "side_mismatch"
+          ],
+          "anchors_requested": [
+            [
+              "Heart attack risk",
+              "Myocardial infarction risk"
+            ],
+            [
+              "Heart attack",
+              "Myocardial infarction"
+            ],
+            [
+              "smoking",
+              "smoking"
+            ]
+          ]
+        }
+      ],
+      "without_anchors_verdict": "not_in_source",
+      "anchor_is_causal": true
+    },
+    {
+      "id": "uplift-07-salt",
+      "claim": "Salt raises blood pressure.",
+      "source": "Sodium chloride raises hypertension.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "rules_verdict": "not_in_source",
+      "reference_verdict": "supported",
+      "reference_bridge": {
+        "original_claim": "Salt raises blood pressure.",
+        "bridged_claim": "Sodium chloride raises hypertension.",
+        "anchors": [
+          [
+            "Salt",
+            "Sodium chloride"
+          ],
+          [
+            "blood pressure",
+            "hypertension"
+          ]
+        ]
+      },
+      "reference_ok": true,
+      "live_verdict": "supported",
+      "live_uplift": true,
+      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "latency_ms": 25029,
+      "ai_arguments": 2,
+      "accepted_ai_arguments": 1,
+      "bridge_count": 1,
+      "bridge": {
+        "original_claim": "Salt raises blood pressure.",
+        "bridged_claim": "Sodium chloride raises hypertension.",
+        "anchors": [
+          [
+            "Salt",
+            "Sodium chloride"
+          ],
+          [
+            "blood pressure",
+            "hypertension"
+          ]
+        ]
+      },
+      "struck": [
+        {
+          "side": "prosecution",
+          "codes": [
+            "side_mismatch"
+          ],
+          "anchors_requested": [
+            [
+              "Salt",
+              "Sodium chloride"
+            ],
+            [
+              "blood pressure",
+              "hypertension"
+            ]
+          ]
+        }
+      ],
+      "without_anchors_verdict": "not_in_source",
+      "anchor_is_causal": true
+    },
+    {
+      "id": "uplift-08-exercise",
+      "claim": "Exercise lowers blood pressure.",
+      "source": "Physical activity lowers hypertension.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "rules_verdict": "not_in_source",
+      "reference_verdict": "supported",
+      "reference_bridge": {
+        "original_claim": "Exercise lowers blood pressure.",
+        "bridged_claim": "Physical activity lowers hypertension.",
+        "anchors": [
+          [
+            "Exercise",
+            "Physical activity"
+          ],
+          [
+            "blood pressure",
+            "hypertension"
+          ]
+        ]
+      },
+      "reference_ok": true,
+      "live_verdict": "supported",
+      "live_uplift": true,
+      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "latency_ms": 25536,
+      "ai_arguments": 2,
+      "accepted_ai_arguments": 1,
+      "bridge_count": 1,
+      "bridge": {
+        "original_claim": "Exercise lowers blood pressure.",
+        "bridged_claim": "Physical activity lowers hypertension.",
+        "anchors": [
+          [
+            "Exercise",
+            "Physical activity"
+          ],
+          [
+            "blood pressure",
+            "hypertension"
+          ]
+        ]
+      },
+      "struck": [
+        {
+          "side": "prosecution",
+          "codes": [
+            "side_mismatch"
+          ],
+          "anchors_requested": [
+            [
+              "Exercise",
+              "Physical activity"
+            ],
+            [
+              "blood pressure",
+              "hypertension"
+            ]
+          ]
+        }
+      ],
+      "without_anchors_verdict": "not_in_source",
+      "anchor_is_causal": true
+    }
+  ],
+  "summary": {
+    "cases": 8,
+    "rule_loss": 8,
+    "reference_pass": 8,
+    "model_live": true,
+    "model_uplift": 8,
+    "anchor_causal": 8,
+    "without_anchors_still_not_in_source": 8
+  },
+  "note": "reference_pass proves the bridge mechanism on fixed anchors. model_uplift is the honest live result; a failed case is kept, not hidden."
+}

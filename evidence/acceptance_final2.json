@@ -1,0 +1,289 @@
+{
+  "run_tag": "final2",
+  "llm_mode": "Offline deterministic core (degraded)",
+  "passed": 43,
+  "total": 44,
+  "all_pass": false,
+  "results": {
+    "A1_no_evidence_refusal": {
+      "pass": true,
+      "detail": "2 claims with no evidence, 0 verdicts leaked"
+    },
+    "A2_citations_required": {
+      "pass": true,
+      "detail": "15 verdicts checked, 0 with missing citation"
+    },
+    "A3_decomposition": {
+      "pass": true,
+      "detail": "comma input -> 3 atoms; enumeration input -> 3 atoms; compound subject -> 1 atom(s), first noun kept=True"
+    },
+    "A4_audit_chain": {
+      "pass": true,
+      "detail": "steps=['decompose', 'negation', 'retrieve', 'semantic', 'adjudicate', 'negation', 'retrieve', 'semantic', 'adjudicate']; per-claim traces complete=True"
+    },
+    "A5_instant_play": {
+      "pass": true,
+      "detail": "index.html present and self-contained=True"
+    },
+    "A6_failure_reproducible": {
+      "pass": true,
+      "detail": "DEMO-3 all refused=True"
+    },
+    "A7_offline_deterministic": {
+      "pass": true,
+      "detail": "two offline runs field-for-field identical=True"
+    },
+    "A8_no_secrets": {
+      "pass": true,
+      "detail": "real key patterns found=0",
+      "hits": []
+    },
+    "A9_honesty_statement": {
+      "pass": true,
+      "detail": "README states limitations and non-authoritative scope=True"
+    },
+    "A10_corpus_coverage": {
+      "pass": true,
+      "detail": "112 cards (>=40), 41 sources (>=8), 0 off-whitelist URLs, 0 without status"
+    },
+    "A11_golden_accuracy": {
+      "pass": true,
+      "detail": "accuracy 100.0% (93/93); distribution={'refuted': 41, 'supported': 37, 'undetermined': 15}; false refusals=0; illegal citations=0",
+      "accuracy": 1.0,
+      "distribution": {
+        "refuted": 41,
+        "supported": 37,
+        "undetermined": 15
+      }
+    },
+    "A12_paraphrase_robust": {
+      "pass": true,
+      "detail": "consistency 100.0% (12/12); verdicts dropped to refusal=0"
+    },
+    "A13_ai_anti_overreach": {
+      "pass": true,
+      "detail": "zero evidence + AI says supported -> undetermined; evidence + AI says refuted -> supported"
+    },
+    "A14_frontend_backend_sync": {
+      "pass": true,
+      "detail": "93 golden + 24 paraphrase pairs compared; 0 mismatches",
+      "mismatches": []
+    },
+    "A15_citation_relevance": {
+      "pass": true,
+      "detail": "3 guard inputs checked; 0 unrelated sources entered citations"
+    },
+    "A16_polarity_correctness": {
+      "pass": true,
+      "detail": "6 polarity fixtures checked; 0 wrong",
+      "bad": []
+    },
+    "A17_hygiene_doc_code_sync": {
+      "pass": true,
+      "detail": "keys=0, CJK files=0, dangling doc paths=0",
+      "cjk": [],
+      "dangling": []
+    },
+    "A18_ai_semantic_recall": {
+      "pass": true,
+      "detail": "4 recall guards checked (real id / stored stance / citation / relevance); 0 violations",
+      "bad": []
+    },
+    "A19_recorded_replay_integrity": {
+      "pass": true,
+      "detail": "14 recorded cases cross-checked against the live benchmark; 0 violations; tampered counterexample rejected=True",
+      "bad": []
+    },
+    "A20_coverage_transparency": {
+      "pass": true,
+      "detail": "browser lists 112/112 cards, 14 replay chips, 3 refusal renders; 0 violations; tampered counterexample rejected=True",
+      "bad": []
+    },
+    "A21_unreadable_input_gate": {
+      "pass": true,
+      "detail": "3 unreadable inputs refused with a full notice (kind/title/body/action), 0 verdicts leaked; front-end renders the same notice; English control still decides; 0 violations; tampered counterexample rejected=True",
+      "bad": []
+    },
+    "A22_adversarial_input_discipline": {
+      "pass": true,
+      "detail": "3 injection payloads kept their verdict; 7700 chars refused as too_long; prompt data-quoted; 0 violations",
+      "bad": []
+    },
+    "A23_offline_isolation": {
+      "pass": true,
+      "detail": "3 claims analysed with sockets blocked in a child process; verdicts identical=True; a forced model call returned llm_unavailable; 0 violations",
+      "bad": []
+    },
+    "A24_precision_traps": {
+      "pass": true,
+      "detail": "7 traps (contradiction / kept object list / reversed causation / adjacent product / adjacent outcome / quantifier / anti-refuse control); front-end parity on all 7; 0 violations",
+      "bad": []
+    },
+    "A25_population_scope": {
+      "pass": true,
+      "detail": "5 scope probes (5 narrowed claims refused, 3 matched-population controls decided); front-end parity on all 8; 0 violations",
+      "bad": []
+    },
+    "A26_negation_property": {
+      "pass": true,
+      "detail": "40 affirmative golden claims inverted and flipped; 11 double-negated claims refused; identity negator rejected; 0 violations",
+      "bad": []
+    },
+    "A27_citation_receipts": {
+      "pass": true,
+      "detail": "3 probes: every citation names shared vocabulary; rendered 'Matched on' in the page; front-end parity; 0 violations",
+      "bad": []
+    },
+    "A28_refusal_diagnosis": {
+      "pass": true,
+      "detail": "5 probes: closest card named with the guard that stopped it (4 with a near-miss, 1 with none); front-end parity; 0 violations",
+      "bad": []
+    },
+    "A29_dose_and_efficacy_scope": {
+      "pass": true,
+      "detail": "6 probes (2 dose mismatches and 1 relation mismatch refused, 3 controls decided); front-end parity; 0 violations",
+      "bad": []
+    },
+    "A30_cross_atom_consistency": {
+      "pass": true,
+      "detail": "5 submissions: 3 contradictions labelled with their basis, 2 controls left unlabelled; front-end parity; 0 violations",
+      "bad": []
+    },
+    "A31_stance_and_separator_parity": {
+      "pass": true,
+      "detail": "4 probes: a thousands separator stays in the number, an object word does not create a relation match, a prohibition is not a negation, and a control still decides; front-end parity; 0 violations",
+      "bad": []
+    },
+    "A32_guard_benchmark": {
+      "pass": true,
+      "detail": "39 held-out probes (disjoint from the golden set), 7 controls that still decide; every verdict, atom count, cited card and near-miss reason matches; front-end parity; 0 violations",
+      "bad": []
+    },
+    "A33_chain_reasoning": {
+      "pass": true,
+      "detail": "5 probes: a two-step chain is derived and labelled, an agreeing third atom is not called a conflict, a pair with no shared link produces no chain, and the three-atom conflict is flagged; front-end parity; 0 violations",
+      "bad": []
+    },
+    "A34_snapshot_verification": {
+      "pass": true,
+      "detail": "97/112 cards carry an archived paragraph: 97 verified, 13 unresolved, 1 page_changed, 1 source_changed; excerpts located at their offsets, hashes recomputed; citation, paragraph and badge parity; 0 violations",
+      "bad": []
+    },
+    "A35_external_regression": {
+      "pass": true,
+      "detail": "5 external dev datasets recomputed from the frozen slice; accuracy and refusal match the published run within tolerance; decisions beat a constant label (lowest accuracy_on_decided=0.875); no benchmark sentence appears in the corpus or the golden set; 0 violations",
+      "bad": []
+    },
+    "A36_endpoint_compatibility": {
+      "pass": true,
+      "detail": "risk/cure classified and kept apart, risk/prevention kept together, harm/harm still decided; susceptibility claim refused with a stated endpoint, cure claim still refuted by E021, research-report sentence gated as not-a-claim; 4 browser cases match the engine; 0 violations",
+      "bad": []
+    },
+    "A37_run_receipt": {
+      "pass": false,
+      "detail": "the acceptance run carries a receipt (bf5a44781b881687ec175643f10e6c9b) that binds 15 artefacts by SHA-256, records the command, exit code 0, interpreter and output hash, and is green at 42/42; every hash recomputed; 4 violations",
+      "bad": [
+        "artefact_changed:core/audit.py",
+        "artefact_changed:web/index.html",
+        "artefact_changed:web/app.js",
+        "artefact_changed:tools/js_ui_verify.js"
+      ],
+      "notes": []
+    },
+    "A38_browser_smoke": {
+      "pass": true,
+      "detail": "the built page ran in edge; 10 demos clicked, each rendering the claim list, the verdict badges and every cited source the engine produced; 112 corpus items; 0 JS exceptions; 0 external requests; 0 violations",
+      "bad": []
+    },
+    "A39_eval_receipt": {
+      "pass": true,
+      "detail": "the external table carries a receipt (f618f0cb0d2ddb7191378509675325c2): two runs with exit codes and output hashes, per-dataset numbers re-read from the file it wrote, 17 artefact hashes (samples, results, corpus, six kernel modules), and the hold-back slice recorded as opened 1 time(s) from a frozen file; 0 violations",
+      "bad": []
+    },
+    "A40_session_evidence": {
+      "pass": true,
+      "detail": "4 recorded session(s), 1 of them replayable against the current kernel and corpus, 0 by an external operator; each replay compares atom boundaries, verdicts and cited source ids; reviewer outcomes none recorded; 0 violations",
+      "bad": [],
+      "sessions": [
+        {
+          "file": "evidence/sessions/2026-11-20T15-50-06Z_self.json",
+          "session_id": "cc57c4a864fbdfce17cc3c8cb797d903",
+          "operator": "self",
+          "channel": "cli",
+          "status": "historical:kernel_changed",
+          "bad": [],
+          "reviewer_outcome": null,
+          "would_pay": null,
+          "bad_count": 0
+        },
+        {
+          "file": "evidence/sessions/2026-11-20T16-19-40Z_self.json",
+          "session_id": "7dcfccff7a58fd8854a30f19f5cf01b4",
+          "operator": "self",
+          "channel": "cli",
+          "status": "historical:kernel_changed",
+          "bad": [],
+          "reviewer_outcome": null,
+          "would_pay": null,
+          "bad_count": 0
+        },
+        {
+          "file": "evidence/sessions/2026-11-20T17-10-45Z_self.json",
+          "session_id": "7b8f914e065218ebfcb62ab43cdb8970",
+          "operator": "self",
+          "channel": "cli",
+          "status": "historical:kernel_changed",
+          "bad": [],
+          "reviewer_outcome": null,
+          "would_pay": null,
+          "bad_count": 0
+        },
+        {
+          "file": "evidence/sessions/2026-11-20T18-01-06Z_self.json",
+          "session_id": "c87bc8d82cc86a65d9820e926100fd8f",
+          "operator": "self",
+          "channel": "cli",
+          "status": "replay_match",
+          "bad": [],
+          "reviewer_outcome": null,
+          "would_pay": null,
+          "bad_count": 0
+        }
+      ]
+    },
+    "A41_error_review": {
+      "pass": true,
+      "detail": "1 wrong dev decision(s), 1 reviewed entry/entries covering exactly the wrong set; categories contradictory_benchmark_label; each entry pinned to this run's gold, prediction and cited cards; label-conflict claims checked against the census; 0 violations",
+      "bad": []
+    },
+    "A42_batch_and_refusal_plan": {
+      "pass": true,
+      "detail": "12 texts compared between the page and the kernel (verdict, scope, plan); a 12-row batch matches the single-claim path row by row and its counts sum; a refusal carries a search plan and a decided claim does not; a tampered batch is rejected; 0 violations",
+      "bad": []
+    },
+    "A43_api_contract": {
+      "pass": true,
+      "detail": "serve.py started on an ephemeral port with no key: /api/health reports its gate tally, /api/status declares the offline core, /api/analyze and /api/batch match the in-process kernel (verdicts, citations, scope, plan), newline batches split, empty text is a 400, and the 60-request window returns 429; 0 violations",
+      "bad": [],
+      "report": {
+        "analyze": 200,
+        "batch": 200,
+        "batch_lines": 200,
+        "citation": 200,
+        "citation_empty": 400,
+        "empty": 400,
+        "rate": {
+          "seen": [
+            400,
+            429
+          ]
+        }
+      }
+    },
+    "A44_citation_audit": {
+      "pass": true,
+      "detail": "12 citation fixtures, every atom receives supported/refuted/not_in_source, the totals sum to the atom count, the source hash is stable, an empty source is rejected, the page and the API agree with the kernel, and a tampered finding is rejected; 0 violations",
+      "bad": []
+    }
+  }
+}

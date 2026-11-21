@@ -1,0 +1,374 @@
+{
+  "checked_at": "2026-11-20T16:41:24.936226+00:00",
+  "producer": "tools/check_links.py",
+  "method": "browser",
+  "unique_urls": 41,
+  "ok": 38,
+  "blocked": 3,
+  "dead": 0,
+  "unreachable": 0,
+  "note": "Network-dependent check; it is a report, not an acceptance gate. `blocked` means the host answered 403/429/503 to this automated client - page exists, access was refused - which is not the same as a dead citation. `dead` (404/410) is the only class this project treats as a defect, and there are none.",
+  "problems": [
+    {
+      "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/",
+      "status": 403,
+      "classification": "blocked",
+      "owners": [
+        "E088",
+        "NIH-ODS-VITD"
+      ]
+    },
+    {
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cooking-microwave-ovens",
+      "status": 403,
+      "classification": "blocked",
+      "owners": [
+        "E033",
+        "USDA-MW"
+      ]
+    },
+    {
+      "url": "https://www.usda.gov/media/press-releases/2022/06/28/july-fourth-fireworks-not-foodborne-illness",
+      "status": 403,
+      "classification": "blocked",
+      "owners": [
+        "E038",
+        "E039",
+        "E040",
+        "E047",
+        "E048",
+        "USDA-FOOD"
+      ]
+    }
+  ],
+  "results": {
+    "https://archive.cdc.gov/www_cdc_gov/vaccinesafety/00_pdf/CDCStudiesonVaccinesandAutism.pdf": {
+      "status": 200,
+      "title": "",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://cancer.gov/publications/dictionaries/cancer-terms/def/alkaline-diet": {
+      "status": 200,
+      "title": "",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://go.nasa.gov/2s79FtE": {
+      "status": 200,
+      "title": "Why Are Planets Round? | NASA Space Place – NASA Science for Kids",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://irp.nih.gov/our-research/research-in-action/how-to-feast-for-your-eyes": {
+      "status": 200,
+      "title": "How to Feast for Your Eyes | NIH Intramural Research Program",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/": {
+      "status": 403,
+      "title": "Just a moment...",
+      "note": "",
+      "attempts": 3,
+      "method": "browser",
+      "classification": "blocked"
+    },
+    "https://stacks.cdc.gov/view/cdc/29152": {
+      "status": 200,
+      "title": "Warning : Antibiotics don't work for viruses like colds and the flu. Using them for viruses will NOT",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cancer.gov/about-cancer/causes-prevention/risk/diet": {
+      "status": 200,
+      "title": "Risk Factors: Diet - NCI",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cancer.gov/about-cancer/causes-prevention/risk/diet/artificial-sweeteners-fact-sheet": {
+      "status": 200,
+      "title": "Artificial Sweeteners and Cancer - NCI",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cancer.gov/about-cancer/causes-prevention/risk/myths": {
+      "status": 200,
+      "title": "Common Cancer Myths and Misconceptions - NCI",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/cell-phones-fact-sheet": {
+      "status": 200,
+      "title": "Cell Phones and Cancer Risk Fact Sheet - NCI",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/antibiotic-use/about/index.html": {
+      "status": 200,
+      "title": "Healthy Habits: Antibiotic Do's and Don'ts | Antibiotic Prescribing and Use | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/antibiotic-use/index.html": {
+      "status": 200,
+      "title": "Antibiotic Prescribing and Use | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/clean-hands/about/index.html": {
+      "status": 200,
+      "title": "About Handwashing | Clean Hands | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/common-cold/treatment/index.html": {
+      "status": 200,
+      "title": "Manage Common Cold | Common Cold | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/fluoridation/about/index.html": {
+      "status": 200,
+      "title": "About Community Water Fluoridation | Fluoridation | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/folic-acid/about/index.html": {
+      "status": 200,
+      "title": "About Folic Acid | Folic Acid | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/measles/vaccination.html": {
+      "status": 200,
+      "title": "About Measles | Measles (Rubeola) | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html": {
+      "status": 200,
+      "title": "Adult Activity: An Overview | Physical Activity Basics | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/salt/about/index.html": {
+      "status": 200,
+      "title": "About Sodium and Health | Salt | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/skin-cancer/sun-safety/index.html": {
+      "status": 200,
+      "title": "Sun Safety Facts | Skin Cancer | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/sleep/about_sleep/how_much_sleep.html": {
+      "status": 200,
+      "title": "About Sleep | Sleep | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/tobacco/about/index.html": {
+      "status": 200,
+      "title": "Cigarette Smoking | Smoking and Tobacco Use | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/vaccine-safety/about/autism.html": {
+      "status": 200,
+      "title": "Autism and Vaccines | Vaccine Safety | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/vaccine-safety/vaccines/mmr.html": {
+      "status": 200,
+      "title": "Measles, Mumps, Rubella (MMR) Vaccine Safety | Vaccine Safety | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdc.gov/vaccines-children/about/": {
+      "status": 200,
+      "title": "About Vaccines for your Children | Childhood Vaccines | CDC",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.cdstm.cn/gallery/media/mkjx/kxhb/art/2017/art_8bbe56c7788c4a569086ef48f1b169b8.html": {
+      "status": 200,
+      "title": "大脑真的只用了10%吗？",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.earthdata.nasa.gov/learn/articles/celebrating-50-years-of-satellite-laser-ranging-at-nasa-goddard-space-flight-center": {
+      "status": 200,
+      "title": "Celebrating 50 Years of Satellite Laser Ranging at NASA's Goddard Space Flight Center | NASA Earthda",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.fda.gov/food/food-additives-petitions/questions-and-answers-monosodium-glutamate-msg/": {
+      "status": 200,
+      "title": "Questions and Answers on Monosodium glutamate (MSG) | FDA",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens": {
+      "status": 200,
+      "title": "Microwave Ovens | FDA",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cooking-microwave-ovens": {
+      "status": 403,
+      "title": "Access Denied",
+      "note": "",
+      "attempts": 3,
+      "method": "browser",
+      "classification": "blocked"
+    },
+    "https://www.nasa.gov/?p=168603": {
+      "status": 200,
+      "title": "90 Years of Our Changing Views of Earth - NASA",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-earth-grades-5-8/": {
+      "status": 200,
+      "title": "What Is Earth? - NASA",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.nccih.nih.gov/health/tips/tips-natural-products-for-the-flu-and-colds-what-does-the-science-say": {
+      "status": 200,
+      "title": "5 Tips: Natural Products for the Flu and Colds: What Does the Science Say? | NCCIH",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.usda.gov/media/press-releases/2022/06/28/july-fourth-fireworks-not-foodborne-illness": {
+      "status": 403,
+      "title": "Access Denied",
+      "note": "",
+      "attempts": 3,
+      "method": "browser",
+      "classification": "blocked"
+    },
+    "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public": {
+      "status": 200,
+      "title": "Advice for the public",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters": {
+      "status": 200,
+      "title": "Mythbusters",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub": {
+      "status": 200,
+      "title": "Question and answers hub",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.who.int/europe/news-room/questions-and-answers/item/influenza-vaccination-7-things-to-know": {
+      "status": 200,
+      "title": "Influenza vaccination – 7 things to know",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)": {
+      "status": 200,
+      "title": "Influenza (seasonal)",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.who.int/news-room/questions-and-answers/item/antibiotic-resistance": {
+      "status": 200,
+      "title": "News",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    },
+    "https://www.who.int/zh/news-room/spotlight/influenza-are-we-ready/5-myths-about-the-flu-vaccine": {
+      "status": 200,
+      "title": "关于流感疫苗的五个误区",
+      "note": "",
+      "attempts": 1,
+      "method": "browser",
+      "classification": "ok"
+    }
+  }
+}

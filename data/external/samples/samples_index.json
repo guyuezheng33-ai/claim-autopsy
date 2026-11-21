@@ -1,0 +1,75 @@
+{
+  "created_at": "2026-11-20T13:14:05Z",
+  "datasets": {
+    "averitec": {
+      "file": "data/external/samples/averitec.jsonl",
+      "mapping": {
+        "Conflicting": "__excluded__",
+        "Not Enough Evidence": "undetermined",
+        "Refuted": "refuted",
+        "Supported": "supported"
+      },
+      "rows": 200
+    },
+    "fever": {
+      "file": "data/external/samples/fever.jsonl",
+      "mapping": {
+        "NOT ENOUGH INFO": "undetermined",
+        "REFUTES": "refuted",
+        "SUPPORTS": "supported"
+      },
+      "rows": 300
+    },
+    "healthver": {
+      "file": "data/external/samples/healthver.jsonl",
+      "mapping": {
+        "Neutral": "undetermined",
+        "Refutes": "refuted",
+        "Supports": "supported"
+      },
+      "rows": 300
+    },
+    "pubhealth": {
+      "file": "data/external/samples/pubhealth.jsonl",
+      "mapping": {
+        "false": "refuted",
+        "mixture": "__excluded__",
+        "true": "supported",
+        "unproven": "undetermined"
+      },
+      "rows": 200
+    },
+    "vitaminc": {
+      "file": "data/external/samples/vitaminc.jsonl",
+      "mapping": {
+        "NOT ENOUGH INFO": "undetermined",
+        "REFUTES": "refuted",
+        "SUPPORTS": "supported"
+      },
+      "rows": 200
+    }
+  },
+  "failed": {
+    "covert": {
+      "note": "DATA_PLAN 标注 ~3.4k，实际论文语料为 300 条推文；规模需更正后再采",
+      "probe": "https://github.com/violenil/factCheckCovidTweets",
+      "reason": "repository_404"
+    },
+    "healthverity": {
+      "note": "HealthVerity 是商业理赔数据商，不是 claim 基准；已改用 HealthVer (sarrouti/healthver)，见 SOURCES.md",
+      "reason": "not_a_benchmark"
+    }
+  },
+  "not_collected": {
+    "scifact": {
+      "detail": "allenai/scifact 公开 tar 的 claims_dev / claims_train 均无 label 字段；GitHub raw 路径 404；无法在不编造标签的前提下采样",
+      "probe": [
+        "https://raw.githubusercontent.com/allenai/scifact/main/data/claims_dev.jsonl",
+        "https://github.com/allenai/scifact"
+      ],
+      "reason": "archive_lacks_label_field"
+    }
+  },
+  "seed": 20261120,
+  "total_rows": 1200
+}

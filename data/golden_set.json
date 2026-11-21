@@ -1,0 +1,687 @@
+{
+  "meta": {
+    "dataset": "held-out golden set v6 (93 cases)",
+    "design": "Mechanism-coverage set, not a random sample. Class distribution is deliberately skewed toward refuted because the corpus targets common misinformation; the v5 additions cover dose, efficacy and hygiene so the quantity and relation guards are measured, not merely present.",
+    "negation_cases": 10
+  },
+  "cases": [
+    {
+      "id": "G01",
+      "text": "Getting a flu vaccine gives you the flu.",
+      "expected": "refuted",
+      "category": "Vaccine"
+    },
+    {
+      "id": "G02",
+      "text": "Flu vaccination is unsafe for pregnant women.",
+      "expected": "refuted",
+      "category": "Vaccine"
+    },
+    {
+      "id": "G03",
+      "text": "One flu shot gives lifelong protection.",
+      "expected": "refuted",
+      "category": "Vaccine"
+    },
+    {
+      "id": "G04",
+      "text": "Antibiotics can cure a common cold and flu.",
+      "expected": "refuted",
+      "category": "Antibiotics"
+    },
+    {
+      "id": "G05",
+      "text": "Taking antibiotics can cure COVID-19.",
+      "expected": "refuted",
+      "category": "Antibiotics"
+    },
+    {
+      "id": "G06",
+      "text": "The body becomes resistant to antibiotics.",
+      "expected": "refuted",
+      "category": "Antibiotics"
+    },
+    {
+      "id": "G07",
+      "text": "Frequent hand washing reduces viral transmission.",
+      "expected": "supported",
+      "category": "Protection"
+    },
+    {
+      "id": "G08",
+      "text": "Wearing gloves is more reliable than washing hands.",
+      "expected": "refuted",
+      "category": "Protection"
+    },
+    {
+      "id": "G09",
+      "text": "Wearing a mask for a long time causes carbon-dioxide poisoning.",
+      "expected": "refuted",
+      "category": "Protection"
+    },
+    {
+      "id": "G10",
+      "text": "Swimming can give you COVID-19.",
+      "expected": "refuted",
+      "category": "COVID-19"
+    },
+    {
+      "id": "G11",
+      "text": "Vitamin supplements can cure COVID-19.",
+      "expected": "refuted",
+      "category": "COVID-19"
+    },
+    {
+      "id": "G12",
+      "text": "5G signals spread the coronavirus.",
+      "expected": "refuted",
+      "category": "COVID-19"
+    },
+    {
+      "id": "G13",
+      "text": "Vaccines overwhelm an infant's immune system.",
+      "expected": "refuted",
+      "category": "Vaccine"
+    },
+    {
+      "id": "G14",
+      "text": "Delaying vaccination is safer.",
+      "expected": "refuted",
+      "category": "Vaccine"
+    },
+    {
+      "id": "G15",
+      "text": "The Earth is a sphere.",
+      "expected": "supported",
+      "category": "Science"
+    },
+    {
+      "id": "G16",
+      "text": "The Earth is a perfect sphere.",
+      "expected": "refuted",
+      "category": "Science"
+    },
+    {
+      "id": "G17",
+      "text": "Humans use only ten percent of their brains.",
+      "expected": "refuted",
+      "category": "Science"
+    },
+    {
+      "id": "G18",
+      "text": "Microwave cooking makes food radioactive.",
+      "expected": "refuted",
+      "category": "Daily life"
+    },
+    {
+      "id": "G19",
+      "text": "Microwaved food is less nutritious than other cooking methods.",
+      "expected": "refuted",
+      "category": "Daily life"
+    },
+    {
+      "id": "G20",
+      "text": "Microwave ovens heat food from the inside out.",
+      "expected": "refuted",
+      "category": "Daily life"
+    },
+    {
+      "id": "G21",
+      "text": "Food left on the table for three hours is still fine.",
+      "expected": "refuted",
+      "category": "Daily life"
+    },
+    {
+      "id": "G22",
+      "text": "You can tell whether meat is cooked by its colour.",
+      "expected": "refuted",
+      "category": "Daily life"
+    },
+    {
+      "id": "G23",
+      "text": "A certain company's stock will rise tomorrow.",
+      "expected": "undetermined",
+      "category": "Out of scope"
+    },
+    {
+      "id": "G24",
+      "text": "Drinking water can make you ten centimetres taller in a week.",
+      "expected": "undetermined",
+      "category": "Out of scope"
+    },
+    {
+      "id": "G25",
+      "text": "Eating a certain fruit can completely cure cancer.",
+      "expected": "undetermined",
+      "category": "Out of scope"
+    },
+    {
+      "id": "G26",
+      "text": "Childhood vaccines cause autism.",
+      "expected": "undetermined",
+      "category": "Source discrepancy"
+    },
+    {
+      "id": "G27",
+      "text": "Eating carrots gives you owl-like night vision.",
+      "expected": "refuted",
+      "category": "Vision"
+    },
+    {
+      "id": "G28",
+      "text": "Eating carrots is good for eye health.",
+      "expected": "supported",
+      "category": "Vision"
+    },
+    {
+      "id": "G29",
+      "text": "MSG is harmful to health.",
+      "expected": "refuted",
+      "category": "Food"
+    },
+    {
+      "id": "G30",
+      "text": "Eating sugar makes cancer worse.",
+      "expected": "refuted",
+      "category": "Cancer"
+    },
+    {
+      "id": "G31",
+      "text": "Cancer is contagious between people.",
+      "expected": "refuted",
+      "category": "Cancer"
+    },
+    {
+      "id": "G32",
+      "text": "Mobile-phone radiation causes cancer.",
+      "expected": "refuted",
+      "category": "Cancer"
+    },
+    {
+      "id": "G33",
+      "text": "Power lines cause cancer.",
+      "expected": "refuted",
+      "category": "Cancer"
+    },
+    {
+      "id": "G34",
+      "text": "A positive attitude determines whether you get cancer.",
+      "expected": "refuted",
+      "category": "Cancer"
+    },
+    {
+      "id": "G35",
+      "text": "An alkaline diet can cure cancer.",
+      "expected": "refuted",
+      "category": "Cancer"
+    },
+    {
+      "id": "G36",
+      "text": "Touching a shared hand-sanitizer bottle gives you COVID-19.",
+      "expected": "refuted",
+      "category": "COVID-19"
+    },
+    {
+      "id": "G37",
+      "text": "Normal use of alcohol hand sanitizer causes alcohol poisoning.",
+      "expected": "refuted",
+      "category": "COVID-19"
+    },
+    {
+      "id": "G38",
+      "text": "Mars is blue.",
+      "expected": "undetermined",
+      "category": "Out of scope"
+    },
+    {
+      "id": "G39",
+      "text": "The flu vaccine needs to be taken every year.",
+      "expected": "supported",
+      "category": "Vaccine"
+    },
+    {
+      "id": "G40",
+      "text": "A common cold can resolve on its own.",
+      "expected": "supported",
+      "category": "Cold"
+    },
+    {
+      "id": "G41",
+      "text": "Antibiotics are effective against bacterial infections.",
+      "expected": "supported",
+      "category": "Antibiotics"
+    },
+    {
+      "id": "G42",
+      "text": "Frequent hand washing reduces viral transmission.",
+      "expected": "supported",
+      "category": "Hygiene"
+    },
+    {
+      "id": "G43",
+      "text": "Microwaves are non-ionizing radiation.",
+      "expected": "supported",
+      "category": "Microwave"
+    },
+    {
+      "id": "G44",
+      "text": "The brain remains active while resting.",
+      "expected": "supported",
+      "category": "Brain"
+    },
+    {
+      "id": "G45",
+      "text": "High-altitude balloon photos show the Earth's curvature.",
+      "expected": "supported",
+      "category": "Earth"
+    },
+    {
+      "id": "G46",
+      "text": "A certain water purifier can cure diabetes.",
+      "expected": "undetermined",
+      "category": "Out of scope"
+    },
+    {
+      "id": "G47",
+      "text": "Mobile phones cause every known disease.",
+      "expected": "undetermined",
+      "category": "Out of scope"
+    },
+    {
+      "id": "G48",
+      "text": "The Moon is made of green cheese.",
+      "expected": "undetermined",
+      "category": "Out of scope"
+    },
+    {
+      "id": "G49",
+      "text": "This medicine cures the common cold in one day.",
+      "expected": "undetermined",
+      "category": "Out of scope"
+    },
+    {
+      "id": "G50",
+      "text": "Aliens built the pyramids.",
+      "expected": "undetermined",
+      "category": "Out of scope"
+    },
+    {
+      "id": "N01",
+      "text": "The Earth is not round.",
+      "expected": "refuted",
+      "category": "Negation"
+    },
+    {
+      "id": "N02",
+      "text": "The Earth is flat.",
+      "expected": "refuted",
+      "category": "Negation"
+    },
+    {
+      "id": "N03",
+      "text": "The Earth is not flat.",
+      "expected": "supported",
+      "category": "Negation"
+    },
+    {
+      "id": "N04",
+      "text": "Getting a flu vaccine will not give you the flu.",
+      "expected": "supported",
+      "category": "Negation"
+    },
+    {
+      "id": "N05",
+      "text": "Antibiotics cannot treat a common cold.",
+      "expected": "supported",
+      "category": "Negation"
+    },
+    {
+      "id": "N06",
+      "text": "Microwave ovens do not make food radioactive.",
+      "expected": "supported",
+      "category": "Negation"
+    },
+    {
+      "id": "N07",
+      "text": "Humans do not use only ten percent of their brains.",
+      "expected": "supported",
+      "category": "Negation"
+    },
+    {
+      "id": "N08",
+      "text": "The Earth is not not round.",
+      "expected": "undetermined",
+      "category": "Negation"
+    },
+    {
+      "id": "N09",
+      "text": "Eating carrots does not support eye health.",
+      "expected": "refuted",
+      "category": "Negation"
+    },
+    {
+      "id": "N10",
+      "text": "MSG is not harmful to health.",
+      "expected": "supported",
+      "category": "Negation"
+    },
+    {
+      "id": "G61",
+      "text": "Folic acid 400 mcg every day helps prevent neural tube defects at birth.",
+      "expected": "supported",
+      "category": "Dose",
+      "note": "E087 states exactly 400 mcg; the dose guard must pass it through."
+    },
+    {
+      "id": "G62",
+      "text": "Folic acid 40 mcg every day helps prevent neural tube defects at birth.",
+      "expected": "undetermined",
+      "category": "Dose",
+      "note": "A card about 400 mcg cannot settle 40 mcg; refusal is the honest answer."
+    },
+    {
+      "id": "G63",
+      "text": "Taking more than 4,000 IU of vitamin D per day is not recommended.",
+      "expected": "supported",
+      "category": "Dose",
+      "note": "E088 restates the NIH upper intake level; a thousands separator is not a clause break."
+    },
+    {
+      "id": "G64",
+      "text": "Vitamin D 10,000 IU a day is safe.",
+      "expected": "undetermined",
+      "category": "Dose",
+      "note": "E088 is about the upper limit, not about safety at 10,000 IU, and the dose differs."
+    },
+    {
+      "id": "G65",
+      "text": "Washing hands with soap prevents respiratory and diarrheal infections.",
+      "expected": "supported",
+      "category": "Hygiene",
+      "note": "E089 covers both infection classes named in the claim."
+    },
+    {
+      "id": "G66",
+      "text": "Hand sanitizer with 60% alcohol works well.",
+      "expected": "supported",
+      "category": "Hygiene",
+      "note": "E090 requires at least 60%, so 60% is inside the card's scope."
+    },
+    {
+      "id": "G67",
+      "text": "Hand sanitizer with 40% alcohol works well.",
+      "expected": "undetermined",
+      "category": "Hygiene",
+      "note": "The nearest card is about poisoning, not efficacy, and the dose is out of scope."
+    },
+    {
+      "id": "G68",
+      "text": "Rubbing hands with alcohol gel prevents the spread of flu.",
+      "expected": "undetermined",
+      "category": "Hygiene",
+      "note": "A card about a flu shot causing flu says nothing about alcohol gel preventing it."
+    },
+    {
+      "id": "G69",
+      "text": "Antibiotics do not kill viruses.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E091",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G70",
+      "text": "Antibiotics never produce side effects.",
+      "expected": "refuted",
+      "category": "Health",
+      "expect_card": "E092",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G71",
+      "text": "Antibiotic side effects send few children to the emergency room.",
+      "expected": "refuted",
+      "category": "Health",
+      "expect_card": "E093",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G72",
+      "text": "Thirty minutes of moderate activity on five days a week meets the adult guideline.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E094",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G73",
+      "text": "Adults need muscle-strengthening exercise at least twice a week.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E095",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G74",
+      "text": "Seventy-five minutes of vigorous activity each week counts for adults.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E096",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G75",
+      "text": "Adults should sleep seven hours or more each night.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E097",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G76",
+      "text": "Teenagers need eight to ten hours of sleep a day.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E098",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G77",
+      "text": "Adults should keep sodium under 2,300 mg a day.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E099",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G78",
+      "text": "Eating too much salt raises blood pressure.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E100",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G79",
+      "text": "Most skin cancers come from too much ultraviolet light.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E101",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G80",
+      "text": "Sunscreen should be broad-spectrum with SPF 15 or higher.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E102",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G81",
+      "text": "Sunscreen is safe for babies under six months.",
+      "expected": "refuted",
+      "category": "Health",
+      "expect_card": "E103",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G82",
+      "text": "Fluoride in drinking water prevents tooth decay.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E104",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G83",
+      "text": "Water fluoridation cuts cavities by about a quarter.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E105",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G84",
+      "text": "Smoking can cause lung cancer.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E106",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G85",
+      "text": "Secondhand smoke can give nonsmokers lung cancer.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E107",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G86",
+      "text": "Stopping smoking lowers the risk of cancer.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E108",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G87",
+      "text": "Smoking only harms the lungs.",
+      "expected": "refuted",
+      "category": "Health",
+      "expect_card": "E109",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G88",
+      "text": "Two MMR doses are about 97% effective against measles.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E110",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G89",
+      "text": "Measles is only mildly contagious.",
+      "expected": "refuted",
+      "category": "Health",
+      "expect_card": "E112",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G90",
+      "text": "Aspartame causes cancer in humans.",
+      "expected": "refuted",
+      "category": "Health",
+      "expect_card": "E113",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G91",
+      "text": "Mobile phones cause brain tumours.",
+      "expected": "refuted",
+      "category": "Health",
+      "expect_card": "E114",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G92",
+      "text": "Antibiotics cannot cause serious infections.",
+      "expected": "refuted",
+      "category": "Health",
+      "expect_card": "E115",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    },
+    {
+      "id": "G93",
+      "text": "Adults need at least 150 minutes of moderate exercise a week.",
+      "expected": "supported",
+      "category": "Health",
+      "expect_card": "E094",
+      "note": "held-out case for a v9 card; wording differs from the card."
+    }
+  ],
+  "paraphrase_pairs": [
+    {
+      "id": "P01",
+      "a": "Getting a flu vaccine gives you the flu.",
+      "b": "Getting a flu vaccine infects you with the flu."
+    },
+    {
+      "id": "P02",
+      "a": "Antibiotics can treat a common cold and flu.",
+      "b": "Taking antibiotics can cure a cold and flu."
+    },
+    {
+      "id": "P03",
+      "a": "The Earth is round.",
+      "b": "The Earth is spherical."
+    },
+    {
+      "id": "P04",
+      "a": "Humans use only ten percent of their brains.",
+      "b": "People use only 10% of their brains."
+    },
+    {
+      "id": "P05",
+      "a": "Microwave ovens make food radioactive.",
+      "b": "Microwaved food has radiation."
+    },
+    {
+      "id": "P06",
+      "a": "5G phone signals spread the coronavirus.",
+      "b": "5G signals spread the coronavirus."
+    },
+    {
+      "id": "P07",
+      "a": "Vaccines cause autism.",
+      "b": "Childhood vaccines cause autism."
+    },
+    {
+      "id": "P08",
+      "a": "Vaccines overwhelm an infant's immune system.",
+      "b": "Infant vaccines overwhelm the immune system."
+    },
+    {
+      "id": "P09",
+      "a": "Eating carrots gives you extraordinary night vision.",
+      "b": "Eating carrots gives you superhuman night vision."
+    },
+    {
+      "id": "P10",
+      "a": "MSG is harmful to health.",
+      "b": "Monosodium glutamate is harmful to health."
+    },
+    {
+      "id": "P11",
+      "a": "Eating sugar makes cancer worse.",
+      "b": "Eating sugar causes cancer to worsen."
+    },
+    {
+      "id": "P12",
+      "a": "Mobile-phone radiation causes cancer.",
+      "b": "Radiation produced by mobile phones causes cancer."
+    }
+  ]
+}

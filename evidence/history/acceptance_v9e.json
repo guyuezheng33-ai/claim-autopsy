@@ -1,0 +1,255 @@
+{
+  "run_tag": "v9e",
+  "llm_mode": "Offline deterministic core (degraded)",
+  "passed": 33,
+  "total": 34,
+  "all_pass": false,
+  "results": {
+    "A1_no_evidence_refusal": {
+      "pass": true,
+      "detail": "2 claims with no evidence, 0 verdicts leaked"
+    },
+    "A2_citations_required": {
+      "pass": true,
+      "detail": "15 verdicts checked, 0 with missing citation"
+    },
+    "A3_decomposition": {
+      "pass": true,
+      "detail": "comma input -> 3 atoms; enumeration input -> 3 atoms"
+    },
+    "A4_audit_chain": {
+      "pass": true,
+      "detail": "steps=['decompose', 'negation', 'retrieve', 'semantic', 'adjudicate', 'negation', 'retrieve', 'semantic', 'adjudicate']; per-claim traces complete=True"
+    },
+    "A5_instant_play": {
+      "pass": true,
+      "detail": "index.html present and self-contained=True"
+    },
+    "A6_failure_reproducible": {
+      "pass": true,
+      "detail": "DEMO-3 all refused=True"
+    },
+    "A7_offline_deterministic": {
+      "pass": true,
+      "detail": "two offline runs field-for-field identical=True"
+    },
+    "A8_no_secrets": {
+      "pass": true,
+      "detail": "real key patterns found=0",
+      "hits": []
+    },
+    "A9_honesty_statement": {
+      "pass": true,
+      "detail": "README states limitations and non-authoritative scope=True"
+    },
+    "A10_corpus_coverage": {
+      "pass": true,
+      "detail": "100 cards (>=40), 41 sources (>=8), 0 off-whitelist URLs, 0 without status"
+    },
+    "A11_golden_accuracy": {
+      "pass": true,
+      "detail": "accuracy 100.0% (93/93); distribution={'refuted': 41, 'supported': 37, 'undetermined': 15}; false refusals=0; illegal citations=0",
+      "accuracy": 1.0,
+      "distribution": {
+        "refuted": 41,
+        "supported": 37,
+        "undetermined": 15
+      }
+    },
+    "A12_paraphrase_robust": {
+      "pass": true,
+      "detail": "consistency 100.0% (12/12); verdicts dropped to refusal=0"
+    },
+    "A13_ai_anti_overreach": {
+      "pass": true,
+      "detail": "zero evidence + AI says supported -> undetermined; evidence + AI says refuted -> supported"
+    },
+    "A14_frontend_backend_sync": {
+      "pass": true,
+      "detail": "93 golden + 24 paraphrase pairs compared; 0 mismatches",
+      "mismatches": []
+    },
+    "A15_citation_relevance": {
+      "pass": true,
+      "detail": "3 guard inputs checked; 0 unrelated sources entered citations"
+    },
+    "A16_polarity_correctness": {
+      "pass": true,
+      "detail": "6 polarity fixtures checked; 0 wrong",
+      "bad": []
+    },
+    "A17_hygiene_doc_code_sync": {
+      "pass": true,
+      "detail": "keys=0, CJK files=0, dangling doc paths=0",
+      "cjk": [],
+      "dangling": []
+    },
+    "A18_ai_semantic_recall": {
+      "pass": true,
+      "detail": "4 recall guards checked (real id / stored stance / citation / relevance); 0 violations",
+      "bad": []
+    },
+    "A19_recorded_replay_integrity": {
+      "pass": true,
+      "detail": "14 recorded cases cross-checked against the live benchmark; 0 violations; tampered counterexample rejected=True",
+      "bad": []
+    },
+    "A20_coverage_transparency": {
+      "pass": true,
+      "detail": "browser lists 100/100 cards, 14 replay chips, 3 refusal renders; 0 violations; tampered counterexample rejected=True",
+      "bad": []
+    },
+    "A21_unreadable_input_gate": {
+      "pass": true,
+      "detail": "3 unreadable inputs refused with a full notice (kind/title/body/action), 0 verdicts leaked; front-end renders the same notice; English control still decides; 0 violations; tampered counterexample rejected=True",
+      "bad": []
+    },
+    "A22_adversarial_input_discipline": {
+      "pass": true,
+      "detail": "3 injection payloads kept their verdict; 7700 chars refused as too_long; prompt data-quoted; 0 violations",
+      "bad": []
+    },
+    "A23_offline_isolation": {
+      "pass": true,
+      "detail": "3 claims analysed with sockets blocked in a child process; verdicts identical=True; a forced model call returned llm_unavailable; 0 violations",
+      "bad": []
+    },
+    "A24_precision_traps": {
+      "pass": true,
+      "detail": "7 traps (contradiction / kept object list / reversed causation / adjacent product / adjacent outcome / quantifier / anti-refuse control); front-end parity on all 7; 0 violations",
+      "bad": []
+    },
+    "A25_population_scope": {
+      "pass": true,
+      "detail": "5 scope probes (5 narrowed claims refused, 3 matched-population controls decided); front-end parity on all 8; 0 violations",
+      "bad": []
+    },
+    "A26_negation_property": {
+      "pass": true,
+      "detail": "40 affirmative golden claims inverted and flipped; 11 double-negated claims refused; identity negator rejected; 0 violations",
+      "bad": []
+    },
+    "A27_citation_receipts": {
+      "pass": true,
+      "detail": "3 probes: every citation names shared vocabulary; rendered 'Matched on' in the page; front-end parity; 0 violations",
+      "bad": []
+    },
+    "A28_refusal_diagnosis": {
+      "pass": true,
+      "detail": "5 probes: closest card named with the guard that stopped it (4 with a near-miss, 1 with none); front-end parity; 0 violations",
+      "bad": []
+    },
+    "A29_dose_and_efficacy_scope": {
+      "pass": true,
+      "detail": "6 probes (2 dose mismatches and 1 relation mismatch refused, 3 controls decided); front-end parity; 0 violations",
+      "bad": []
+    },
+    "A30_cross_atom_consistency": {
+      "pass": true,
+      "detail": "5 submissions: 3 contradictions labelled with their basis, 2 controls left unlabelled; front-end parity; 0 violations",
+      "bad": []
+    },
+    "A31_stance_and_separator_parity": {
+      "pass": true,
+      "detail": "4 probes: a thousands separator stays in the number, an object word does not create a relation match, a prohibition is not a negation, and a control still decides; front-end parity; 0 violations",
+      "bad": []
+    },
+    "A32_guard_benchmark": {
+      "pass": true,
+      "detail": "36 held-out probes (disjoint from the golden set), 5 controls that still decide; every verdict, atom count, cited card and near-miss reason matches; front-end parity; 0 violations",
+      "bad": []
+    },
+    "A33_chain_reasoning": {
+      "pass": true,
+      "detail": "5 probes: a two-step chain is derived and labelled, an agreeing third atom is not called a conflict, a pair with no shared link produces no chain, and the three-atom conflict is flagged; front-end parity; 0 violations",
+      "bad": []
+    },
+    "A34_snapshot_verification": {
+      "pass": false,
+      "detail": "81/100 cards carry an archived paragraph: 81 verified, 17 unresolved, 1 page_changed, 1 source_changed; excerpts located at their offsets, hashes recomputed; citation, paragraph and badge parity; 81 violations",
+      "bad": [
+        "bad_offset:E001",
+        "bad_offset:E004",
+        "bad_offset:E007",
+        "bad_offset:E009",
+        "bad_offset:E010",
+        "bad_offset:E012",
+        "bad_offset:E013",
+        "bad_offset:E015",
+        "bad_offset:E017",
+        "bad_offset:E018",
+        "bad_offset:E019",
+        "bad_offset:E020",
+        "bad_offset:E021",
+        "bad_offset:E022",
+        "bad_offset:E023",
+        "bad_offset:E025",
+        "bad_offset:E026",
+        "bad_offset:E027",
+        "bad_offset:E028",
+        "bad_offset:E029",
+        "bad_offset:E030",
+        "bad_offset:E031",
+        "bad_offset:E032",
+        "bad_offset:E033",
+        "bad_offset:E034",
+        "bad_offset:E035",
+        "bad_offset:E038",
+        "bad_offset:E039",
+        "bad_offset:E041",
+        "bad_offset:E042",
+        "bad_offset:E043",
+        "bad_offset:E044",
+        "bad_offset:E045",
+        "bad_offset:E046",
+        "bad_offset:E047",
+        "bad_offset:E048",
+        "bad_offset:E051",
+        "bad_offset:E052",
+        "bad_offset:E060",
+        "bad_offset:E070",
+        "bad_offset:E071",
+        "bad_offset:E072",
+        "bad_offset:E073",
+        "bad_offset:E074",
+        "bad_offset:E075",
+        "bad_offset:E076",
+        "bad_offset:E077",
+        "bad_offset:E078",
+        "bad_offset:E080",
+        "bad_offset:E081",
+        "bad_offset:E082",
+        "bad_offset:E083",
+        "bad_offset:E084",
+        "bad_offset:E085",
+        "bad_offset:E086",
+        "bad_offset:E087",
+        "bad_offset:E088",
+        "bad_offset:E089",
+        "bad_offset:E090",
+        "bad_offset:E091",
+        "bad_offset:E092",
+        "bad_offset:E093",
+        "bad_offset:E094",
+        "bad_offset:E095",
+        "bad_offset:E096",
+        "bad_offset:E099",
+        "bad_offset:E100",
+        "bad_offset:E101",
+        "bad_offset:E102",
+        "bad_offset:E103",
+        "bad_offset:E104",
+        "bad_offset:E105",
+        "bad_offset:E106",
+        "bad_offset:E107",
+        "bad_offset:E108",
+        "bad_offset:E109",
+        "bad_offset:E110",
+        "bad_offset:E111",
+        "bad_offset:E113",
+        "bad_offset:E114",
+        "bad_offset:E115"
+      ]
+    }
+  }
+}

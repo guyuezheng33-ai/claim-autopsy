@@ -1,0 +1,592 @@
+{
+  "meta": {
+    "purpose": "Recorded dual-path evidence for the public static page: the offline core refuses low-overlap restatements, while AI same-proposition recall reaches a gated verdict with a real corpus card.",
+    "captured_at": "2026-11-20T00:09:35+08:00",
+    "producer": "tools/export_ai_replay.py",
+    "source": "Live API calls executed by the producer; no verdict or citation below is hand-written.",
+    "provider": "DeepSeek",
+    "requested_model": "deepseek-chat",
+    "offline_engine": "Local deterministic core",
+    "honesty": "Recorded, not live. A static page cannot call a model; these are real recorded results, and the live AI path requires running serve.py with a key.",
+    "stance_rule": "Every stance is read from the stored evidence card; the AI never supplies or alters a stance or a verdict.",
+    "case_count": 14,
+    "gain_case_count": 11,
+    "gated_case_count": 3,
+    "offline_refusal_rate": 1.0,
+    "ai_success_rate_on_gain_cases": 1.0,
+    "measured_delta": 0.9286,
+    "benchmark": "data/paraphrase_deep.json",
+    "measurement": "evidence/ai_lift.json"
+  },
+  "cases": [
+    {
+      "id": "DP01",
+      "text": "Consuming carrots lets people see clearly in the dark.",
+      "expected": "refuted",
+      "expect_card": "E070",
+      "kind": "gain",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "refuted",
+        "confidence": "medium",
+        "reason": "An authoritative source in this corpus refutes the claim.",
+        "missing": "",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E070",
+            "source_id": "NIH-NEI-CARROT",
+            "source_name": "US NIH National Eye Institute · How to Feast for Your Eyes",
+            "url": "https://irp.nih.gov/our-research/research-in-action/how-to-feast-for-your-eyes",
+            "snippet": "NIH National Eye Institute: no amount of carrots, liver or bilberries gives owl-like night vision; carrots supply vitamin A needed for eye health.",
+            "stance": "refutes",
+            "effective_stance": "refutes",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E070",
+        "recall_detail": "AI recalled 1 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=0.00 refutes=2.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP02",
+      "text": "The planet we live on has a spherical shape.",
+      "expected": "supported",
+      "expect_card": "E004",
+      "kind": "gain",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "supported",
+        "confidence": "high",
+        "reason": "An authoritative source in this corpus supports the claim.",
+        "missing": "",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E004",
+            "source_id": "NASA-EARTH",
+            "source_name": "NASA · What Is Earth",
+            "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-earth-grades-5-8/",
+            "snippet": "NASA: people have known Earth is round for more than two thousand years; the curved shadow in lunar eclipses, satellite measurements and space photographs all support this.",
+            "stance": "supports",
+            "effective_stance": "supports",
+            "polarity_flipped": false
+          },
+          {
+            "card_id": "E049",
+            "source_id": "NASA-EARTH",
+            "source_name": "NASA · What Is Earth",
+            "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-earth-grades-5-8/",
+            "snippet": "NASA: independent lines of evidence show Earth is roughly spherical, with slight polar flattening.",
+            "stance": "supports",
+            "effective_stance": "supports",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E004,E049",
+        "recall_detail": "AI recalled 2 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=4.00 refutes=0.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP03",
+      "text": "People activate only a tenth of their cerebral capacity.",
+      "expected": "refuted",
+      "expect_card": "E036",
+      "kind": "gain",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "refuted",
+        "confidence": "high",
+        "reason": "An authoritative source in this corpus refutes the claim.",
+        "missing": "",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E036",
+            "source_id": "KP-BRAIN",
+            "source_name": "China Science Communication · The 10% brain myth",
+            "url": "https://piyao.kepuchina.cn/h5/rumordetail?id=Ewgz",
+            "snippet": "NIH-supported and science-communication sources: brain imaging shows that most of the brain is active over the course of a day.",
+            "stance": "refutes",
+            "effective_stance": "refutes",
+            "polarity_flipped": false
+          },
+          {
+            "card_id": "E050",
+            "source_id": "KP-BRAIN",
+            "source_name": "China Science Communication · The 10% brain myth",
+            "url": "https://piyao.kepuchina.cn/h5/rumordetail?id=Ewgz",
+            "snippet": "Chinese science-communication sources: modern brain imaging contradicts the 10% claim.",
+            "stance": "refutes",
+            "effective_stance": "refutes",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E036,E050",
+        "recall_detail": "AI recalled 2 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=0.00 refutes=4.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP04",
+      "text": "Monosodium glutamate poses serious health risks.",
+      "expected": "refuted",
+      "expect_card": "E072",
+      "kind": "gain",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "refuted",
+        "confidence": "medium",
+        "reason": "An authoritative source in this corpus refutes the claim.",
+        "missing": "",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E072",
+            "source_id": "FDA-MSG",
+            "source_name": "US FDA · Questions and Answers on Monosodium glutamate (MSG)",
+            "url": "https://www.fda.gov/food/food-additives-petitions/questions-and-answers-monosodium-glutamate-msg/",
+            "snippet": "FDA: monosodium glutamate is 'generally recognized as safe'; controlled studies could not consistently trigger reactions in self-described sensitive people.",
+            "stance": "refutes",
+            "effective_stance": "refutes",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E072",
+        "recall_detail": "AI recalled 1 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=0.00 refutes=2.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP06",
+      "text": "Cancer can be caught from another person.",
+      "expected": "refuted",
+      "expect_card": "E074",
+      "kind": "gain",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "refuted",
+        "confidence": "medium",
+        "reason": "An authoritative source in this corpus refutes the claim.",
+        "missing": "",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E074",
+            "source_id": "NCI-MYTHS",
+            "source_name": "US National Cancer Institute · Common Cancer Myths and Misconceptions",
+            "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/myths",
+            "snippet": "US NCI: cancer is generally not contagious; aside from rare transplant transmission, cancer-causing viruses or bacteria can spread but the cancer itself cannot.",
+            "stance": "refutes",
+            "effective_stance": "refutes",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E074",
+        "recall_detail": "AI recalled 1 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=0.00 refutes=2.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP08",
+      "text": "Cellphone signals cause tumors.",
+      "expected": "refuted",
+      "expect_card": "E075",
+      "kind": "gain",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "refuted",
+        "confidence": "medium",
+        "reason": "An authoritative source in this corpus refutes the claim.",
+        "missing": "",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E075",
+            "source_id": "NCI-MYTHS",
+            "source_name": "US National Cancer Institute · Common Cancer Myths and Misconceptions",
+            "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/myths",
+            "snippet": "US NCI: the best studies to date show mobile phones do not cause cancer; they emit low-frequency energy that does not damage genes.",
+            "stance": "refutes",
+            "effective_stance": "refutes",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E075",
+        "recall_detail": "AI recalled 1 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=0.00 refutes=2.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP09",
+      "text": "The coronavirus is actually a type of bacteria.",
+      "expected": "refuted",
+      "expect_card": "E023",
+      "kind": "gain",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "refuted",
+        "confidence": "medium",
+        "reason": "An authoritative source in this corpus refutes the claim.",
+        "missing": "",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E023",
+            "source_id": "WHO-MYTH",
+            "source_name": "WHO · COVID-19 mythbusters",
+            "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+            "snippet": "WHO: COVID-19 is caused by the SARS-CoV-2 virus, not by bacteria.",
+            "stance": "refutes",
+            "effective_stance": "refutes",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E023",
+        "recall_detail": "AI recalled 1 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=0.00 refutes=2.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP12",
+      "text": "Following an alkaline regimen cures malignant tumors.",
+      "expected": "refuted",
+      "expect_card": "E079",
+      "kind": "gain",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "refuted",
+        "confidence": "medium",
+        "reason": "An authoritative source in this corpus refutes the claim.",
+        "missing": "",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E079",
+            "source_id": "NCI-ALK",
+            "source_name": "US National Cancer Institute · Alkaline diet entry",
+            "url": "https://cancer.gov/publications/dictionaries/cancer-terms/def/alkaline-diet",
+            "snippet": "US NCI: there is no proof that an alkaline diet can slow, cure or prevent the return of cancer.",
+            "stance": "refutes",
+            "effective_stance": "refutes",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E079",
+        "recall_detail": "AI recalled 1 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=0.00 refutes=2.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP15",
+      "text": "Regular hand hygiene cuts the spread of viral illness.",
+      "expected": "supported",
+      "expect_card": "E024",
+      "kind": "gain",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "supported",
+        "confidence": "medium",
+        "reason": "An authoritative source in this corpus supports the claim.",
+        "missing": "",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E024",
+            "source_id": "WHO-PUB",
+            "source_name": "WHO · Public advice on COVID-19",
+            "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public",
+            "snippet": "WHO: cleaning hands is one of the key measures for preventing infection.",
+            "stance": "supports",
+            "effective_stance": "supports",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E024",
+        "recall_detail": "AI recalled 1 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=2.00 refutes=0.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP19",
+      "text": "Frozen groceries should be defrosted on the kitchen counter.",
+      "expected": "refuted",
+      "expect_card": "E040",
+      "kind": "gain",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "refuted",
+        "confidence": "medium",
+        "reason": "An authoritative source in this corpus refutes the claim.",
+        "missing": "",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E040",
+            "source_id": "USDA-FOOD",
+            "source_name": "US USDA · The two-hour food safety rule",
+            "url": "https://www.usda.gov/media/press-releases/2022/06/28/july-fourth-fireworks-not-foodborne-illness",
+            "snippet": "USDA: thaw in the refrigerator, in cold water or in the microwave, never on the counter.",
+            "stance": "refutes",
+            "effective_stance": "refutes",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E040",
+        "recall_detail": "AI recalled 1 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=0.00 refutes=2.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP20",
+      "text": "Seasonal immunizations overload a baby's immune defences.",
+      "expected": "refuted",
+      "expect_card": "E041",
+      "kind": "gain",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "refuted",
+        "confidence": "medium",
+        "reason": "An authoritative source in this corpus refutes the claim.",
+        "missing": "",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E041",
+            "source_id": "CDC-VAC",
+            "source_name": "US CDC · Childhood vaccines Q&A",
+            "url": "https://www.cdc.gov/vaccines-children/about/",
+            "snippet": "CDC: vaccines expose the immune system to small amounts of antigen, far less than infants encounter every day.",
+            "stance": "refutes",
+            "effective_stance": "refutes",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E041",
+        "recall_detail": "AI recalled 1 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=0.00 refutes=2.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP16",
+      "text": "Getting enough rest keeps the brain active.",
+      "expected": "undetermined",
+      "expect_card": "E037",
+      "kind": "gated",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "undetermined",
+        "confidence": "low",
+        "reason": "Retrieved evidence is below the decision threshold; no verdict is justified.",
+        "missing": "A more direct and authoritative source",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E037",
+            "source_id": "CDSTM-BRAIN",
+            "source_name": "China Digital Science and Technology Museum · Does the brain use only 10%?",
+            "url": "https://www.cdstm.cn/gallery/media/mkjx/kxhb/art/2017/art_8bbe56c7788c4a569086ef48f1b169b8.html",
+            "snippet": "NIH: even at rest the brain consumes energy and maintains active networks.",
+            "stance": "supports",
+            "effective_stance": "supports",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E037",
+        "recall_detail": "AI recalled 1 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=0.60 refutes=0.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP17",
+      "text": "A course of antibacterial tablets fights bacterial illness.",
+      "expected": "undetermined",
+      "expect_card": "E016",
+      "kind": "gated",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "undetermined",
+        "confidence": "low",
+        "reason": "Retrieved evidence is below the decision threshold; no verdict is justified.",
+        "missing": "A more direct and authoritative source",
+        "explain": "",
+        "citations": [
+          {
+            "card_id": "E016",
+            "source_id": "CDC-ABX",
+            "source_name": "US CDC · Be Antibiotics Aware",
+            "url": "https://www.cdc.gov/antibiotic-use/index.html",
+            "snippet": "CDC: antibiotics are used to treat infections caused by bacteria, not viruses.",
+            "stance": "supports",
+            "effective_stance": "supports",
+            "polarity_flipped": false
+          }
+        ],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "E016",
+        "recall_detail": "AI recalled 1 real card(s) asserting the same proposition; stance read from each stored card, verdict still owned by the deterministic gate.",
+        "retrieve_output": [],
+        "adjudicate_detail": "supports=0.50 refutes=0.00 threshold=1.20; ratio=0.00; groups=0; flipped=False"
+      }
+    },
+    {
+      "id": "DP18",
+      "text": "Ingesting ordinary table salt is bad for your wellbeing.",
+      "expected": "undetermined",
+      "expect_card": null,
+      "kind": "gated",
+      "offline": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": []
+      },
+      "ai": {
+        "verdict": "undetermined",
+        "confidence": "none",
+        "reason": "No matching evidence card in this corpus; the claim cannot be decided.",
+        "missing": "A directly relevant authoritative source",
+        "explain": "",
+        "citations": [],
+        "mode": "Cloud LLM (deepseek-chat)",
+        "origin": "semantic_recall",
+        "recall_output": "no_match",
+        "recall_detail": "AI found no card asserting the same proposition; the tool refuses.",
+        "retrieve_output": [],
+        "adjudicate_detail": "Zero recall forces refusal; an AI suggestion cannot bypass it."
+      }
+    }
+  ]
+}

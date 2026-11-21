@@ -1,0 +1,85 @@
+{
+  "cases": [
+    {
+      "id": "batch-01-duplicate",
+      "claim": "Getting a flu vaccine gives you the flu.",
+      "sources": [
+        {"name": "CDC", "text": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus."},
+        {"name": "CDC copy", "text": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus."},
+        {"name": "Hand hygiene", "text": "Hand washing with soap reduces diarrhoeal disease in children."}
+      ],
+      "expected": {
+        "sources": 2,
+        "verdicts": ["refuted", "not_in_source"],
+        "duplicates": 1,
+        "cross_source_conflict": false
+      }
+    },
+    {
+      "id": "batch-02-cross-conflict",
+      "claim": "Getting a flu vaccine gives you the flu.",
+      "sources": [
+        {"name": "CDC", "text": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus."},
+        {"name": "Claim restated", "text": "Getting a flu vaccine gives you the flu."},
+        {"name": "Hand hygiene", "text": "Hand washing with soap reduces diarrhoeal disease in children."}
+      ],
+      "expected": {
+        "sources": 3,
+        "verdicts": ["refuted", "supported", "not_in_source"],
+        "duplicates": 0,
+        "cross_source_conflict": true
+      }
+    },
+    {
+      "id": "batch-03-all-not-in-source",
+      "claim": "Coffee stunts growth in children.",
+      "sources": [
+        {"name": "Vitamin D", "text": "Vitamin D is important for bone health in adults."},
+        {"name": "Fluoride", "text": "Drinking fluoridated water keeps teeth strong."},
+        {"name": "Sleep", "text": "Children need more sleep than adults."}
+      ],
+      "expected": {
+        "sources": 3,
+        "verdicts": ["not_in_source", "not_in_source", "not_in_source"],
+        "duplicates": 0,
+        "cross_source_conflict": false
+      }
+    },
+    {
+      "id": "batch-04-eight-sources",
+      "claim": "Getting a flu vaccine gives you the flu.",
+      "sources": [
+        {"name": "S1", "text": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus."},
+        {"name": "S2", "text": "Hand washing with soap reduces diarrhoeal disease in children."},
+        {"name": "S3", "text": "Vitamin D is important for bone health in adults."},
+        {"name": "S4", "text": "Drinking fluoridated water keeps teeth strong."},
+        {"name": "S5", "text": "Children need more sleep than adults."},
+        {"name": "S6", "text": "Regular exercise lowers blood pressure."},
+        {"name": "S7", "text": "Smoking increases the risk of lung cancer."},
+        {"name": "S8", "text": "Vaccines train the immune system to recognise pathogens."}
+      ],
+      "expected": {
+        "sources": 8,
+        "verdicts": ["refuted", "not_in_source", "not_in_source", "not_in_source", "not_in_source", "not_in_source", "not_in_source", "not_in_source"],
+        "duplicates": 0,
+        "cross_source_conflict": false
+      }
+    },
+    {
+      "id": "batch-05-too-many",
+      "claim": "Getting a flu vaccine gives you the flu.",
+      "sources": [
+        {"name": "S1", "text": "A"}, {"name": "S2", "text": "B"}, {"name": "S3", "text": "C"},
+        {"name": "S4", "text": "D"}, {"name": "S5", "text": "E"}, {"name": "S6", "text": "F"},
+        {"name": "S7", "text": "G"}, {"name": "S8", "text": "H"}, {"name": "S9", "text": "I"}
+      ],
+      "expected_error": "too_many_sources"
+    },
+    {
+      "id": "batch-06-empty",
+      "claim": "",
+      "sources": [],
+      "expected_error": "empty_claim"
+    }
+  ]
+}

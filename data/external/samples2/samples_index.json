@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-11-20T15:37:33Z",
+  "dataset": "holdout2 (never evaluated)",
+  "datasets": {
+    "averitec": {
+      "file": "data/external/samples2/averitec.jsonl",
+      "mapping": {
+        "Conflicting": "__excluded__",
+        "Not Enough Evidence": "undetermined",
+        "Refuted": "refuted",
+        "Supported": "supported"
+      },
+      "rows": 80
+    },
+    "fever": {
+      "file": "data/external/samples2/fever.jsonl",
+      "mapping": {
+        "NOT ENOUGH INFO": "undetermined",
+        "REFUTES": "refuted",
+        "SUPPORTS": "supported"
+      },
+      "rows": 120
+    },
+    "healthver": {
+      "file": "data/external/samples2/healthver.jsonl",
+      "mapping": {
+        "Neutral": "undetermined",
+        "Refutes": "refuted",
+        "Supports": "supported"
+      },
+      "rows": 74
+    },
+    "pubhealth": {
+      "file": "data/external/samples2/pubhealth.jsonl",
+      "mapping": {
+        "false": "refuted",
+        "mixture": "__excluded__",
+        "true": "supported",
+        "unproven": "undetermined"
+      },
+      "rows": 80
+    },
+    "vitaminc": {
+      "file": "data/external/samples2/vitaminc.jsonl",
+      "mapping": {
+        "NOT ENOUGH INFO": "undetermined",
+        "REFUTES": "refuted",
+        "SUPPORTS": "supported"
+      },
+      "rows": 80
+    }
+  },
+  "excluded_by_text": "samples 1, data/claims.json, golden set, guard set",
+  "raw_dir": "D:\\桌面\\数据Agent工程化\\data\\claim\\bench\\raw",
+  "seed_tag": "20261121"
+}

@@ -1,0 +1,480 @@
+{
+  "meta": {
+    "dataset": "guard benchmark v1 (English, 39 probes)",
+    "design": "One row per guard family, written from the source text before the kernel is run. The golden set measures deciding; this set measures refusing for the right reason, with controls so a guard that refuses everything cannot pass.",
+    "count": 39
+  },
+  "probes": [
+    {
+      "id": "H01",
+      "guard": "dose",
+      "text": "Folic acid 200 mcg daily prevents neural tube defects.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": [
+        "E087",
+        "different_quantity"
+      ],
+      "note": "E087 states 400 mcg; 200 mcg is a different dose, so its stance is out of scope."
+    },
+    {
+      "id": "H02",
+      "guard": "dose",
+      "text": "Folic acid 800 mcg daily prevents neural tube defects.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": [
+        "E087",
+        "different_quantity"
+      ],
+      "note": "Same card, a different amount. A higher dose is not entailed by a card about 400 mcg."
+    },
+    {
+      "id": "H03",
+      "guard": "dose",
+      "text": "Vitamin D above 40,000 IU per day is not recommended.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": [
+        "E088",
+        "different_quantity"
+      ],
+      "note": "E088 gives the magnitude as 4,000 IU; 40,000 IU is ten times that, not a rounding."
+    },
+    {
+      "id": "H04",
+      "guard": "dose",
+      "text": "Folic acid 400 mcg daily prevents neural tube defects in men.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": null,
+      "note": "The card is population-unmarked and the claim narrows to men, so the scope guard refuses."
+    },
+    {
+      "id": "H05",
+      "guard": "dose",
+      "text": "Folic acid 400 mcg daily prevents neural tube defects.",
+      "atoms": 1,
+      "verdict": "supported",
+      "cards": [
+        "E087"
+      ],
+      "near": null,
+      "note": "Control: same dose, same subject, and the card states it."
+    },
+    {
+      "id": "H06",
+      "guard": "percent",
+      "text": "A hand sanitizer that contains 40% alcohol cleans hands well.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": [
+        "E081",
+        "different_predicate"
+      ],
+      "note": "The poisoning card is about a harm, not about whether the product cleans; E090's efficacy threshold is not reachable from a 40% claim, so nothing decides it."
+    },
+    {
+      "id": "H07",
+      "guard": "percent",
+      "text": "A hand sanitizer that contains 60% alcohol cleans hands well.",
+      "atoms": 1,
+      "verdict": "supported",
+      "cards": [
+        "E090"
+      ],
+      "near": null,
+      "note": "Control: 60% is the card's own threshold."
+    },
+    {
+      "id": "H08",
+      "guard": "relation",
+      "text": "Coffee prevents cancer.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": [
+        "E086",
+        "different_relation"
+      ],
+      "note": "A card that coffee causes cancer cannot decide the opposite relation."
+    },
+    {
+      "id": "H09",
+      "guard": "relation",
+      "text": "Coffee causes cancer.",
+      "atoms": 1,
+      "verdict": "refuted",
+      "cards": [
+        "E086"
+      ],
+      "near": null,
+      "note": "Control: the relation matches the card, and the source refutes it."
+    },
+    {
+      "id": "H10",
+      "guard": "relation",
+      "text": "Vitamin C cures the flu.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": null,
+      "note": "Curing is not preventing: the vitamin C cards are about colds, and none states a cure."
+    },
+    {
+      "id": "H11",
+      "guard": "relation",
+      "text": "Alcohol gel rubbed into the hands stops influenza from spreading.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": [
+        "E001",
+        "different_relation"
+      ],
+      "note": "An object word (spread) must not make a vaccine-side-effect card decide a prevention claim."
+    },
+    {
+      "id": "H12",
+      "guard": "population",
+      "text": "Coffee causes cancer in children.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": [
+        "E086",
+        "different_population"
+      ],
+      "note": "The card is about adults; a paediatric version is a different proposition."
+    },
+    {
+      "id": "H13",
+      "guard": "population",
+      "text": "MSG causes headaches in pregnant women.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": [
+        "E072",
+        "different_population"
+      ],
+      "note": "A pregnancy card cannot decide a general MSG claim and vice versa."
+    },
+    {
+      "id": "H14",
+      "guard": "population",
+      "text": "Vaccination against flu is unsafe for pregnant women.",
+      "atoms": 1,
+      "verdict": "refuted",
+      "cards": [
+        "E009"
+      ],
+      "near": null,
+      "note": "Control: the eligibility card is exactly about this population."
+    },
+    {
+      "id": "H15",
+      "guard": "population",
+      "text": "A baby's immune system is overwhelmed by vaccines.",
+      "atoms": 1,
+      "verdict": "refuted",
+      "cards": [
+        "E041"
+      ],
+      "near": null,
+      "note": "Control: the card is about infants and refutes it."
+    },
+    {
+      "id": "H16",
+      "guard": "attribute",
+      "text": "Flu vaccines are safe.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": [
+        "E001",
+        "different_predicate"
+      ],
+      "note": "A refuted side-effect claim is not proof of general safety; the corpus has no safety card."
+    },
+    {
+      "id": "H17",
+      "guard": "attribute",
+      "text": "Alcohol hand sanitizer is safe for children.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": null,
+      "note": "No card states paediatric safety, so the broad attribute cannot be decided."
+    },
+    {
+      "id": "H18",
+      "guard": "prohibition",
+      "text": "Taking more than 4,000 IU of vitamin D each day is not advised.",
+      "atoms": 1,
+      "verdict": "supported",
+      "cards": [
+        "E088"
+      ],
+      "near": null,
+      "note": "A prohibition is not a logical negation: the upper-limit card supports it."
+    },
+    {
+      "id": "H19",
+      "guard": "prohibition",
+      "text": "Taking more than 4,000 IU of vitamin D per day is recommended.",
+      "atoms": 1,
+      "verdict": "refuted",
+      "cards": [
+        "E088"
+      ],
+      "near": null,
+      "note": "Inverted control: the same card refutes the positive form."
+    },
+    {
+      "id": "H20",
+      "guard": "negation",
+      "text": "Our planet is not round.",
+      "atoms": 1,
+      "verdict": "refuted",
+      "cards": [
+        "E004"
+      ],
+      "near": null,
+      "note": "Polarity flips the supporting card into a refutation."
+    },
+    {
+      "id": "H21",
+      "guard": "negation",
+      "text": "It is not true that the Earth is flat.",
+      "atoms": 1,
+      "verdict": "supported",
+      "cards": [
+        "E082"
+      ],
+      "near": null,
+      "note": "One negation inverts the refuting card back into support."
+    },
+    {
+      "id": "H22",
+      "guard": "split",
+      "text": "The Earth is round and the Earth is flat.",
+      "atoms": 2,
+      "verdict": "supported",
+      "cards": [
+        "E004"
+      ],
+      "near": null,
+      "note": "A contradictory compound splits; the first atom keeps its own verdict (second is refuted)."
+    },
+    {
+      "id": "H23",
+      "guard": "split",
+      "text": "Antibiotics can cure both the common cold and influenza.",
+      "atoms": 1,
+      "verdict": "refuted",
+      "cards": [
+        "E002"
+      ],
+      "near": null,
+      "note": "A coordinated object stays whole; the claim is not truncated to cold."
+    },
+    {
+      "id": "H24",
+      "guard": "separator",
+      "text": "Taking more than 4,000 IU of vitamin D a day is not advised.",
+      "atoms": 1,
+      "verdict": "supported",
+      "cards": [
+        "E088"
+      ],
+      "near": null,
+      "note": "A thousands separator belongs to the number, not to a clause boundary."
+    },
+    {
+      "id": "H25",
+      "guard": "separator",
+      "text": "4,000 IU of vitamin D per day is not recommended for adults.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": null,
+      "note": "The card gives no adult-specific statement, so the narrowed claim refuses."
+    },
+    {
+      "id": "H26",
+      "guard": "control",
+      "text": "The Earth is round.",
+      "atoms": 1,
+      "verdict": "supported",
+      "cards": [
+        "E004"
+      ],
+      "near": null,
+      "note": "Plain control."
+    },
+    {
+      "id": "H27",
+      "guard": "control",
+      "text": "A flu shot infects you with the flu.",
+      "atoms": 1,
+      "verdict": "refuted",
+      "cards": [
+        "E001"
+      ],
+      "near": null,
+      "note": "Plain control."
+    },
+    {
+      "id": "H28",
+      "guard": "control",
+      "text": "Antibiotics can treat a common cold.",
+      "atoms": 1,
+      "verdict": "refuted",
+      "cards": [
+        "E002"
+      ],
+      "near": null,
+      "note": "Plain control."
+    },
+    {
+      "id": "H29",
+      "guard": "control",
+      "text": "Soap and water handwashing prevents respiratory and diarrheal infections.",
+      "atoms": 1,
+      "verdict": "supported",
+      "cards": [
+        "E089"
+      ],
+      "near": null,
+      "note": "Plain control for the hygiene card."
+    },
+    {
+      "id": "H30",
+      "guard": "control",
+      "text": "Eating carrots supports eye health.",
+      "atoms": 1,
+      "verdict": "supported",
+      "cards": [
+        "E071"
+      ],
+      "near": null,
+      "note": "Plain control for the vision card."
+    },
+    {
+      "id": "H31",
+      "guard": "polarity",
+      "text": "Antibiotics cause side effects.",
+      "atoms": 1,
+      "verdict": "supported",
+      "cards": [
+        "E092"
+      ],
+      "near": null,
+      "note": "E092 reads \"antibiotics have no side effects\", so a positive restatement of the opposite must land supported. Checking only the claim's own negation would report refuted."
+    },
+    {
+      "id": "H32",
+      "guard": "polarity",
+      "text": "Antibiotics do not cause side effects.",
+      "atoms": 1,
+      "verdict": "refuted",
+      "cards": [
+        "E092"
+      ],
+      "near": null,
+      "note": "The claim repeats the card, so the negation must not be applied twice."
+    },
+    {
+      "id": "H33",
+      "guard": "strength",
+      "text": "Antibiotics never have side effects.",
+      "atoms": 1,
+      "verdict": "refuted",
+      "cards": [
+        "E092"
+      ],
+      "near": null,
+      "note": "E093 says side effects are rare in children: rare is not never, so it is excluded instead of lending support to an absolute."
+    },
+    {
+      "id": "H34",
+      "guard": "strength",
+      "text": "Smoking always causes lung cancer.",
+      "atoms": 1,
+      "verdict": "supported",
+      "cards": [
+        "E106"
+      ],
+      "near": null,
+      "note": "Control: the card's own statement is absolute enough for an absolute claim."
+    },
+    {
+      "id": "H35",
+      "guard": "subject",
+      "text": "Cancer causes death.",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": [
+        "E086",
+        "different_subject"
+      ],
+      "note": "Cancer is E086's object, not its subject: coffee causing cancer says nothing about what cancer causes, so the chain link may not be borrowed from the card."
+    },
+    {
+      "id": "H36",
+      "guard": "subject",
+      "text": "Smoking causes lung cancer.",
+      "atoms": 1,
+      "verdict": "supported",
+      "cards": [
+        "E106"
+      ],
+      "near": null,
+      "note": "Control: the card's subject is the claim's subject, so it still decides."
+    },
+    {
+      "id": "H37",
+      "guard": "outcome",
+      "text": "Dry indoor air may encourage coronavirus spread",
+      "atoms": 1,
+      "verdict": "undetermined",
+      "cards": [],
+      "near": [
+        "E122",
+        "different_object"
+      ],
+      "note": "E122 asserts that exposure to air spreads a tumour. Air and spread are the only shared words; the conditions are different, so the card cannot decide a coronavirus claim. This exact pair was answered refuted on the dev slice before the outcome vocabulary knew the word tumour."
+    },
+    {
+      "id": "H38",
+      "guard": "control",
+      "text": "Exposure to air makes a tumour spread",
+      "atoms": 1,
+      "verdict": "refuted",
+      "cards": [
+        "E122"
+      ],
+      "near": [],
+      "note": "The control for H37: the same card still decides the claim it is actually about. A guard that refused this as well would be a blanket refusal, not a comparison."
+    },
+    {
+      "id": "H39",
+      "guard": "control",
+      "text": "Cold weather kills the coronavirus",
+      "atoms": 1,
+      "verdict": "refuted",
+      "cards": [
+        "E117"
+      ],
+      "near": [],
+      "note": "The second control: coronavirus and covid are now one condition class, so the weather cards must keep deciding weather claims. Merging the two words was required by this fix; refusing these as well would have paid for precision with coverage that already worked."
+    }
+  ]
+}

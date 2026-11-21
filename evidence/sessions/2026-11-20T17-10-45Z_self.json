@@ -1,0 +1,77 @@
+{
+  "schema": "claim-autopsy/session/1",
+  "operator": "self",
+  "channel": "cli",
+  "note": "Same three inputs as the pre-freeze session, replayed on the v24 kernel: batch, scope and refusal-plan fields added, no verdict changed.",
+  "reviewer": null,
+  "started_at": "2026-11-20T17:10:45Z",
+  "environment": {
+    "kernel": {
+      "core/evidence.py": "3a5d00bca4e9654704dacd457125b51cfd4f2028db090d46f6004ac81fca59f1",
+      "core/decompose.py": "5d179890a87cf2e3618b4c737f65b72c9fa26d464759e609e62812a3907e873f",
+      "core/pipeline.py": "78ec484310f2446e1cfe7c3fdc6bef34adc474fcec14d45a87b7b11545a57325",
+      "core/adjudicate.py": "e826227a3cc5b2402d66e2cab6ae9ddcbfbd9b8b77f7677dd6091bda761c2274",
+      "core/negation.py": "bdcd2edf1d45810c2b8a8720228d7bf790a214958667ff4f2b07994f43129f5b",
+      "core/semantic.py": "17740087a6d79afe7e005c8dba98a3cde20c5b32d95e96f9447876b0b28dc6aa",
+      "core/snapshots.py": "b94853a2b09b06ecbaaee1f1ad77bc3adec398e4d197509189cfc54570506811"
+    },
+    "corpus_sha256": "0c96925411fed34a68461b488c7125dd78641216fc9a0fcef81e05e5914a3017",
+    "python": "3.13.18"
+  },
+  "turns": [
+    {
+      "input": "Dry indoor air may encourage Coronavirus spread.",
+      "verdicts": [
+        {
+          "claim": "Dry indoor air may encourage Coronavirus spread.",
+          "verdict": "undetermined",
+          "sources": [],
+          "reason": "A card that shares the claim's words was excluded by a scope guard (a different condition); the claim cannot be decided."
+        }
+      ],
+      "claims_detected": 0,
+      "unsupported_input": null,
+      "runtime_ms": 15
+    },
+    {
+      "input": "Exposure to air makes a tumour spread.",
+      "verdicts": [
+        {
+          "claim": "Exposure to air makes a tumour spread.",
+          "verdict": "refuted",
+          "sources": [
+            "NCI-MYTHS"
+          ],
+          "reason": "An authoritative source in this corpus refutes the claim."
+        }
+      ],
+      "claims_detected": 0,
+      "unsupported_input": null,
+      "runtime_ms": 95
+    },
+    {
+      "input": "Cold weather kills the coronavirus.",
+      "verdicts": [
+        {
+          "claim": "Cold weather kills the coronavirus.",
+          "verdict": "refuted",
+          "sources": [
+            "WHO-MYTH"
+          ],
+          "reason": "An authoritative source in this corpus refutes the claim."
+        }
+      ],
+      "claims_detected": 0,
+      "unsupported_input": null,
+      "runtime_ms": 14
+    }
+  ],
+  "summary": {
+    "inputs": 3,
+    "atoms": 3,
+    "answered_atoms": 2,
+    "undetermined_atoms": 1,
+    "no_claim_inputs": 3
+  },
+  "session_id": "7b8f914e065218ebfcb62ab43cdb8970"
+}

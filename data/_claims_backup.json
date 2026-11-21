@@ -1,0 +1,1719 @@
+{
+  "meta": {
+    "dataset": "corpus v9 (English, 100 cards)",
+    "version": "2.3.0",
+    "notice": "This corpus demonstrates a mechanism; it is not an authoritative fact-checking result. It contains common public claims with links to authoritative sources. Every snippet is a human-written English paraphrase, not a verbatim quotation; click the source to check the original text. Where sources differ in wording, the tool displays the difference without adjudicating and takes no position on the topic.",
+    "url_status_legend": {
+      "verified_2026-11-19": "Source page existence verified by public web search in this session",
+      "carried_over_v1": "Carried over from the earlier corpus; not re-verified online in this session",
+      "verified_2026_11_20": "Source page existence verified in a real browser in this session"
+    },
+    "source_whitelist": [
+      "who.int",
+      "cdc.gov",
+      "nasa.gov",
+      "fda.gov",
+      "usda.gov",
+      "kepuchina.cn",
+      "cdstm.cn",
+      "nih.gov",
+      "cancer.gov"
+    ],
+    "field_meanings": {
+      "stance": "supports = this source supports the claim; refutes = this source refutes it; contextual = background only; conflicting = sources differ in wording",
+      "card_id": "unique evidence-card identifier used for citation",
+      "source_id": "stable source identifier",
+      "snippet": "human-written paraphrase; click url to verify the original",
+      "conflict_group": "group of cards whose sources differ in wording; a hit forces refusal and shows both sides",
+      "exclude_if": "scope guard: a general card yields to a more specific claim"
+    }
+  },
+  "sources": [
+    {
+      "id": "WHO-FLU",
+      "name": "WHO · Seasonal influenza fact sheet",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)",
+      "url_status": "carried_over_v1",
+      "authority": "International organisation"
+    },
+    {
+      "id": "WHO-FLU-5M",
+      "name": "WHO · Five myths about the flu vaccine",
+      "url": "https://www.who.int/zh/news-room/spotlight/influenza-are-we-ready/5-myths-about-the-flu-vaccine",
+      "url_status": "verified_2026-11-19",
+      "authority": "International organisation"
+    },
+    {
+      "id": "WHO-FLU-7T",
+      "name": "WHO · Seven things to know about influenza vaccination",
+      "url": "https://www.who.int/europe/news-room/questions-and-answers/item/influenza-vaccination-7-things-to-know",
+      "url_status": "verified_2026-11-19",
+      "authority": "International organisation"
+    },
+    {
+      "id": "WHO-ABX",
+      "name": "WHO · Antibiotic resistance Q&A",
+      "url": "https://www.who.int/news-room/questions-and-answers/item/antibiotic-resistance",
+      "url_status": "carried_over_v1",
+      "authority": "International organisation"
+    },
+    {
+      "id": "WHO-MYTH",
+      "name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "url_status": "verified_2026-11-19",
+      "authority": "International organisation"
+    },
+    {
+      "id": "WHO-PUB",
+      "name": "WHO · Public advice on COVID-19",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public",
+      "url_status": "verified_2026-11-19",
+      "authority": "International organisation"
+    },
+    {
+      "id": "WHO-COVID",
+      "name": "WHO · Coronavirus disease Q&A",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub",
+      "url_status": "carried_over_v1",
+      "authority": "International organisation"
+    },
+    {
+      "id": "CDC-ABX",
+      "name": "US CDC · Be Antibiotics Aware",
+      "url": "https://www.cdc.gov/antibiotic-use/index.html",
+      "url_status": "verified_2026-11-19",
+      "authority": "National public-health agency"
+    },
+    {
+      "id": "CDC-COLD",
+      "name": "US CDC · Treating the common cold",
+      "url": "https://www.cdc.gov/common-cold/treatment/index.html",
+      "url_status": "verified_2026-11-19",
+      "authority": "National public-health agency"
+    },
+    {
+      "id": "CDC-STACK",
+      "name": "US CDC Stacks · Antibiotic awareness poster",
+      "url": "https://stacks.cdc.gov/view/cdc/29152",
+      "url_status": "verified_2026-11-19",
+      "authority": "National public-health agency"
+    },
+    {
+      "id": "CDC-VAC",
+      "name": "US CDC · Childhood vaccines Q&A",
+      "url": "https://www.cdc.gov/vaccines-children/about/",
+      "url_status": "verified_2026-11-19",
+      "authority": "National public-health agency"
+    },
+    {
+      "id": "CDC-MMR",
+      "name": "US CDC · MMR vaccine safety",
+      "url": "https://www.cdc.gov/vaccine-safety/vaccines/mmr.html",
+      "url_status": "verified_2026-11-19",
+      "authority": "National public-health agency"
+    },
+    {
+      "id": "CDC-AUT",
+      "name": "US CDC · Autism and vaccines (current page)",
+      "url": "https://www.cdc.gov/vaccine-safety/about/autism.html",
+      "url_status": "verified_2026-11-19",
+      "authority": "National public-health agency"
+    },
+    {
+      "id": "CDC-ARC",
+      "name": "US CDC archive · Studies on vaccines and autism",
+      "url": "https://archive.cdc.gov/www_cdc_gov/vaccinesafety/00_pdf/CDCStudiesonVaccinesandAutism.pdf",
+      "url_status": "verified_2026-11-19",
+      "authority": "National public-health agency (archive)"
+    },
+    {
+      "id": "NASA-EARTH",
+      "name": "NASA · What Is Earth",
+      "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-earth-grades-5-8/",
+      "url_status": "verified_2026-11-19",
+      "authority": "National space agency"
+    },
+    {
+      "id": "NASA-ROUND",
+      "name": "NASA · Why Are Planets Round",
+      "url": "https://go.nasa.gov/2s79FtE",
+      "url_status": "verified_2026-11-19",
+      "authority": "National space agency"
+    },
+    {
+      "id": "NASA-HIST",
+      "name": "NASA · 90 Years of Our Changing Views of Earth",
+      "url": "https://www.nasa.gov/?p=168603",
+      "url_status": "verified_2026-11-19",
+      "authority": "National space agency"
+    },
+    {
+      "id": "NASA-GEO",
+      "name": "NASA Earthdata · Fifty years of satellite laser ranging",
+      "url": "https://www.earthdata.nasa.gov/learn/articles/celebrating-50-years-of-satellite-laser-ranging-at-nasa-goddard-space-flight-center",
+      "url_status": "verified_2026-11-19",
+      "authority": "National space agency"
+    },
+    {
+      "id": "FDA-MW",
+      "name": "US FDA · Microwave Ovens",
+      "url": "https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens",
+      "url_status": "verified_2026-11-19",
+      "authority": "National regulator"
+    },
+    {
+      "id": "USDA-MW",
+      "name": "US USDA FSIS · Microwave cooking and food safety",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cooking-microwave-ovens",
+      "url_status": "verified_2026-11-19",
+      "authority": "National regulator"
+    },
+    {
+      "id": "USDA-FOOD",
+      "name": "US USDA · The two-hour food safety rule",
+      "url": "https://www.usda.gov/media/press-releases/2022/06/28/july-fourth-fireworks-not-foodborne-illness",
+      "url_status": "verified_2026-11-19",
+      "authority": "National regulator"
+    },
+    {
+      "id": "CDSTM-BRAIN",
+      "name": "China Digital Science and Technology Museum · Does the brain use only 10%?",
+      "url": "https://www.cdstm.cn/gallery/media/mkjx/kxhb/art/2017/art_8bbe56c7788c4a569086ef48f1b169b8.html",
+      "url_status": "verified_2026-11-19",
+      "authority": "National science-communication platform"
+    },
+    {
+      "id": "NIH-NEI-CARROT",
+      "name": "US NIH National Eye Institute · How to Feast for Your Eyes",
+      "url": "https://irp.nih.gov/our-research/research-in-action/how-to-feast-for-your-eyes",
+      "url_status": "verified_2026-11-19",
+      "authority": "National research institute"
+    },
+    {
+      "id": "FDA-MSG",
+      "name": "US FDA · Questions and Answers on Monosodium glutamate (MSG)",
+      "url": "https://www.fda.gov/food/food-additives-petitions/questions-and-answers-monosodium-glutamate-msg/",
+      "url_status": "verified_2026-11-19",
+      "authority": "National regulator"
+    },
+    {
+      "id": "NCI-MYTHS",
+      "name": "US National Cancer Institute · Common Cancer Myths and Misconceptions",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/myths",
+      "url_status": "verified_2026-11-19",
+      "authority": "National research institute"
+    },
+    {
+      "id": "NCI-ALK",
+      "name": "US National Cancer Institute · Alkaline diet entry",
+      "url": "https://cancer.gov/publications/dictionaries/cancer-terms/def/alkaline-diet",
+      "url_status": "verified_2026-11-19",
+      "authority": "National research institute"
+    },
+    {
+      "id": "NCCIH-COLD",
+      "name": "US NIH NCCIH · Natural products for flu and colds",
+      "url": "https://www.nccih.nih.gov/health/tips/tips-natural-products-for-the-flu-and-colds-what-does-the-science-say",
+      "url_status": "verified_2026_11_20",
+      "authority": "US federal health institute"
+    },
+    {
+      "id": "NCI-DIET",
+      "name": "US NCI · Diet and cancer risk",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/diet",
+      "url_status": "verified_2026_11_20",
+      "authority": "US federal cancer institute"
+    },
+    {
+      "id": "CDC-FOLIC",
+      "name": "US CDC · About folic acid",
+      "url": "https://www.cdc.gov/folic-acid/about/index.html",
+      "url_status": "verified_2026_11_20",
+      "authority": "National public health agency"
+    },
+    {
+      "id": "NIH-ODS-VITD",
+      "name": "US NIH ODS · Vitamin D fact sheet",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/",
+      "url_status": "verified_2026_11_20",
+      "authority": "National institutes of health"
+    },
+    {
+      "id": "CDC-CLEANHANDS",
+      "name": "US CDC · About handwashing",
+      "url": "https://www.cdc.gov/clean-hands/about/index.html",
+      "url_status": "verified_2026_11_20",
+      "authority": "National public health agency"
+    },
+    {
+      "id": "CDC-ABX-HABITS",
+      "name": "CDC · Antibiotic do's and don'ts",
+      "url": "https://www.cdc.gov/antibiotic-use/about/index.html",
+      "url_status": "checked_200",
+      "authority": "National public health agency"
+    },
+    {
+      "id": "CDC-PA-ADULT",
+      "name": "CDC · Physical activity guidelines for adults",
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+      "url_status": "checked_200",
+      "authority": "National public health agency"
+    },
+    {
+      "id": "CDC-SLEEP-HOWMUCH",
+      "name": "CDC · How much sleep do I need",
+      "url": "https://www.cdc.gov/sleep/about_sleep/how_much_sleep.html",
+      "url_status": "checked_200",
+      "authority": "National public health agency"
+    },
+    {
+      "id": "CDC-SODIUM",
+      "name": "CDC · About sodium and health",
+      "url": "https://www.cdc.gov/salt/about/index.html",
+      "url_status": "checked_200",
+      "authority": "National public health agency"
+    },
+    {
+      "id": "CDC-SUNSAFE",
+      "name": "CDC · Sun safety facts",
+      "url": "https://www.cdc.gov/skin-cancer/sun-safety/index.html",
+      "url_status": "checked_200",
+      "authority": "National public health agency"
+    },
+    {
+      "id": "CDC-FLUORIDE",
+      "name": "CDC · About community water fluoridation",
+      "url": "https://www.cdc.gov/fluoridation/about/index.html",
+      "url_status": "checked_200",
+      "authority": "National public health agency"
+    },
+    {
+      "id": "CDC-TOBACCO",
+      "name": "CDC · Cigarette smoking",
+      "url": "https://www.cdc.gov/tobacco/about/index.html",
+      "url_status": "checked_200",
+      "authority": "National public health agency"
+    },
+    {
+      "id": "CDC-MEASLES-VAX",
+      "name": "CDC · Measles vaccination",
+      "url": "https://www.cdc.gov/measles/vaccination.html",
+      "url_status": "checked_200",
+      "authority": "National public health agency"
+    },
+    {
+      "id": "NCI-SWEETENERS",
+      "name": "NCI · Artificial sweeteners and cancer",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/diet/artificial-sweeteners-fact-sheet",
+      "url_status": "checked_200",
+      "authority": "National cancer institute"
+    },
+    {
+      "id": "NCI-CELLPHONE",
+      "name": "NCI · Cell phones and cancer risk",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/cell-phones-fact-sheet",
+      "url_status": "checked_200",
+      "authority": "National cancer institute"
+    }
+  ],
+  "evidence_cards": [
+    {
+      "card_id": "E001",
+      "claim": "Getting a flu vaccine gives you the flu",
+      "source_id": "WHO-FLU-5M",
+      "source_name": "WHO · Five myths about the flu vaccine",
+      "url": "https://www.who.int/zh/news-room/spotlight/influenza-are-we-ready/5-myths-about-the-flu-vaccine",
+      "snippet": "WHO: injected seasonal flu vaccines contain no live virus and cannot cause influenza; mild soreness is common, but the vaccine does not give you the flu.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E002",
+      "claim": "Antibiotics can treat a common cold or flu",
+      "source_id": "CDC-ABX",
+      "source_name": "US CDC · Be Antibiotics Aware",
+      "url": "https://www.cdc.gov/antibiotic-use/index.html",
+      "snippet": "CDC: colds and flu are viral illnesses; antibiotics treat bacterial infections and do not work on viruses.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Antibiotics"
+      ]
+    },
+    {
+      "card_id": "E003",
+      "claim": "5G phone signals spread the coronavirus",
+      "source_id": "WHO-COVID",
+      "source_name": "WHO · Coronavirus disease Q&A",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub",
+      "snippet": "WHO: viruses cannot travel on radio waves or mobile networks; COVID-19 spreads through respiratory droplets.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19"
+      ]
+    },
+    {
+      "card_id": "E004",
+      "claim": "The Earth is round",
+      "source_id": "NASA-EARTH",
+      "source_name": "NASA · What Is Earth",
+      "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-earth-grades-5-8/",
+      "snippet": "NASA: people have known Earth is round for more than two thousand years; the curved shadow in lunar eclipses, satellite measurements and space photographs all support this.",
+      "stance": "supports",
+      "exclude_if": [
+        "perfect",
+        "sphere",
+        "flat"
+      ],
+      "tags": [
+        "Science",
+        "Earth"
+      ]
+    },
+    {
+      "card_id": "E005",
+      "claim": "A certain water purifier can cure diabetes",
+      "source_id": "WHO-PUB",
+      "source_name": "WHO · Public advice on COVID-19",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public",
+      "snippet": "No source in this corpus supports such a product claim. Included as an example of an unsupported claim that must trigger refusal.",
+      "stance": "contextual",
+      "tags": [
+        "Health",
+        "Product claim"
+      ]
+    },
+    {
+      "card_id": "E006",
+      "claim": "Getting the flu after vaccination proves the vaccine is completely ineffective",
+      "source_id": "WHO-FLU-5M",
+      "source_name": "WHO · Five myths about the flu vaccine",
+      "url": "https://www.who.int/zh/news-room/spotlight/influenza-are-we-ready/5-myths-about-the-flu-vaccine",
+      "snippet": "WHO: vaccination reduces the risk of severe disease; breakthrough infections occur because immunity wanes and circulating strains change, not because the vaccine is useless.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E007",
+      "claim": "The flu vaccine contains live virus and causes infection",
+      "source_id": "WHO-FLU-7T",
+      "source_name": "WHO · Seven things to know about influenza vaccination",
+      "url": "https://www.who.int/europe/news-room/questions-and-answers/item/influenza-vaccination-7-things-to-know",
+      "snippet": "WHO: the injected flu vaccine contains no live virus. The nasal-spray form uses weakened virus that does not cause flu in healthy people.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E008",
+      "claim": "The flu vaccine needs to be taken every year",
+      "source_id": "WHO-FLU-7T",
+      "source_name": "WHO · Seven things to know about influenza vaccination",
+      "url": "https://www.who.int/europe/news-room/questions-and-answers/item/influenza-vaccination-7-things-to-know",
+      "snippet": "WHO: antibody levels decline over time and flu strains change, so annual vaccination is recommended.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E009",
+      "claim": "Pregnant women cannot receive the flu vaccine",
+      "source_id": "WHO-FLU-5M",
+      "source_name": "WHO · Five myths about the flu vaccine",
+      "url": "https://www.who.int/zh/news-room/spotlight/influenza-are-we-ready/5-myths-about-the-flu-vaccine",
+      "snippet": "WHO: flu vaccination is safe and recommended during pregnancy and protects both mother and baby.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vaccine",
+        "Pregnancy"
+      ]
+    },
+    {
+      "card_id": "E010",
+      "claim": "The flu vaccine causes severe side effects",
+      "source_id": "WHO-FLU-5M",
+      "source_name": "WHO · Five myths about the flu vaccine",
+      "url": "https://www.who.int/zh/news-room/spotlight/influenza-are-we-ready/5-myths-about-the-flu-vaccine",
+      "snippet": "WHO: typical side effects are mild and short-lived; severe reactions are very rare.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E011",
+      "claim": "Flu is not serious, so vaccination is unnecessary",
+      "source_id": "WHO-FLU-5M",
+      "source_name": "WHO · Five myths about the flu vaccine",
+      "url": "https://www.who.int/zh/news-room/spotlight/influenza-are-we-ready/5-myths-about-the-flu-vaccine",
+      "snippet": "WHO: influenza can cause severe disease and death, especially in high-risk groups; vaccination is the best available prevention.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E012",
+      "claim": "Antibiotics can cure COVID-19",
+      "source_id": "WHO-MYTH",
+      "source_name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "snippet": "WHO: COVID-19 is viral; antibiotics do not work on viruses and are used only for secondary bacterial infections.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19",
+        "Antibiotics"
+      ]
+    },
+    {
+      "card_id": "E013",
+      "claim": "A common cold can resolve on its own",
+      "source_id": "CDC-COLD",
+      "source_name": "US CDC · Treating the common cold",
+      "url": "https://www.cdc.gov/common-cold/treatment/index.html",
+      "snippet": "CDC: most people recover from a common cold without specific treatment in about one to two weeks.",
+      "stance": "supports",
+      "stance_weight": 0.25,
+      "tags": [
+        "Health",
+        "Cold"
+      ]
+    },
+    {
+      "card_id": "E014",
+      "claim": "Antibiotic resistance means the body becomes resistant to antibiotics",
+      "source_id": "CDC-ABX",
+      "source_name": "US CDC · Be Antibiotics Aware",
+      "url": "https://www.cdc.gov/antibiotic-use/index.html",
+      "snippet": "CDC and WHO: bacteria become resistant to antibiotics; the human body does not.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Antibiotics"
+      ]
+    },
+    {
+      "card_id": "E015",
+      "claim": "Taking antibiotics helps people return to work faster",
+      "source_id": "CDC-STACK",
+      "source_name": "US CDC Stacks · Antibiotic awareness poster",
+      "url": "https://stacks.cdc.gov/view/cdc/29152",
+      "snippet": "CDC: for viral colds antibiotics provide no benefit and can cause harm; they do not speed recovery.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Antibiotics"
+      ]
+    },
+    {
+      "card_id": "E016",
+      "claim": "Antibiotics are effective against bacterial infections",
+      "source_id": "CDC-ABX",
+      "source_name": "US CDC · Be Antibiotics Aware",
+      "url": "https://www.cdc.gov/antibiotic-use/index.html",
+      "snippet": "CDC: antibiotics are used to treat infections caused by bacteria, not viruses.",
+      "stance": "supports",
+      "stance_weight": 0.25,
+      "tags": [
+        "Health",
+        "Antibiotics"
+      ]
+    },
+    {
+      "card_id": "E017",
+      "claim": "Alcohol-based hand sanitizer creates antibiotic resistance",
+      "source_id": "WHO-MYTH",
+      "source_name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "snippet": "WHO: pathogens do not appear to develop resistance to alcohol-based hand rubs, unlike antibiotics.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19"
+      ]
+    },
+    {
+      "card_id": "E018",
+      "claim": "Wearing a medical mask causes carbon-dioxide poisoning",
+      "source_id": "WHO-MYTH",
+      "source_name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "snippet": "WHO: masks do not cause CO2 poisoning; oxygen and carbon dioxide pass through the mask material.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19"
+      ]
+    },
+    {
+      "card_id": "E019",
+      "claim": "Swimming spreads the coronavirus through pool water",
+      "source_id": "WHO-MYTH",
+      "source_name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "snippet": "WHO: the virus is not spread through properly chlorinated swimming-pool water.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19"
+      ]
+    },
+    {
+      "card_id": "E020",
+      "claim": "Shoes are a high-probability route for coronavirus transmission",
+      "source_id": "WHO-MYTH",
+      "source_name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "snippet": "WHO mythbusters: the risk of infection from shoes is low; routine cleaning is sufficient.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19"
+      ]
+    },
+    {
+      "card_id": "E021",
+      "claim": "Vitamin supplements can cure COVID-19",
+      "source_id": "WHO-MYTH",
+      "source_name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "snippet": "WHO: there is no evidence that vitamin or mineral supplements cure COVID-19; they are not a treatment.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19"
+      ]
+    },
+    {
+      "card_id": "E022",
+      "claim": "Wearing gloves can replace hand washing",
+      "source_id": "WHO-MYTH",
+      "source_name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "snippet": "WHO: gloves can transfer germs between surfaces and contaminate hands when removed; hand cleaning remains essential.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19"
+      ]
+    },
+    {
+      "card_id": "E023",
+      "claim": "COVID-19 is caused by bacteria",
+      "source_id": "WHO-MYTH",
+      "source_name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "snippet": "WHO: COVID-19 is caused by the SARS-CoV-2 virus, not by bacteria.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19"
+      ]
+    },
+    {
+      "card_id": "E024",
+      "claim": "Frequent hand washing reduces viral transmission",
+      "source_id": "WHO-PUB",
+      "source_name": "WHO · Public advice on COVID-19",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public",
+      "snippet": "WHO: cleaning hands is one of the key measures for preventing infection.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Hygiene"
+      ]
+    },
+    {
+      "card_id": "E025",
+      "claim": "The Earth is a perfect sphere",
+      "source_id": "NASA-GEO",
+      "source_name": "NASA Earthdata · Fifty years of satellite laser ranging",
+      "url": "https://www.earthdata.nasa.gov/learn/articles/celebrating-50-years-of-satellite-laser-ranging-at-nasa-goddard-space-flight-center",
+      "snippet": "NASA: Earth is an oblate spheroid, slightly flattened at the poles and bulging at the equator, not a perfect sphere.",
+      "stance": "refutes",
+      "tags": [
+        "Science",
+        "Earth"
+      ],
+      "requires_all": [
+        "perfect"
+      ]
+    },
+    {
+      "card_id": "E026",
+      "claim": "High-altitude balloon photos show the Earth's curvature",
+      "source_id": "NASA-HIST",
+      "source_name": "NASA · 90 Years of Our Changing Views of Earth",
+      "url": "https://www.nasa.gov/?p=168603",
+      "snippet": "NASA: high-altitude photographs have shown Earth's curved horizon since the early days of ballooning.",
+      "stance": "supports",
+      "tags": [
+        "Science",
+        "Earth"
+      ]
+    },
+    {
+      "card_id": "E027",
+      "claim": "During a lunar eclipse, Earth's shadow on the Moon is curved",
+      "source_id": "NASA-EARTH",
+      "source_name": "NASA · What Is Earth",
+      "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-earth-grades-5-8/",
+      "snippet": "NASA: the curved shadow on the Moon during a lunar eclipse is one of the oldest observations supporting a round Earth.",
+      "stance": "supports",
+      "tags": [
+        "Science",
+        "Earth"
+      ]
+    },
+    {
+      "card_id": "E028",
+      "claim": "Planets are cube-shaped",
+      "source_id": "NASA-ROUND",
+      "source_name": "NASA · Why Are Planets Round",
+      "url": "https://go.nasa.gov/2s79FtE",
+      "snippet": "NASA: gravity pulls large bodies into roughly spherical shapes; no known planet is cube-shaped.",
+      "stance": "refutes",
+      "stance_weight": 0.25,
+      "tags": [
+        "Science",
+        "Planets"
+      ]
+    },
+    {
+      "card_id": "E029",
+      "claim": "Saturn is the roundest planet in the solar system",
+      "source_id": "NASA-ROUND",
+      "source_name": "NASA · Why Are Planets Round",
+      "url": "https://go.nasa.gov/2s79FtE",
+      "snippet": "NASA: Saturn is strongly oblate because of rapid rotation, so it is not the roundest planet.",
+      "stance": "refutes",
+      "stance_weight": 0.25,
+      "tags": [
+        "Science",
+        "Planets"
+      ]
+    },
+    {
+      "card_id": "E030",
+      "claim": "Earth's rotation makes the poles slightly flattened",
+      "source_id": "NASA-GEO",
+      "source_name": "NASA Earthdata · Fifty years of satellite laser ranging",
+      "url": "https://www.earthdata.nasa.gov/learn/articles/celebrating-50-years-of-satellite-laser-ranging-at-nasa-goddard-space-flight-center",
+      "snippet": "NASA: rotation produces a slight equatorial bulge and polar flattening; Earth is an oblate spheroid.",
+      "stance": "supports",
+      "tags": [
+        "Science",
+        "Earth"
+      ]
+    },
+    {
+      "card_id": "E031",
+      "claim": "Microwave ovens make food radioactive",
+      "source_id": "FDA-MW",
+      "source_name": "US FDA · Microwave Ovens",
+      "url": "https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens",
+      "snippet": "US FDA: microwaves are non-ionizing radiation; they heat food but leave no residual radiation.",
+      "stance": "refutes",
+      "tags": [
+        "Science",
+        "Microwave"
+      ]
+    },
+    {
+      "card_id": "E032",
+      "claim": "Microwave cooking destroys more nutrients than conventional cooking",
+      "source_id": "FDA-MW",
+      "source_name": "US FDA · Microwave Ovens",
+      "url": "https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens",
+      "snippet": "USDA and FDA: nutrient retention depends mainly on cooking time and temperature; microwaving often preserves nutrients well.",
+      "stance": "refutes",
+      "tags": [
+        "Science",
+        "Microwave"
+      ]
+    },
+    {
+      "card_id": "E033",
+      "claim": "Microwaves heat food from the inside out",
+      "source_id": "USDA-MW",
+      "source_name": "US USDA FSIS · Microwave cooking and food safety",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cooking-microwave-ovens",
+      "snippet": "USDA FSIS: microwaves penetrate only a few centimetres; heat then spreads by conduction, so the centre may stay cold.",
+      "stance": "refutes",
+      "tags": [
+        "Science",
+        "Microwave"
+      ]
+    },
+    {
+      "card_id": "E034",
+      "claim": "An intact microwave oven leaks microwaves",
+      "source_id": "FDA-MW",
+      "source_name": "US FDA · Microwave Ovens",
+      "url": "https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens",
+      "snippet": "US FDA: a properly functioning oven is designed to contain microwaves and must meet strict leakage limits.",
+      "stance": "refutes",
+      "tags": [
+        "Science",
+        "Microwave"
+      ]
+    },
+    {
+      "card_id": "E035",
+      "claim": "Microwaves are non-ionizing radiation",
+      "source_id": "FDA-MW",
+      "source_name": "US FDA · Microwave Ovens",
+      "url": "https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens",
+      "snippet": "US FDA: microwave energy is non-ionizing and cannot break chemical bonds or make food radioactive.",
+      "stance": "supports",
+      "tags": [
+        "Science",
+        "Microwave"
+      ]
+    },
+    {
+      "card_id": "E036",
+      "claim": "Humans use only ten percent of their brains",
+      "source_id": "CDSTM-BRAIN",
+      "source_name": "China Digital Science & Technology Museum · Science Pictorial",
+      "url": "https://www.cdstm.cn/gallery/media/mkjx/kxhb/art/2017/art_8bbe56c7788c4a569086ef48f1b169b8.html",
+      "snippet": "CDSTM: brain imaging shows the whole brain stays active even when a person is not thinking; no region is permanently idle, so the 10% figure is a myth.",
+      "stance": "refutes",
+      "tags": [
+        "Science",
+        "Brain"
+      ]
+    },
+    {
+      "card_id": "E037",
+      "claim": "The brain remains active while resting",
+      "source_id": "CDSTM-BRAIN",
+      "source_name": "China Digital Science & Technology Museum · Science Pictorial",
+      "url": "https://www.cdstm.cn/gallery/media/mkjx/kxhb/art/2017/art_8bbe56c7788c4a569086ef48f1b169b8.html",
+      "snippet": "CDSTM: even when a subject is thinking about nothing, the entire brain keeps working; resting does not mean idle.",
+      "stance": "supports",
+      "stance_weight": 0.3,
+      "tags": [
+        "Science",
+        "Brain"
+      ]
+    },
+    {
+      "card_id": "E038",
+      "claim": "Food left at room temperature for over two hours is still safe",
+      "source_id": "USDA-FOOD",
+      "source_name": "US USDA · The two-hour food safety rule",
+      "url": "https://www.usda.gov/media/press-releases/2022/06/28/july-fourth-fireworks-not-foodborne-illness",
+      "snippet": "USDA: perishable food left in the temperature danger zone for more than two hours should be discarded (one hour above 32 C).",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Food safety"
+      ]
+    },
+    {
+      "card_id": "E039",
+      "claim": "Meat colour is a reliable indicator of doneness",
+      "source_id": "USDA-FOOD",
+      "source_name": "US USDA · The two-hour food safety rule",
+      "url": "https://www.usda.gov/media/press-releases/2022/06/28/july-fourth-fireworks-not-foodborne-illness",
+      "snippet": "USDA: colour is not a reliable indicator of a safe internal temperature; use a food thermometer.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Food safety"
+      ]
+    },
+    {
+      "card_id": "E040",
+      "claim": "Frozen food can be thawed on the counter at room temperature",
+      "source_id": "USDA-FOOD",
+      "source_name": "US USDA · The two-hour food safety rule",
+      "url": "https://www.usda.gov/media/press-releases/2022/06/28/july-fourth-fireworks-not-foodborne-illness",
+      "snippet": "USDA: thaw in the refrigerator, in cold water or in the microwave, never on the counter.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Food safety"
+      ]
+    },
+    {
+      "card_id": "E041",
+      "claim": "Vaccines overwhelm an infant's immune system",
+      "source_id": "CDC-VAC",
+      "source_name": "US CDC · Childhood vaccines Q&A",
+      "url": "https://www.cdc.gov/vaccines-children/about/",
+      "snippet": "CDC: vaccines expose the immune system to small amounts of antigen, far less than infants encounter every day.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E042",
+      "claim": "Delaying vaccination is safer for children",
+      "source_id": "CDC-VAC",
+      "source_name": "US CDC · Childhood vaccines Q&A",
+      "url": "https://www.cdc.gov/vaccines-children/about/",
+      "snippet": "CDC: the recommended schedule protects children earlier; delay leaves them vulnerable to disease.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E043",
+      "claim": "Splitting the MMR vaccine into three separate shots works better",
+      "source_id": "CDC-MMR",
+      "source_name": "US CDC · MMR vaccine safety",
+      "url": "https://www.cdc.gov/vaccine-safety/vaccines/mmr.html",
+      "snippet": "CDC: separate shots would require more visits and provide no safety or effectiveness advantage.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E044",
+      "claim": "One flu shot gives lifelong protection",
+      "source_id": "WHO-FLU-7T",
+      "source_name": "WHO · Seven things to know about influenza vaccination",
+      "url": "https://www.who.int/europe/news-room/questions-and-answers/item/influenza-vaccination-7-things-to-know",
+      "snippet": "WHO: circulating strains change and immunity wanes, so annual vaccination is needed.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E045",
+      "claim": "Swimming can give you COVID-19",
+      "source_id": "WHO-MYTH",
+      "source_name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "snippet": "WHO: the virus does not spread through properly chlorinated swimming pools.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19"
+      ]
+    },
+    {
+      "card_id": "E046",
+      "claim": "Microwaved food is less nutritious than food cooked other ways",
+      "source_id": "FDA-MW",
+      "source_name": "US FDA · Microwave Ovens",
+      "url": "https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens",
+      "snippet": "FDA: nutrient loss is driven mainly by cooking time and temperature, not by microwave cooking itself.",
+      "stance": "refutes",
+      "tags": [
+        "Science",
+        "Microwave"
+      ]
+    },
+    {
+      "card_id": "E047",
+      "claim": "Food left on the table for three hours is still fine",
+      "source_id": "USDA-FOOD",
+      "source_name": "US USDA · The two-hour food safety rule",
+      "url": "https://www.usda.gov/media/press-releases/2022/06/28/july-fourth-fireworks-not-foodborne-illness",
+      "snippet": "USDA: perishable food left out for three hours is in the bacterial danger zone and should be discarded.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Food safety"
+      ]
+    },
+    {
+      "card_id": "E048",
+      "claim": "You can tell if meat is cooked by its colour",
+      "source_id": "USDA-FOOD",
+      "source_name": "US USDA · The two-hour food safety rule",
+      "url": "https://www.usda.gov/media/press-releases/2022/06/28/july-fourth-fireworks-not-foodborne-illness",
+      "snippet": "USDA: only a food thermometer can confirm a safe internal temperature; colour is unreliable.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Food safety"
+      ]
+    },
+    {
+      "card_id": "E049",
+      "claim": "The Earth is a sphere",
+      "source_id": "NASA-EARTH",
+      "source_name": "NASA · What Is Earth",
+      "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-earth-grades-5-8/",
+      "snippet": "NASA: independent lines of evidence show Earth is roughly spherical, with slight polar flattening.",
+      "stance": "supports",
+      "exclude_if": [
+        "perfect"
+      ],
+      "tags": [
+        "Science",
+        "Earth"
+      ]
+    },
+    {
+      "card_id": "E050",
+      "claim": "People use only 10% of their brains",
+      "source_id": "CDSTM-BRAIN",
+      "source_name": "China Digital Science & Technology Museum · Science Pictorial",
+      "url": "https://www.cdstm.cn/gallery/media/mkjx/kxhb/art/2017/art_8bbe56c7788c4a569086ef48f1b169b8.html",
+      "snippet": "CDSTM, citing the Science Pictorial: the brain runs on about 20% of the body's energy at rest, which makes 'only 10% is used' biologically implausible.",
+      "stance": "refutes",
+      "tags": [
+        "Science",
+        "Brain"
+      ]
+    },
+    {
+      "card_id": "E051",
+      "claim": "Wearing gloves is more reliable than washing hands",
+      "source_id": "WHO-MYTH",
+      "source_name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "snippet": "WHO: hand cleaning remains the key measure; gloves can spread contamination when removed.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19"
+      ]
+    },
+    {
+      "card_id": "E052",
+      "claim": "Delaying vaccination is safer",
+      "source_id": "CDC-VAC",
+      "source_name": "US CDC · Childhood vaccines Q&A",
+      "url": "https://www.cdc.gov/vaccines-children/about/",
+      "snippet": "CDC: the recommended schedule is designed for timely protection; delay increases risk.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E060",
+      "claim": "Vaccines cause autism",
+      "source_id": "CDC-MMR",
+      "source_name": "US CDC · MMR vaccine safety",
+      "url": "https://www.cdc.gov/vaccine-safety/vaccines/mmr.html",
+      "snippet": "CDC MMR safety page: multiple well-designed studies found no association between MMR vaccine and autism. This card is part of a real source-wording discrepancy group.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vaccine",
+        "Source discrepancy"
+      ],
+      "conflict_group": "CG-VAC-AUTISM"
+    },
+    {
+      "card_id": "E061",
+      "claim": "Vaccines cause autism",
+      "source_id": "CDC-AUT",
+      "source_name": "US CDC · Autism and vaccines (current page)",
+      "url": "https://www.cdc.gov/vaccine-safety/about/autism.html",
+      "snippet": "CDC current page: wording was updated under a data-quality process and differs from the safety page and archived material. The tool shows the difference and takes no position on the topic.",
+      "stance": "conflicting",
+      "tags": [
+        "Health",
+        "Vaccine",
+        "Source discrepancy"
+      ],
+      "conflict_group": "CG-VAC-AUTISM"
+    },
+    {
+      "card_id": "E070",
+      "claim": "Eating carrots gives you extraordinary night vision",
+      "source_id": "NIH-NEI-CARROT",
+      "source_name": "US NIH National Eye Institute · How to Feast for Your Eyes",
+      "url": "https://irp.nih.gov/our-research/research-in-action/how-to-feast-for-your-eyes",
+      "snippet": "NIH National Eye Institute: no amount of carrots, liver or bilberries gives owl-like night vision; carrots supply vitamin A needed for eye health.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Vision"
+      ]
+    },
+    {
+      "card_id": "E071",
+      "claim": "Eating carrots supports eye health",
+      "source_id": "NIH-NEI-CARROT",
+      "source_name": "US NIH National Eye Institute · How to Feast for Your Eyes",
+      "url": "https://irp.nih.gov/our-research/research-in-action/how-to-feast-for-your-eyes",
+      "snippet": "NIH NEI: carrots are rich in vitamin A, which is needed for eye health; a balanced diet supplies the vitamin A most people need.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Vision"
+      ]
+    },
+    {
+      "card_id": "E072",
+      "claim": "MSG is harmful to health",
+      "source_id": "FDA-MSG",
+      "source_name": "US FDA · Questions and Answers on Monosodium glutamate (MSG)",
+      "url": "https://www.fda.gov/food/food-additives-petitions/questions-and-answers-monosodium-glutamate-msg/",
+      "snippet": "FDA: monosodium glutamate is 'generally recognized as safe'; controlled studies could not consistently trigger reactions in self-described sensitive people.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Food"
+      ]
+    },
+    {
+      "card_id": "E073",
+      "claim": "Eating sugar makes cancer worse",
+      "source_id": "NCI-MYTHS",
+      "source_name": "US National Cancer Institute · Common Cancer Myths and Misconceptions",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/myths",
+      "snippet": "US NCI: although cancer cells consume more glucose, no studies show that eating sugar worsens cancer or that cutting sugar shrinks tumours.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Cancer"
+      ]
+    },
+    {
+      "card_id": "E074",
+      "claim": "Cancer is contagious between people",
+      "source_id": "NCI-MYTHS",
+      "source_name": "US National Cancer Institute · Common Cancer Myths and Misconceptions",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/myths",
+      "snippet": "US NCI: cancer is generally not contagious; aside from rare transplant transmission, cancer-causing viruses or bacteria can spread but the cancer itself cannot.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Cancer"
+      ]
+    },
+    {
+      "card_id": "E075",
+      "claim": "Mobile-phone radiation causes cancer",
+      "source_id": "NCI-MYTHS",
+      "source_name": "US National Cancer Institute · Common Cancer Myths and Misconceptions",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/myths",
+      "snippet": "US NCI: the best studies to date show mobile phones do not cause cancer; they emit low-frequency energy that does not damage genes.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Cancer"
+      ]
+    },
+    {
+      "card_id": "E076",
+      "claim": "Power lines cause cancer",
+      "source_id": "NCI-MYTHS",
+      "source_name": "US National Cancer Institute · Common Cancer Myths and Misconceptions",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/myths",
+      "snippet": "US NCI: the best available studies show no cancer risk; electric fields are easily shielded and magnetic fields are low-frequency and non-genotoxic.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Cancer"
+      ]
+    },
+    {
+      "card_id": "E077",
+      "claim": "A positive attitude determines whether you get cancer",
+      "source_id": "NCI-MYTHS",
+      "source_name": "US National Cancer Institute · Common Cancer Myths and Misconceptions",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/myths",
+      "snippet": "US NCI: there is no convincing scientific evidence linking a person's attitude to cancer risk or survival.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Cancer"
+      ]
+    },
+    {
+      "card_id": "E078",
+      "claim": "Cancer surgery spreads cancer cells",
+      "source_id": "NCI-MYTHS",
+      "source_name": "US National Cancer Institute · Common Cancer Myths and Misconceptions",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/myths",
+      "snippet": "US NCI: the chance is extremely low; surgeons use separate instruments and specific procedures to prevent spread.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Cancer"
+      ]
+    },
+    {
+      "card_id": "E079",
+      "claim": "An alkaline diet can cure cancer",
+      "source_id": "NCI-ALK",
+      "source_name": "US National Cancer Institute · Alkaline diet entry",
+      "url": "https://cancer.gov/publications/dictionaries/cancer-terms/def/alkaline-diet",
+      "snippet": "US NCI: there is no proof that an alkaline diet can slow, cure or prevent the return of cancer.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Cancer"
+      ]
+    },
+    {
+      "card_id": "E080",
+      "claim": "Touching a shared hand-sanitizer bottle gives you COVID-19",
+      "source_id": "WHO-MYTH",
+      "source_name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "snippet": "WHO mythbusters: once hands are sanitized, germs on the bottle are removed; shared sanitizer use lowers overall risk.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19"
+      ]
+    },
+    {
+      "card_id": "E081",
+      "claim": "Normal use of alcohol hand sanitizer causes alcohol poisoning",
+      "source_id": "WHO-MYTH",
+      "source_name": "WHO · COVID-19 mythbusters",
+      "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+      "snippet": "WHO: little alcohol is absorbed through the skin; accidental swallowing and intoxication are described only in rare cases.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "COVID-19"
+      ]
+    },
+    {
+      "card_id": "E082",
+      "claim": "The Earth is flat",
+      "source_id": "NASA-EARTH",
+      "source_name": "NASA · What Is Earth",
+      "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-earth-grades-5-8/",
+      "snippet": "NASA: satellite imagery, lunar eclipses, circumnavigation and gravity all show that Earth is roughly spherical, not flat.",
+      "stance": "refutes",
+      "tags": [
+        "Science",
+        "Earth"
+      ]
+    },
+    {
+      "card_id": "E083",
+      "claim": "Microwaved food has radiation",
+      "source_id": "FDA-MW",
+      "source_name": "US FDA · Microwave Ovens",
+      "url": "https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens",
+      "snippet": "US FDA: microwave energy is non-ionizing and heats food without making it radioactive; no residual radiation remains in the food.",
+      "stance": "refutes",
+      "tags": [
+        "Science",
+        "Microwave"
+      ]
+    },
+    {
+      "card_id": "E084",
+      "claim": "Vitamin C prevents the common cold",
+      "source_id": "NCCIH-COLD",
+      "source_name": "US NIH NCCIH · Natural products for flu and colds",
+      "url": "https://www.nccih.nih.gov/health/tips/tips-natural-products-for-the-flu-and-colds-what-does-the-science-say",
+      "snippet": "NCCIH: vitamin C does not prevent colds; a 2013 review found that taking it regularly did not reduce the likelihood of catching one.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Cold"
+      ],
+      "requires_all": [
+        "cold"
+      ]
+    },
+    {
+      "card_id": "E085",
+      "claim": "Vitamin C cures a cold once you already have it",
+      "source_id": "NCCIH-COLD",
+      "source_name": "US NIH NCCIH · Natural products for flu and colds",
+      "url": "https://www.nccih.nih.gov/health/tips/tips-natural-products-for-the-flu-and-colds-what-does-the-science-say",
+      "snippet": "NCCIH: vitamin C only slightly reduces the length and severity of a cold; in studies where people took it after symptoms began, it did not improve them.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Cold",
+        "Product claim"
+      ],
+      "requires_all": [
+        "cold"
+      ]
+    },
+    {
+      "card_id": "E086",
+      "claim": "Coffee causes cancer",
+      "source_id": "NCI-DIET",
+      "source_name": "US NCI · Diet and cancer risk",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/diet",
+      "snippet": "US NCI: with few exceptions, studies of human populations have not shown definitively that any dietary component, coffee included among the foods studied, causes cancer.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Cancer",
+        "Food"
+      ],
+      "requires_all": [
+        "cancer"
+      ]
+    },
+    {
+      "card_id": "E087",
+      "claim": "Taking 400 mcg of folic acid daily helps prevent neural tube defects",
+      "source_id": "CDC-FOLIC",
+      "source_name": "US CDC · About folic acid",
+      "url": "https://www.cdc.gov/folic-acid/about/index.html",
+      "snippet": "CDC: 400 micrograms (mcg) of folic acid daily can help prevent serious birth defects called neural tube defects, and that amount is what the US Public Health Service recommends for anyone who could become pregnant.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Pregnancy",
+        "Nutrition"
+      ],
+      "requires_all": [
+        "folic"
+      ]
+    },
+    {
+      "card_id": "E088",
+      "claim": "Taking more than 4,000 IU of vitamin D per day exceeds the safe upper limit",
+      "source_id": "NIH-ODS-VITD",
+      "source_name": "US NIH ODS · Vitamin D fact sheet",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/",
+      "snippet": "NIH ODS: the tolerable upper intake level for vitamin D ranges from 25 to 100 mcg (1,000-4,000 IU) per day depending on age; above that level the risk of toxicity rises.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Nutrition",
+        "Dose"
+      ],
+      "requires_all": [
+        "vitamin d",
+        "iu"
+      ]
+    },
+    {
+      "card_id": "E089",
+      "claim": "Washing hands with soap prevents the spread of respiratory and diarrheal infections",
+      "source_id": "CDC-CLEANHANDS",
+      "source_name": "US CDC · About handwashing",
+      "url": "https://www.cdc.gov/clean-hands/about/index.html",
+      "snippet": "CDC: washing hands can keep you healthy and prevent the spread of respiratory and diarrheal infections, and handwashing with soap is one of the best ways to stay healthy.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Hygiene"
+      ]
+    },
+    {
+      "card_id": "E090",
+      "claim": "Hand sanitizer needs at least 60% alcohol to work",
+      "source_id": "CDC-CLEANHANDS",
+      "source_name": "US CDC · About handwashing",
+      "url": "https://www.cdc.gov/clean-hands/about/index.html",
+      "snippet": "CDC: if soap and water are not available, use an alcohol-based hand sanitizer that contains at least 60% alcohol; the label tells you whether it does.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Hygiene"
+      ],
+      "requires_all": [
+        "sanitizer"
+      ]
+    },
+    {
+      "card_id": "E091",
+      "claim": "Antibiotics work on viruses",
+      "source_id": "CDC-ABX-HABITS",
+      "source_name": "CDC · Antibiotic do's and don'ts",
+      "url": "https://www.cdc.gov/antibiotic-use/about/index.html",
+      "snippet": "CDC: antibiotics do not treat infections caused by viruses, including colds and flu; they only treat certain bacterial infections.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Antibiotics"
+      ]
+    },
+    {
+      "card_id": "E092",
+      "claim": "Antibiotics have no side effects",
+      "source_id": "CDC-ABX-HABITS",
+      "source_name": "CDC · Antibiotic do's and don'ts",
+      "url": "https://www.cdc.gov/antibiotic-use/about/index.html",
+      "snippet": "CDC: taking antibiotics when they are not needed does not help and the side effects can still cause harm; common ones include rash, dizziness, nausea, diarrhea and yeast infections.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Antibiotics"
+      ]
+    },
+    {
+      "card_id": "E093",
+      "claim": "Antibiotic side effects in children are rare",
+      "source_id": "CDC-ABX-HABITS",
+      "source_name": "CDC · Antibiotic do's and don'ts",
+      "url": "https://www.cdc.gov/antibiotic-use/about/index.html",
+      "snippet": "CDC: in children, side effects from antibiotics are the most common cause of medication-related emergency department visits.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Antibiotics"
+      ]
+    },
+    {
+      "card_id": "E094",
+      "claim": "Adults need at least 150 minutes of moderate-intensity activity a week",
+      "source_id": "CDC-PA-ADULT",
+      "source_name": "CDC · Physical activity guidelines for adults",
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+      "snippet": "CDC: adults need at least 150 minutes of moderate-intensity physical activity a week, for example 30 minutes a day on five days.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Exercise"
+      ]
+    },
+    {
+      "card_id": "E095",
+      "claim": "Adults need muscle-strengthening activity on two or more days a week",
+      "source_id": "CDC-PA-ADULT",
+      "source_name": "CDC · Physical activity guidelines for adults",
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+      "snippet": "CDC: adults also need at least 2 days of muscle-strengthening activity each week, working all major muscle groups.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Exercise"
+      ]
+    },
+    {
+      "card_id": "E096",
+      "claim": "75 minutes of vigorous activity a week meets the adult guideline",
+      "source_id": "CDC-PA-ADULT",
+      "source_name": "CDC · Physical activity guidelines for adults",
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+      "snippet": "CDC: 150 minutes of moderate activity can be replaced by 75 minutes of vigorous-intensity activity, or an equivalent mix of the two.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Exercise"
+      ]
+    },
+    {
+      "card_id": "E097",
+      "claim": "Adults need at least seven hours of sleep a night",
+      "source_id": "CDC-SLEEP-HOWMUCH",
+      "source_name": "CDC · How much sleep do I need",
+      "url": "https://www.cdc.gov/sleep/about_sleep/how_much_sleep.html",
+      "snippet": "CDC: adults aged 18 to 60 years are recommended to get 7 or more hours of sleep per night.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Sleep"
+      ]
+    },
+    {
+      "card_id": "E098",
+      "claim": "Teenagers need eight to ten hours of sleep per day",
+      "source_id": "CDC-SLEEP-HOWMUCH",
+      "source_name": "CDC · How much sleep do I need",
+      "url": "https://www.cdc.gov/sleep/about_sleep/how_much_sleep.html",
+      "snippet": "CDC: teenagers aged 13 to 18 years are recommended to get 8 to 10 hours of sleep per 24 hours.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Sleep"
+      ]
+    },
+    {
+      "card_id": "E099",
+      "claim": "Adults should keep sodium intake below 2,300 mg a day",
+      "source_id": "CDC-SODIUM",
+      "source_name": "CDC · About sodium and health",
+      "url": "https://www.cdc.gov/salt/about/index.html",
+      "snippet": "CDC: the federal recommendation is less than 2,300 milligrams of sodium daily for teens and adults as part of a healthy eating pattern.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Nutrition"
+      ]
+    },
+    {
+      "card_id": "E100",
+      "claim": "Too much sodium raises blood pressure",
+      "source_id": "CDC-SODIUM",
+      "source_name": "CDC · About sodium and health",
+      "url": "https://www.cdc.gov/salt/about/index.html",
+      "snippet": "CDC: eating too much sodium can increase your blood pressure and your risk for heart disease and stroke.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Nutrition"
+      ]
+    },
+    {
+      "card_id": "E101",
+      "claim": "Most skin cancers are caused by too much ultraviolet exposure",
+      "source_id": "CDC-SUNSAFE",
+      "source_name": "CDC · Sun safety facts",
+      "url": "https://www.cdc.gov/skin-cancer/sun-safety/index.html",
+      "snippet": "CDC: most skin cancers are caused by too much exposure to ultraviolet rays, which can damage skin cells.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Cancer"
+      ]
+    },
+    {
+      "card_id": "E102",
+      "claim": "A broad-spectrum sunscreen with SPF 15 or higher protects the skin",
+      "source_id": "CDC-SUNSAFE",
+      "source_name": "CDC · Sun safety facts",
+      "url": "https://www.cdc.gov/skin-cancer/sun-safety/index.html",
+      "snippet": "CDC: use a broad-spectrum sunscreen that filters both UVA and UVB rays and has an SPF of 15 or higher before going outside.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Skin"
+      ]
+    },
+    {
+      "card_id": "E103",
+      "claim": "Sunscreen is safe for babies younger than six months",
+      "source_id": "CDC-SUNSAFE",
+      "source_name": "CDC · Sun safety facts",
+      "url": "https://www.cdc.gov/skin-cancer/sun-safety/index.html",
+      "snippet": "CDC: sunscreen is not recommended for babies who are 6 months old or younger; keep infants out of the sun and use protective clothing instead.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Skin"
+      ]
+    },
+    {
+      "card_id": "E104",
+      "claim": "Fluoridated drinking water prevents cavities",
+      "source_id": "CDC-FLUORIDE",
+      "source_name": "CDC · About community water fluoridation",
+      "url": "https://www.cdc.gov/fluoridation/about/index.html",
+      "snippet": "CDC: community water fluoridation adjusts the fluoride in drinking water to a level recommended for preventing cavities.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Dental"
+      ]
+    },
+    {
+      "card_id": "E105",
+      "claim": "Water fluoridation reduces cavities by about 25%",
+      "source_id": "CDC-FLUORIDE",
+      "source_name": "CDC · About community water fluoridation",
+      "url": "https://www.cdc.gov/fluoridation/about/index.html",
+      "snippet": "CDC: drinking fluoridated water keeps teeth strong and reduces cavities by about 25% in children and adults.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Dental"
+      ]
+    },
+    {
+      "card_id": "E106",
+      "claim": "Smoking causes lung cancer",
+      "source_id": "CDC-TOBACCO",
+      "source_name": "CDC · Cigarette smoking",
+      "url": "https://www.cdc.gov/tobacco/about/index.html",
+      "snippet": "CDC: cigarette smoking causes many diseases, including cancer, heart disease, stroke and chronic obstructive pulmonary disease.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Smoking"
+      ]
+    },
+    {
+      "card_id": "E107",
+      "claim": "Secondhand smoke can cause lung cancer in nonsmokers",
+      "source_id": "CDC-TOBACCO",
+      "source_name": "CDC · Cigarette smoking",
+      "url": "https://www.cdc.gov/tobacco/about/index.html",
+      "snippet": "CDC: in adults, secondhand smoke can cause coronary heart disease, stroke and lung cancer; it contributes to over 40,000 deaths among nonsmoking adults each year.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Smoking"
+      ]
+    },
+    {
+      "card_id": "E108",
+      "claim": "Quitting smoking lowers the risk of heart disease and cancer",
+      "source_id": "CDC-TOBACCO",
+      "source_name": "CDC · Cigarette smoking",
+      "url": "https://www.cdc.gov/tobacco/about/index.html",
+      "snippet": "CDC: quitting improves health and reduces the risk of premature death and of smoking-related diseases, including heart disease, cancer and COPD.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Smoking"
+      ]
+    },
+    {
+      "card_id": "E109",
+      "claim": "Smoking only harms the lungs",
+      "source_id": "CDC-TOBACCO",
+      "source_name": "CDC · Cigarette smoking",
+      "url": "https://www.cdc.gov/tobacco/about/index.html",
+      "snippet": "CDC: cigarette smoking harms nearly every organ of the body; it causes cancer, heart disease, stroke, lung diseases, type 2 diabetes and other conditions.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Smoking"
+      ]
+    },
+    {
+      "card_id": "E110",
+      "claim": "Two doses of MMR vaccine are about 97% effective against measles",
+      "source_id": "CDC-MEASLES-VAX",
+      "source_name": "CDC · Measles vaccination",
+      "url": "https://www.cdc.gov/measles/vaccination.html",
+      "snippet": "CDC: two doses of MMR vaccine are about 97% effective at preventing measles; one dose is about 93% effective.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E111",
+      "claim": "The MMR vaccine is safe and effective",
+      "source_id": "CDC-MEASLES-VAX",
+      "source_name": "CDC · Measles vaccination",
+      "url": "https://www.cdc.gov/measles/vaccination.html",
+      "snippet": "CDC: MMR is safe and effective, and it provides long-lasting protection against all strains of measles.",
+      "stance": "supports",
+      "tags": [
+        "Health",
+        "Vaccine"
+      ]
+    },
+    {
+      "card_id": "E112",
+      "claim": "Measles is not very contagious",
+      "source_id": "CDC-MEASLES-VAX",
+      "source_name": "CDC · Measles vaccination",
+      "url": "https://www.cdc.gov/measles/vaccination.html",
+      "snippet": "CDC: measles is highly contagious; if one person has it, up to 9 out of 10 nearby people will become infected if they are not protected.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Measles"
+      ]
+    },
+    {
+      "card_id": "E113",
+      "claim": "Aspartame and other artificial sweeteners cause cancer in people",
+      "source_id": "NCI-SWEETENERS",
+      "source_name": "NCI · Artificial sweeteners and cancer",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/diet/artificial-sweeteners-fact-sheet",
+      "snippet": "NCI: studies reviewed by the FDA showed no evidence that approved artificial sweeteners cause cancer or other harms in people.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Nutrition"
+      ]
+    },
+    {
+      "card_id": "E114",
+      "claim": "Cell phones cause brain cancer",
+      "source_id": "NCI-CELLPHONE",
+      "source_name": "NCI · Cell phones and cancer risk",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/cell-phones-fact-sheet",
+      "snippet": "NCI: the evidence to date suggests that cell phone use does not cause brain or other kinds of cancer in humans.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Cancer"
+      ]
+    },
+    {
+      "card_id": "E115",
+      "claim": "Antibiotics cannot cause serious infections",
+      "source_id": "CDC-ABX-HABITS",
+      "source_name": "CDC · Antibiotic do's and don'ts",
+      "url": "https://www.cdc.gov/antibiotic-use/about/index.html",
+      "snippet": "CDC: serious side effects of antibiotics include C. diff infection, which causes diarrhea that can lead to severe colon damage and death.",
+      "stance": "refutes",
+      "tags": [
+        "Health",
+        "Antibiotics"
+      ]
+    }
+  ],
+  "demo_inputs": [
+    {
+      "id": "DEMO-1",
+      "label": "Both refuted",
+      "text": "Getting a flu vaccine gives you the flu, and antibiotics can treat a common cold."
+    },
+    {
+      "id": "DEMO-2",
+      "label": "Mixed three states",
+      "text": "You must drink eight glasses of water a day or you will get sick; besides, the Earth is round."
+    },
+    {
+      "id": "DEMO-3",
+      "label": "Refusal with no evidence",
+      "text": "A certain water purifier can cure diabetes, and drinking water can make you ten centimetres taller in a week."
+    },
+    {
+      "id": "DEMO-4",
+      "label": "Source discrepancy, no verdict",
+      "text": "Vaccines cause autism."
+    },
+    {
+      "id": "DEMO-5",
+      "label": "Coverage showcase",
+      "text": "Microwave ovens make food radioactive, and humans use only ten percent of their brains."
+    },
+    {
+      "id": "DEMO-6",
+      "label": "Paraphrase robustness",
+      "text": "The flu vaccine contains live virus and causes infection, and the Earth is round."
+    },
+    {
+      "id": "DEMO-7",
+      "label": "New coverage: cancer, MSG, vision",
+      "text": "Eating sugar makes cancer worse, MSG is harmful to health, and eating carrots supports eye health."
+    },
+    {
+      "id": "DEMO-8",
+      "label": "Comma-separated enumeration",
+      "text": "Mobile-phone radiation causes cancer, an alkaline diet can cure cancer."
+    },
+    {
+      "id": "DEMO-9",
+      "label": "Two atoms that cannot both be true",
+      "text": "The Earth is round and the Earth is flat."
+    },
+    {
+      "id": "DEMO-10",
+      "label": "A two-step chain that contradicts itself",
+      "text": "Coffee causes cancer. Cancer causes death. Coffee prevents death."
+    }
+  ]
+}

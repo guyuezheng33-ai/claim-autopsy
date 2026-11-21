@@ -1,0 +1,304 @@
+{
+  "datasets": {
+    "averitec": {
+      "accuracy": 0.094,
+      "accuracy_on_decided": 1.0,
+      "always_undetermined_baseline": 0.6577,
+      "answers": 3,
+      "citation_metrics_note": "The sampled evidence documents carry no URLs (links were removed at sampling time), so citation_precision/recall cannot be computed on this slice.The paragraph-level equivalent is reported in evidence/cards_evidence.jsonl.",
+      "citation_precision": null,
+      "citation_recall": null,
+      "commit": "n/a (working tree)",
+      "correct": 3,
+      "coverage": 0.0201,
+      "dataset": "averitec",
+      "gated_inputs": 0,
+      "gold_distribution": {
+        "refuted": 98,
+        "supported": 40,
+        "undetermined": 11
+      },
+      "macro_f1": 0.0665,
+      "mapping": {
+        "Conflicting": "__excluded__",
+        "Not Enough Evidence": "undetermined",
+        "Refuted": "refuted",
+        "Supported": "supported"
+      },
+      "n": 149,
+      "per_label": {
+        "refuted": {
+          "precision": 1.0,
+          "recall": 0.0306,
+          "support": 98
+        },
+        "supported": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 40
+        },
+        "undetermined": {
+          "precision": 0.0753,
+          "recall": 1.0,
+          "support": 11
+        }
+      },
+      "refusal_rate": 0.9799,
+      "runtime_s": 2.07,
+      "seed": 20261120,
+      "selective_accuracy": {
+        "100": 0.094,
+        "50": 0.1216,
+        "70": 0.1058
+      },
+      "split": "dev",
+      "undetermined_precision": 0.0753,
+      "wrong": 0,
+      "wrong_cases": []
+    },
+    "fever": {
+      "accuracy": 0.3153,
+      "accuracy_on_decided": null,
+      "always_undetermined_baseline": 0.3448,
+      "answers": 0,
+      "citation_metrics_note": "The sampled evidence documents carry no URLs (links were removed at sampling time), so citation_precision/recall cannot be computed on this slice.The paragraph-level equivalent is reported in evidence/cards_evidence.jsonl.",
+      "citation_precision": null,
+      "citation_recall": null,
+      "commit": "n/a (working tree)",
+      "correct": 0,
+      "coverage": 0.0,
+      "dataset": "fever",
+      "gated_inputs": 0,
+      "gold_distribution": {
+        "refuted": 69,
+        "supported": 70,
+        "undetermined": 64
+      },
+      "macro_f1": 0.1598,
+      "mapping": {
+        "NOT ENOUGH INFO": "undetermined",
+        "REFUTES": "refuted",
+        "SUPPORTS": "supported"
+      },
+      "n": 203,
+      "per_label": {
+        "refuted": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 69
+        },
+        "supported": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 70
+        },
+        "undetermined": {
+          "precision": 0.3153,
+          "recall": 1.0,
+          "support": 64
+        }
+      },
+      "refusal_rate": 1.0,
+      "runtime_s": 2.393,
+      "seed": 20261120,
+      "selective_accuracy": {
+        "100": 0.3153,
+        "50": 0.297,
+        "70": 0.2887
+      },
+      "split": "dev",
+      "undetermined_precision": 0.3153,
+      "wrong": 0,
+      "wrong_cases": []
+    },
+    "healthver": {
+      "accuracy": 0.5561,
+      "accuracy_on_decided": 0.875,
+      "always_undetermined_baseline": 0.5234,
+      "answers": 8,
+      "citation_metrics_note": "The sampled evidence documents carry no URLs (links were removed at sampling time), so citation_precision/recall cannot be computed on this slice.The paragraph-level equivalent is reported in evidence/cards_evidence.jsonl.",
+      "citation_precision": null,
+      "citation_recall": null,
+      "commit": "n/a (working tree)",
+      "correct": 7,
+      "coverage": 0.0374,
+      "dataset": "healthver",
+      "gated_inputs": 6,
+      "gold_distribution": {
+        "refuted": 42,
+        "supported": 60,
+        "undetermined": 112
+      },
+      "macro_f1": 0.3274,
+      "mapping": {
+        "Neutral": "undetermined",
+        "Refutes": "refuted",
+        "Supports": "supported"
+      },
+      "n": 214,
+      "per_label": {
+        "refuted": {
+          "precision": 0.8571,
+          "recall": 0.1429,
+          "support": 42
+        },
+        "supported": {
+          "precision": 1.0,
+          "recall": 0.0167,
+          "support": 60
+        },
+        "undetermined": {
+          "precision": 0.5437,
+          "recall": 1.0,
+          "support": 112
+        }
+      },
+      "refusal_rate": 0.9626,
+      "runtime_s": 3.887,
+      "seed": 20261120,
+      "selective_accuracy": {
+        "100": 0.5561,
+        "50": 0.7477,
+        "70": 0.6644
+      },
+      "split": "dev",
+      "undetermined_precision": 0.5437,
+      "wrong": 1,
+      "wrong_cases": [
+        {
+          "atom": "The pandemic coronavirus will wane with warmer weather",
+          "cards": [
+            "E117"
+          ],
+          "gold": "supported",
+          "id": "healthver-674",
+          "pred": "refuted",
+          "sources": [
+            "WHO-MYTH"
+          ],
+          "text": "The pandemic coronavirus will wane with warmer weather, like some other respiratory"
+        }
+      ]
+    },
+    "pubhealth": {
+      "accuracy": 0.0559,
+      "accuracy_on_decided": null,
+      "always_undetermined_baseline": 0.6014,
+      "answers": 0,
+      "citation_metrics_note": "The sampled evidence documents carry no URLs (links were removed at sampling time), so citation_precision/recall cannot be computed on this slice.The paragraph-level equivalent is reported in evidence/cards_evidence.jsonl.",
+      "citation_precision": null,
+      "citation_recall": null,
+      "commit": "n/a (working tree)",
+      "correct": 0,
+      "coverage": 0.0,
+      "dataset": "pubhealth",
+      "gated_inputs": 0,
+      "gold_distribution": {
+        "refuted": 49,
+        "supported": 86,
+        "undetermined": 8
+      },
+      "macro_f1": 0.0353,
+      "mapping": {
+        "false": "refuted",
+        "mixture": "__excluded__",
+        "true": "supported",
+        "unproven": "undetermined"
+      },
+      "n": 143,
+      "per_label": {
+        "refuted": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 49
+        },
+        "supported": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 86
+        },
+        "undetermined": {
+          "precision": 0.0559,
+          "recall": 1.0,
+          "support": 8
+        }
+      },
+      "refusal_rate": 1.0,
+      "runtime_s": 2.164,
+      "seed": 20261120,
+      "selective_accuracy": {
+        "100": 0.0559,
+        "50": 0.0,
+        "70": 0.08
+      },
+      "split": "dev",
+      "undetermined_precision": 0.0559,
+      "wrong": 0,
+      "wrong_cases": []
+    },
+    "scifact": {
+      "status": "no_samples"
+    },
+    "vitaminc": {
+      "accuracy": 0.1756,
+      "accuracy_on_decided": null,
+      "always_undetermined_baseline": 0.4885,
+      "answers": 0,
+      "citation_metrics_note": "The sampled evidence documents carry no URLs (links were removed at sampling time), so citation_precision/recall cannot be computed on this slice.The paragraph-level equivalent is reported in evidence/cards_evidence.jsonl.",
+      "citation_precision": null,
+      "citation_recall": null,
+      "commit": "n/a (working tree)",
+      "correct": 0,
+      "coverage": 0.0,
+      "dataset": "vitaminc",
+      "gated_inputs": 0,
+      "gold_distribution": {
+        "refuted": 44,
+        "supported": 64,
+        "undetermined": 23
+      },
+      "macro_f1": 0.0996,
+      "mapping": {
+        "NOT ENOUGH INFO": "undetermined",
+        "REFUTES": "refuted",
+        "SUPPORTS": "supported"
+      },
+      "n": 131,
+      "per_label": {
+        "refuted": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 44
+        },
+        "supported": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 64
+        },
+        "undetermined": {
+          "precision": 0.1756,
+          "recall": 1.0,
+          "support": 23
+        }
+      },
+      "refusal_rate": 1.0,
+      "runtime_s": 1.945,
+      "seed": 20261120,
+      "selective_accuracy": {
+        "100": 0.1756,
+        "50": 0.1538,
+        "70": 0.1099
+      },
+      "split": "dev",
+      "undetermined_precision": 0.1756,
+      "wrong": 0,
+      "wrong_cases": []
+    }
+  },
+  "evaluated_at": "2026-11-20T18:01:14Z",
+  "kernel": "offline deterministic core (use_llm=False)",
+  "samples_dir": "data/external/samples",
+  "seed": 20261120,
+  "split": "dev",
+  "status": "run"
+}

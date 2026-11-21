@@ -1,0 +1,54 @@
+{
+ "schema": "claim-autopsy/error-review/1",
+ "generated_at": "2026-11-20T16:17:40Z",
+ "reviewed_against": {
+  "run": "evidence/external_eval_v4.json",
+  "split": "dev",
+  "seed": 20261120,
+  "answers": 11,
+  "correct": 10,
+  "wrong": 1,
+  "wrong_ids": ["healthver-674"]
+ },
+ "categories": {
+  "contradictory_benchmark_label": "The same claim text carries more than one gold label in the benchmark itself; the verdict is checked against a label the file contradicts elsewhere. Requires label_evidence pointing at a group in evidence/label_conflicts.json.",
+  "provenance_difference": "The benchmark sentence and the corpus sentence state the same proposition but differ in a detail the engine correctly treats as decisive (population, dose, endpoint, timeframe); the verdict follows the corpus, the label follows another source.",
+  "corpus_scope": "The claim is inside the tool's declared domain but outside what the 112-card corpus asserts; a decision was made that the corpus does not actually licence."
+ },
+ "entries": [
+  {
+   "id": "ER-001",
+   "case_id": "healthver-674",
+   "dataset": "healthver",
+   "claim": "The pandemic coronavirus will wane with warmer weather, like some other respiratory",
+   "atom": "The pandemic coronavirus will wane with warmer weather",
+   "gold": "supported",
+   "pred": "refuted",
+   "cards": ["E117"],
+   "sources": ["WHO-MYTH"],
+   "category": "contradictory_benchmark_label",
+   "label_evidence": {
+    "section": "raw_healthver",
+    "text_prefix": "the pandemic coronavirus will wane with warmer weather",
+    "labels": {"Supports": 8, "Refutes": 3, "Neutral": 1},
+    "rows": 12
+   },
+   "reason": "The verdict comes from E117, the WHO myth card 'Cold weather kills the coronavirus', whose archived paragraph states that high temperatures are 'not strong enough to seasonally control transmission'. Against that paragraph a claim that the pandemic 'will wane with warmer weather' is refutable, and 3 of the 12 rows carrying this exact sentence in healthver_dev.csv label it Refutes while 1 labels it Neutral and 8 label it Supports. HealthVer labels a claim against the evidence sentence supplied with it, not against the claim alone, so one sentence is both supported and refuted inside a single dev split. This row's label is therefore not a settled fact about the claim, and the kernel is not patched to manufacture a Supports for it.",
+   "what_would_change_it": "A card whose paragraph asserts that warm weather reduces transmission, with the affirming excerpt archived, would move this claim to supported on its own evidence. No such card exists, and inventing one from a benchmark sentence is barred by the no-benchmark-in-corpus rule that A35 enforces.",
+   "cost_of_patching": "The only kernel change that would flip this row is a hedge/modal rule that suppresses refutation of sentences containing 'may' or 'will ... like'. Probed on the same 840 dev rows it trades 3 correct decisions for 2 errors, and one of the two recovered rows is this one, whose label the file itself contradicts. Rejected on the numbers, not on taste."
+  }
+ ],
+ "rejected_fixes": [
+  {
+   "change": "hedge/modal suppression: treat 'may', 'could', 'will ... like' as undetermined rather than refutable",
+   "effect_on_dev": "3 correct answers lost, 2 wrong answers recovered, net -1 correct; the recovered rows include a claim whose own label is contradicted by 3 of 12 rows in the raw file",
+   "verdict": "rejected"
+  },
+  {
+   "change": "restate E117's archived excerpt to only the 'cold weather' clause so the warm-weather claim no longer matches",
+   "effect_on_dev": "would flip this row to supported",
+   "verdict": "rejected: the excerpt is the source's own paragraph, and editing source text to move a benchmark row is the definition of tuning to the test"
+  }
+ ],
+ "note": "One entry, because the current dev run has one wrong decision. The entry set is compared with the wrong set in both directions on every audit, so this file cannot outlive the error it describes."
+}

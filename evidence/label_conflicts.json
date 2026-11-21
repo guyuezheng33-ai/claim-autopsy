@@ -1,0 +1,2790 @@
+{
+ "schema": "claim-autopsy/label-conflicts/1",
+ "generated_at": "2026-11-20T16:14:36Z",
+ "samples": {
+  "rows": 1200,
+  "distinct": 1052,
+  "conflicting_groups": 27,
+  "rows_in_conflicting_groups": 79,
+  "conflicts": {
+   "'social distancing' could help stop coronavirus spread": {
+    "labels": {
+     "supported": 2,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-2048",
+     "healthver-2131",
+     "healthver-2255"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "5g networks facilitate the spread of the coronavirus.": {
+    "labels": {
+     "refuted": 2,
+     "supported": 1
+    },
+    "ids": [
+     "healthver-5867",
+     "healthver-5935",
+     "healthver-6028"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "a person can also get the coronavirus if they touch a surface or object that has viral particles on it and then touch their mouth, nose, or eyes.": {
+    "labels": {
+     "supported": 2,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-10440",
+     "healthver-10476",
+     "healthver-10655"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "are hydroxychloroquine and chloroquine safe? hydroxychloroquine and chloroquine are generally considered safe when taken for conditions that they have been approved for.": {
+    "labels": {
+     "supported": 1,
+     "undetermined": 2
+    },
+    "ids": [
+     "healthver-2743",
+     "healthver-2914",
+     "healthver-2943"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "can dogs and cats get coronavirus ? the short answer is yes": {
+    "labels": {
+     "refuted": 1,
+     "supported": 2
+    },
+    "ids": [
+     "healthver-6702",
+     "healthver-6894",
+     "healthver-7000"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "can my pet spread the coronavirus? yes it can": {
+    "labels": {
+     "refuted": 1,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-6921",
+     "healthver-7061"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "can we get the virus from our pets? no, we can't": {
+    "labels": {
+     "refuted": 1,
+     "supported": 1
+    },
+    "ids": [
+     "healthver-6678",
+     "healthver-6814"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "coronavirus may originated in a lab": {
+    "labels": {
+     "refuted": 2,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-161",
+     "healthver-264",
+     "healthver-365"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "even wearing non-medical grade masks or face coverings would have a profound effect in limiting coronavirus transmission": {
+    "labels": {
+     "supported": 1,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-4238",
+     "healthver-4288"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "favipiravir, an antiviral drug used for influenza in japan, is currently being studied in humans for treating covid-19 in over 30 clinical trials (as of july 31, 2020). it is not known whether it is safe or helpful for this disease.": {
+    "labels": {
+     "refuted": 1,
+     "supported": 1
+    },
+    "ids": [
+     "healthver-10240",
+     "healthver-10254"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "ibuprofen may not be effective for covid-19": {
+    "labels": {
+     "supported": 1,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-10134",
+     "healthver-10170"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "if you do get covid-19, the infection could put you at greater risk for diabetes complications like diabetic ketoacidosis (dka). dka happens when high levels of acids called ketones build up in your blood. it can be very serious.": {
+    "labels": {
+     "supported": 1,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-12375",
+     "healthver-12407"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "it is safe for you to defer taking anti-fever like ibuprofen medicines for minor illnesses.": {
+    "labels": {
+     "refuted": 1,
+     "supported": 3
+    },
+    "ids": [
+     "healthver-7153",
+     "healthver-7358",
+     "healthver-7499",
+     "healthver-7675"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "most people infected with the covid-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment": {
+    "labels": {
+     "refuted": 1,
+     "undetermined": 2
+    },
+    "ids": [
+     "healthver-285",
+     "healthver-387",
+     "healthver-485"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "other viral respiratory diseases, such as influenza, are seasonal in that cases decrease in the spring and summer. but unlike the flu, no one knows what to expect from covid-19": {
+    "labels": {
+     "refuted": 1,
+     "supported": 2
+    },
+    "ids": [
+     "healthver-1033",
+     "healthver-1282",
+     "healthver-604"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "people may acquire sars-cov-2 through the air and after touching contaminated objects.": {
+    "labels": {
+     "refuted": 1,
+     "supported": 4
+    },
+    "ids": [
+     "healthver-10363",
+     "healthver-10722",
+     "healthver-10794",
+     "healthver-10830",
+     "healthver-10902"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "the analyses clearly show that sars-cov-2 is not a laboratory construct or a purposefully manipulated virus": {
+    "labels": {
+     "supported": 1,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-28",
+     "healthver-434"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the coronavirus that causes covid-19 can spread between people interacting in close proximity - for example, speaking, coughing, sneezing, or singing- even if those people do not symptoms": {
+    "labels": {
+     "refuted": 5,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-10382",
+     "healthver-10418",
+     "healthver-10454",
+     "healthver-10633",
+     "healthver-10669",
+     "healthver-10777"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "the covid-19 disease can infect anyone at any age. people with pre-existing health conditions such as asthma, copd, diabetes and heart disease appear to be more at risk.": {
+    "labels": {
+     "refuted": 1,
+     "undetermined": 3
+    },
+    "ids": [
+     "healthver-12244",
+     "healthver-12277",
+     "healthver-12310",
+     "healthver-12408"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the marshall mathers lp sold less than 30 million copies globally .": {
+    "labels": {
+     "refuted": 1,
+     "supported": 1
+    },
+    "ids": [
+     "vitaminc-5ebbf32bc9e77c0009295827_4",
+     "vitaminc-5ebbf32bc9e77c0009295843_2"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "the new coronavirus can infect organs throughout the body, including lungs, throat, heart, liver, brain, kidneys and the intestines": {
+    "labels": {
+     "supported": 2,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-9369",
+     "healthver-9378",
+     "healthver-9401"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "there is evidence that routine use of ibuprofen associated with higher covid-19 mortality": {
+    "labels": {
+     "refuted": 4,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-7260",
+     "healthver-7303",
+     "healthver-7351",
+     "healthver-7387",
+     "healthver-7413"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "there's actually elevated transmission during the winter months from covid.": {
+    "labels": {
+     "refuted": 1,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-1243",
+     "healthver-930"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "there's an evidence that pets are playing a role in spreading covid-19": {
+    "labels": {
+     "refuted": 1,
+     "supported": 1
+    },
+    "ids": [
+     "healthver-6720",
+     "healthver-6869"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "understanding these immune changes may help in finding treatments that work for older covid-19 patients, but, it may also help younger people who may have some of the same problems without knowing it.": {
+    "labels": {
+     "supported": 1,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-13105",
+     "healthver-13657"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "vitamin c supports your immune system.": {
+    "labels": {
+     "supported": 2,
+     "undetermined": 1
+    },
+    "ids": [
+     "healthver-4910",
+     "healthver-5080",
+     "healthver-5158"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   },
+   "while there is no evidence that infected animals can spread covid-19 to humans, some pet owners might be concerned, understandably so, that their pet could become infected with covid-19 and fall ill.": {
+    "labels": {
+     "refuted": 1,
+     "supported": 2
+    },
+    "ids": [
+     "healthver-9039",
+     "healthver-9052",
+     "healthver-9201"
+    ],
+    "slices": [
+     "dev",
+     "holdback"
+    ]
+   }
+  }
+ },
+ "raw_healthver": {
+  "rows": 1917,
+  "distinct": 230,
+  "conflicting_groups": 115,
+  "rows_in_conflicting_groups": 1071,
+  "conflicts": {
+   "'social distancing' could help stop coronavirus spread": {
+    "labels": {
+     "Neutral": 4,
+     "Refutes": 2,
+     "Supports": 10
+    },
+    "ids": [
+     "1696",
+     "1911",
+     "1922",
+     "2015",
+     "2399",
+     "1767",
+     "2060",
+     "1666",
+     "1943",
+     "2327",
+     "2255",
+     "1839",
+     "2131",
+     "2471",
+     "2048",
+     "2184"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "5g networks facilitate the spread of the coronavirus.": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 8,
+     "Supports": 1
+    },
+    "ids": [
+     "5953",
+     "6006",
+     "6063",
+     "5935",
+     "6028",
+     "5913",
+     "5962",
+     "5867",
+     "5890",
+     "5984"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "a few cats have reportedly tested positive for covid-19 after they came into contact with people who were infected. they include pet cats and zoo animals.": {
+    "labels": {
+     "Refutes": 1,
+     "Supports": 4
+    },
+    "ids": [
+     "6854",
+     "7027",
+     "6799",
+     "6944",
+     "6900"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "a headache isn't a common symptom of the virus, but about 14% of people infected with corna have experienced it": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 2,
+     "Supports": 2
+    },
+    "ids": [
+     "7924",
+     "7971",
+     "7984",
+     "7956",
+     "8001"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "a lot has been written around the novel coronavirus and how it impacts lungs, but in recent few months, experts have observed a rise in cardiac arrest cases during the pandemic.": {
+    "labels": {
+     "Neutral": 1,
+     "Supports": 5
+    },
+    "ids": [
+     "11992",
+     "12017",
+     "12067",
+     "11942",
+     "12042",
+     "11967"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "a person can also get the coronavirus if they touch a surface or object that has viral particles on it and then touch their mouth, nose, or eyes.": {
+    "labels": {
+     "Neutral": 4,
+     "Refutes": 2,
+     "Supports": 11
+    },
+    "ids": [
+     "10368",
+     "10440",
+     "10476",
+     "10835",
+     "10512",
+     "10907",
+     "10404",
+     "10548",
+     "10619",
+     "10943",
+     "10727",
+     "10799",
+     "10871",
+     "10583",
+     "10655",
+     "10763",
+     "10691"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "ace inhibitors and angiotensin receptor blockers may increase the risk of severe covid-19": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 3,
+     "Supports": 3
+    },
+    "ids": [
+     "11573",
+     "11733",
+     "11765",
+     "11637",
+     "11605",
+     "11669",
+     "11701"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "all hand sanitizers works against covid-19": {
+    "labels": {
+     "Neutral": 4,
+     "Supports": 3
+    },
+    "ids": [
+     "11548",
+     "11373",
+     "11443",
+     "11513",
+     "11478",
+     "11338",
+     "11408"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "although cardiovascular diseases in combination with covid-19 portend increased risk of severity and mortality, the use of [ace inhibitors and arbs] is not the likely culprit.": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 3,
+     "Supports": 3
+    },
+    "ids": [
+     "11594",
+     "11658",
+     "11754",
+     "11786",
+     "11690",
+     "11722",
+     "11626"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "animals don't appear to play a significant role in spreading the virus that causes covid-19.": {
+    "labels": {
+     "Neutral": 8,
+     "Refutes": 1,
+     "Supports": 9
+    },
+    "ids": [
+     "6964",
+     "6896",
+     "6848",
+     "6837",
+     "6704",
+     "6755",
+     "6884",
+     "7001",
+     "6791",
+     "6931",
+     "6629",
+     "6782",
+     "7062",
+     "7017",
+     "7047",
+     "6866",
+     "6658",
+     "6988"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "another candidate vaccine, called coronavac , being developed by beijing-based sinovac biotech, protected rhesus macaque monkeys from infection with the novel coronavirus,": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 3
+    },
+    "ids": [
+     "3224",
+     "3216",
+     "3211",
+     "3205"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "ards (acute respiratory distress syndrome) is a common cause of death in critically ill coronavirus patients": {
+    "labels": {
+     "Refutes": 1,
+     "Supports": 3
+    },
+    "ids": [
+     "1577",
+     "1468",
+     "1530",
+     "1615"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "are hydroxychloroquine and chloroquine safe? hydroxychloroquine and chloroquine are generally considered safe when taken for conditions that they have been approved for.": {
+    "labels": {
+     "Neutral": 7,
+     "Supports": 7
+    },
+    "ids": [
+     "2830",
+     "3009",
+     "3066",
+     "3097",
+     "2806",
+     "2978",
+     "2886",
+     "2774",
+     "2711",
+     "3037",
+     "2858",
+     "2914",
+     "2743",
+     "2943"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "before preparing or eating food it is important to always wash your hands with soap and water for 20 seconds for general food safety.": {
+    "labels": {
+     "Neutral": 10,
+     "Supports": 1
+    },
+    "ids": [
+     "8780",
+     "8760",
+     "8833",
+     "8788",
+     "8774",
+     "8809",
+     "8736",
+     "8821",
+     "8748",
+     "8798",
+     "8763"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "blood pressure drugs linked to lower covid-19 mortality": {
+    "labels": {
+     "Neutral": 6,
+     "Supports": 1
+    },
+    "ids": [
+     "12166",
+     "12090",
+     "12128",
+     "12203",
+     "12185",
+     "12147",
+     "12109"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "blood pressure meds could improve survival in covid-19": {
+    "labels": {
+     "Neutral": 4,
+     "Refutes": 3
+    },
+    "ids": [
+     "11630",
+     "11790",
+     "11662",
+     "11598",
+     "11726",
+     "11758",
+     "11694"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "budesonide, commonly prescribed in the united states under the name pulmicort, is a good treatment for covid-19.": {
+    "labels": {
+     "Neutral": 9,
+     "Refutes": 2
+    },
+    "ids": [
+     "9476",
+     "9531",
+     "9484",
+     "9558",
+     "9523",
+     "9537",
+     "9508",
+     "9545",
+     "9515",
+     "9500",
+     "9492"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "can dogs and cats get coronavirus ? the short answer is yes": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 2,
+     "Supports": 12
+    },
+    "ids": [
+     "6789",
+     "6846",
+     "7087",
+     "6628",
+     "7015",
+     "6656",
+     "6702",
+     "6987",
+     "7000",
+     "6962",
+     "6754",
+     "6894",
+     "6883",
+     "6929",
+     "6780"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "can my pet spread the coronavirus? yes it can": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 4,
+     "Supports": 2
+    },
+    "ids": [
+     "7085",
+     "6649",
+     "7061",
+     "6921",
+     "6876",
+     "6833",
+     "6750"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "can we get the virus from our pets? no, we can't": {
+    "labels": {
+     "Refutes": 3,
+     "Supports": 2
+    },
+    "ids": [
+     "6728",
+     "7040",
+     "6678",
+     "6814",
+     "6955"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "cannabis may reduce deadly covid-19 lung inflammation": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 5,
+     "Supports": 2
+    },
+    "ids": [
+     "7846",
+     "7750",
+     "7778",
+     "7850",
+     "7806",
+     "7836",
+     "7884",
+     "7856"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "cats can pass the virus to other cats, they discovered no proof that the animals can pass covid-19 to humans": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 2
+    },
+    "ids": [
+     "7060",
+     "7083",
+     "6919"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "certain marijuana strains could possibly prevent covid-19 infection.": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 5
+    },
+    "ids": [
+     "7797",
+     "7769",
+     "7903",
+     "7875",
+     "7920",
+     "7825"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "chimps and gorillas may catch covid-19": {
+    "labels": {
+     "Refutes": 1,
+     "Supports": 3
+    },
+    "ids": [
+     "6936",
+     "7021",
+     "6898",
+     "6968"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "consuming alcohol stimulates the immune system": {
+    "labels": {
+     "Neutral": 2,
+     "Supports": 3
+    },
+    "ids": [
+     "5786",
+     "5753",
+     "5790",
+     "5822",
+     "5835"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "coronavirus can be crushed by warmer weather": {
+    "labels": {
+     "Neutral": 2,
+     "Refutes": 4,
+     "Supports": 8
+    },
+    "ids": [
+     "1300",
+     "987",
+     "697",
+     "904",
+     "1157",
+     "760",
+     "1387",
+     "1362",
+     "1111",
+     "622",
+     "1213",
+     "1049",
+     "844",
+     "1440"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "coronavirus can be prevented by having millets in one's diet because it generates heat in the body.": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 6
+    },
+    "ids": [
+     "10008",
+     "9963",
+     "9978",
+     "10022",
+     "9986",
+     "9970",
+     "9994"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "coronavirus deaths in people with diabetes data from nhs england in may showed us that, for those who become so unwell with coronavirus that they need to go to hospital, the risk of dying is higher for people living with diabetes than people without the condition.": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 1,
+     "Supports": 5
+    },
+    "ids": [
+     "12345",
+     "12410",
+     "12377",
+     "12213",
+     "12246",
+     "12312",
+     "12279"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "coronavirus does not cause heart damage": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 4,
+     "Supports": 1
+    },
+    "ids": [
+     "12046",
+     "11996",
+     "12071",
+     "12021",
+     "11971",
+     "11946"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "coronavirus may originated in a lab": {
+    "labels": {
+     "Neutral": 7,
+     "Refutes": 5
+    },
+    "ids": [
+     "8",
+     "414",
+     "529",
+     "365",
+     "264",
+     "161",
+     "57",
+     "510",
+     "463",
+     "109",
+     "315",
+     "212"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "coronavirus originate in a chinese laboratory": {
+    "labels": {
+     "Neutral": 6,
+     "Refutes": 5
+    },
+    "ids": [
+     "511",
+     "267",
+     "60",
+     "417",
+     "215",
+     "368",
+     "112",
+     "164",
+     "11",
+     "466",
+     "318"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "coronaviruses are a large family of different viruses and have coexisted with humans for a long time. the leap from animals to humans, however, coronavirus is new": {
+    "labels": {
+     "Neutral": 6,
+     "Supports": 5
+    },
+    "ids": [
+     "101",
+     "357",
+     "153",
+     "506",
+     "407",
+     "0",
+     "455",
+     "307",
+     "204",
+     "49",
+     "256"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "covid-19 primary, not only, cause of 94% of deaths": {
+    "labels": {
+     "Neutral": 1,
+     "Supports": 3
+    },
+    "ids": [
+     "1460",
+     "1522",
+     "1660",
+     "1607"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "diabetes more than doubles your risk of dying from coronavirus.": {
+    "labels": {
+     "Neutral": 4,
+     "Refutes": 1,
+     "Supports": 2
+    },
+    "ids": [
+     "12326",
+     "12391",
+     "12359",
+     "12424",
+     "12260",
+     "12293",
+     "12227"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "do surgical masks actually prevent the spread of covid-19? no, absolutely not.": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 9
+    },
+    "ids": [
+     "4320",
+     "4273",
+     "4343",
+     "4415",
+     "4226",
+     "4247",
+     "4391",
+     "4296",
+     "4439",
+     "4367"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "do you need hand sanitizer to effectively fight covid-19? per the centers for disease control and prevention, the most effective way of fighting coronavirus is using soap and water to wash your hands": {
+    "labels": {
+     "Neutral": 4,
+     "Supports": 3
+    },
+    "ids": [
+     "11489",
+     "11524",
+     "11559",
+     "11419",
+     "11454",
+     "11384",
+     "11349"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "drinking boiled garlic water will cure covid-19.": {
+    "labels": {
+     "Refutes": 4,
+     "Supports": 1
+    },
+    "ids": [
+     "5305",
+     "5343",
+     "5296",
+     "5182",
+     "5242"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "drugs for high blood pressure appear to make covid-19 worse": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 3,
+     "Supports": 3
+    },
+    "ids": [
+     "11591",
+     "11655",
+     "11719",
+     "11687",
+     "11623",
+     "11751",
+     "11783"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "even wearing non-medical grade masks or face coverings would have a profound effect in limiting coronavirus transmission": {
+    "labels": {
+     "Neutral": 1,
+     "Supports": 9
+    },
+    "ids": [
+     "4383",
+     "4335",
+     "4312",
+     "4265",
+     "4218",
+     "4407",
+     "4288",
+     "4238",
+     "4431",
+     "4359"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "experts anticipate some seasonal impact on the spread of the coronavirus, though the exact relationship is unclear.": {
+    "labels": {
+     "Neutral": 1,
+     "Supports": 3
+    },
+    "ids": [
+     "807",
+     "949",
+     "1262",
+     "584"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "face masks could be giving people covid-19 immunity": {
+    "labels": {
+     "Neutral": 1,
+     "Supports": 10
+    },
+    "ids": [
+     "8396",
+     "8449",
+     "8271",
+     "8580",
+     "8165",
+     "8324",
+     "8555",
+     "8112",
+     "8218",
+     "8059",
+     "8502"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "favipiravir, an antiviral drug used for influenza in japan, is currently being studied in humans for treating covid-19 in over 30 clinical trials (as of july 31, 2020). it is not known whether it is safe or helpful for this disease.": {
+    "labels": {
+     "Neutral": 2,
+     "Refutes": 3,
+     "Supports": 5
+    },
+    "ids": [
+     "10288",
+     "10286",
+     "10245",
+     "10254",
+     "10292",
+     "10240",
+     "10287",
+     "10259",
+     "10289",
+     "10272"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "headache was a symptom in some covid-19 patients.": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 1,
+     "Supports": 8
+    },
+    "ids": [
+     "7972",
+     "7939",
+     "8003",
+     "7949",
+     "7987",
+     "8018",
+     "7926",
+     "7964",
+     "7960",
+     "7958"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "heart attacks and strokes caused by blood clots appears to be the cause of death in some younger patients under the age of 50.": {
+    "labels": {
+     "Refutes": 3,
+     "Supports": 1
+    },
+    "ids": [
+     "1551",
+     "1495",
+     "1589",
+     "1636"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "high blood pressure doubles coronavirus death risk": {
+    "labels": {
+     "Neutral": 2,
+     "Supports": 5
+    },
+    "ids": [
+     "12153",
+     "12077",
+     "12096",
+     "12172",
+     "12115",
+     "12191",
+     "12134"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "high doses of vitamin c effectively treat coronavirus.": {
+    "labels": {
+     "Refutes": 8,
+     "Supports": 1
+    },
+    "ids": [
+     "4678",
+     "5069",
+     "5161",
+     "4849",
+     "4593",
+     "4934",
+     "5103",
+     "4763",
+     "5013"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "high doses of vitamins and natural remedies can stave off covid-19": {
+    "labels": {
+     "Neutral": 5,
+     "Refutes": 3,
+     "Supports": 1
+    },
+    "ids": [
+     "10342",
+     "10298",
+     "10347",
+     "10303",
+     "10311",
+     "10315",
+     "10308",
+     "10335",
+     "10320"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "hvac systems can spread the disease caused by the coronavirus": {
+    "labels": {
+     "Neutral": 2,
+     "Refutes": 2
+    },
+    "ids": [
+     "1253",
+     "940",
+     "798",
+     "575"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "ibuprofen may not be effective for covid-19": {
+    "labels": {
+     "Neutral": 2,
+     "Supports": 4
+    },
+    "ids": [
+     "10151",
+     "10134",
+     "10177",
+     "10170",
+     "10159",
+     "10165"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "ideal weather conditions may have helped coronavirus thrive": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 3
+    },
+    "ids": [
+     "809",
+     "586",
+     "951",
+     "1264"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "if you do get covid-19, the infection could put you at greater risk for diabetes complications like diabetic ketoacidosis (dka). dka happens when high levels of acids called ketones build up in your blood. it can be very serious.": {
+    "labels": {
+     "Neutral": 5,
+     "Refutes": 1,
+     "Supports": 1
+    },
+    "ids": [
+     "12375",
+     "12243",
+     "12407",
+     "12276",
+     "12210",
+     "12342",
+     "12309"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "in covid-19 patients especially old people, those who had sufficient levels of vitamin d were more than 51% less likely to die than patients who were deficient.": {
+    "labels": {
+     "Refutes": 3,
+     "Supports": 6
+    },
+    "ids": [
+     "3702",
+     "3928",
+     "3580",
+     "4111",
+     "4050",
+     "3336",
+     "3449",
+     "3815",
+     "3989"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "is it safe to take acetaminophen/tylenol to treat coronavirus symptoms? yes it is.": {
+    "labels": {
+     "Refutes": 3,
+     "Supports": 11
+    },
+    "ids": [
+     "7297",
+     "7617",
+     "7438",
+     "7345",
+     "7596",
+     "7486",
+     "7207",
+     "7411",
+     "7255",
+     "7575",
+     "7105",
+     "7169",
+     "7534",
+     "7662"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "it is safe for you to defer taking anti-fever like ibuprofen medicines for minor illnesses.": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 5,
+     "Supports": 10
+    },
+    "ids": [
+     "7220",
+     "7358",
+     "7451",
+     "7499",
+     "7177",
+     "7605",
+     "7153",
+     "7266",
+     "7310",
+     "7547",
+     "7675",
+     "7581",
+     "7630",
+     "7394",
+     "7118",
+     "7402"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "low vitamin d levels tied to odds for severe covid": {
+    "labels": {
+     "Refutes": 3,
+     "Supports": 6
+    },
+    "ids": [
+     "3842",
+     "3363",
+     "3953",
+     "4075",
+     "4138",
+     "3729",
+     "3476",
+     "4014",
+     "3607"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "mask wearing and social distancing for covid-19 may be slowing influenza spread": {
+    "labels": {
+     "Neutral": 2,
+     "Refutes": 2,
+     "Supports": 10
+    },
+    "ids": [
+     "2193",
+     "2019",
+     "2140",
+     "1705",
+     "2264",
+     "2475",
+     "2069",
+     "1848",
+     "2408",
+     "1927",
+     "2336",
+     "1952",
+     "1776",
+     "1675"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "masks prevent the spread of covid-19": {
+    "labels": {
+     "Neutral": 1,
+     "Supports": 9
+    },
+    "ids": [
+     "4228",
+     "4276",
+     "4394",
+     "4299",
+     "4442",
+     "4418",
+     "4323",
+     "4346",
+     "4250",
+     "4370"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "most people infected with the covid-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment": {
+    "labels": {
+     "Neutral": 9,
+     "Refutes": 1
+    },
+    "ids": [
+     "387",
+     "285",
+     "131",
+     "234",
+     "29",
+     "79",
+     "435",
+     "183",
+     "336",
+     "485"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "new evidence suggests the coronavirus has lasting impacts on the heart, raising alarm for cardiologists who have been concerned about potential long-term heart injury from covid-19.": {
+    "labels": {
+     "Neutral": 4,
+     "Refutes": 1,
+     "Supports": 1
+    },
+    "ids": [
+     "11976",
+     "11951",
+     "12051",
+     "12026",
+     "12001",
+     "11926"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "not all masks confer equal levels of protection": {
+    "labels": {
+     "Neutral": 12,
+     "Supports": 2
+    },
+    "ids": [
+     "11177",
+     "11109",
+     "11086",
+     "11017",
+     "11040",
+     "11246",
+     "11292",
+     "11155",
+     "11063",
+     "11223",
+     "11269",
+     "11200",
+     "11315",
+     "11132"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "only 6% of deaths have covid-19 as the only cause mentioned, revealing that 94% of patients who died from coronavirus also had other health conditions and contributing causes.": {
+    "labels": {
+     "Neutral": 2,
+     "Supports": 1
+    },
+    "ids": [
+     "1545",
+     "1488",
+     "1630"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "other viral respiratory diseases, such as influenza, are seasonal in that cases decrease in the spring and summer. but unlike the flu, no one knows what to expect from covid-19": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 8,
+     "Supports": 2
+    },
+    "ids": [
+     "1424",
+     "744",
+     "1346",
+     "1033",
+     "1095",
+     "888",
+     "1197",
+     "604",
+     "681",
+     "968",
+     "1282"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "people may acquire sars-cov-2 through the air and after touching contaminated objects.": {
+    "labels": {
+     "Neutral": 4,
+     "Refutes": 2,
+     "Supports": 11
+    },
+    "ids": [
+     "10830",
+     "10614",
+     "10866",
+     "10507",
+     "10363",
+     "10794",
+     "10471",
+     "10758",
+     "10902",
+     "10722",
+     "10650",
+     "10435",
+     "10543",
+     "10399",
+     "10578",
+     "10686",
+     "10938"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "people may take ibuprofen for body aches, headaches, or chronic health conditions, such as arthritis or lupus.": {
+    "labels": {
+     "Neutral": 10,
+     "Supports": 2
+    },
+    "ids": [
+     "10145",
+     "10131",
+     "10167",
+     "10161",
+     "10158",
+     "10153",
+     "10179",
+     "10142",
+     "10149",
+     "10156",
+     "10136",
+     "10140"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "people who died of covid-19, acute respiratory failure was the leading cause of death": {
+    "labels": {
+     "Refutes": 1,
+     "Supports": 3
+    },
+    "ids": [
+     "1548",
+     "1491",
+     "1633",
+     "1587"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "remdesivir has not been approved by the u.s. food and drug administration (fda) for any use, and its safety and efficacy have not been established.": {
+    "labels": {
+     "Neutral": 1,
+     "Supports": 3
+    },
+    "ids": [
+     "8694",
+     "8703",
+     "8688",
+     "8729"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "reports hypertension may be risk factor for people who get infected with the coronavirus, experts says there's not enough evidence to support that fear.": {
+    "labels": {
+     "Refutes": 6,
+     "Supports": 1
+    },
+    "ids": [
+     "12179",
+     "12122",
+     "12084",
+     "12160",
+     "12141",
+     "12197",
+     "12103"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "research shows covid-19 is a multi-organ metabolic disease": {
+    "labels": {
+     "Neutral": 1,
+     "Supports": 6
+    },
+    "ids": [
+     "9377",
+     "9399",
+     "9405",
+     "9387",
+     "9384",
+     "9407",
+     "9392"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "sars-cov-2 is more stable on plastic and stainless steel than on copper and cardboard": {
+    "labels": {
+     "Neutral": 15,
+     "Supports": 2
+    },
+    "ids": [
+     "10587",
+     "10947",
+     "10695",
+     "10372",
+     "10516",
+     "10659",
+     "10803",
+     "10875",
+     "10480",
+     "10839",
+     "10408",
+     "10623",
+     "10911",
+     "10731",
+     "10444",
+     "10767",
+     "10551"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "scientific data has shown that cats can be infected with sars-cov-2 and can spread it to other cats.": {
+    "labels": {
+     "Refutes": 2,
+     "Supports": 2
+    },
+    "ids": [
+     "6685",
+     "7077",
+     "6738",
+     "7058"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "scientific data shows dogs can become infected, but do not seem to show symptoms and it is not thought they spread the covid-19 virus effectively.": {
+    "labels": {
+     "Refutes": 1,
+     "Supports": 3
+    },
+    "ids": [
+     "6735",
+     "6770",
+     "6819",
+     "6906"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "several already approved drugs, including lopinavir (lpv), ritonavir, chloroquine, favipiravir, and remdesivir, an antiviral awaiting approval have been repurposed and their efficacy in fighting covid-19 is being evaluated": {
+    "labels": {
+     "Neutral": 12,
+     "Supports": 1
+    },
+    "ids": [
+     "14016",
+     "14304",
+     "13872",
+     "13945",
+     "13871",
+     "14234",
+     "14015",
+     "14161",
+     "14305",
+     "13944",
+     "14089",
+     "14088",
+     "14160"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "severe coronavirus cases may start with body aches": {
+    "labels": {
+     "Neutral": 2,
+     "Refutes": 2,
+     "Supports": 3
+    },
+    "ids": [
+     "7979",
+     "7995",
+     "8025",
+     "7933",
+     "8013",
+     "7951",
+     "8009"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "since patients treated with aceis and arbs will have increased numbers of ace2 receptors in their lungs for coronavirus s proteins to bind to, they may be at increased risk of severe disease outcomes due to sars-cov-2infections": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 3,
+     "Supports": 3
+    },
+    "ids": [
+     "11671",
+     "11575",
+     "11735",
+     "11703",
+     "11607",
+     "11639",
+     "11767"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "smokers were statistically less likely to be admitted for treatment for covid-19.": {
+    "labels": {
+     "Refutes": 5,
+     "Supports": 1
+    },
+    "ids": [
+     "6572",
+     "6419",
+     "6597",
+     "6547",
+     "6482",
+     "6622"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "social distancing is crucial for preventing the spread of contagious illnesses such as covid-19 (coronavirus). covid-19 can spread through coughing, sneezing and close contact. by minimizing the amount of close contact we have with others, we reduce our chances of catching the virus and spreading it to our loved ones and within our community.": {
+    "labels": {
+     "Neutral": 2,
+     "Supports": 10
+    },
+    "ids": [
+     "1860",
+     "2420",
+     "1964",
+     "2276",
+     "1687",
+     "2028",
+     "2148",
+     "2205",
+     "1717",
+     "2348",
+     "1788",
+     "2081"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "social distancing is the most effective measure of containing the spread of the new coronavirus.": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 1,
+     "Supports": 10
+    },
+    "ids": [
+     "2286",
+     "2358",
+     "2038",
+     "2430",
+     "2091",
+     "2153",
+     "1933",
+     "2215",
+     "1727",
+     "1974",
+     "1870",
+     "1798"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "some people with diabetes, a disease that affects the body's ability to produce or use the hormone insulin to reduce glucose (sugar) in the blood, may be concerned about being at higher risk of getting covid-19. however, this is a misconception.": {
+    "labels": {
+     "Neutral": 3,
+     "Refutes": 3,
+     "Supports": 1
+    },
+    "ids": [
+     "12321",
+     "12222",
+     "12255",
+     "12288",
+     "12419",
+     "12386",
+     "12354"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "tests have confirmed that two hand sanitizer formulations recommended by the world health organization (who) inactivate the virus that causes coronavirus disease 19 (covid-19).": {
+    "labels": {
+     "Neutral": 5,
+     "Refutes": 1,
+     "Supports": 1
+    },
+    "ids": [
+     "11477",
+     "11372",
+     "11547",
+     "11512",
+     "11407",
+     "11337",
+     "11442"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the analyses clearly show that sars-cov-2 is not a laboratory construct or a purposefully manipulated virus": {
+    "labels": {
+     "Neutral": 5,
+     "Supports": 5
+    },
+    "ids": [
+     "335",
+     "434",
+     "28",
+     "284",
+     "130",
+     "233",
+     "182",
+     "386",
+     "484",
+     "78"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the brain is another complicated organ that may be affected by the virus. people with covid-19 have had strokes and seizures.": {
+    "labels": {
+     "Neutral": 2,
+     "Supports": 3
+    },
+    "ids": [
+     "9371",
+     "9374",
+     "9395",
+     "9402",
+     "9380"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the coronavirus can live on a surgical mask for 7 days, cloth for 2 days, and paper for 3 hours.": {
+    "labels": {
+     "Neutral": 9,
+     "Supports": 8
+    },
+    "ids": [
+     "10654",
+     "10511",
+     "10942",
+     "10870",
+     "10403",
+     "10367",
+     "10690",
+     "10726",
+     "10618",
+     "10582",
+     "10906",
+     "10798",
+     "10762",
+     "10439",
+     "10475",
+     "10547",
+     "10834"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the coronavirus is not of natural origin": {
+    "labels": {
+     "Neutral": 7,
+     "Refutes": 5
+    },
+    "ids": [
+     "224",
+     "173",
+     "19",
+     "515",
+     "534",
+     "275",
+     "121",
+     "377",
+     "69",
+     "475",
+     "426",
+     "326"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the coronavirus that causes covid-19 can spread between people interacting in close proximity - for example, speaking, coughing, sneezing, or singing- even if those people do not symptoms": {
+    "labels": {
+     "Neutral": 9,
+     "Refutes": 7,
+     "Supports": 1
+    },
+    "ids": [
+     "10382",
+     "10454",
+     "10885",
+     "10597",
+     "10957",
+     "10561",
+     "10669",
+     "10921",
+     "10849",
+     "10490",
+     "10813",
+     "10633",
+     "10418",
+     "10705",
+     "10526",
+     "10741",
+     "10777"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the covid-19 disease can infect anyone at any age. people with pre-existing health conditions such as asthma, copd, diabetes and heart disease appear to be more at risk.": {
+    "labels": {
+     "Neutral": 3,
+     "Refutes": 1,
+     "Supports": 2
+    },
+    "ids": [
+     "12408",
+     "12277",
+     "12343",
+     "12244",
+     "12211",
+     "12310"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the first known cases of covid-19 were in wuhan, china": {
+    "labels": {
+     "Neutral": 8,
+     "Supports": 4
+    },
+    "ids": [
+     "461",
+     "262",
+     "363",
+     "413",
+     "107",
+     "313",
+     "210",
+     "55",
+     "6",
+     "528",
+     "159",
+     "509"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the lack of vitamin d make you more susceptible to the covid-19 coronavirus": {
+    "labels": {
+     "Refutes": 3,
+     "Supports": 6
+    },
+    "ids": [
+     "4002",
+     "3828",
+     "3462",
+     "4063",
+     "3349",
+     "3941",
+     "4124",
+     "3715",
+     "3593"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the new coronavirus can infect organs throughout the body, including lungs, throat, heart, liver, brain, kidneys and the intestines": {
+    "labels": {
+     "Neutral": 2,
+     "Supports": 5
+    },
+    "ids": [
+     "9369",
+     "9401",
+     "9409",
+     "9378",
+     "9372",
+     "9393",
+     "9388"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the new coronavirus may cause migraine attacks. headaches in general may be a symptom. learn more about the new coronavirus, migraine, and covid-19 symptoms.": {
+    "labels": {
+     "Neutral": 7,
+     "Supports": 3
+    },
+    "ids": [
+     "10180",
+     "10222",
+     "10190",
+     "10217",
+     "10206",
+     "10185",
+     "10227",
+     "10203",
+     "10194",
+     "10211"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the pandemic coronavirus will wane with warmer weather, like some other respiratory": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 3,
+     "Supports": 8
+    },
+    "ids": [
+     "1190",
+     "1088",
+     "881",
+     "1417",
+     "1026",
+     "813",
+     "674",
+     "954",
+     "590",
+     "736",
+     "1339",
+     "1268"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the science is clear: face masks can prevent coronavirus transmission and save lives.": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 1,
+     "Supports": 12
+    },
+    "ids": [
+     "11225",
+     "11179",
+     "11294",
+     "11019",
+     "11157",
+     "11317",
+     "11111",
+     "11248",
+     "11065",
+     "11202",
+     "11042",
+     "11134",
+     "11088",
+     "11271"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "the use of ace inhibitors was associated with an almost 40% lower risk of covid-19 hospitalization for the older, medicare advantage patients - but there was no significant difference in risk for the younger, commercially insured patients.": {
+    "labels": {
+     "Neutral": 4,
+     "Refutes": 3
+    },
+    "ids": [
+     "11716",
+     "11748",
+     "11588",
+     "11652",
+     "11780",
+     "11620",
+     "11684"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "there is also growing evidence that smaller particles called aerosols can hang in the air longer and travel farther.": {
+    "labels": {
+     "Neutral": 16,
+     "Supports": 1
+    },
+    "ids": [
+     "10824",
+     "10501",
+     "10429",
+     "10932",
+     "10644",
+     "10393",
+     "10860",
+     "10716",
+     "10680",
+     "10465",
+     "10896",
+     "10608",
+     "10788",
+     "10572",
+     "10752",
+     "10537",
+     "10357"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "there is evidence that routine use of ibuprofen associated with higher covid-19 mortality": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 13,
+     "Supports": 5
+    },
+    "ids": [
+     "7213",
+     "7668",
+     "7303",
+     "7173",
+     "7492",
+     "7387",
+     "7444",
+     "7111",
+     "7413",
+     "7623",
+     "7588",
+     "7260",
+     "7578",
+     "7423",
+     "7601",
+     "7401",
+     "7351",
+     "7540",
+     "7151"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "there's actually elevated transmission during the winter months from covid.": {
+    "labels": {
+     "Neutral": 2,
+     "Refutes": 2
+    },
+    "ids": [
+     "1243",
+     "930",
+     "788",
+     "565"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "there's an evidence that pets are playing a role in spreading covid-19": {
+    "labels": {
+     "Neutral": 2,
+     "Refutes": 8,
+     "Supports": 2
+    },
+    "ids": [
+     "6947",
+     "6869",
+     "6805",
+     "6720",
+     "6972",
+     "7053",
+     "6764",
+     "6671",
+     "7070",
+     "6637",
+     "7032",
+     "6858"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "understanding these immune changes may help in finding treatments that work for older covid-19 patients, but, it may also help younger people who may have some of the same problems without knowing it.": {
+    "labels": {
+     "Neutral": 18,
+     "Supports": 1
+    },
+    "ids": [
+     "12554",
+     "12691",
+     "12692",
+     "13242",
+     "13795",
+     "12829",
+     "12967",
+     "13794",
+     "13381",
+     "13243",
+     "13657",
+     "12553",
+     "13519",
+     "13518",
+     "13656",
+     "12830",
+     "12968",
+     "13105",
+     "13380"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "uv light is the latest popular tool in the ongoing race to find ways to prevent oneself from catching sars-cov-2, the virus that causes covid-19.": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 1
+    },
+    "ids": [
+     "7702",
+     "7729"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "vitamin b could relieve covid-19": {
+    "labels": {
+     "Neutral": 2,
+     "Refutes": 5
+    },
+    "ids": [
+     "4792",
+     "4964",
+     "4879",
+     "5043",
+     "5131",
+     "4706",
+     "4621"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "vitamin c can prevent or treat covid-19 (coronavirus)": {
+    "labels": {
+     "Refutes": 8,
+     "Supports": 1
+    },
+    "ids": [
+     "5073",
+     "5065",
+     "4903",
+     "4562",
+     "4989",
+     "4647",
+     "5152",
+     "4818",
+     "4732"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "vitamin c helps to kill the virus and reduces the symptoms of infection. it's not a covid \"cure,\" but nothing is": {
+    "labels": {
+     "Refutes": 5,
+     "Supports": 2
+    },
+    "ids": [
+     "4655",
+     "5081",
+     "4996",
+     "4826",
+     "4911",
+     "4570",
+     "4740"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "vitamin c infusion can help improve the prognosis of patients with sari.": {
+    "labels": {
+     "Neutral": 4,
+     "Refutes": 2
+    },
+    "ids": [
+     "4942",
+     "4771",
+     "4857",
+     "4601",
+     "5021",
+     "4686"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "vitamin c supports your immune system.": {
+    "labels": {
+     "Neutral": 2,
+     "Supports": 6
+    },
+    "ids": [
+     "4739",
+     "5066",
+     "5158",
+     "5080",
+     "4654",
+     "4910",
+     "4569",
+     "4825"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "vitamin d levels increase covid-19 mortality rates": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 9
+    },
+    "ids": [
+     "3310",
+     "3986",
+     "3332",
+     "3698",
+     "4047",
+     "3811",
+     "4107",
+     "3576",
+     "3445",
+     "3925"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "vitamin d levels may impact covid-19 mortality rates": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 3,
+     "Supports": 6
+    },
+    "ids": [
+     "3574",
+     "3443",
+     "3330",
+     "3308",
+     "3984",
+     "3696",
+     "4105",
+     "3809",
+     "3923",
+     "4045"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "vitamin d may improve odds of survival from covid-19.": {
+    "labels": {
+     "Refutes": 3,
+     "Supports": 6
+    },
+    "ids": [
+     "4081",
+     "3959",
+     "4147",
+     "3485",
+     "3372",
+     "3851",
+     "3738",
+     "4020",
+     "3616"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "vitamin deficiency may raise risk of serious covid-19": {
+    "labels": {
+     "Neutral": 6,
+     "Refutes": 3
+    },
+    "ids": [
+     "3829",
+     "3716",
+     "3594",
+     "3350",
+     "4064",
+     "4125",
+     "3942",
+     "3463",
+     "4003"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "warmer weather slow coronavirus": {
+    "labels": {
+     "Neutral": 3,
+     "Refutes": 5,
+     "Supports": 9
+    },
+    "ids": [
+     "1163",
+     "1181",
+     "727",
+     "1252",
+     "872",
+     "665",
+     "1079",
+     "939",
+     "1138",
+     "574",
+     "1330",
+     "644",
+     "1408",
+     "1017",
+     "1378",
+     "797",
+     "1227"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "wear cloth face coverings in public can stop spreading coronanvirus when social distancing is difficult. this advice is based on evidence that people with covid-19 can transmit the covid-19 virus before they realize they have it.": {
+    "labels": {
+     "Neutral": 1,
+     "Supports": 10
+    },
+    "ids": [
+     "8440",
+     "8262",
+     "8493",
+     "8387",
+     "8209",
+     "8361",
+     "8315",
+     "8546",
+     "8050",
+     "8156",
+     "8103"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "wearing a face mask do not stopped person-to-person spread of the virus.": {
+    "labels": {
+     "Neutral": 1,
+     "Supports": 9
+    },
+    "ids": [
+     "4452",
+     "4332",
+     "4261",
+     "4308",
+     "4428",
+     "4235",
+     "4356",
+     "4285",
+     "4404",
+     "4380"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "wet weather can kill the new coronavirus": {
+    "labels": {
+     "Neutral": 4,
+     "Refutes": 12,
+     "Supports": 1
+    },
+    "ids": [
+     "1129",
+     "1318",
+     "1155",
+     "556",
+     "779",
+     "1234",
+     "1005",
+     "1162",
+     "922",
+     "653",
+     "1169",
+     "1396",
+     "715",
+     "638",
+     "1132",
+     "860",
+     "1067"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "what are the best antibiotics for the coronavirus? none whatsoever.": {
+    "labels": {
+     "Refutes": 2,
+     "Supports": 1
+    },
+    "ids": [
+     "8616",
+     "8625",
+     "8607"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "while there is no evidence that infected animals can spread covid-19 to humans, some pet owners might be concerned, understandably so, that their pet could become infected with covid-19 and fall ill.": {
+    "labels": {
+     "Neutral": 2,
+     "Refutes": 3,
+     "Supports": 9
+    },
+    "ids": [
+     "9052",
+     "9102",
+     "9201",
+     "9078",
+     "9065",
+     "9150",
+     "9039",
+     "9124",
+     "9176",
+     "9115",
+     "9189",
+     "9163",
+     "9091",
+     "9137"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "yes, kids can get covid-19": {
+    "labels": {
+     "Neutral": 4,
+     "Supports": 17
+    },
+    "ids": [
+     "9726",
+     "9731",
+     "9705",
+     "9638",
+     "9692",
+     "9648",
+     "9658",
+     "9668",
+     "9678",
+     "9688",
+     "9713",
+     "9683",
+     "9700",
+     "9710",
+     "9653",
+     "9673",
+     "9716",
+     "9695",
+     "9721",
+     "9663",
+     "9643"
+    ],
+    "slices": [
+     "dev"
+    ]
+   },
+   "yes, the novel coronavirus can survive on surfaces. no, it doesn't seem to matter.": {
+    "labels": {
+     "Neutral": 1,
+     "Refutes": 12,
+     "Supports": 4
+    },
+    "ids": [
+     "10520",
+     "10699",
+     "10663",
+     "10771",
+     "10951",
+     "10591",
+     "10735",
+     "10807",
+     "10915",
+     "10412",
+     "10843",
+     "10484",
+     "10376",
+     "10879",
+     "10627",
+     "10448",
+     "10555"
+    ],
+    "slices": [
+     "dev"
+    ]
+   }
+  },
+  "file": "healthver_dev.csv",
+  "sha256": "6f8ea31cbcf2ea5a2d3c82d65587d66e96de4f70e72642bbf7f61fec6ef8a93a",
+  "note": "label counts per claim text, computed over the raw dev split; this is the census the sample was drawn from, not a re-scoring of it"
+ },
+ "reading": "A group is a normalized claim text that arrives with more than one gold label. On such a text, a claim-level accuracy number cannot be right for every row, and a single wrong verdict may be a verdict against a label the file contradicts elsewhere."
+}

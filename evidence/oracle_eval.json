@@ -1,0 +1,893 @@
+{
+  "datasets": {
+    "averitec": {
+      "accuracy": 0.3154,
+      "accuracy_on_decided": 0.3197,
+      "always_undetermined_baseline": 0.6577,
+      "confusion": {
+        "refuted": {
+          "refuted": 8,
+          "supported": 88,
+          "undetermined": 2
+        },
+        "supported": {
+          "refuted": 1,
+          "supported": 39,
+          "undetermined": 0
+        },
+        "undetermined": {
+          "refuted": 3,
+          "supported": 8,
+          "undetermined": 0
+        }
+      },
+      "coverage": 0.9866,
+      "dataset": "averitec",
+      "failures": [
+        {
+          "claim": "Trump Administration claimed songwriter Billie Eilish Is Destroying Our Country In Leaked Documents",
+          "evidence": "A Washington Post story wrongly claimed the Trump administration accused Billie Eilish of “destroying our country",
+          "gold": "refuted",
+          "id": "averitec-0001",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "New Zealand’s new Food Bill bans gardening",
+          "evidence": "The claim refers to the Food Act 2014, first read in New Zealand Parliament in May 2010. No The title of the blog refers to the Food Bill as \"New Food Bill in New Zealand...\" This bill would on commencement replace the Food Act 1981 and over time the Food Hygiene Regulations 1974 and the Food (Safety) Regulations 2002. The date on the post is October 29, 2020 Public Service Act 2020 (2020 No 40): section 135\nEducation and Training Act 2020 (2020 No 38): section 668\nPrivacy Act 2020 (2020 No 31): section 217\nCOVID-19 Response (Further Management Measures) Legislation Act 2020 (2020 No 13): section 3\nStatutes Amendment Act 2019 (2019 No 56): Part 18\nCustoms and Excise Act 2018 (2018 No 4): section 443(3)\nFood Safety Law Reform Act 2018 (2018 No 3): Part 1\nDistrict Court Act 2016 (2016 No 49): section 261\nSenior Courts Act 2016 (2016 No 48): section 183(b), (c)\nFood Regulations 2015 (LI 201",
+          "gold": "refuted",
+          "id": "averitec-0012",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Trash Can Plastered With 'Ballot Box' Sign In Philadelphia Was Intended To Get People To Toss Their Ballots In The Trash.",
+          "evidence": "The posters proclaiming Ballot Box on sidewalk solar-powered trash compactors were created to advertise Ballot Box an exhibit and not to throw votes in the trash.",
+          "gold": "refuted",
+          "id": "averitec-0022",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Joe Biden wants to ban fracking",
+          "evidence": "hes never said he opposes it.",
+          "gold": "refuted",
+          "id": "averitec-0023",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Breitbart News reports that the daughter of Delaware Democratic Senator Chris Coons and seven other underage girls were featured on Hunter Biden's laptop.",
+          "evidence": "No evidence was found online that Breitbart News had reported on  the daughter of Delaware Democratic Senator Chris Coons and seven other underaged girls being featured on Hunter Biden's laptop. Lauren Witzke\n@LaurenWitzkeDE\n\nBIG BREAKING NEWS:\n\n\"Sources close to and with deep knowledge of the investigation, have informed me that Chris Coons' DAUGHTER in addition to seven other underage girls are also featured on [Hunter Biden's] laptop.\"",
+          "gold": "refuted",
+          "id": "averitec-0037",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Hunter Biden, son of US President Joe Biden has died.",
+          "evidence": "25/10/2020 No",
+          "gold": "refuted",
+          "id": "averitec-0038",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "5G causes COVID-19.",
+          "evidence": "No Many countries affected by coronavirus do not yet have 5G coverage World Health Organization (WHO) and Centers for Disease Control (CDC), you need to come into contact physically with the coronavirus to become infected by it, and as the EMFs from 5G cannot carry viruses, they cannot bring you into contact with the virus.”",
+          "gold": "refuted",
+          "id": "averitec-0039",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Wearing face masks can cause infections from bacteria such as staphylococcus.",
+          "evidence": "Wearing masks for a long time causes a lot of physiological and psychological loads and can reduce work efficiency. The activity cannot be performed as much or as efficiently while wearing the mask as when the masks are not worn. In addition, when you can continue an activity, it decreases when using the mask. Prolonged use of N95 and surgical masks can cause physical side effects such as acne, difficulty breathing, headaches, impaired cognition, rashes, and skin breakdown. It also interferes with vision, communication, and thermal balance [34]. You probably come into contact with staph bacteria on a daily basis, but it doesn’t always cause an infection. If you have a break in your skin, though, such as a cut, scrape, or burn, the bacteria can enter your body and cause an infection.\n\nThere are several things that can cause a a break in the delicate skin inside your nose, including:\n\n   e",
+          "gold": "refuted",
+          "id": "averitec-0041",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "The umbilical cord should not be cut until 1 hour after birth or they baby will not have enough blood right after birth.",
+          "evidence": "Late cord clamping (performed approximately 1–3 min after birth) is recommended for all births,",
+          "gold": "refuted",
+          "id": "averitec-0046",
+          "polarity_flipped": false,
+          "pred": "undetermined",
+          "reason": "Ambiguous double negation. The tool refuses rather than guessing which polarity was meant.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0.0,
+            "supports": 0.0
+          }
+        },
+        {
+          "claim": "The US saw the best carbon emission numbers in 35 years under President Donald Trump's administration.",
+          "evidence": "The United States...  managed to cut their carbon dioxide output this year (2019) 6,373 metric tons of carbon dioxide in 1991 George H. W. Bush carbon emission reduced under trump but it was not the lowest seen before",
+          "gold": "refuted",
+          "id": "averitec-0049",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Previous flu vaccines may have made President Donald Trump susceptible to COVID-19",
+          "evidence": "COVID-19 and influenza (flu) are both infectious respiratory illnesses. Though the symptoms of these two diseases seem similar, they are caused by different viruses. While many people often compare COVID-19 to the flu, there are many differences between them. Yes",
+          "gold": "refuted",
+          "id": "averitec-0056",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "White House coronavirus adviser Dr. Anthony Fauci wrote a 2008 paper that found most 1918-1919 Spanish Influenza pandemic deaths were because of bacterial pneumonia from wearing masks.",
+          "evidence": "The majority of deaths in the 1918–1919 influenza pandemic likely resulted directly from secondary bacterial pneumonia caused by common upper respiratory–tract bacteria. No",
+          "gold": "refuted",
+          "id": "averitec-0069",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        }
+      ],
+      "gold_distribution": {
+        "refuted": 98,
+        "supported": 40,
+        "undetermined": 11
+      },
+      "macro_f1": 0.197,
+      "n": 149,
+      "per_label": {
+        "refuted": {
+          "precision": 0.6667,
+          "recall": 0.0816,
+          "support": 98
+        },
+        "supported": {
+          "precision": 0.2889,
+          "recall": 0.975,
+          "support": 40
+        },
+        "undetermined": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 11
+        }
+      },
+      "runtime_s": 0.227,
+      "split": "dev"
+    },
+    "fever": {
+      "dataset": "fever",
+      "status": "no_rows_with_evidence"
+    },
+    "healthver": {
+      "accuracy": 0.2243,
+      "accuracy_on_decided": 0.2297,
+      "always_undetermined_baseline": 0.5234,
+      "confusion": {
+        "refuted": {
+          "refuted": 8,
+          "supported": 31,
+          "undetermined": 3
+        },
+        "supported": {
+          "refuted": 18,
+          "supported": 40,
+          "undetermined": 2
+        },
+        "undetermined": {
+          "refuted": 13,
+          "supported": 99,
+          "undetermined": 0
+        }
+      },
+      "coverage": 0.9766,
+      "dataset": "healthver",
+      "failures": [
+        {
+          "claim": "coronavirus can be prevented by having millets in one's diet because it generates heat in the body.",
+          "evidence": "It is suggested that Chinese medicine of clearing heat and removing toxin should be used to prevent the uninfected people from COVID-19, and intervene in the early stage of the disease and control the development of it to be severe by inhibiting the cytokine storm.",
+          "gold": "refuted",
+          "id": "healthver-10008",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "wet weather can kill the new coronavirus",
+          "evidence": "the temperature changes retarded the growth rate and found that -6.28{degrees}C and +14.51{degrees}C temperature is the favorable range for COVID-19 growth",
+          "gold": "refuted",
+          "id": "healthver-1005",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "People may take ibuprofen for body aches, headaches, or chronic health conditions, such as arthritis or lupus.",
+          "evidence": "We aimed to provide a literature review on the putative effectiveness and safety of available treatments for COVID-19 in pregnant women.",
+          "gold": "undetermined",
+          "id": "healthver-10142",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "People may take ibuprofen for body aches, headaches, or chronic health conditions, such as arthritis or lupus.",
+          "evidence": "It is too early to be sure of them as safe treatments because some reports seem to suggest some alarming side effects.",
+          "gold": "undetermined",
+          "id": "healthver-10153",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "ibuprofen may not be effective for COVID-19",
+          "evidence": "Although based on existing evidence, NSAIDs have been effective in treating respiratory infections caused by influenza and rhinovirus, since there is no clinical trial on COVID-19 and case-reports and clinical experiences are indicative of elongation of treatment duration and exacerbation of the clinical course of patients with COVID-19, it is recommended to use substitutes such as acetaminophen for controlling fever and inflammation and be cautious about using NSAIDs in management of COVID-19 patients until there are enough evidence.",
+          "gold": "supported",
+          "id": "healthver-10170",
+          "polarity_flipped": true,
+          "pred": "refuted",
+          "reason": "Negation detected (not); evidence stance was inverted for scoring. An authoritative source in this corpus refutes the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 99.0,
+            "supports": 0
+          }
+        },
+        {
+          "claim": "high doses of vitamins and natural remedies can stave off COVID-19",
+          "evidence": "In recent past, some natural herbal compounds have demonstrated encouraging anti-viral properties.",
+          "gold": "undetermined",
+          "id": "healthver-10308",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Can coronavirus be transmitted over surfaces? Yes. ",
+          "evidence": "As no vaccine is available for COVID-19, the development of directly acting antiviral agents and preventive strategies have to be considered.",
+          "gold": "undetermined",
+          "id": "healthver-10312",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Can coronavirus be transmitted over surfaces? Yes. ",
+          "evidence": "Foods and herbs could be used as dietary or complementary therapy to prevent infection and strengthen immunity, as antiviral agents for masks, as disinfectants to curb aerosol transmission, or as sanitizing agents to disinfect surfaces. However, these hypotheses need to be experimentally verified for SARS-CoV-2 and COVID-19 patients.",
+          "gold": "undetermined",
+          "id": "healthver-10330",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "high doses of vitamins and natural remedies can stave off COVID-19",
+          "evidence": "The objective of this study is to determine if the components of natural origin have an anti-viral effect and which can prevent humans from infection by this coronavirus using the most reliable method is molecular docking, which used to find the interaction between studied molecules and the protein, in our case we based on the inhibitor of Coronavirus (nCoV-2019) main protease.",
+          "gold": "undetermined",
+          "id": "healthver-10347",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "The coronavirus that causes COVID-19 can spread between people interacting in close proximity - for example, speaking, coughing, sneezing, or singing- even if those people do not symptoms",
+          "evidence": "It was found that 83% and 77% of the bedside surfaces of MRSA-positive and MRSA-negative patients respectively were contaminated with staphylococci at 08:00 hours, and that the staphylococcal concentrations increased by 80% at 1200 h over a 4-hour period with routine ward and clinical activities.",
+          "gold": "undetermined",
+          "id": "healthver-10418",
+          "polarity_flipped": true,
+          "pred": "refuted",
+          "reason": "Negation detected (do not); evidence stance was inverted for scoring. An authoritative source in this corpus refutes the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 99.0,
+            "supports": 0
+          }
+        },
+        {
+          "claim": "there is also growing evidence that smaller particles called aerosols can hang in the air longer and travel farther.",
+          "evidence": "Nonfabric surface materials were found to be much more favorable in the indirect contact transmission for RSV and rhinovirus than fabric surface materials.",
+          "gold": "undetermined",
+          "id": "healthver-10608",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "SARS-CoV-2 is more stable on plastic and stainless steel than on copper and cardboard",
+          "evidence": "We report here that pathogenic human coronavirus 229E remained infectious in a human lung cell culture model following at least 5 days of persistence on a range of common nonbiocidal surface materials, including polytetrafluoroethylene (Teflon; PTFE), polyvinyl chloride (PVC), ceramic tiles, glass, silicone rubber, and stainless steel.",
+          "gold": "undetermined",
+          "id": "healthver-10803",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        }
+      ],
+      "gold_distribution": {
+        "refuted": 42,
+        "supported": 60,
+        "undetermined": 112
+      },
+      "macro_f1": 0.1818,
+      "n": 214,
+      "per_label": {
+        "refuted": {
+          "precision": 0.2051,
+          "recall": 0.1905,
+          "support": 42
+        },
+        "supported": {
+          "precision": 0.2353,
+          "recall": 0.6667,
+          "support": 60
+        },
+        "undetermined": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 112
+        }
+      },
+      "runtime_s": 0.202,
+      "split": "dev"
+    },
+    "pubhealth": {
+      "accuracy": 0.5944,
+      "accuracy_on_decided": 0.5944,
+      "always_undetermined_baseline": 0.6014,
+      "confusion": {
+        "refuted": {
+          "refuted": 2,
+          "supported": 47,
+          "undetermined": 0
+        },
+        "supported": {
+          "refuted": 3,
+          "supported": 83,
+          "undetermined": 0
+        },
+        "undetermined": {
+          "refuted": 0,
+          "supported": 8,
+          "undetermined": 0
+        }
+      },
+      "coverage": 1.0,
+      "dataset": "pubhealth",
+      "failures": [
+        {
+          "claim": "MRI Might Screen for Autism",
+          "evidence": "It takes until the very end of the story for there to be a comment on costs. An autism activist mentions,\"So if there’s no targeted treatment to follow up on the results of this kind of scan, then it’s just another expensive test for parents who are already barraged with so many tests at diagnosis,\" she said. \"And in that case, I see this as just a waste of money.\" We don’t know enough about the benefits or the harms so it’s hard to say if it’s a waste of money. The cost information about MRIs would not have been hard to find. The benefits are not quantified. The implication here is that these physical defecits are only found in patients with autism and are never found in patients with \"normal\" brains or with any other disorders. This, of course, is difficult to conclude based on a study of 80 patients. The story does something worse than failing to quantify the potential harms of MRIs. ",
+          "gold": "refuted",
+          "id": "pubhealth-10019",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Bone drug cuts risk of breast cancer",
+          "evidence": "No mention of the costs of either tamoxifen or raloxifene was made. Failure to mention the lack of statistical significance for the incidence of uterine cancers and blood clots for women at increased risk of breast cancer taking raloxifene as compared with those taking tamoxifen is an important lack of framework. The story didn’t describe how well either drug prevents breast cancer (i.e. how many would have developed it and how many were prevented from developing it because of treatment. In addition, the reported impact on the quality of life was the same for the two treatments. The increased incidence of other, less-invasive forms of breast cancer (ductal carcinoma in situ and lobular carcinoma in situ) was not mentioned. The absolute number of cases for the side effects was not presented. The article discussed some recently released data from a large clinical trial comparing tamoxifen ",
+          "gold": "refuted",
+          "id": "pubhealth-10089",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Medtronic insulin pump beats injections in study",
+          "evidence": "The story does not mention that the devices cost thousands of dollars and their use requires ongoing purchases of supplies and services. These costs may or may not be covered by health care insurance. As mentioned above, the story implies that the degree of improvement in the control of blood sugar levels reported by the researchers will reduce the risk of eye, kidney and heart disease, even though these health outcomes were not measured. Although control of blood sugar levels is a widely accepted target of diabetes treatment, the trial did not measure whether or not there were any noticeable improvements in real health outcomes. The story does not mention any potential harms of insulin pumps, even though the researchers reported that two patients were hospitalized because of infections at the site of the pump insertion. The story fails to report any of the limitations or qualifications ",
+          "gold": "refuted",
+          "id": "pubhealth-10402",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Blood test that could predict arthritis risk",
+          "evidence": "The release doesn’t provide discussion of what the cost of the blood test might be. If the test is promising enough to issue a news release about it, readers should be given some idea of the cost. A related test called the CCP assay, which detects certain peptides that also predict future RA, is already in use and would make a good comparison. Moreover, there would not only be the cost for this test, but also the downstream costs of earlier treatment (and potential benefits). In general, the potential benefits in terms of cost savings are usually offset by higher costs associated with treatment for a longer duration of time (earlier diagnosis = earlier “longer” treatment). The release asserts that the key benefit of the test for tenascin-C protein is early detection of RA that can be used to initiate early treatment. After looking at results from 2,000 patient volunteers, the lead resear",
+          "gold": "refuted",
+          "id": "pubhealth-10543",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Once-a-day AIDS pill may be OK’d soon",
+          "evidence": "There was no cost of treatment information; how would this once-a-day pill compare to the two pill once-a-day combination? There was no quantification of benefits of treatment. While it is easy to forget to take medications that are taken several times during the day, it is also easy to forget to take a medication once-a-day. There were no data to indicate how compliance compared. No harms of treatment or side effects were mentioned. Does the frequency of side effects differ when medication is taken once or more than once a day? This article does not contain evidence. It appears to have been stimulated by “forward-looking” statements from one of the drug manufacturers involved in this partnership. It contains the view of one patient describing how difficult it is to remember to take daily prescription medications. This is a hurdle faced by many people with a variety of conditions other t",
+          "gold": "refuted",
+          "id": "pubhealth-10587",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "UAB Recruiting for Clinical Trial to Determine Therapies for Eradication of Multiple Myeloma –University of Alabama at Birmingham",
+          "evidence": "In some experiments, it may be too early to discuss treatment costs, but this trial involves drugs that are all already approved for other uses, which means their prices are known. Also, while trial participants typically are not charged for experimental drugs, in this case it appears they will be billed for many treatment costs… and there would likely be costs for some (including travel and  lodging) that insurance would not cover. In fact, the lead investigator acknowledged the costs when asked in an interview about what patients should know about the trial: “[T]he study, like any other clinical trials, that our components are considered standard of care and they are charged to the patient or to the insurance. For example, the costs of seeing the doctor, the cost of doing the main test for a traditional disease assessment, the cost of stem cell transplant, but there are components that",
+          "gold": "refuted",
+          "id": "pubhealth-10642",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Aspirin cuts heart attacks, not deaths or strokes",
+          "evidence": "We’ll accept the brief mention – at the very end of the story about aspiring being “cheap” and “cost effective for men over 45.”  We all know it’s cheap. But it doesn’t hurt to include a few words about cost and cost-effectiveness. Appropriate context. With a meta-analysis it is not statistically appropriate to pool absolute risk reductions, so the way the story treated the evidence is as good as can be done (showing the relative risk reduction and an “anchor” in terms of absolute risk. Excerpt: “The researchers found a 19-percent reduction in non-fatal heart attacks among participants who took aspirin compared to those who did not. They don’t mention how many people actually suffered such a heart attack, but an earlier analysis of six of the trials showed that out of every 1,000 people, 18 individuals taking aspirin had heart attacks every year, compared to 23 individuals taking placebo",
+          "gold": "supported",
+          "id": "pubhealth-10845",
+          "polarity_flipped": true,
+          "pred": "refuted",
+          "reason": "Negation detected (not); evidence stance was inverted for scoring. An authoritative source in this corpus refutes the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 99.0,
+            "supports": 0
+          }
+        },
+        {
+          "claim": "New drug ‘big deal’ in cystic fibrosis fight",
+          "evidence": "Although the company that wants to sell this drug has yet to announce a price, blogs that follow pharmaceutical companies quote a Wall Street analyst who predicts the drug will cost about $150,000 a year. That massive price tag for a drug that patients likely would have to continue to take for their entire lives is certainly something that readers should be told about. Although this story accurately reports the specific results of this drug trial, including lung function, disease symptoms, weight and sweat chloride (a measure of disease); it misses important aspects of the big picture. As the journal editorial accompanying this research report noted, the trial does not prove that this drug halts the progression of disease or that patients who take the drug will live longer. The story could also have been clearer about the distinction between the small percentage of patients who have the ",
+          "gold": "refuted",
+          "id": "pubhealth-11167",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Cervical cancer vaccine up for FDA review",
+          "evidence": "There is no mention of the projected cost of the new vaccine. This information may not be available at this time, but an expert could have given an educated estimate. As noted above, the article does not provide numbers of women who were protected from HPV infection in trials of the vaccine. The story notes some questions raised by the FDA about the vaccine’s safety–but gives the last word on the concerns to the Merck spokesman, who downplayed their significance. In addition, the number of birth abnormalities was lower in the vaccine group, but it is reported as if it were higher (“less favorable showing”) and due to chance. The article states that the vaccine was “extremely effective” against the targeted HPV strains, but doesn’t note how many infections it prevented. It also does not mention what, if anything, is known about whether the vaccine does lower the risk of cervical cancer. T",
+          "gold": "refuted",
+          "id": "pubhealth-11283",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Barron Trump Rushed To The Hospital, Hospital Releases Statement On His Condition",
+          "evidence": "A post on the website AmericanToday.us falsely claimed Barron Trump was hospitalized for pneumonia. \"Horrible news are coming from the President’s house while President (Donald) Trump on Friday began a 17-day stint at his prized golf club in Bedminster, NJ. Barron Trump has been rushed to hospital with severe pneumonia while on holiday in Bedminster, NJ,\" the Aug. 6 post said. Trump’s youngest son is indeed on vacation with his family at their Bedminster resort, but we found no proof of his purported illness. The post claimed Trump had sent a Snapchat photo to his friends captioned, \"Not the sort of bangles I usually choose on holiday.\" We traced the image attached to the article to an 841-day old photo on an Instagram search engine called Mulpix. It’s not Barron Trump’s hand. \"He also tweeted his friends, saying that he was currently ‘in a wheelchair, connected up to tubes, in a hospita",
+          "gold": "refuted",
+          "id": "pubhealth-12211",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "One of the Planned Parenthood videos shows \"a fully formed fetus on the table, its heart beating, its legs kicking, while someone says, 'We have to keep it alive to harvest its brain.' ",
+          "evidence": "Following the release of several videos claiming to prove Planned Parenthood illegally profits off of aborted fetal tissue, many anti-abortion politicians have called for cutting off federal funding to the women’s health organization. At the second Republican debate, former Hewlett-Packard CEO Carly Fiorina laid out defunding Planned Parenthood as a priority. \"I dare Hillary Clinton, Barack Obama to watch these tapes,\" she said on the stage at the Ronald Reagan Presidential Library Sept. 16. \"Watch a fully formed fetus on the table, its heart beating, its legs kicking, while someone says, 'We have to keep it alive to harvest its brain.' \" The videos, which amount to at least a dozen hours, are produced by the anti-abortion Center for Medical Progress. They primarily show people posing as tissue brokers and talking with Planned Parenthood employees about procuring fetal tissue for medical",
+          "gold": "refuted",
+          "id": "pubhealth-15146",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "ISIS lures women with kittens, nutella.",
+          "evidence": "Find a goofy still frame of television, and people will propel it across the Internet. CNN got a taste of this law of social media on Wednesday after airing a silly-looking graphic about a serious topic: the Islamic State’s recruitment of female fighters. The anchor’s set-up of the segment did little to help viewers take it seriously. \"ISIS is talking online about jars of Nutella, pictures of kittens and emojis,\" CNN Newsroom host Carol Costello said in the Feb. 18, 2015, segment. \"These three images are in part helping ISIS recruiters lure westerners into their fight because they want people to believe their life on the battlefield isn't so different than yours. They actually eat Nutella, and I guess they have pet kittens.\" As she spoke, a highly sharable graphic depicting a jar of the chocolate hazelnut spread, two orange tabby kittens and a silly face from the emoji keyboard appeared ",
+          "gold": "refuted",
+          "id": "pubhealth-15891",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        }
+      ],
+      "gold_distribution": {
+        "refuted": 49,
+        "supported": 86,
+        "undetermined": 8
+      },
+      "macro_f1": 0.2717,
+      "n": 143,
+      "per_label": {
+        "refuted": {
+          "precision": 0.4,
+          "recall": 0.0408,
+          "support": 49
+        },
+        "supported": {
+          "precision": 0.6014,
+          "recall": 0.9651,
+          "support": 86
+        },
+        "undetermined": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 8
+        }
+      },
+      "runtime_s": 0.419,
+      "split": "dev"
+    },
+    "vitaminc": {
+      "accuracy": 0.4809,
+      "accuracy_on_decided": 0.4809,
+      "always_undetermined_baseline": 0.4885,
+      "confusion": {
+        "refuted": {
+          "refuted": 0,
+          "supported": 44,
+          "undetermined": 0
+        },
+        "supported": {
+          "refuted": 1,
+          "supported": 63,
+          "undetermined": 0
+        },
+        "undetermined": {
+          "refuted": 0,
+          "supported": 23,
+          "undetermined": 0
+        }
+      },
+      "coverage": 1.0,
+      "dataset": "vitaminc",
+      "failures": [
+        {
+          "claim": "In Book of Shadows : Blair Witch 2 , Kim stabs the cashier with a knife .",
+          "evidence": "In Kim 's room , they play security footage from the store of her stabbing the cashier in the neck with a nail file .",
+          "gold": "refuted",
+          "id": "vitaminc-5ea2d97dc9e77c0009cdadbf_2",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "New Order released acid house and ambient house chillout-influenced Technique which topped the UK charts .",
+          "evidence": "Music by artists such as the Stone Roses and Happy Mondays began to chart highly in 1989 with New Order releasing the house-influenced Technique , which topped the UK album charts.",
+          "gold": "undetermined",
+          "id": "vitaminc-5ea2d97dc9e77c0009cdb0aa_1",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "Based on less than 49 reviews , Dirty Grandpa scored below 7.5 % .",
+          "evidence": "On Rotten Tomatoes , the film has a rating of 8 % , based on 49 reviews , with an average rating of 2.5/10 .",
+          "gold": "refuted",
+          "id": "vitaminc-5eafed7ec9e77c0009ce0f3c_2",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "The Equalizer 2 has earned less than $ 101.8 million in the United States and Canada , with a worldwide earning below $ 173.7 million .",
+          "evidence": ", The Equalizer 2 has grossed $ 101.8 million in the United States and Canada , and $ 71.9 million in other territories , for a total worldwide gross of $ 173.7 million , against a production budget of $ 62 million .",
+          "gold": "refuted",
+          "id": "vitaminc-5eb29888c9e77c0008d93a67_2",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "JaMychal Green became a free agent when Spurs desisted from re-signing him .",
+          "evidence": "Spurs Sign JaMychal Green to 10 Day Contract",
+          "gold": "undetermined",
+          "id": "vitaminc-5ebbf32ac9e77c0009294c22_1",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "The band received radio play .",
+          "evidence": "The band also became the first Roadrunner band to receive extensive radio rock play .",
+          "gold": "undetermined",
+          "id": "vitaminc-5ebbf32ac9e77c0009294d36_2",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "The Professional Indoor Football League 's Lehigh Valley Steelhawks is located in Stabler .",
+          "evidence": "Stabler is home to Lehigh University collegiate basketball.",
+          "gold": "undetermined",
+          "id": "vitaminc-5ebbf32ac9e77c0009294f3a_1",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "In Jumanji : Welcome to the Jungle , Fridge mistook the nickname of `` Mouse '' to `` Moose '' , and Bethany thought that Professor Sheldon Oberon was a woman based on the latter 's nickname .",
+          "evidence": "Spencer is a tough , muscular explorer and archaeologist named Dr. Smolder Bravestone ; Fridge is a diminutive zoologist named Franklin `` Mouse '' Finbar ; Bethany is an overweight male cartographer named Professor Sheldon Oberon ; and Martha is a female commando and martial arts expert named Ruby Roundhouse .",
+          "gold": "undetermined",
+          "id": "vitaminc-5ebbf32bc9e77c000929549d_2",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "The Marshall Mathers LP sold less than 30 million copies globally .",
+          "evidence": "Worldwide , The Marshall Mathers LP sold at least 32 million copies .",
+          "gold": "refuted",
+          "id": "vitaminc-5ebbf32bc9e77c0009295843_2",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "More than 10 % of over 9300 people reported coronavirus symptoms by February 22 .",
+          "evidence": "As of 22 February , among 9,336 followers of the church , 1,261 reported symptoms .",
+          "gold": "undetermined",
+          "id": "vitaminc-5ebbf32bc9e77c00092958e7_2",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "In the movie Seabiscuit , Wolf lets Seabiscuit `` get a good look '' .",
+          "evidence": "Seabiscuit drops to last place and trails the pack , but Woolf holds back to be alongside Red .",
+          "gold": "undetermined",
+          "id": "vitaminc-5ebe6f2ec9e77c0008407a45_1",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        },
+        {
+          "claim": "After April 2013 , Guillermo Varela went on a trial at Premier League giants Manchester United .",
+          "evidence": "In May 2013 , Varela went on a two-week trial at Manchester United 's Carrington , after an impressive performance in 2013 South American U-20 Championship .",
+          "gold": "refuted",
+          "id": "vitaminc-5ebe6f30c9e77c0008408311_2",
+          "polarity_flipped": false,
+          "pred": "supported",
+          "reason": "An authoritative source in this corpus supports the claim.",
+          "scores": {
+            "contextual": 0,
+            "refutes": 0,
+            "supports": 99.0
+          }
+        }
+      ],
+      "gold_distribution": {
+        "refuted": 44,
+        "supported": 64,
+        "undetermined": 23
+      },
+      "macro_f1": 0.2165,
+      "n": 131,
+      "per_label": {
+        "refuted": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 44
+        },
+        "supported": {
+          "precision": 0.4846,
+          "recall": 0.9844,
+          "support": 64
+        },
+        "undetermined": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 23
+        }
+      },
+      "runtime_s": 0.093,
+      "split": "dev"
+    }
+  },
+  "evaluated_at": "2026-11-20T13:25:51Z",
+  "protocol": "Each claim is paired with one card built from the benchmark's own evidence sentences; the card asserts the evidence, so a correct verdict means the rule layer recognised agreement, contradiction, or a scope mismatch. URLs are urn: markers because released samples omit links.",
+  "question": "Can the semantic layer decide when the gold evidence passage is supplied?",
+  "split": "dev",
+  "status": "run"
+}

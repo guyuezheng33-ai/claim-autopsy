@@ -1,0 +1,102 @@
+{
+ "version": "corpus v10",
+ "cards": [
+  {
+   "card_id": "E116",
+   "source_id": "WHO-MYTH",
+   "paragraph_index": 32,
+   "claim": "Hot weather stops the spread of COVID-19",
+   "stance": "refutes",
+   "paragraph_excerpt": "You can catch COVID-19, no matter how sunny or hot the weather is. Countries with hot weather have reported cases of COVID-19. To protect yourself, make sure yo"
+  },
+  {
+   "card_id": "E117",
+   "source_id": "WHO-MYTH",
+   "paragraph_index": 34,
+   "claim": "Cold weather kills the coronavirus",
+   "stance": "refutes",
+   "paragraph_excerpt": "There is no reason to believe that cold weather can kill the new coronavirus or other diseases. The normal human body temperature remains around 36.5°C to 37°C,"
+  },
+  {
+   "card_id": "E118",
+   "source_id": "WHO-MYTH",
+   "paragraph_index": 28,
+   "claim": "Drinking or injecting bleach can cure COVID-19",
+   "stance": "refutes",
+   "paragraph_excerpt": "Do not under any circumstance spray or introduce bleach or any other disinfectant into your body. These substances can be poisonous if ingested and cause irrita"
+  },
+  {
+   "card_id": "E119",
+   "source_id": "WHO-MYTH",
+   "paragraph_index": 37,
+   "claim": "Older adults and people with pre-existing conditions are more vulnerable to severe COVID-19",
+   "stance": "supports",
+   "paragraph_excerpt": "Older people and younger people can be infected by the COVID-19 virus. Older people, and people with pre-existing medical conditions such as asthma, diabetes, a"
+  },
+  {
+   "card_id": "E120",
+   "source_id": "WHO-PUB",
+   "paragraph_index": 121,
+   "claim": "COVID-19 spreads more easily in crowded, poorly ventilated indoor spaces",
+   "stance": "supports",
+   "paragraph_excerpt": "The risks of getting COVID-19 are higher in crowded and inadequately ventilated spaces where infected people spend long periods of time together in close proxim"
+  },
+  {
+   "card_id": "E121",
+   "source_id": "WHO-PUB",
+   "paragraph_index": 125,
+   "claim": "Outdoor gatherings are safer than indoor gatherings",
+   "stance": "supports",
+   "paragraph_excerpt": "Meet people outside. Outdoor gatherings are safer than indoor ones, particularly if indoor spaces are small and without outdoor air coming in."
+  },
+  {
+   "card_id": "E122",
+   "source_id": "NCI-MYTHS",
+   "paragraph_index": 10,
+   "claim": "Exposure to air makes a tumour spread",
+   "stance": "refutes",
+   "paragraph_excerpt": "No. Exposure to air will not make tumors grow faster or cause cancer to spread to other parts of the body. For information about how cancer spreads in the body,"
+  },
+  {
+   "card_id": "E123",
+   "source_id": "NCI-MYTHS",
+   "paragraph_index": 17,
+   "claim": "Antiperspirants and deodorants cause breast cancer",
+   "stance": "refutes",
+   "paragraph_excerpt": "No. The best studies so far have found no evidence linking the chemicals typically found in antiperspirants and deodorants with changes in breast tissue. For mo"
+  },
+  {
+   "card_id": "E124",
+   "source_id": "CDC-SUNSAFE",
+   "paragraph_index": 45,
+   "claim": "Indoor tanning is a safe way to tan",
+   "stance": "refutes",
+   "paragraph_excerpt": "To lower your skin cancer risk, protect your skin from the sun and avoid tanning."
+  },
+  {
+   "card_id": "E125",
+   "source_id": "CDC-SUNSAFE",
+   "paragraph_index": 8,
+   "claim": "UV rays from tanning beds can damage skin cells",
+   "stance": "supports",
+   "paragraph_excerpt": "Most skin cancers are caused by too much exposure to ultraviolet (UV) rays. UV rays are an invisible kind of radiation that comes from the sun and tanning beds."
+  },
+  {
+   "card_id": "E126",
+   "source_id": "CDC-TOBACCO",
+   "paragraph_index": 8,
+   "claim": "Smoking harms nearly every organ of the body",
+   "stance": "supports",
+   "paragraph_excerpt": "Smoking harms nearly every organ of the body and causes many diseases."
+  },
+  {
+   "card_id": "E127",
+   "source_id": "CDC-SUNSAFE",
+   "paragraph_index": 17,
+   "claim": "Sunglasses that block UVA and UVB offer the best protection",
+   "stance": "supports",
+   "paragraph_excerpt": "Sunglasses that block both UVA and UVB rays offer the best protection. Most sunglasses sold in the United States, regardless of cost, meet this standard. Wrap-a"
+  }
+ ],
+ "note": "Every new card names a paragraph already present in evidence/paragraphs.jsonl; the snapshot row is copied from that paragraph, so offsets and hashes are not re-derived."
+}

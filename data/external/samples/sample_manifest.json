@@ -1,0 +1,188 @@
+{
+  "generated_at": "2026-11-20T13:09:11Z",
+  "seed": 20261120,
+  "overlap_threshold": 0.6,
+  "datasets": {
+    "fever": {
+      "dataset": "fever",
+      "requested": 300,
+      "available_after_filter": 19998,
+      "sampled": 300,
+      "considered": 19998,
+      "excluded_by_label": {},
+      "excluded_by_overlap": 0,
+      "label_counts": {
+        "supported": 100,
+        "undetermined": 100,
+        "refuted": 100
+      },
+      "split_counts": {
+        "dev": 203,
+        "holdback": 97
+      },
+      "mapping": {
+        "SUPPORTS": "supported",
+        "REFUTES": "refuted",
+        "NOT ENOUGH INFO": "undetermined"
+      },
+      "licence": "CC BY-SA 3.0 (FEVER)",
+      "url": "https://fever.ai/dataset/fever.html",
+      "citation": "Thorne et al. 2018, FEVER",
+      "raw_sha256": "e89865bfe1b4dd054e03dd57d7241a6fde24862905f31117cf0cd719f7c78df7",
+      "raw_bytes": 4349935,
+      "seed": 20261120,
+      "note": "",
+      "file": "D:\\桌面\\数据Agent工程化\\data\\claim\\bench\\samples\\fever.jsonl",
+      "file_sha256": "26cf2fcd5f8f7e231eeb9af4979cc055ac3c170f12ed7459372232a482f4326a"
+    },
+    "scifact": {
+      "error": "KeyError: 'label'",
+      "sampled": 0
+    },
+    "healthver": {
+      "dataset": "healthver",
+      "requested": 300,
+      "available_after_filter": 1910,
+      "sampled": 300,
+      "considered": 1917,
+      "excluded_by_label": {},
+      "excluded_by_overlap": 7,
+      "label_counts": {
+        "refuted": 61,
+        "undetermined": 155,
+        "supported": 84
+      },
+      "split_counts": {
+        "dev": 214,
+        "holdback": 86
+      },
+      "mapping": {
+        "Supports": "supported",
+        "Refutes": "refuted",
+        "Neutral": "undetermined"
+      },
+      "licence": "CC BY 4.0 (HealthVer)",
+      "url": "https://github.com/sarrouti/healthver",
+      "citation": "Sarrouti et al. 2021, HealthVer",
+      "raw_sha256": "6f8ea31cbcf2ea5a2d3c82d65587d66e96de4f70e72642bbf7f61fec6ef8a93a",
+      "raw_bytes": 804885,
+      "seed": 20261120,
+      "note": "",
+      "file": "D:\\桌面\\数据Agent工程化\\data\\claim\\bench\\samples\\healthver.jsonl",
+      "file_sha256": "0cb693a846ce94dbfc18065984e5dd610ddee6506f3d6215a7a6688d02781a30"
+    },
+    "averitec": {
+      "dataset": "averitec",
+      "requested": 200,
+      "available_after_filter": 462,
+      "sampled": 200,
+      "considered": 500,
+      "excluded_by_label": {
+        "Conflicting Evidence/Cherrypicking": 38
+      },
+      "excluded_by_overlap": 0,
+      "label_counts": {
+        "refuted": 131,
+        "supported": 53,
+        "undetermined": 16
+      },
+      "split_counts": {
+        "dev": 149,
+        "holdback": 51
+      },
+      "mapping": {
+        "Supported": "supported",
+        "Refuted": "refuted",
+        "Not Enough Evidence": "undetermined",
+        "Conflicting": "__excluded__"
+      },
+      "licence": "CC BY-NC 4.0 (AVeriTeC)",
+      "url": "https://github.com/MichSchli/AVeriTeC",
+      "citation": "Schlichtkrull et al. 2023, AVeriTeC",
+      "raw_sha256": "499793726b4a5406780928a3d9dedc48d6dd53de778f22437d129cacdb08e300",
+      "raw_bytes": 1785475,
+      "seed": 20261120,
+      "note": "",
+      "file": "D:\\桌面\\数据Agent工程化\\data\\claim\\bench\\samples\\averitec.jsonl",
+      "file_sha256": "f15c13f487ab869b1083760dc82b454b930715dfcdd9017b853c5179a766bfdb"
+    },
+    "pubhealth": {
+      "dataset": "pubhealth",
+      "requested": 200,
+      "available_after_filter": 1050,
+      "sampled": 200,
+      "considered": 1214,
+      "excluded_by_label": {
+        "mixture": 164
+      },
+      "excluded_by_overlap": 0,
+      "label_counts": {
+        "refuted": 72,
+        "supported": 119,
+        "undetermined": 9
+      },
+      "split_counts": {
+        "dev": 143,
+        "holdback": 57
+      },
+      "mapping": {
+        "true": "supported",
+        "false": "refuted",
+        "unproven": "undetermined",
+        "mixture": "__excluded__"
+      },
+      "licence": "CC BY-NC-SA 4.0 (PUBHEALTH)",
+      "url": "https://github.com/neemakot/Health-Fact-Checking",
+      "citation": "Kotonya and Toni 2020, PUBHEALTH",
+      "raw_sha256": "3f0a5541f4a60c09a138a896621402893ce4b3a37060363d9257010c2c27fc3a",
+      "raw_bytes": 24892660,
+      "seed": 20261120,
+      "note": "",
+      "file": "D:\\桌面\\数据Agent工程化\\data\\claim\\bench\\samples\\pubhealth.jsonl",
+      "file_sha256": "b92d60453c352bdfc211cbc4cc0ba042d12b53ca510473ce5e1fbbca15870da3"
+    },
+    "vitaminc": {
+      "dataset": "vitaminc",
+      "requested": 200,
+      "available_after_filter": 63054,
+      "sampled": 200,
+      "considered": 63054,
+      "excluded_by_label": {},
+      "excluded_by_overlap": 0,
+      "label_counts": {
+        "refuted": 72,
+        "undetermined": 29,
+        "supported": 99
+      },
+      "split_counts": {
+        "holdback": 69,
+        "dev": 131
+      },
+      "mapping": {
+        "SUPPORTS": "supported",
+        "REFUTES": "refuted",
+        "NOT ENOUGH INFO": "undetermined"
+      },
+      "licence": "CC BY-SA 4.0 (VitaminC)",
+      "url": "https://github.com/TalSchuster/VitaminC",
+      "citation": "Schuster et al. 2021, VitaminC",
+      "raw_sha256": "49d82dc1690cbee420d18e2c26f687a7937710bb211845d2571430dfd4dc0337",
+      "raw_bytes": 22381149,
+      "seed": 20261120,
+      "note": "",
+      "file": "D:\\桌面\\数据Agent工程化\\data\\claim\\bench\\samples\\vitaminc.jsonl",
+      "file_sha256": "b56940a16a60a2e0ddf38842ea438d2d52b9fcee45ab785138c465fe68cd48d2"
+    }
+  },
+  "failed": {
+    "covert": {
+      "reason": "repository_404",
+      "probe": "https://github.com/violenil/factCheckCovidTweets",
+      "note": "DATA_PLAN 标注 ~3.4k，实际论文语料为 300 条推文；规模需更正后再采"
+    },
+    "healthverity": {
+      "reason": "not_a_benchmark",
+      "note": "HealthVerity 是商业理赔数据商，不是 claim 基准；已改用 HealthVer (sarrouti/healthver)，见 SOURCES.md"
+    }
+  }
+}

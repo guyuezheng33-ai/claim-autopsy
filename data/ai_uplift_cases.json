@@ -1,0 +1,69 @@
+{
+  "description": "Real-increment baseline: every case is a pair where the rules docket returns not_in_source, but a grounded AI term bridge lets the same judge verify a quotation. reference_anchors prove the mechanism; a live run records what the local model actually proposes.",
+  "cases": [
+    {
+      "id": "uplift-01-aspirin",
+      "claim": "Aspirin reduces the risk of a second heart attack.",
+      "source": "Daily acetylsalicylic acid lowers the chance of recurrent myocardial infarction.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "reference_anchors": [["Aspirin", "acetylsalicylic acid"], ["heart attack", "myocardial infarction"], ["risk", "chance"], ["second", "recurrent"]]
+    },
+    {
+      "id": "uplift-02-antibiotics",
+      "claim": "Antibiotics cure bacterial pneumonia.",
+      "source": "Antibacterial medicines cure bacterial lung infection.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "reference_anchors": [["Antibiotics", "Antibacterial medicines"], ["pneumonia", "lung infection"]]
+    },
+    {
+      "id": "uplift-03-vitamin-c",
+      "claim": "Vitamin C shortens colds.",
+      "source": "Ascorbic acid shortens colds.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "reference_anchors": [["Vitamin C", "Ascorbic acid"]]
+    },
+    {
+      "id": "uplift-04-paracetamol",
+      "claim": "Paracetamol treats fever.",
+      "source": "Acetaminophen treats fever.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "reference_anchors": [["Paracetamol", "Acetaminophen"]]
+    },
+    {
+      "id": "uplift-05-kidney",
+      "claim": "High blood pressure damages kidneys.",
+      "source": "Hypertension damages the kidneys.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "reference_anchors": [["High blood pressure", "Hypertension"]]
+    },
+    {
+      "id": "uplift-06-heart-attack",
+      "claim": "Heart attack risk rises with smoking.",
+      "source": "Myocardial infarction risk increases with smoking.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "reference_anchors": [["Heart attack", "Myocardial infarction"]]
+    },
+    {
+      "id": "uplift-07-salt",
+      "claim": "Salt raises blood pressure.",
+      "source": "Sodium chloride raises hypertension.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "reference_anchors": [["Salt", "Sodium chloride"], ["blood pressure", "hypertension"]]
+    },
+    {
+      "id": "uplift-08-exercise",
+      "claim": "Exercise lowers blood pressure.",
+      "source": "Physical activity lowers hypertension.",
+      "side": "defense",
+      "expected_verdict": "supported",
+      "reference_anchors": [["Exercise", "Physical activity"], ["blood pressure", "hypertension"]]
+    }
+  ]
+}

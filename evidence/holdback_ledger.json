@@ -1,0 +1,18 @@
+{
+ "schema": "claim-autopsy/holdback-ledger/1",
+ "note": "One entry per scoring of a hold-back slice. A slice scored twice is no longer a hold-out; this file is the record that makes a second open visible instead of accidental. tools/eval_external.py refuses to score a slice that already has an entry unless --force-rerun is passed, and the entry it writes then carries forced=true.",
+ "opens": [
+  {
+   "split": "holdback",
+   "samples": "samples",
+   "seed": 20261120,
+   "evaluated_at": "2026-11-20T14:43:22Z",
+   "n": 360,
+   "out": "evidence/external_eval_holdback.json",
+   "forced": false,
+   "recorded_at": "2026-11-20T15:41:47Z",
+   "recorded_retroactively": true,
+   "note": "The slice was scored once, at 14:43Z, before this ledger existed. This entry is written from the result file that run left behind: it records an event rather than authorising one. The slice has not been scored a second time, and tools/eval_external.py now refuses to score it again."
+  }
+ ]
+}

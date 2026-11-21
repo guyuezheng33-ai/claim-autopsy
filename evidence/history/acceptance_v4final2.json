@@ -1,0 +1,88 @@
+{
+  "run_tag": "v4final2",
+  "llm_mode": "Offline deterministic core (degraded)",
+  "passed": 17,
+  "total": 17,
+  "all_pass": true,
+  "results": {
+    "A1_no_evidence_refusal": {
+      "pass": true,
+      "detail": "2 claims with no evidence, 0 verdicts leaked"
+    },
+    "A2_citations_required": {
+      "pass": true,
+      "detail": "12 verdicts checked, 0 with missing citation"
+    },
+    "A3_decomposition": {
+      "pass": true,
+      "detail": "comma input -> 3 atoms; enumeration input -> 3 atoms"
+    },
+    "A4_audit_chain": {
+      "pass": true,
+      "detail": "steps=['decompose', 'negation', 'retrieve', 'semantic', 'adjudicate', 'negation', 'retrieve', 'semantic', 'adjudicate']; per-claim traces complete=True"
+    },
+    "A5_instant_play": {
+      "pass": true,
+      "detail": "index.html present and self-contained=True"
+    },
+    "A6_failure_reproducible": {
+      "pass": true,
+      "detail": "DEMO-3 all refused=True"
+    },
+    "A7_offline_deterministic": {
+      "pass": true,
+      "detail": "two offline runs field-for-field identical=True"
+    },
+    "A8_no_secrets": {
+      "pass": true,
+      "detail": "real key patterns found=0",
+      "hits": []
+    },
+    "A9_honesty_statement": {
+      "pass": true,
+      "detail": "README states limitations and non-authoritative scope=True"
+    },
+    "A10_corpus_coverage": {
+      "pass": true,
+      "detail": "68 cards (>=40), 27 sources (>=8), 0 off-whitelist URLs, 0 without status"
+    },
+    "A11_golden_accuracy": {
+      "pass": true,
+      "detail": "accuracy 100.0% (60/60); distribution={'refuted': 33, 'supported': 16, 'undetermined': 11}; false refusals=0; illegal citations=0",
+      "accuracy": 1.0,
+      "distribution": {
+        "refuted": 33,
+        "supported": 16,
+        "undetermined": 11
+      }
+    },
+    "A12_paraphrase_robust": {
+      "pass": true,
+      "detail": "consistency 100.0% (12/12); verdicts dropped to refusal=0"
+    },
+    "A13_ai_anti_overreach": {
+      "pass": true,
+      "detail": "zero evidence + AI says supported -> undetermined; evidence + AI says refuted -> supported"
+    },
+    "A14_frontend_backend_sync": {
+      "pass": true,
+      "detail": "60 golden + 24 paraphrase pairs compared; 0 mismatches",
+      "mismatches": []
+    },
+    "A15_citation_relevance": {
+      "pass": true,
+      "detail": "3 guard inputs checked; 0 unrelated sources entered citations"
+    },
+    "A16_polarity_correctness": {
+      "pass": true,
+      "detail": "6 polarity fixtures checked; 0 wrong",
+      "bad": []
+    },
+    "A17_hygiene_doc_code_sync": {
+      "pass": true,
+      "detail": "keys=0, CJK files=0, dangling doc paths=0",
+      "cjk": [],
+      "dangling": []
+    }
+  }
+}

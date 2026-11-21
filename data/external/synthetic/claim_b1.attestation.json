@@ -1,0 +1,48 @@
+{
+  "batch_id": "claim_b1",
+  "calibration": {
+    "domain_share": {
+      "antibiotics": 0.08,
+      "cancer": 0.12,
+      "cold": 0.0133,
+      "covid-19": 0.1333,
+      "dental": 0.0267,
+      "earth": 0.08,
+      "exercise": 0.04,
+      "food": 0.0133,
+      "food safety": 0.0533,
+      "hygiene": 0.0267,
+      "microwave": 0.0667,
+      "nutrition": 0.0667,
+      "planets": 0.0133,
+      "product claim": 0.0133,
+      "skin": 0.0267,
+      "smoking": 0.0533,
+      "vaccine": 0.1467,
+      "vision": 0.0267
+    },
+    "label_share": {
+      "refuted": 0.68,
+      "supported": 0.32
+    },
+    "len_p10": 26,
+    "len_p50": 44,
+    "len_p90": 64,
+    "n_facts": 75,
+    "number_rate": 0.1867
+  },
+  "config_hash": "4a11b0ea72e7e8e6ade89649bb93ae768ebb74f1a65864393ee7dd24d2e3360c",
+  "egress": [],
+  "generator_version": "synth-1.0",
+  "label_share": {
+    "refuted": 159,
+    "supported": 138,
+    "undetermined": 103
+  },
+  "n_rows": 400,
+  "outputs": {
+    "synth_rows.jsonl": "fb1587827a7ab7e4b8095f204949cfdfab6595a8bbbc6bfc73a8e08a8a6dcc59"
+  },
+  "seed": 2300756965,
+  "tier": "S"
+}

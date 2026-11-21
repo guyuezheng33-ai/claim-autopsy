@@ -1,0 +1,60 @@
+{
+  "run_tag": "fixcheck4",
+  "llm_mode": "离线确定性内核（degraded）",
+  "passed": 9,
+  "total": 9,
+  "all_pass": true,
+  "results": {
+    "A1_no_evidence_refusal": {
+      "pass": true,
+      "detail": "无证据输入 2 条主张，出现定论 0 条",
+      "verdicts": [
+        "undetermined",
+        "undetermined"
+      ]
+    },
+    "A2_citations_required": {
+      "pass": true,
+      "detail": "检查 7 条定论，引用缺失 0 条",
+      "bad": []
+    },
+    "A3_decomposition": {
+      "pass": true,
+      "detail": "输入含 3 断言，拆出 3 条",
+      "atoms": [
+        "接种流感疫苗会让人得流感",
+        "抗生素可以治疗普通感冒",
+        "吸烟有害健康"
+      ]
+    },
+    "A4_audit_chain": {
+      "pass": true,
+      "detail": "trace 步骤=['decompose', 'retrieve', 'semantic', 'adjudicate', 'retrieve', 'semantic', 'adjudicate']，逐主张 trace 完整=True"
+    },
+    "A5_instant_play": {
+      "pass": true,
+      "detail": "index.html 存在=True，含一键示例与离线计算=True"
+    },
+    "A6_failure_reproducible": {
+      "pass": true,
+      "detail": "DEMO-3 全部拒答=True",
+      "verdicts": [
+        "undetermined",
+        "undetermined"
+      ]
+    },
+    "A7_offline_deterministic": {
+      "pass": true,
+      "detail": "两次离线运行结构逐字段一致=True"
+    },
+    "A8_no_secrets": {
+      "pass": true,
+      "detail": "疑似凭证出现 0 处",
+      "hits": []
+    },
+    "A9_honesty_statement": {
+      "pass": true,
+      "detail": "README 含 limitations 且声明不构成权威事实核查=True"
+    }
+  }
+}

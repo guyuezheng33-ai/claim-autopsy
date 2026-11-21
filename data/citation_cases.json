@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "purpose": "Gate A44 fixtures for citation audit. Each case asserts the verdict every atom must receive when a claim is checked against the source supplied with it.",
+    "note": "not_in_source is a finding, not a refusal: the source was read and does not state the claim."
+  },
+  "cases": [
+    {
+      "id": "cit-01-negation",
+      "claim": "Getting a flu vaccine gives you the flu.",
+      "source": "Getting a flu vaccine does not give you the flu. The vaccine contains inactivated virus.",
+      "expected": ["refuted"]
+    },
+    {
+      "id": "cit-02-verbatim",
+      "claim": "The Guthrie Theater's first building included a 1,441-window thrust stage.",
+      "source": "The Guthrie Theater's first building included a 1,441-window thrust stage. It opened in 1963.",
+      "expected": ["supported"]
+    },
+    {
+      "id": "cit-03-off-topic",
+      "claim": "Coffee stunts growth in teenagers.",
+      "source": "Vitamin D deficiency is common in teenagers. Coffee contains caffeine.",
+      "expected": ["not_in_source"]
+    },
+    {
+      "id": "cit-04-quantity",
+      "claim": "Adults should take 10,000 IU of vitamin D daily.",
+      "source": "Adults should take 600 IU of vitamin D daily.",
+      "expected": ["not_in_source"]
+    },
+    {
+      "id": "cit-05-refuted",
+      "claim": "Vitamin D prevents the flu.",
+      "source": "Vitamin D does not prevent the flu.",
+      "expected": ["refuted"]
+    },
+    {
+      "id": "cit-06-relation",
+      "claim": "Vitamin D cures the flu.",
+      "source": "Vitamin D prevents the flu.",
+      "expected": ["not_in_source"]
+    },
+    {
+      "id": "cit-07-year",
+      "claim": "The bank was founded in 1998.",
+      "source": "The bank was founded in 2004.",
+      "expected": ["not_in_source"]
+    },
+    {
+      "id": "cit-08-location",
+      "claim": "The Eiffel Tower is in Paris.",
+      "source": "The Eiffel Tower is located in Paris, France.",
+      "expected": ["supported"]
+    },
+    {
+      "id": "cit-09-passive",
+      "claim": "The company was acquired by Microsoft in 2016.",
+      "source": "Microsoft acquired the company in 2016.",
+      "expected": ["supported"]
+    },
+    {
+      "id": "cit-10-percent",
+      "claim": "The trial found the drug reduced mortality by 20%.",
+      "source": "The trial found the drug reduced mortality by 30%.",
+      "expected": ["not_in_source"]
+    },
+    {
+      "id": "cit-11-two-atoms",
+      "claim": "Coffee causes cancer, and coffee cures headaches.",
+      "source": "Coffee causes cancer. The study did not examine headaches.",
+      "expected": ["supported", "not_in_source"]
+    },
+    {
+      "id": "cit-12-tax",
+      "claim": "The carbon tax raised household electricity prices.",
+      "source": "The carbon tax raised household electricity prices by 8% in its first year.",
+      "expected": ["supported"]
+    }
+  ]
+}

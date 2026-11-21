@@ -1,0 +1,497 @@
+{
+  "cases": {
+    "Getting a flu vaccine gives you the flu.": {
+      "mode": "multi-source court",
+      "input": {
+        "claim": "Getting a flu vaccine gives you the flu."
+      },
+      "sources": [
+        {
+          "source_id": "B1",
+          "name": "CDC · injected vaccine",
+          "sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+          "chars": 108,
+          "mode": "rules"
+        },
+        {
+          "source_id": "B2",
+          "name": "A leaflet that restates the claim",
+          "sha256": "5c90e6947de4338927a5266012de893a01f9fbf019502daa0cb0893f6f8eef18",
+          "chars": 40,
+          "mode": "rules"
+        },
+        {
+          "source_id": "B3",
+          "name": "Hand-hygiene source",
+          "sha256": "e62037c374adbde170a69dcf3617ad20314e4ae58ee34473bfc71ffb3500e77f",
+          "chars": 62,
+          "mode": "rules"
+        },
+        {
+          "source_id": "B4",
+          "name": "Vitamin D source",
+          "sha256": "1efdf507c30c00f7b589f8676b088d9e1c92975ef8a15e4b14488cfa7e4ad3a0",
+          "chars": 49,
+          "mode": "rules"
+        }
+      ],
+      "rows": [
+        {
+          "source_id": "B1",
+          "name": "CDC · injected vaccine",
+          "sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+          "chars": 108,
+          "mode": "rules",
+          "verdict": "refuted",
+          "quote": {
+            "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+            "evidence_id": "S1-P1",
+            "char_start": 0,
+            "char_end": 108,
+            "origin": "rule",
+            "bridge": null
+          },
+          "summary": {
+            "claims": 1,
+            "supported": 0,
+            "refuted": 1,
+            "not_in_source": 0,
+            "conflict": 0,
+            "accepted_arguments": 1,
+            "struck_arguments": 0,
+            "ai_arguments": 0,
+            "ai_accepted": 0,
+            "ai_struck": 0,
+            "ai_bridges": 0,
+            "rule_arguments": 1
+          },
+          "dossier": {
+            "mode": "court",
+            "ai_mode": "rules",
+            "input": {
+              "claim": "Getting a flu vaccine gives you the flu.",
+              "source_name": "CDC · injected vaccine",
+              "source_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f"
+            },
+            "source": {
+              "source_id": "S1",
+              "name": "CDC · injected vaccine",
+              "sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+              "chars": 108,
+              "sentences": 1
+            },
+            "atoms": [
+              {
+                "atom_id": "A1",
+                "claim": "Getting a flu vaccine gives you the flu.",
+                "verdict": "refuted",
+                "reason": "A verified quotation states the same proposition with the opposite polarity.",
+                "accepted_argument_ids": [
+                  "P-A1-S1-P1-13b95a"
+                ],
+                "struck_argument_ids": [],
+                "bridge_argument_ids": [],
+                "evidence_ids": [
+                  "S1-P1"
+                ],
+                "nearest": {
+                  "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+                  "coverage": 1.0,
+                  "evidence_id": "S1-P1",
+                  "char_start": 0,
+                  "char_end": 108
+                },
+                "what_would_change_it": "A source sentence asserting the same proposition would change this verdict."
+              }
+            ],
+            "arguments": [
+              {
+                "argument_id": "P-A1-S1-P1-13b95a",
+                "side": "prosecution",
+                "origin": "rule",
+                "atom_id": "A1",
+                "relation": "contradicts",
+                "evidence_id": "S1-P1",
+                "source_name": "CDC · injected vaccine",
+                "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+                "quote_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+                "char_start": 0,
+                "char_end": 108,
+                "rationale": "The quotation states the same proposition with the opposite polarity.",
+                "status": "accepted",
+                "strike_codes": [],
+                "strike_reason": null,
+                "checks": {
+                  "quote_exact": true,
+                  "relation": true,
+                  "subject": true,
+                  "population": true,
+                  "object": true,
+                  "endpoint": true,
+                  "quantity": true,
+                  "strength": true,
+                  "polarity": true
+                },
+                "coverage": 1.0,
+                "bridge": null
+              }
+            ],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 1,
+              "not_in_source": 0,
+              "conflict": 0,
+              "accepted_arguments": 1,
+              "struck_arguments": 0,
+              "ai_arguments": 0,
+              "ai_accepted": 0,
+              "ai_struck": 0,
+              "ai_bridges": 0,
+              "rule_arguments": 1
+            },
+            "receipt": {
+              "run_id": "f0baf4ed9efafda8",
+              "generated_at": "2026-11-21T03:23:40.837815+00:00",
+              "model": null,
+              "engine": "deterministic judge + rules-only docket"
+            },
+            "trace": [],
+            "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false."
+          },
+          "ai_meta": null
+        },
+        {
+          "source_id": "B2",
+          "name": "A leaflet that restates the claim",
+          "sha256": "5c90e6947de4338927a5266012de893a01f9fbf019502daa0cb0893f6f8eef18",
+          "chars": 40,
+          "mode": "rules",
+          "verdict": "supported",
+          "quote": {
+            "quote": "Getting a flu vaccine gives you the flu.",
+            "evidence_id": "S1-P1",
+            "char_start": 0,
+            "char_end": 40,
+            "origin": "rule",
+            "bridge": null
+          },
+          "summary": {
+            "claims": 1,
+            "supported": 1,
+            "refuted": 0,
+            "not_in_source": 0,
+            "conflict": 0,
+            "accepted_arguments": 1,
+            "struck_arguments": 0,
+            "ai_arguments": 0,
+            "ai_accepted": 0,
+            "ai_struck": 0,
+            "ai_bridges": 0,
+            "rule_arguments": 1
+          },
+          "dossier": {
+            "mode": "court",
+            "ai_mode": "rules",
+            "input": {
+              "claim": "Getting a flu vaccine gives you the flu.",
+              "source_name": "A leaflet that restates the claim",
+              "source_sha256": "5c90e6947de4338927a5266012de893a01f9fbf019502daa0cb0893f6f8eef18"
+            },
+            "source": {
+              "source_id": "S1",
+              "name": "A leaflet that restates the claim",
+              "sha256": "5c90e6947de4338927a5266012de893a01f9fbf019502daa0cb0893f6f8eef18",
+              "chars": 40,
+              "sentences": 1
+            },
+            "atoms": [
+              {
+                "atom_id": "A1",
+                "claim": "Getting a flu vaccine gives you the flu.",
+                "verdict": "supported",
+                "reason": "A verified quotation states the same proposition with the same polarity.",
+                "accepted_argument_ids": [
+                  "D-A1-S1-P1-5c90e6"
+                ],
+                "struck_argument_ids": [],
+                "bridge_argument_ids": [],
+                "evidence_ids": [
+                  "S1-P1"
+                ],
+                "nearest": {
+                  "quote": "Getting a flu vaccine gives you the flu.",
+                  "coverage": 1.0,
+                  "evidence_id": "S1-P1",
+                  "char_start": 0,
+                  "char_end": 40
+                },
+                "what_would_change_it": "A source sentence asserting the same proposition with the opposite polarity would change this verdict."
+              }
+            ],
+            "arguments": [
+              {
+                "argument_id": "D-A1-S1-P1-5c90e6",
+                "side": "defense",
+                "origin": "rule",
+                "atom_id": "A1",
+                "relation": "supports",
+                "evidence_id": "S1-P1",
+                "source_name": "A leaflet that restates the claim",
+                "quote": "Getting a flu vaccine gives you the flu.",
+                "quote_sha256": "5c90e6947de4338927a5266012de893a01f9fbf019502daa0cb0893f6f8eef18",
+                "char_start": 0,
+                "char_end": 40,
+                "rationale": "The quotation states the same proposition with the same polarity.",
+                "status": "accepted",
+                "strike_codes": [],
+                "strike_reason": null,
+                "checks": {
+                  "quote_exact": true,
+                  "relation": true,
+                  "subject": true,
+                  "population": true,
+                  "object": true,
+                  "endpoint": true,
+                  "quantity": true,
+                  "strength": true,
+                  "polarity": true
+                },
+                "coverage": 1.0,
+                "bridge": null
+              }
+            ],
+            "summary": {
+              "claims": 1,
+              "supported": 1,
+              "refuted": 0,
+              "not_in_source": 0,
+              "conflict": 0,
+              "accepted_arguments": 1,
+              "struck_arguments": 0,
+              "ai_arguments": 0,
+              "ai_accepted": 0,
+              "ai_struck": 0,
+              "ai_bridges": 0,
+              "rule_arguments": 1
+            },
+            "receipt": {
+              "run_id": "6f2a7fa4e0f9b8bc",
+              "generated_at": "2026-11-21T03:23:40.838258+00:00",
+              "model": null,
+              "engine": "deterministic judge + rules-only docket"
+            },
+            "trace": [],
+            "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false."
+          },
+          "ai_meta": null
+        },
+        {
+          "source_id": "B3",
+          "name": "Hand-hygiene source",
+          "sha256": "e62037c374adbde170a69dcf3617ad20314e4ae58ee34473bfc71ffb3500e77f",
+          "chars": 62,
+          "mode": "rules",
+          "verdict": "not_in_source",
+          "quote": null,
+          "summary": {
+            "claims": 1,
+            "supported": 0,
+            "refuted": 0,
+            "not_in_source": 1,
+            "conflict": 0,
+            "accepted_arguments": 0,
+            "struck_arguments": 0,
+            "ai_arguments": 0,
+            "ai_accepted": 0,
+            "ai_struck": 0,
+            "ai_bridges": 0,
+            "rule_arguments": 0
+          },
+          "dossier": {
+            "mode": "court",
+            "ai_mode": "rules",
+            "input": {
+              "claim": "Getting a flu vaccine gives you the flu.",
+              "source_name": "Hand-hygiene source",
+              "source_sha256": "e62037c374adbde170a69dcf3617ad20314e4ae58ee34473bfc71ffb3500e77f"
+            },
+            "source": {
+              "source_id": "S1",
+              "name": "Hand-hygiene source",
+              "sha256": "e62037c374adbde170a69dcf3617ad20314e4ae58ee34473bfc71ffb3500e77f",
+              "chars": 62,
+              "sentences": 1
+            },
+            "atoms": [
+              {
+                "atom_id": "A1",
+                "claim": "Getting a flu vaccine gives you the flu.",
+                "verdict": "not_in_source",
+                "reason": "No verified quotation states this proposition in the supplied source.",
+                "accepted_argument_ids": [],
+                "struck_argument_ids": [],
+                "bridge_argument_ids": [],
+                "evidence_ids": [],
+                "nearest": {
+                  "quote": "Hand washing with soap reduces diarrhoeal disease in children.",
+                  "coverage": 0.0,
+                  "evidence_id": "S1-P1",
+                  "char_start": 0,
+                  "char_end": 62
+                },
+                "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+              }
+            ],
+            "arguments": [],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 0,
+              "not_in_source": 1,
+              "conflict": 0,
+              "accepted_arguments": 0,
+              "struck_arguments": 0,
+              "ai_arguments": 0,
+              "ai_accepted": 0,
+              "ai_struck": 0,
+              "ai_bridges": 0,
+              "rule_arguments": 0
+            },
+            "receipt": {
+              "run_id": "99779853b40d1b87",
+              "generated_at": "2026-11-21T03:23:40.838404+00:00",
+              "model": null,
+              "engine": "deterministic judge + rules-only docket"
+            },
+            "trace": [],
+            "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false."
+          },
+          "ai_meta": null
+        },
+        {
+          "source_id": "B4",
+          "name": "Vitamin D source",
+          "sha256": "1efdf507c30c00f7b589f8676b088d9e1c92975ef8a15e4b14488cfa7e4ad3a0",
+          "chars": 49,
+          "mode": "rules",
+          "verdict": "not_in_source",
+          "quote": null,
+          "summary": {
+            "claims": 1,
+            "supported": 0,
+            "refuted": 0,
+            "not_in_source": 1,
+            "conflict": 0,
+            "accepted_arguments": 0,
+            "struck_arguments": 0,
+            "ai_arguments": 0,
+            "ai_accepted": 0,
+            "ai_struck": 0,
+            "ai_bridges": 0,
+            "rule_arguments": 0
+          },
+          "dossier": {
+            "mode": "court",
+            "ai_mode": "rules",
+            "input": {
+              "claim": "Getting a flu vaccine gives you the flu.",
+              "source_name": "Vitamin D source",
+              "source_sha256": "1efdf507c30c00f7b589f8676b088d9e1c92975ef8a15e4b14488cfa7e4ad3a0"
+            },
+            "source": {
+              "source_id": "S1",
+              "name": "Vitamin D source",
+              "sha256": "1efdf507c30c00f7b589f8676b088d9e1c92975ef8a15e4b14488cfa7e4ad3a0",
+              "chars": 49,
+              "sentences": 1
+            },
+            "atoms": [
+              {
+                "atom_id": "A1",
+                "claim": "Getting a flu vaccine gives you the flu.",
+                "verdict": "not_in_source",
+                "reason": "No verified quotation states this proposition in the supplied source.",
+                "accepted_argument_ids": [],
+                "struck_argument_ids": [],
+                "bridge_argument_ids": [],
+                "evidence_ids": [],
+                "nearest": {
+                  "quote": "Vitamin D is important for bone health in adults.",
+                  "coverage": 0.0,
+                  "evidence_id": "S1-P1",
+                  "char_start": 0,
+                  "char_end": 49
+                },
+                "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+              }
+            ],
+            "arguments": [],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 0,
+              "not_in_source": 1,
+              "conflict": 0,
+              "accepted_arguments": 0,
+              "struck_arguments": 0,
+              "ai_arguments": 0,
+              "ai_accepted": 0,
+              "ai_struck": 0,
+              "ai_bridges": 0,
+              "rule_arguments": 0
+            },
+            "receipt": {
+              "run_id": "8aaf7f5b836f22c8",
+              "generated_at": "2026-11-21T03:23:40.838514+00:00",
+              "model": null,
+              "engine": "deterministic judge + rules-only docket"
+            },
+            "trace": [],
+            "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false."
+          },
+          "ai_meta": null
+        }
+      ],
+      "duplicates": [],
+      "summary": {
+        "sources": 4,
+        "supported": 1,
+        "refuted": 1,
+        "not_in_source": 2,
+        "conflict": 0,
+        "cross_source_conflict": true,
+        "ai_used": 0,
+        "ai_skipped": 0,
+        "total_ai_ms": 0
+      },
+      "receipt": {
+        "run_id": "e1e17b0e5f35f754",
+        "generated_at": "2026-11-21T03:23:40.838532+00:00",
+        "model": null,
+        "engine": "deterministic judge + rules triage"
+      },
+      "disclaimer": "Each source is judged on its own. A cross-source conflict means the supplied sources disagree; the court does not decide which source is right, and it is not an authoritative fact-check.",
+      "demo_label": "RECORDED MULTI-SOURCE RUN · RULES TRIAGE",
+      "recorded_at": "2026-11-21T03:23:40.838554+00:00",
+      "replay_sources": [
+        {
+          "name": "CDC · injected vaccine",
+          "text": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus."
+        },
+        {
+          "name": "A leaflet that restates the claim",
+          "text": "Getting a flu vaccine gives you the flu."
+        },
+        {
+          "name": "Hand-hygiene source",
+          "text": "Hand washing with soap reduces diarrhoeal disease in children."
+        },
+        {
+          "name": "Vitamin D source",
+          "text": "Vitamin D is important for bone health in adults."
+        }
+      ]
+    }
+  }
+}

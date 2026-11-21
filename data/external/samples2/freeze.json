@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-11-20T15:37:33Z",
+  "dedup": {
+    "averitec": {
+      "candidates": 256,
+      "dropped_label": 38,
+      "dropped_used_text": 206
+    },
+    "fever": {
+      "candidates": 19295,
+      "dropped_label": 0,
+      "dropped_used_text": 313
+    },
+    "healthver": {
+      "candidates": 74,
+      "dropped_label": 0,
+      "dropped_used_text": 1554
+    },
+    "pubhealth": {
+      "candidates": 9218,
+      "dropped_label": 1633,
+      "dropped_used_text": 200
+    },
+    "vitaminc": {
+      "candidates": 54924,
+      "dropped_label": 0,
+      "dropped_used_text": 572
+    }
+  },
+  "files": {
+    "data/external/samples2/averitec.jsonl": "de939147480a78a9d4b6f9d06ba40c775928a2e4e5a9929c98fd9ff03b7cdca5",
+    "data/external/samples2/fever.jsonl": "3100b986224a4691b76adb68be7f0de43b6563fd0defa7de515d976445d4ee7c",
+    "data/external/samples2/healthver.jsonl": "277958631a5e18e15fa0c38624b78226a9ec6cf7c4db8c46906f7deef7c1e883",
+    "data/external/samples2/pubhealth.jsonl": "1d7192412e7145f1e2d96f88f8579ff4a229ea6d6a6ceeff7c447ab8661591d1",
+    "data/external/samples2/vitaminc.jsonl": "f7988cc0c806abdbb4f549762bf450b59e405f8bf6be1fc568d0b53b82ce5918"
+  },
+  "rows": {
+    "averitec": 80,
+    "fever": 120,
+    "healthver": 74,
+    "pubhealth": 80,
+    "vitaminc": 80
+  },
+  "seed_tag": "20261121",
+  "statement": "this slice has not been evaluated; scoring it once is recorded in evidence/holdback_ledger.json and burns it"
+}

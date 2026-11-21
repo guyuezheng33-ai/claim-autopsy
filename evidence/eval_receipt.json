@@ -1,0 +1,178 @@
+{
+  "schema": "claim-autopsy/eval-receipt/1",
+  "generated_at": "2026-11-20T18:01:39Z",
+  "split": "dev",
+  "seed": 20261120,
+  "evaluated_at": "2026-11-20T18:01:14Z",
+  "kernel": "offline deterministic core (use_llm=False)",
+  "python": "3.13.18",
+  "runs": [
+    {
+      "command": "C:\\Users\\Admin\\AppData\\Local\\Doubao\\User Data\\sandbox_runtime\\bases\\fa694f517e5995233c80a9a8db5212c2\\python\\python.exe tools/eval_external.py --split dev --out evidence\\external_eval_v4.json",
+      "exit_code": 0,
+      "stdout_sha256": "c5ad5dddd2ca8f8cb4d65b4019c8e4c57a062dbbf5f876fb89a4cea7d8bfc3e2",
+      "stdout_tail": [
+        "[pubhealth] n=143 acc=0.0559 macroF1=0.0353 refusal=1.0 answers=0 correct=0 wrong=0 2.164s",
+        "[vitaminc] n=131 acc=0.1756 macroF1=0.0996 refusal=1.0 answers=0 correct=0 wrong=0 1.945s",
+        "out: evidence\\external_eval_v4.json"
+      ]
+    },
+    {
+      "command": "C:\\Users\\Admin\\AppData\\Local\\Doubao\\User Data\\sandbox_runtime\\bases\\fa694f517e5995233c80a9a8db5212c2\\python\\python.exe tools/eval_external_detail.py",
+      "exit_code": 0,
+      "stdout_sha256": "ac6413aa877db4680c6927ca20bedae62308584d6d5c8114a6773780a6503471",
+      "stdout_tail": [
+        "pubhealth  n=143 answered= 0 wrong= 0",
+        "vitaminc   n=131 answered= 0 wrong= 0",
+        "written evidence/external_dev_detail.json"
+      ]
+    }
+  ],
+  "datasets": {
+    "fever": {
+      "n": 203,
+      "accuracy": 0.3153,
+      "refusal": 1.0,
+      "accuracy_on_decided": null,
+      "answers": 0,
+      "correct": 0,
+      "wrong": 0,
+      "baseline": 0.3448
+    },
+    "healthver": {
+      "n": 214,
+      "accuracy": 0.5561,
+      "refusal": 0.9626,
+      "accuracy_on_decided": 0.875,
+      "answers": 8,
+      "correct": 7,
+      "wrong": 1,
+      "baseline": 0.5234
+    },
+    "averitec": {
+      "n": 149,
+      "accuracy": 0.094,
+      "refusal": 0.9799,
+      "accuracy_on_decided": 1.0,
+      "answers": 3,
+      "correct": 3,
+      "wrong": 0,
+      "baseline": 0.6577
+    },
+    "pubhealth": {
+      "n": 143,
+      "accuracy": 0.0559,
+      "refusal": 1.0,
+      "accuracy_on_decided": null,
+      "answers": 0,
+      "correct": 0,
+      "wrong": 0,
+      "baseline": 0.6014
+    },
+    "vitaminc": {
+      "n": 131,
+      "accuracy": 0.1756,
+      "refusal": 1.0,
+      "accuracy_on_decided": null,
+      "answers": 0,
+      "correct": 0,
+      "wrong": 0,
+      "baseline": 0.4885
+    }
+  },
+  "totals": {
+    "n": 840,
+    "answers": 11,
+    "correct": 10,
+    "wrong": 1
+  },
+  "holdback": {
+    "status": "opened",
+    "evidence_kind": "frozen result of the single open; this script does not re-score it",
+    "file_sha256": "3e28d0465a407849a8a22eb77de0a6a81543f2619ba05a03c160651a125d3102",
+    "evaluated_at": "2026-11-20T14:43:22Z",
+    "split": "holdback",
+    "seed": 20261120,
+    "opens": 1,
+    "ledger_entry": {
+      "split": "holdback",
+      "samples": "samples",
+      "seed": 20261120,
+      "evaluated_at": "2026-11-20T14:43:22Z",
+      "n": 360,
+      "out": "evidence/external_eval_holdback.json",
+      "forced": false,
+      "recorded_at": "2026-11-20T15:41:47Z",
+      "recorded_retroactively": true,
+      "note": "The slice was scored once, at 14:43Z, before this ledger existed. This entry is written from the result file that run left behind: it records an event rather than authorising one. The slice has not been scored a second time, and tools/eval_external.py now refuses to score it again."
+    },
+    "per_dataset": {
+      "fever": {
+        "n": 97,
+        "accuracy": 0.3711,
+        "refusal": 1.0,
+        "answers": null,
+        "correct": null,
+        "wrong": null
+      },
+      "healthver": {
+        "n": 86,
+        "accuracy": 0.5465,
+        "refusal": 0.8953,
+        "answers": null,
+        "correct": null,
+        "wrong": null
+      },
+      "averitec": {
+        "n": 51,
+        "accuracy": 0.1176,
+        "refusal": 0.9804,
+        "answers": null,
+        "correct": null,
+        "wrong": null
+      },
+      "pubhealth": {
+        "n": 57,
+        "accuracy": 0.0175,
+        "refusal": 1.0,
+        "answers": null,
+        "correct": null,
+        "wrong": null
+      },
+      "vitaminc": {
+        "n": 69,
+        "accuracy": 0.087,
+        "refusal": 1.0,
+        "answers": null,
+        "correct": null,
+        "wrong": null
+      }
+    },
+    "totals": {
+      "n": 360,
+      "answers": 0,
+      "correct": 0,
+      "wrong": 0
+    }
+  },
+  "artefacts": {
+    "data/external/samples/fever.jsonl": "26cf2fcd5f8f7e231eeb9af4979cc055ac3c170f12ed7459372232a482f4326a",
+    "data/external/samples/healthver.jsonl": "0cb693a846ce94dbfc18065984e5dd610ddee6506f3d6215a7a6688d02781a30",
+    "data/external/samples/averitec.jsonl": "f15c13f487ab869b1083760dc82b454b930715dfcdd9017b853c5179a766bfdb",
+    "data/external/samples/pubhealth.jsonl": "b92d60453c352bdfc211cbc4cc0ba042d12b53ca510473ce5e1fbbca15870da3",
+    "data/external/samples/vitaminc.jsonl": "b56940a16a60a2e0ddf38842ea438d2d52b9fcee45ab785138c465fe68cd48d2",
+    "data/external/samples/samples_index.json": "f3bdd43095bf66e116e805f52c2f1320f83ed1ab45f85a805c84e08e213060e8",
+    "evidence/external_eval_v4.json": "95650f8382c2cd3f754a74f14f21126ef811671e79f8b1f2ca29cc9f198433fd",
+    "evidence/external_dev_detail.json": "b6fff9d8545acd73dad77384c7282b0ee08c5b8f50be40bf68746184f2dcff35",
+    "evidence/external_eval_holdback.json": "3e28d0465a407849a8a22eb77de0a6a81543f2619ba05a03c160651a125d3102",
+    "evidence/holdback_ledger.json": "8ac57eef6d1a3558a45503ea9c3bdb7f5f6806dd759c02d1b92d09add03a91cf",
+    "data/claims.json": "0c96925411fed34a68461b488c7125dd78641216fc9a0fcef81e05e5914a3017",
+    "core/evidence.py": "807bf0c1444fa1dc12bb319aaa929ebd78fbe133c5b3b058d3ef41ab19105e1c",
+    "core/pipeline.py": "78ec484310f2446e1cfe7c3fdc6bef34adc474fcec14d45a87b7b11545a57325",
+    "core/decompose.py": "5d179890a87cf2e3618b4c737f65b72c9fa26d464759e609e62812a3907e873f",
+    "core/adjudicate.py": "e826227a3cc5b2402d66e2cab6ae9ddcbfbd9b8b77f7677dd6091bda761c2274",
+    "core/negation.py": "bdcd2edf1d45810c2b8a8720228d7bf790a214958667ff4f2b07994f43129f5b",
+    "core/semantic.py": "17740087a6d79afe7e005c8dba98a3cde20c5b32d95e96f9447876b0b28dc6aa"
+  },
+  "receipt_id": "f618f0cb0d2ddb7191378509675325c2"
+}

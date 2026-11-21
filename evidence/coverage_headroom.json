@@ -1,0 +1,281 @@
+{
+ "split": "dev",
+ "claims": 840,
+ "answered": 11,
+ "refused": 829,
+ "coverage_overall": 0.0131,
+ "coverage_in_domain": 0.0196,
+ "refusals_with_contact": 549,
+ "refusals_without_contact": 280,
+ "best_cover_histogram_ignoring_guards": {
+  "0.0-0.2": 438,
+  "0.2-0.4": 215,
+  "0.4-0.6": 155,
+  "0.6-0.8": 21
+ },
+ "per_dataset": {
+  "fever": {
+   "answered": 0,
+   "refused": 203,
+   "in_domain_refused": 53,
+   "no_contact": 150,
+   "coverage_in_domain": 0.0
+  },
+  "healthver": {
+   "answered": 8,
+   "refused": 206,
+   "in_domain_refused": 201,
+   "no_contact": 5,
+   "coverage_in_domain": 0.0383
+  },
+  "averitec": {
+   "answered": 3,
+   "refused": 146,
+   "in_domain_refused": 109,
+   "no_contact": 37,
+   "coverage_in_domain": 0.0268
+  },
+  "pubhealth": {
+   "answered": 0,
+   "refused": 143,
+   "in_domain_refused": 105,
+   "no_contact": 38,
+   "coverage_in_domain": 0.0
+  },
+  "vitaminc": {
+   "answered": 0,
+   "refused": 131,
+   "in_domain_refused": 81,
+   "no_contact": 50,
+   "coverage_in_domain": 0.0
+  }
+ },
+ "in_domain_missing": [
+  {
+   "id": "healthver-3511",
+   "dataset": "healthver",
+   "text": "There is no evidence taking vitamin D supplements will protect people from Covid-19.",
+   "gold": "refuted",
+   "nearest_card": "E021",
+   "nearest_claim": "Vitamin supplements can cure COVID-19",
+   "best_cover": 0.75
+  },
+  {
+   "id": "healthver-10382",
+   "dataset": "healthver",
+   "text": "The coronavirus that causes COVID-19 can spread between people interacting in close proximity - for example, speaking, coughing, sneezing, or singing- even if those people do not symptoms",
+   "gold": "refuted",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-10418",
+   "dataset": "healthver",
+   "text": "The coronavirus that causes COVID-19 can spread between people interacting in close proximity - for example, speaking, coughing, sneezing, or singing- even if those people do not symptoms",
+   "gold": "undetermined",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-10633",
+   "dataset": "healthver",
+   "text": "The coronavirus that causes COVID-19 can spread between people interacting in close proximity - for example, speaking, coughing, sneezing, or singing- even if those people do not symptoms",
+   "gold": "refuted",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-10777",
+   "dataset": "healthver",
+   "text": "The coronavirus that causes COVID-19 can spread between people interacting in close proximity - for example, speaking, coughing, sneezing, or singing- even if those people do not symptoms",
+   "gold": "refuted",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-12489",
+   "dataset": "healthver",
+   "text": "By curbing inflammation, the drug could help people whose immune systems have become overactive through a process called a cytokine storm, which can cause severe COVID-19 symptoms",
+   "gold": "undetermined",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-12490",
+   "dataset": "healthver",
+   "text": "By curbing inflammation, the drug could help people whose immune systems have become overactive through a process called a cytokine storm, which can cause severe COVID-19 symptoms",
+   "gold": "undetermined",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-1804",
+   "dataset": "healthver",
+   "text": "The virus that causes COVID-19 appears to spread more efficiently than influenza but not as efficiently as measles, which is among the most contagious viruses known to affect people.",
+   "gold": "undetermined",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-2097",
+   "dataset": "healthver",
+   "text": "The virus that causes COVID-19 appears to spread more efficiently than influenza but not as efficiently as measles, which is among the most contagious viruses known to affect people.",
+   "gold": "undetermined",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-2221",
+   "dataset": "healthver",
+   "text": "The virus that causes COVID-19 appears to spread more efficiently than influenza but not as efficiently as measles, which is among the most contagious viruses known to affect people.",
+   "gold": "undetermined",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-3266",
+   "dataset": "healthver",
+   "text": "COVID-19 disease, caused by infection with SARS-CoV-2, is related to a series of physiopathological mechanisms that mobilize a wide variety of biomolecules, mainly immunological in nature. ",
+   "gold": "undetermined",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-6704",
+   "dataset": "healthver",
+   "text": "Animals don't appear to play a significant role in spreading the virus that causes COVID-19.",
+   "gold": "supported",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-7729",
+   "dataset": "healthver",
+   "text": "UV light is the latest popular tool in the ongoing race to find ways to prevent oneself from catching SARS-CoV-2, the virus that causes COVID-19. ",
+   "gold": "undetermined",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-787",
+   "dataset": "healthver",
+   "text": "SARS-CoV-2, the official name of the virus that causes COVID-19, is spread by respiratory droplets produced when people breathe, talk, sneeze or cough.",
+   "gold": "undetermined",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "averitec-0039",
+   "dataset": "averitec",
+   "text": "5G causes COVID-19.",
+   "gold": "refuted",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "averitec-0041",
+   "dataset": "averitec",
+   "text": "Wearing face masks can cause infections from bacteria such as staphylococcus.",
+   "gold": "refuted",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "averitec-0131",
+   "dataset": "averitec",
+   "text": "We do not know where Covid-19 places among causes of death because the data is not published.",
+   "gold": "refuted",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "averitec-0154",
+   "dataset": "averitec",
+   "text": "COVID-19 had caused zero deaths in people under 20.",
+   "gold": "refuted",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "averitec-0400",
+   "dataset": "averitec",
+   "text": "Math Mistake Caused U.S. Leaders To Panic And Order COVID Lockdowns",
+   "gold": "refuted",
+   "nearest_card": "E023",
+   "nearest_claim": "COVID-19 is caused by bacteria",
+   "best_cover": 0.667
+  },
+  {
+   "id": "pubhealth-41205",
+   "dataset": "pubhealth",
+   "text": "In 1983, US children got 10 vaccines and the autism rate was 1 in 10,000.",
+   "gold": "undetermined",
+   "nearest_card": "E060",
+   "nearest_claim": "Vaccines cause autism",
+   "best_cover": 0.667
+  },
+  {
+   "id": "healthver-4989",
+   "dataset": "healthver",
+   "text": "vitamin C can prevent or treat COVID-19 (coronavirus)",
+   "gold": "refuted",
+   "nearest_card": "E084",
+   "nearest_claim": "Vitamin C prevents the common cold",
+   "best_cover": 0.6
+  },
+  {
+   "id": "healthver-12244",
+   "dataset": "healthver",
+   "text": "The COVID-19 disease can infect anyone at any age. People with pre-existing health conditions such as asthma, COPD, diabetes and heart disease appear to be more at risk.",
+   "gold": "refuted",
+   "nearest_card": "E119",
+   "nearest_claim": "Older adults and people with pre-existing conditions are more vulnerable to severe COVID-19",
+   "best_cover": 0.556
+  },
+  {
+   "id": "healthver-12277",
+   "dataset": "healthver",
+   "text": "The COVID-19 disease can infect anyone at any age. People with pre-existing health conditions such as asthma, COPD, diabetes and heart disease appear to be more at risk.",
+   "gold": "undetermined",
+   "nearest_card": "E119",
+   "nearest_claim": "Older adults and people with pre-existing conditions are more vulnerable to severe COVID-19",
+   "best_cover": 0.556
+  },
+  {
+   "id": "healthver-12310",
+   "dataset": "healthver",
+   "text": "The COVID-19 disease can infect anyone at any age. People with pre-existing health conditions such as asthma, COPD, diabetes and heart disease appear to be more at risk.",
+   "gold": "undetermined",
+   "nearest_card": "E119",
+   "nearest_claim": "Older adults and people with pre-existing conditions are more vulnerable to severe COVID-19",
+   "best_cover": 0.556
+  },
+  {
+   "id": "healthver-12408",
+   "dataset": "healthver",
+   "text": "The COVID-19 disease can infect anyone at any age. People with pre-existing health conditions such as asthma, COPD, diabetes and heart disease appear to be more at risk.",
+   "gold": "undetermined",
+   "nearest_card": "E119",
+   "nearest_claim": "Older adults and people with pre-existing conditions are more vulnerable to severe COVID-19",
+   "best_cover": 0.556
+  }
+ ],
+ "reading": "The histogram is the matcher ceiling: with every guard switched off, no refused claim on this slice restates even 80% of any card. Loosening a threshold would therefore buy nothing here. The contact split says why: claims without contact are outside the corpus's subject matter, and coverage inside the subject is the number to quote."
+}

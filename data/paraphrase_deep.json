@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "purpose": "AI semantic-recall benchmark. Every text below has ZERO lexical retrieval hits in the offline core; a correct verdict is reachable only when the LLM nominates a real corpus card asserting the same proposition. Expected verdicts are derived from the recalled card's own stored stance, never from the AI.",
+    "construction": "Mechanism-coverage set, not a random sample. Selected by probing candidate low-overlap restatements and keeping only those with verified rule-zero-recall and a real same-proposition card in the corpus. Cases where recall finds only a low-weight background card are kept as negative controls (expected undetermined).",
+    "pass_condition": "A case scores correct only when the verdict equals the expected verdict AND every citation is a real corpus card whose stance equals that card's stored stance AND, where expect_card is set, that specific card is cited. Negative controls DP16/DP17 expect undetermined: AI must recall the weak background card yet still refuse because its stored weight is below threshold.",
+    "note": "Do not read these numbers as real-world fact-checking accuracy. This set isolates one mechanism: does AI recall change a measured number while staying gated?"
+  },
+  "cases": [
+    {"id": "DP01", "text": "Consuming carrots lets people see clearly in the dark.", "expected": "refuted", "expect_card": "E070"},
+    {"id": "DP02", "text": "The planet we live on has a spherical shape.", "expected": "supported", "expect_card": "E004"},
+    {"id": "DP03", "text": "People activate only a tenth of their cerebral capacity.", "expected": "refuted", "expect_card": "E036"},
+    {"id": "DP04", "text": "Monosodium glutamate poses serious health risks.", "expected": "refuted", "expect_card": "E072"},
+    {"id": "DP06", "text": "Cancer can be caught from another person.", "expected": "refuted", "expect_card": "E074"},
+    {"id": "DP08", "text": "Cellphone signals cause tumors.", "expected": "refuted", "expect_card": "E075"},
+    {"id": "DP09", "text": "The coronavirus is actually a type of bacteria.", "expected": "refuted", "expect_card": "E023"},
+    {"id": "DP12", "text": "Following an alkaline regimen cures malignant tumors.", "expected": "refuted", "expect_card": "E079"},
+    {"id": "DP15", "text": "Regular hand hygiene cuts the spread of viral illness.", "expected": "supported", "expect_card": "E024"},
+    {"id": "DP19", "text": "Frozen groceries should be defrosted on the kitchen counter.", "expected": "refuted", "expect_card": "E040"},
+    {"id": "DP20", "text": "Seasonal immunizations overload a baby's immune defences.", "expected": "refuted", "expect_card": "E041"},
+    {"id": "DP16", "text": "Getting enough rest keeps the brain active.", "expected": "undetermined", "expect_card": "E037"},
+    {"id": "DP17", "text": "A course of antibacterial tablets fights bacterial illness.", "expected": "undetermined", "expect_card": "E016"},
+    {"id": "DP18", "text": "Ingesting ordinary table salt is bad for your wellbeing.", "expected": "undetermined", "expect_card": null}
+  ]
+}

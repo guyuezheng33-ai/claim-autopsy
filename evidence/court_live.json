@@ -1,0 +1,4641 @@
+{
+  "ok": true,
+  "generated_at": "2026-11-20T20:15:21.843797+00:00",
+  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+  "provider": "local-llama.cpp",
+  "mode": "live AI advocates + deterministic judge",
+  "cases": [
+    {
+      "id": "court-01-refuted-flu",
+      "replay_key": "refuted_flu",
+      "claim": "Getting a flu vaccine gives you the flu.",
+      "source": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+      "expected": [
+        "refuted"
+      ],
+      "rules": {
+        "verdicts": [
+          "refuted"
+        ],
+        "run_id": "b5efbc2011802774"
+      },
+      "live": {
+        "verdicts": [
+          "refuted"
+        ],
+        "run_id": "bb5bce9edf51e779",
+        "arguments": [
+          {
+            "argument_id": "P-A1-S1-P1-13b95a",
+            "side": "prosecution",
+            "origin": "ai",
+            "atom_id": "A1",
+            "relation": "contradicts",
+            "evidence_id": "S1-P1",
+            "source_name": "live fixture",
+            "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+            "quote_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+            "char_start": 0,
+            "char_end": 108,
+            "rationale": "The evidence directly contradicts the claim that getting a flu vaccine gives you the flu.",
+            "status": "accepted",
+            "strike_codes": [],
+            "strike_reason": null,
+            "checks": {
+              "quote_exact": true,
+              "relation": true,
+              "subject": true,
+              "population": true,
+              "object": true,
+              "endpoint": true,
+              "quantity": true,
+              "strength": true,
+              "polarity": true
+            },
+            "coverage": 1.0
+          }
+        ],
+        "summary": {
+          "claims": 1,
+          "supported": 0,
+          "refuted": 1,
+          "not_in_source": 0,
+          "conflict": 0,
+          "accepted_arguments": 1,
+          "struck_arguments": 0,
+          "ai_arguments": 1,
+          "ai_accepted": 1,
+          "ai_struck": 0,
+          "rule_arguments": 0
+        },
+        "dossier": {
+          "mode": "court",
+          "ai_mode": "ai",
+          "input": {
+            "claim": "Getting a flu vaccine gives you the flu.",
+            "source_name": "live fixture",
+            "source_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f"
+          },
+          "source": {
+            "source_id": "S1",
+            "name": "live fixture",
+            "sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+            "chars": 108,
+            "sentences": 1
+          },
+          "atoms": [
+            {
+              "atom_id": "A1",
+              "claim": "Getting a flu vaccine gives you the flu.",
+              "verdict": "refuted",
+              "reason": "A verified quotation states the same proposition with the opposite polarity.",
+              "accepted_argument_ids": [
+                "P-A1-S1-P1-13b95a"
+              ],
+              "struck_argument_ids": [],
+              "evidence_ids": [
+                "S1-P1"
+              ],
+              "nearest": {
+                "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+                "coverage": 1.0,
+                "evidence_id": "S1-P1",
+                "char_start": 0,
+                "char_end": 108
+              },
+              "what_would_change_it": "A source sentence asserting the same proposition would change this verdict."
+            }
+          ],
+          "arguments": [
+            {
+              "argument_id": "P-A1-S1-P1-13b95a",
+              "side": "prosecution",
+              "origin": "ai",
+              "atom_id": "A1",
+              "relation": "contradicts",
+              "evidence_id": "S1-P1",
+              "source_name": "live fixture",
+              "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+              "quote_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+              "char_start": 0,
+              "char_end": 108,
+              "rationale": "The evidence directly contradicts the claim that getting a flu vaccine gives you the flu.",
+              "status": "accepted",
+              "strike_codes": [],
+              "strike_reason": null,
+              "checks": {
+                "quote_exact": true,
+                "relation": true,
+                "subject": true,
+                "population": true,
+                "object": true,
+                "endpoint": true,
+                "quantity": true,
+                "strength": true,
+                "polarity": true
+              },
+              "coverage": 1.0
+            }
+          ],
+          "summary": {
+            "claims": 1,
+            "supported": 0,
+            "refuted": 1,
+            "not_in_source": 0,
+            "conflict": 0,
+            "accepted_arguments": 1,
+            "struck_arguments": 0,
+            "ai_arguments": 1,
+            "ai_accepted": 1,
+            "ai_struck": 0,
+            "rule_arguments": 0
+          },
+          "receipt": {
+            "run_id": "bb5bce9edf51e779",
+            "generated_at": "2026-11-20T20:15:05.798339+00:00",
+            "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            "engine": "deterministic judge + AI advocates"
+          },
+          "trace": [
+            {
+              "step": "advocates",
+              "meta": {
+                "prosecution": {
+                  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                  "provider": "local-llama.cpp",
+                  "latency_ms": 4340,
+                  "usage": {
+                    "prompt_tokens": 421,
+                    "completion_tokens": 66,
+                    "total_tokens": 487
+                  },
+                  "role": "prosecution",
+                  "arguments": 1,
+                  "output_format": "array"
+                },
+                "defense": {
+                  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                  "provider": "local-llama.cpp",
+                  "latency_ms": 207,
+                  "usage": {
+                    "prompt_tokens": 420,
+                    "completion_tokens": 2,
+                    "total_tokens": 422
+                  },
+                  "role": "defense",
+                  "arguments": 0,
+                  "output_format": "array"
+                },
+                "available": true,
+                "parallel": true
+              }
+            }
+          ],
+          "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+          "__source": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+          "replay_mode": "live-run-recording",
+          "demo_label": "RECORDED LIVE AI RUN · qwen2.5-1.5b-instruct-q4_k_m.gguf"
+        }
+      },
+      "model_meta": {
+        "prosecution": {
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "provider": "local-llama.cpp",
+          "latency_ms": 4340,
+          "usage": {
+            "prompt_tokens": 421,
+            "completion_tokens": 66,
+            "total_tokens": 487
+          },
+          "role": "prosecution",
+          "arguments": 1,
+          "output_format": "array"
+        },
+        "defense": {
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "provider": "local-llama.cpp",
+          "latency_ms": 207,
+          "usage": {
+            "prompt_tokens": 420,
+            "completion_tokens": 2,
+            "total_tokens": 422
+          },
+          "role": "defense",
+          "arguments": 0,
+          "output_format": "array"
+        },
+        "available": true,
+        "parallel": true
+      }
+    },
+    {
+      "id": "court-02-supported-eiffel",
+      "replay_key": "supported_eiffel",
+      "claim": "The Eiffel Tower is located in Paris.",
+      "source": "The Eiffel Tower is located in Paris, France.",
+      "expected": [
+        "supported"
+      ],
+      "rules": {
+        "verdicts": [
+          "supported"
+        ],
+        "run_id": "f4a057b6937ce630"
+      },
+      "live": {
+        "verdicts": [
+          "supported"
+        ],
+        "run_id": "3d46adb24ebeeb26",
+        "arguments": [
+          {
+            "argument_id": "P-A1-S1-P1-27dfce",
+            "side": "prosecution",
+            "origin": "ai",
+            "atom_id": "A1",
+            "relation": "supports",
+            "evidence_id": "S1-P1",
+            "source_name": "live fixture",
+            "quote": "The Eiffel Tower is located in Paris, France.",
+            "quote_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+            "char_start": 0,
+            "char_end": 45,
+            "rationale": "The evidence explicitly states that the Eiffel Tower is located in Paris, France, which directly supports the claim.",
+            "status": "struck",
+            "strike_codes": [
+              "side_mismatch"
+            ],
+            "strike_reason": "quotation points the other way",
+            "checks": {
+              "quote_exact": true,
+              "relation": true,
+              "subject": true,
+              "population": true,
+              "object": true,
+              "endpoint": true,
+              "quantity": true,
+              "strength": true,
+              "polarity": true
+            },
+            "coverage": 1.0
+          },
+          {
+            "argument_id": "D-A1-S1-P1-27dfce",
+            "side": "defense",
+            "origin": "ai",
+            "atom_id": "A1",
+            "relation": "supports",
+            "evidence_id": "S1-P1",
+            "source_name": "live fixture",
+            "quote": "The Eiffel Tower is located in Paris, France.",
+            "quote_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+            "char_start": 0,
+            "char_end": 45,
+            "rationale": "The evidence explicitly states that the Eiffel Tower is located in Paris, France, which directly supports the claim.",
+            "status": "accepted",
+            "strike_codes": [],
+            "strike_reason": null,
+            "checks": {
+              "quote_exact": true,
+              "relation": true,
+              "subject": true,
+              "population": true,
+              "object": true,
+              "endpoint": true,
+              "quantity": true,
+              "strength": true,
+              "polarity": true
+            },
+            "coverage": 1.0
+          }
+        ],
+        "summary": {
+          "claims": 1,
+          "supported": 1,
+          "refuted": 0,
+          "not_in_source": 0,
+          "conflict": 0,
+          "accepted_arguments": 1,
+          "struck_arguments": 1,
+          "ai_arguments": 2,
+          "ai_accepted": 1,
+          "ai_struck": 1,
+          "rule_arguments": 0
+        },
+        "dossier": {
+          "mode": "court",
+          "ai_mode": "ai",
+          "input": {
+            "claim": "The Eiffel Tower is located in Paris.",
+            "source_name": "live fixture",
+            "source_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b"
+          },
+          "source": {
+            "source_id": "S1",
+            "name": "live fixture",
+            "sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+            "chars": 45,
+            "sentences": 1
+          },
+          "atoms": [
+            {
+              "atom_id": "A1",
+              "claim": "The Eiffel Tower is located in Paris.",
+              "verdict": "supported",
+              "reason": "A verified quotation states the same proposition with the same polarity.",
+              "accepted_argument_ids": [
+                "D-A1-S1-P1-27dfce"
+              ],
+              "struck_argument_ids": [
+                "P-A1-S1-P1-27dfce"
+              ],
+              "evidence_ids": [
+                "S1-P1"
+              ],
+              "nearest": {
+                "quote": "The Eiffel Tower is located in Paris, France.",
+                "coverage": 1.0,
+                "evidence_id": "S1-P1",
+                "char_start": 0,
+                "char_end": 45
+              },
+              "what_would_change_it": "A source sentence asserting the same proposition with the opposite polarity would change this verdict."
+            }
+          ],
+          "arguments": [
+            {
+              "argument_id": "P-A1-S1-P1-27dfce",
+              "side": "prosecution",
+              "origin": "ai",
+              "atom_id": "A1",
+              "relation": "supports",
+              "evidence_id": "S1-P1",
+              "source_name": "live fixture",
+              "quote": "The Eiffel Tower is located in Paris, France.",
+              "quote_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+              "char_start": 0,
+              "char_end": 45,
+              "rationale": "The evidence explicitly states that the Eiffel Tower is located in Paris, France, which directly supports the claim.",
+              "status": "struck",
+              "strike_codes": [
+                "side_mismatch"
+              ],
+              "strike_reason": "quotation points the other way",
+              "checks": {
+                "quote_exact": true,
+                "relation": true,
+                "subject": true,
+                "population": true,
+                "object": true,
+                "endpoint": true,
+                "quantity": true,
+                "strength": true,
+                "polarity": true
+              },
+              "coverage": 1.0
+            },
+            {
+              "argument_id": "D-A1-S1-P1-27dfce",
+              "side": "defense",
+              "origin": "ai",
+              "atom_id": "A1",
+              "relation": "supports",
+              "evidence_id": "S1-P1",
+              "source_name": "live fixture",
+              "quote": "The Eiffel Tower is located in Paris, France.",
+              "quote_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+              "char_start": 0,
+              "char_end": 45,
+              "rationale": "The evidence explicitly states that the Eiffel Tower is located in Paris, France, which directly supports the claim.",
+              "status": "accepted",
+              "strike_codes": [],
+              "strike_reason": null,
+              "checks": {
+                "quote_exact": true,
+                "relation": true,
+                "subject": true,
+                "population": true,
+                "object": true,
+                "endpoint": true,
+                "quantity": true,
+                "strength": true,
+                "polarity": true
+              },
+              "coverage": 1.0
+            }
+          ],
+          "summary": {
+            "claims": 1,
+            "supported": 1,
+            "refuted": 0,
+            "not_in_source": 0,
+            "conflict": 0,
+            "accepted_arguments": 1,
+            "struck_arguments": 1,
+            "ai_arguments": 2,
+            "ai_accepted": 1,
+            "ai_struck": 1,
+            "rule_arguments": 0
+          },
+          "receipt": {
+            "run_id": "3d46adb24ebeeb26",
+            "generated_at": "2026-11-20T20:15:12.064979+00:00",
+            "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            "engine": "deterministic judge + AI advocates"
+          },
+          "trace": [
+            {
+              "step": "advocates",
+              "meta": {
+                "prosecution": {
+                  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                  "provider": "local-llama.cpp",
+                  "latency_ms": 6254,
+                  "usage": {
+                    "prompt_tokens": 415,
+                    "completion_tokens": 63,
+                    "total_tokens": 478
+                  },
+                  "role": "prosecution",
+                  "arguments": 1,
+                  "output_format": "array"
+                },
+                "defense": {
+                  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                  "provider": "local-llama.cpp",
+                  "latency_ms": 6253,
+                  "usage": {
+                    "prompt_tokens": 414,
+                    "completion_tokens": 63,
+                    "total_tokens": 477
+                  },
+                  "role": "defense",
+                  "arguments": 1,
+                  "output_format": "array"
+                },
+                "available": true,
+                "parallel": true
+              }
+            }
+          ],
+          "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+          "__source": "The Eiffel Tower is located in Paris, France.",
+          "replay_mode": "live-run-recording",
+          "demo_label": "RECORDED LIVE AI RUN · qwen2.5-1.5b-instruct-q4_k_m.gguf"
+        }
+      },
+      "model_meta": {
+        "prosecution": {
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "provider": "local-llama.cpp",
+          "latency_ms": 6254,
+          "usage": {
+            "prompt_tokens": 415,
+            "completion_tokens": 63,
+            "total_tokens": 478
+          },
+          "role": "prosecution",
+          "arguments": 1,
+          "output_format": "array"
+        },
+        "defense": {
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "provider": "local-llama.cpp",
+          "latency_ms": 6253,
+          "usage": {
+            "prompt_tokens": 414,
+            "completion_tokens": 63,
+            "total_tokens": 477
+          },
+          "role": "defense",
+          "arguments": 1,
+          "output_format": "array"
+        },
+        "available": true,
+        "parallel": true
+      }
+    },
+    {
+      "id": "court-03-not-in-source-coffee",
+      "replay_key": "not_in_source_coffee",
+      "claim": "Coffee stunts growth in children.",
+      "source": "Vitamin D is important for bone health in adults.",
+      "expected": [
+        "not_in_source"
+      ],
+      "rules": {
+        "verdicts": [
+          "not_in_source"
+        ],
+        "run_id": "f9e9bf61027d4bb4"
+      },
+      "live": {
+        "verdicts": [
+          "not_in_source"
+        ],
+        "run_id": "b92cbe6c0e15744b",
+        "arguments": [],
+        "summary": {
+          "claims": 1,
+          "supported": 0,
+          "refuted": 0,
+          "not_in_source": 1,
+          "conflict": 0,
+          "accepted_arguments": 0,
+          "struck_arguments": 0,
+          "ai_arguments": 0,
+          "ai_accepted": 0,
+          "ai_struck": 0,
+          "rule_arguments": 0
+        },
+        "dossier": {
+          "mode": "court",
+          "ai_mode": "ai",
+          "input": {
+            "claim": "Coffee stunts growth in children.",
+            "source_name": "live fixture",
+            "source_sha256": "1efdf507c30c00f7b589f8676b088d9e1c92975ef8a15e4b14488cfa7e4ad3a0"
+          },
+          "source": {
+            "source_id": "S1",
+            "name": "live fixture",
+            "sha256": "1efdf507c30c00f7b589f8676b088d9e1c92975ef8a15e4b14488cfa7e4ad3a0",
+            "chars": 49,
+            "sentences": 1
+          },
+          "atoms": [
+            {
+              "atom_id": "A1",
+              "claim": "Coffee stunts growth in children.",
+              "verdict": "not_in_source",
+              "reason": "No verified quotation states this proposition in the supplied source.",
+              "accepted_argument_ids": [],
+              "struck_argument_ids": [],
+              "evidence_ids": [],
+              "nearest": {
+                "quote": "Vitamin D is important for bone health in adults.",
+                "coverage": 0.0,
+                "evidence_id": "S1-P1",
+                "char_start": 0,
+                "char_end": 49
+              },
+              "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+            }
+          ],
+          "arguments": [],
+          "summary": {
+            "claims": 1,
+            "supported": 0,
+            "refuted": 0,
+            "not_in_source": 1,
+            "conflict": 0,
+            "accepted_arguments": 0,
+            "struck_arguments": 0,
+            "ai_arguments": 0,
+            "ai_accepted": 0,
+            "ai_struck": 0,
+            "rule_arguments": 0
+          },
+          "receipt": {
+            "run_id": "b92cbe6c0e15744b",
+            "generated_at": "2026-11-20T20:15:12.642588+00:00",
+            "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            "engine": "deterministic judge + AI advocates"
+          },
+          "trace": [
+            {
+              "step": "advocates",
+              "meta": {
+                "prosecution": {
+                  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                  "provider": "local-llama.cpp",
+                  "latency_ms": 568,
+                  "usage": {
+                    "prompt_tokens": 411,
+                    "completion_tokens": 2,
+                    "total_tokens": 413
+                  },
+                  "role": "prosecution",
+                  "arguments": 0,
+                  "output_format": "array"
+                },
+                "defense": {
+                  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                  "provider": "local-llama.cpp",
+                  "latency_ms": 567,
+                  "usage": {
+                    "prompt_tokens": 410,
+                    "completion_tokens": 2,
+                    "total_tokens": 412
+                  },
+                  "role": "defense",
+                  "arguments": 0,
+                  "output_format": "array"
+                },
+                "available": true,
+                "parallel": true
+              }
+            }
+          ],
+          "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+          "__source": "Vitamin D is important for bone health in adults.",
+          "replay_mode": "live-run-recording",
+          "demo_label": "RECORDED LIVE AI RUN · qwen2.5-1.5b-instruct-q4_k_m.gguf"
+        }
+      },
+      "model_meta": {
+        "prosecution": {
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "provider": "local-llama.cpp",
+          "latency_ms": 568,
+          "usage": {
+            "prompt_tokens": 411,
+            "completion_tokens": 2,
+            "total_tokens": 413
+          },
+          "role": "prosecution",
+          "arguments": 0,
+          "output_format": "array"
+        },
+        "defense": {
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "provider": "local-llama.cpp",
+          "latency_ms": 567,
+          "usage": {
+            "prompt_tokens": 410,
+            "completion_tokens": 2,
+            "total_tokens": 412
+          },
+          "role": "defense",
+          "arguments": 0,
+          "output_format": "array"
+        },
+        "available": true,
+        "parallel": true
+      }
+    },
+    {
+      "id": "court-04-quantity-mismatch",
+      "replay_key": "quantity_mismatch",
+      "claim": "Adults need 150 minutes of moderate exercise per week.",
+      "source": "Adults should get at least 60 minutes of moderate exercise per week.",
+      "expected": [
+        "not_in_source"
+      ],
+      "rules": {
+        "verdicts": [
+          "not_in_source"
+        ],
+        "run_id": "87694504a320280c"
+      },
+      "live": {
+        "verdicts": [
+          "not_in_source"
+        ],
+        "run_id": "2a78553f01fe3dd1",
+        "arguments": [],
+        "summary": {
+          "claims": 1,
+          "supported": 0,
+          "refuted": 0,
+          "not_in_source": 1,
+          "conflict": 0,
+          "accepted_arguments": 0,
+          "struck_arguments": 0,
+          "ai_arguments": 0,
+          "ai_accepted": 0,
+          "ai_struck": 0,
+          "rule_arguments": 0
+        },
+        "dossier": {
+          "mode": "court",
+          "ai_mode": "ai",
+          "input": {
+            "claim": "Adults need 150 minutes of moderate exercise per week.",
+            "source_name": "live fixture",
+            "source_sha256": "0c3d82c02ed2df30406e7b226f4b5cf3904e9604483142218c764c3a6580f9a3"
+          },
+          "source": {
+            "source_id": "S1",
+            "name": "live fixture",
+            "sha256": "0c3d82c02ed2df30406e7b226f4b5cf3904e9604483142218c764c3a6580f9a3",
+            "chars": 68,
+            "sentences": 1
+          },
+          "atoms": [
+            {
+              "atom_id": "A1",
+              "claim": "Adults need 150 minutes of moderate exercise per week.",
+              "verdict": "not_in_source",
+              "reason": "No verified quotation states this proposition in the supplied source.",
+              "accepted_argument_ids": [],
+              "struck_argument_ids": [],
+              "evidence_ids": [],
+              "nearest": {
+                "quote": "Adults should get at least 60 minutes of moderate exercise per week.",
+                "coverage": 0.6,
+                "evidence_id": "S1-P1",
+                "char_start": 0,
+                "char_end": 68
+              },
+              "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+            }
+          ],
+          "arguments": [],
+          "summary": {
+            "claims": 1,
+            "supported": 0,
+            "refuted": 0,
+            "not_in_source": 1,
+            "conflict": 0,
+            "accepted_arguments": 0,
+            "struck_arguments": 0,
+            "ai_arguments": 0,
+            "ai_accepted": 0,
+            "ai_struck": 0,
+            "rule_arguments": 0
+          },
+          "receipt": {
+            "run_id": "2a78553f01fe3dd1",
+            "generated_at": "2026-11-20T20:15:13.304381+00:00",
+            "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            "engine": "deterministic judge + AI advocates"
+          },
+          "trace": [
+            {
+              "step": "advocates",
+              "meta": {
+                "prosecution": {
+                  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                  "provider": "local-llama.cpp",
+                  "latency_ms": 650,
+                  "usage": {
+                    "prompt_tokens": 423,
+                    "completion_tokens": 2,
+                    "total_tokens": 425
+                  },
+                  "role": "prosecution",
+                  "arguments": 0,
+                  "output_format": "array"
+                },
+                "defense": {
+                  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                  "provider": "local-llama.cpp",
+                  "latency_ms": 650,
+                  "usage": {
+                    "prompt_tokens": 422,
+                    "completion_tokens": 2,
+                    "total_tokens": 424
+                  },
+                  "role": "defense",
+                  "arguments": 0,
+                  "output_format": "array"
+                },
+                "available": true,
+                "parallel": true
+              }
+            }
+          ],
+          "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+          "__source": "Adults should get at least 60 minutes of moderate exercise per week.",
+          "replay_mode": "live-run-recording",
+          "demo_label": "RECORDED LIVE AI RUN · qwen2.5-1.5b-instruct-q4_k_m.gguf"
+        }
+      },
+      "model_meta": {
+        "prosecution": {
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "provider": "local-llama.cpp",
+          "latency_ms": 650,
+          "usage": {
+            "prompt_tokens": 423,
+            "completion_tokens": 2,
+            "total_tokens": 425
+          },
+          "role": "prosecution",
+          "arguments": 0,
+          "output_format": "array"
+        },
+        "defense": {
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "provider": "local-llama.cpp",
+          "latency_ms": 650,
+          "usage": {
+            "prompt_tokens": 422,
+            "completion_tokens": 2,
+            "total_tokens": 424
+          },
+          "role": "defense",
+          "arguments": 0,
+          "output_format": "array"
+        },
+        "available": true,
+        "parallel": true
+      }
+    },
+    {
+      "id": "court-05-population-mismatch",
+      "replay_key": "population_mismatch",
+      "claim": "Children need 150 minutes of moderate exercise per week.",
+      "source": "Adults need 150 minutes of moderate exercise per week.",
+      "expected": [
+        "not_in_source"
+      ],
+      "rules": {
+        "verdicts": [
+          "not_in_source"
+        ],
+        "run_id": "bb02bd75565c55a8"
+      },
+      "live": {
+        "verdicts": [
+          "not_in_source"
+        ],
+        "run_id": "7f2f5b42521e85da",
+        "arguments": [
+          {
+            "argument_id": "P-A1-S1-P1-dd86c2",
+            "side": "prosecution",
+            "origin": "ai",
+            "atom_id": "A1",
+            "relation": "supports",
+            "evidence_id": "S1-P1",
+            "source_name": "live fixture",
+            "quote": "Adults need 150 minutes of moderate exercise per week.",
+            "quote_sha256": "dd86c214d5ea3c52e3ac865d3c0af38f0f1d649ddbde6d890f14fb52c1676237",
+            "char_start": 0,
+            "char_end": 54,
+            "rationale": "The evidence directly contradicts the claim that children need 150 minutes of moderate exercise per week.",
+            "status": "struck",
+            "strike_codes": [
+              "population_mismatch"
+            ],
+            "strike_reason": "quotation is about a different population",
+            "checks": {
+              "quote_exact": true,
+              "relation": true,
+              "subject": true,
+              "population": false,
+              "object": true,
+              "endpoint": true,
+              "quantity": true,
+              "strength": true,
+              "polarity": true
+            },
+            "coverage": 0.7778
+          }
+        ],
+        "summary": {
+          "claims": 1,
+          "supported": 0,
+          "refuted": 0,
+          "not_in_source": 1,
+          "conflict": 0,
+          "accepted_arguments": 0,
+          "struck_arguments": 1,
+          "ai_arguments": 1,
+          "ai_accepted": 0,
+          "ai_struck": 1,
+          "rule_arguments": 0
+        },
+        "dossier": {
+          "mode": "court",
+          "ai_mode": "ai",
+          "input": {
+            "claim": "Children need 150 minutes of moderate exercise per week.",
+            "source_name": "live fixture",
+            "source_sha256": "dd86c214d5ea3c52e3ac865d3c0af38f0f1d649ddbde6d890f14fb52c1676237"
+          },
+          "source": {
+            "source_id": "S1",
+            "name": "live fixture",
+            "sha256": "dd86c214d5ea3c52e3ac865d3c0af38f0f1d649ddbde6d890f14fb52c1676237",
+            "chars": 54,
+            "sentences": 1
+          },
+          "atoms": [
+            {
+              "atom_id": "A1",
+              "claim": "Children need 150 minutes of moderate exercise per week.",
+              "verdict": "not_in_source",
+              "reason": "No verified quotation states this proposition in the supplied source.",
+              "accepted_argument_ids": [],
+              "struck_argument_ids": [
+                "P-A1-S1-P1-dd86c2"
+              ],
+              "evidence_ids": [],
+              "nearest": {
+                "quote": "Adults need 150 minutes of moderate exercise per week.",
+                "coverage": 0.7778,
+                "evidence_id": "S1-P1",
+                "char_start": 0,
+                "char_end": 54
+              },
+              "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+            }
+          ],
+          "arguments": [
+            {
+              "argument_id": "P-A1-S1-P1-dd86c2",
+              "side": "prosecution",
+              "origin": "ai",
+              "atom_id": "A1",
+              "relation": "supports",
+              "evidence_id": "S1-P1",
+              "source_name": "live fixture",
+              "quote": "Adults need 150 minutes of moderate exercise per week.",
+              "quote_sha256": "dd86c214d5ea3c52e3ac865d3c0af38f0f1d649ddbde6d890f14fb52c1676237",
+              "char_start": 0,
+              "char_end": 54,
+              "rationale": "The evidence directly contradicts the claim that children need 150 minutes of moderate exercise per week.",
+              "status": "struck",
+              "strike_codes": [
+                "population_mismatch"
+              ],
+              "strike_reason": "quotation is about a different population",
+              "checks": {
+                "quote_exact": true,
+                "relation": true,
+                "subject": true,
+                "population": false,
+                "object": true,
+                "endpoint": true,
+                "quantity": true,
+                "strength": true,
+                "polarity": true
+              },
+              "coverage": 0.7778
+            }
+          ],
+          "summary": {
+            "claims": 1,
+            "supported": 0,
+            "refuted": 0,
+            "not_in_source": 1,
+            "conflict": 0,
+            "accepted_arguments": 0,
+            "struck_arguments": 1,
+            "ai_arguments": 1,
+            "ai_accepted": 0,
+            "ai_struck": 1,
+            "rule_arguments": 0
+          },
+          "receipt": {
+            "run_id": "7f2f5b42521e85da",
+            "generated_at": "2026-11-20T20:15:17.821323+00:00",
+            "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            "engine": "deterministic judge + AI advocates"
+          },
+          "trace": [
+            {
+              "step": "advocates",
+              "meta": {
+                "prosecution": {
+                  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                  "provider": "local-llama.cpp",
+                  "latency_ms": 4504,
+                  "usage": {
+                    "prompt_tokens": 420,
+                    "completion_tokens": 65,
+                    "total_tokens": 485
+                  },
+                  "role": "prosecution",
+                  "arguments": 1,
+                  "output_format": "array"
+                },
+                "defense": {
+                  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                  "provider": "local-llama.cpp",
+                  "latency_ms": 631,
+                  "usage": {
+                    "prompt_tokens": 419,
+                    "completion_tokens": 2,
+                    "total_tokens": 421
+                  },
+                  "role": "defense",
+                  "arguments": 0,
+                  "output_format": "array"
+                },
+                "available": true,
+                "parallel": true
+              }
+            }
+          ],
+          "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+          "__source": "Adults need 150 minutes of moderate exercise per week.",
+          "replay_mode": "live-run-recording",
+          "demo_label": "RECORDED LIVE AI RUN · qwen2.5-1.5b-instruct-q4_k_m.gguf"
+        }
+      },
+      "model_meta": {
+        "prosecution": {
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "provider": "local-llama.cpp",
+          "latency_ms": 4504,
+          "usage": {
+            "prompt_tokens": 420,
+            "completion_tokens": 65,
+            "total_tokens": 485
+          },
+          "role": "prosecution",
+          "arguments": 1,
+          "output_format": "array"
+        },
+        "defense": {
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "provider": "local-llama.cpp",
+          "latency_ms": 631,
+          "usage": {
+            "prompt_tokens": 419,
+            "completion_tokens": 2,
+            "total_tokens": 421
+          },
+          "role": "defense",
+          "arguments": 0,
+          "output_format": "array"
+        },
+        "available": true,
+        "parallel": true
+      }
+    },
+    {
+      "id": "court-06-relation-mismatch",
+      "replay_key": "relation_mismatch",
+      "claim": "Vitamin C cures the common cold.",
+      "source": "Vitamin C does not prevent the common cold.",
+      "expected": [
+        "not_in_source"
+      ],
+      "rules": {
+        "verdicts": [
+          "not_in_source"
+        ],
+        "run_id": "6767ec0a496217b1"
+      },
+      "live": {
+        "verdicts": [
+          "not_in_source"
+        ],
+        "run_id": "1f3bee9b3025de1b",
+        "arguments": [
+          {
+            "argument_id": "P-A1-S1-P1-967b6f",
+            "side": "prosecution",
+            "origin": "ai",
+            "atom_id": "A1",
+            "relation": "contradicts",
+            "evidence_id": "S1-P1",
+            "source_name": "live fixture",
+            "quote": "Vitamin C does not prevent the common cold.",
+            "quote_sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558",
+            "char_start": 0,
+            "char_end": 43,
+            "rationale": "The evidence directly contradicts the claim that Vitamin C cures the common cold.",
+            "status": "struck",
+            "strike_codes": [
+              "endpoint_mismatch",
+              "low_coverage",
+              "relation_mismatch"
+            ],
+            "strike_reason": "quotation answers a different endpoint",
+            "checks": {
+              "quote_exact": true,
+              "relation": false,
+              "subject": true,
+              "population": true,
+              "object": true,
+              "endpoint": false,
+              "quantity": true,
+              "strength": true,
+              "polarity": true
+            },
+            "coverage": 0.6
+          }
+        ],
+        "summary": {
+          "claims": 1,
+          "supported": 0,
+          "refuted": 0,
+          "not_in_source": 1,
+          "conflict": 0,
+          "accepted_arguments": 0,
+          "struck_arguments": 1,
+          "ai_arguments": 1,
+          "ai_accepted": 0,
+          "ai_struck": 1,
+          "rule_arguments": 0
+        },
+        "dossier": {
+          "mode": "court",
+          "ai_mode": "ai",
+          "input": {
+            "claim": "Vitamin C cures the common cold.",
+            "source_name": "live fixture",
+            "source_sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558"
+          },
+          "source": {
+            "source_id": "S1",
+            "name": "live fixture",
+            "sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558",
+            "chars": 43,
+            "sentences": 1
+          },
+          "atoms": [
+            {
+              "atom_id": "A1",
+              "claim": "Vitamin C cures the common cold.",
+              "verdict": "not_in_source",
+              "reason": "No verified quotation states this proposition in the supplied source.",
+              "accepted_argument_ids": [],
+              "struck_argument_ids": [
+                "P-A1-S1-P1-967b6f"
+              ],
+              "evidence_ids": [],
+              "nearest": {
+                "quote": "Vitamin C does not prevent the common cold.",
+                "coverage": 0.6,
+                "evidence_id": "S1-P1",
+                "char_start": 0,
+                "char_end": 43
+              },
+              "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+            }
+          ],
+          "arguments": [
+            {
+              "argument_id": "P-A1-S1-P1-967b6f",
+              "side": "prosecution",
+              "origin": "ai",
+              "atom_id": "A1",
+              "relation": "contradicts",
+              "evidence_id": "S1-P1",
+              "source_name": "live fixture",
+              "quote": "Vitamin C does not prevent the common cold.",
+              "quote_sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558",
+              "char_start": 0,
+              "char_end": 43,
+              "rationale": "The evidence directly contradicts the claim that Vitamin C cures the common cold.",
+              "status": "struck",
+              "strike_codes": [
+                "endpoint_mismatch",
+                "low_coverage",
+                "relation_mismatch"
+              ],
+              "strike_reason": "quotation answers a different endpoint",
+              "checks": {
+                "quote_exact": true,
+                "relation": false,
+                "subject": true,
+                "population": true,
+                "object": true,
+                "endpoint": false,
+                "quantity": true,
+                "strength": true,
+                "polarity": true
+              },
+              "coverage": 0.6
+            }
+          ],
+          "summary": {
+            "claims": 1,
+            "supported": 0,
+            "refuted": 0,
+            "not_in_source": 1,
+            "conflict": 0,
+            "accepted_arguments": 0,
+            "struck_arguments": 1,
+            "ai_arguments": 1,
+            "ai_accepted": 0,
+            "ai_struck": 1,
+            "rule_arguments": 0
+          },
+          "receipt": {
+            "run_id": "1f3bee9b3025de1b",
+            "generated_at": "2026-11-20T20:15:21.842939+00:00",
+            "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            "engine": "deterministic judge + AI advocates"
+          },
+          "trace": [
+            {
+              "step": "advocates",
+              "meta": {
+                "prosecution": {
+                  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                  "provider": "local-llama.cpp",
+                  "latency_ms": 4009,
+                  "usage": {
+                    "prompt_tokens": 412,
+                    "completion_tokens": 56,
+                    "total_tokens": 468
+                  },
+                  "role": "prosecution",
+                  "arguments": 1,
+                  "output_format": "array"
+                },
+                "defense": {
+                  "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                  "provider": "local-llama.cpp",
+                  "latency_ms": 629,
+                  "usage": {
+                    "prompt_tokens": 411,
+                    "completion_tokens": 2,
+                    "total_tokens": 413
+                  },
+                  "role": "defense",
+                  "arguments": 0,
+                  "output_format": "array"
+                },
+                "available": true,
+                "parallel": true
+              }
+            }
+          ],
+          "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+          "__source": "Vitamin C does not prevent the common cold.",
+          "replay_mode": "live-run-recording",
+          "demo_label": "RECORDED LIVE AI RUN · qwen2.5-1.5b-instruct-q4_k_m.gguf"
+        }
+      },
+      "model_meta": {
+        "prosecution": {
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "provider": "local-llama.cpp",
+          "latency_ms": 4009,
+          "usage": {
+            "prompt_tokens": 412,
+            "completion_tokens": 56,
+            "total_tokens": 468
+          },
+          "role": "prosecution",
+          "arguments": 1,
+          "output_format": "array"
+        },
+        "defense": {
+          "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+          "provider": "local-llama.cpp",
+          "latency_ms": 629,
+          "usage": {
+            "prompt_tokens": 411,
+            "completion_tokens": 2,
+            "total_tokens": 413
+          },
+          "role": "defense",
+          "arguments": 0,
+          "output_format": "array"
+        },
+        "available": true,
+        "parallel": true
+      }
+    }
+  ],
+  "summary": {
+    "cases": 6,
+    "rules_accuracy": 1.0,
+    "live_accuracy": 1.0,
+    "accepted_arguments": 2,
+    "struck_arguments": 3,
+    "uplift": 0.0
+  },
+  "schema": "claim-autopsy/court-live/2",
+  "runs": [
+    {
+      "model_key": "1.5b",
+      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+      "provider": "local-llama.cpp",
+      "generated_at": "2026-11-20T20:15:21.843797+00:00",
+      "mode": "live AI advocates + deterministic judge",
+      "summary": {
+        "cases": 6,
+        "rules_accuracy": 1.0,
+        "live_accuracy": 1.0,
+        "accepted_arguments": 2,
+        "struck_arguments": 3,
+        "uplift": 0.0
+      },
+      "cases": [
+        {
+          "id": "court-01-refuted-flu",
+          "replay_key": "refuted_flu",
+          "claim": "Getting a flu vaccine gives you the flu.",
+          "source": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+          "expected": [
+            "refuted"
+          ],
+          "rules": {
+            "verdicts": [
+              "refuted"
+            ],
+            "run_id": "b5efbc2011802774"
+          },
+          "live": {
+            "verdicts": [
+              "refuted"
+            ],
+            "run_id": "bb5bce9edf51e779",
+            "arguments": [
+              {
+                "argument_id": "P-A1-S1-P1-13b95a",
+                "side": "prosecution",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "contradicts",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+                "quote_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+                "char_start": 0,
+                "char_end": 108,
+                "rationale": "The evidence directly contradicts the claim that getting a flu vaccine gives you the flu.",
+                "status": "accepted",
+                "strike_codes": [],
+                "strike_reason": null,
+                "checks": {
+                  "quote_exact": true,
+                  "relation": true,
+                  "subject": true,
+                  "population": true,
+                  "object": true,
+                  "endpoint": true,
+                  "quantity": true,
+                  "strength": true,
+                  "polarity": true
+                },
+                "coverage": 1.0
+              }
+            ],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 1,
+              "not_in_source": 0,
+              "conflict": 0,
+              "accepted_arguments": 1,
+              "struck_arguments": 0,
+              "ai_arguments": 1,
+              "ai_accepted": 1,
+              "ai_struck": 0,
+              "rule_arguments": 0
+            },
+            "dossier": {
+              "mode": "court",
+              "ai_mode": "ai",
+              "input": {
+                "claim": "Getting a flu vaccine gives you the flu.",
+                "source_name": "live fixture",
+                "source_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f"
+              },
+              "source": {
+                "source_id": "S1",
+                "name": "live fixture",
+                "sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+                "chars": 108,
+                "sentences": 1
+              },
+              "atoms": [
+                {
+                  "atom_id": "A1",
+                  "claim": "Getting a flu vaccine gives you the flu.",
+                  "verdict": "refuted",
+                  "reason": "A verified quotation states the same proposition with the opposite polarity.",
+                  "accepted_argument_ids": [
+                    "P-A1-S1-P1-13b95a"
+                  ],
+                  "struck_argument_ids": [],
+                  "evidence_ids": [
+                    "S1-P1"
+                  ],
+                  "nearest": {
+                    "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+                    "coverage": 1.0,
+                    "evidence_id": "S1-P1",
+                    "char_start": 0,
+                    "char_end": 108
+                  },
+                  "what_would_change_it": "A source sentence asserting the same proposition would change this verdict."
+                }
+              ],
+              "arguments": [
+                {
+                  "argument_id": "P-A1-S1-P1-13b95a",
+                  "side": "prosecution",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "contradicts",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+                  "quote_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+                  "char_start": 0,
+                  "char_end": 108,
+                  "rationale": "The evidence directly contradicts the claim that getting a flu vaccine gives you the flu.",
+                  "status": "accepted",
+                  "strike_codes": [],
+                  "strike_reason": null,
+                  "checks": {
+                    "quote_exact": true,
+                    "relation": true,
+                    "subject": true,
+                    "population": true,
+                    "object": true,
+                    "endpoint": true,
+                    "quantity": true,
+                    "strength": true,
+                    "polarity": true
+                  },
+                  "coverage": 1.0
+                }
+              ],
+              "summary": {
+                "claims": 1,
+                "supported": 0,
+                "refuted": 1,
+                "not_in_source": 0,
+                "conflict": 0,
+                "accepted_arguments": 1,
+                "struck_arguments": 0,
+                "ai_arguments": 1,
+                "ai_accepted": 1,
+                "ai_struck": 0,
+                "rule_arguments": 0
+              },
+              "receipt": {
+                "run_id": "bb5bce9edf51e779",
+                "generated_at": "2026-11-20T20:15:05.798339+00:00",
+                "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                "engine": "deterministic judge + AI advocates"
+              },
+              "trace": [
+                {
+                  "step": "advocates",
+                  "meta": {
+                    "prosecution": {
+                      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 4340,
+                      "usage": {
+                        "prompt_tokens": 421,
+                        "completion_tokens": 66,
+                        "total_tokens": 487
+                      },
+                      "role": "prosecution",
+                      "arguments": 1,
+                      "output_format": "array"
+                    },
+                    "defense": {
+                      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 207,
+                      "usage": {
+                        "prompt_tokens": 420,
+                        "completion_tokens": 2,
+                        "total_tokens": 422
+                      },
+                      "role": "defense",
+                      "arguments": 0,
+                      "output_format": "array"
+                    },
+                    "available": true,
+                    "parallel": true
+                  }
+                }
+              ],
+              "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+              "__source": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+              "replay_mode": "live-run-recording",
+              "demo_label": "RECORDED LIVE AI RUN · qwen2.5-1.5b-instruct-q4_k_m.gguf"
+            }
+          },
+          "model_meta": {
+            "prosecution": {
+              "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 4340,
+              "usage": {
+                "prompt_tokens": 421,
+                "completion_tokens": 66,
+                "total_tokens": 487
+              },
+              "role": "prosecution",
+              "arguments": 1,
+              "output_format": "array"
+            },
+            "defense": {
+              "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 207,
+              "usage": {
+                "prompt_tokens": 420,
+                "completion_tokens": 2,
+                "total_tokens": 422
+              },
+              "role": "defense",
+              "arguments": 0,
+              "output_format": "array"
+            },
+            "available": true,
+            "parallel": true
+          }
+        },
+        {
+          "id": "court-02-supported-eiffel",
+          "replay_key": "supported_eiffel",
+          "claim": "The Eiffel Tower is located in Paris.",
+          "source": "The Eiffel Tower is located in Paris, France.",
+          "expected": [
+            "supported"
+          ],
+          "rules": {
+            "verdicts": [
+              "supported"
+            ],
+            "run_id": "f4a057b6937ce630"
+          },
+          "live": {
+            "verdicts": [
+              "supported"
+            ],
+            "run_id": "3d46adb24ebeeb26",
+            "arguments": [
+              {
+                "argument_id": "P-A1-S1-P1-27dfce",
+                "side": "prosecution",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "supports",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "The Eiffel Tower is located in Paris, France.",
+                "quote_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+                "char_start": 0,
+                "char_end": 45,
+                "rationale": "The evidence explicitly states that the Eiffel Tower is located in Paris, France, which directly supports the claim.",
+                "status": "struck",
+                "strike_codes": [
+                  "side_mismatch"
+                ],
+                "strike_reason": "quotation points the other way",
+                "checks": {
+                  "quote_exact": true,
+                  "relation": true,
+                  "subject": true,
+                  "population": true,
+                  "object": true,
+                  "endpoint": true,
+                  "quantity": true,
+                  "strength": true,
+                  "polarity": true
+                },
+                "coverage": 1.0
+              },
+              {
+                "argument_id": "D-A1-S1-P1-27dfce",
+                "side": "defense",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "supports",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "The Eiffel Tower is located in Paris, France.",
+                "quote_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+                "char_start": 0,
+                "char_end": 45,
+                "rationale": "The evidence explicitly states that the Eiffel Tower is located in Paris, France, which directly supports the claim.",
+                "status": "accepted",
+                "strike_codes": [],
+                "strike_reason": null,
+                "checks": {
+                  "quote_exact": true,
+                  "relation": true,
+                  "subject": true,
+                  "population": true,
+                  "object": true,
+                  "endpoint": true,
+                  "quantity": true,
+                  "strength": true,
+                  "polarity": true
+                },
+                "coverage": 1.0
+              }
+            ],
+            "summary": {
+              "claims": 1,
+              "supported": 1,
+              "refuted": 0,
+              "not_in_source": 0,
+              "conflict": 0,
+              "accepted_arguments": 1,
+              "struck_arguments": 1,
+              "ai_arguments": 2,
+              "ai_accepted": 1,
+              "ai_struck": 1,
+              "rule_arguments": 0
+            },
+            "dossier": {
+              "mode": "court",
+              "ai_mode": "ai",
+              "input": {
+                "claim": "The Eiffel Tower is located in Paris.",
+                "source_name": "live fixture",
+                "source_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b"
+              },
+              "source": {
+                "source_id": "S1",
+                "name": "live fixture",
+                "sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+                "chars": 45,
+                "sentences": 1
+              },
+              "atoms": [
+                {
+                  "atom_id": "A1",
+                  "claim": "The Eiffel Tower is located in Paris.",
+                  "verdict": "supported",
+                  "reason": "A verified quotation states the same proposition with the same polarity.",
+                  "accepted_argument_ids": [
+                    "D-A1-S1-P1-27dfce"
+                  ],
+                  "struck_argument_ids": [
+                    "P-A1-S1-P1-27dfce"
+                  ],
+                  "evidence_ids": [
+                    "S1-P1"
+                  ],
+                  "nearest": {
+                    "quote": "The Eiffel Tower is located in Paris, France.",
+                    "coverage": 1.0,
+                    "evidence_id": "S1-P1",
+                    "char_start": 0,
+                    "char_end": 45
+                  },
+                  "what_would_change_it": "A source sentence asserting the same proposition with the opposite polarity would change this verdict."
+                }
+              ],
+              "arguments": [
+                {
+                  "argument_id": "P-A1-S1-P1-27dfce",
+                  "side": "prosecution",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "supports",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "The Eiffel Tower is located in Paris, France.",
+                  "quote_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+                  "char_start": 0,
+                  "char_end": 45,
+                  "rationale": "The evidence explicitly states that the Eiffel Tower is located in Paris, France, which directly supports the claim.",
+                  "status": "struck",
+                  "strike_codes": [
+                    "side_mismatch"
+                  ],
+                  "strike_reason": "quotation points the other way",
+                  "checks": {
+                    "quote_exact": true,
+                    "relation": true,
+                    "subject": true,
+                    "population": true,
+                    "object": true,
+                    "endpoint": true,
+                    "quantity": true,
+                    "strength": true,
+                    "polarity": true
+                  },
+                  "coverage": 1.0
+                },
+                {
+                  "argument_id": "D-A1-S1-P1-27dfce",
+                  "side": "defense",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "supports",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "The Eiffel Tower is located in Paris, France.",
+                  "quote_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+                  "char_start": 0,
+                  "char_end": 45,
+                  "rationale": "The evidence explicitly states that the Eiffel Tower is located in Paris, France, which directly supports the claim.",
+                  "status": "accepted",
+                  "strike_codes": [],
+                  "strike_reason": null,
+                  "checks": {
+                    "quote_exact": true,
+                    "relation": true,
+                    "subject": true,
+                    "population": true,
+                    "object": true,
+                    "endpoint": true,
+                    "quantity": true,
+                    "strength": true,
+                    "polarity": true
+                  },
+                  "coverage": 1.0
+                }
+              ],
+              "summary": {
+                "claims": 1,
+                "supported": 1,
+                "refuted": 0,
+                "not_in_source": 0,
+                "conflict": 0,
+                "accepted_arguments": 1,
+                "struck_arguments": 1,
+                "ai_arguments": 2,
+                "ai_accepted": 1,
+                "ai_struck": 1,
+                "rule_arguments": 0
+              },
+              "receipt": {
+                "run_id": "3d46adb24ebeeb26",
+                "generated_at": "2026-11-20T20:15:12.064979+00:00",
+                "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                "engine": "deterministic judge + AI advocates"
+              },
+              "trace": [
+                {
+                  "step": "advocates",
+                  "meta": {
+                    "prosecution": {
+                      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 6254,
+                      "usage": {
+                        "prompt_tokens": 415,
+                        "completion_tokens": 63,
+                        "total_tokens": 478
+                      },
+                      "role": "prosecution",
+                      "arguments": 1,
+                      "output_format": "array"
+                    },
+                    "defense": {
+                      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 6253,
+                      "usage": {
+                        "prompt_tokens": 414,
+                        "completion_tokens": 63,
+                        "total_tokens": 477
+                      },
+                      "role": "defense",
+                      "arguments": 1,
+                      "output_format": "array"
+                    },
+                    "available": true,
+                    "parallel": true
+                  }
+                }
+              ],
+              "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+              "__source": "The Eiffel Tower is located in Paris, France.",
+              "replay_mode": "live-run-recording",
+              "demo_label": "RECORDED LIVE AI RUN · qwen2.5-1.5b-instruct-q4_k_m.gguf"
+            }
+          },
+          "model_meta": {
+            "prosecution": {
+              "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 6254,
+              "usage": {
+                "prompt_tokens": 415,
+                "completion_tokens": 63,
+                "total_tokens": 478
+              },
+              "role": "prosecution",
+              "arguments": 1,
+              "output_format": "array"
+            },
+            "defense": {
+              "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 6253,
+              "usage": {
+                "prompt_tokens": 414,
+                "completion_tokens": 63,
+                "total_tokens": 477
+              },
+              "role": "defense",
+              "arguments": 1,
+              "output_format": "array"
+            },
+            "available": true,
+            "parallel": true
+          }
+        },
+        {
+          "id": "court-03-not-in-source-coffee",
+          "replay_key": "not_in_source_coffee",
+          "claim": "Coffee stunts growth in children.",
+          "source": "Vitamin D is important for bone health in adults.",
+          "expected": [
+            "not_in_source"
+          ],
+          "rules": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "f9e9bf61027d4bb4"
+          },
+          "live": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "b92cbe6c0e15744b",
+            "arguments": [],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 0,
+              "not_in_source": 1,
+              "conflict": 0,
+              "accepted_arguments": 0,
+              "struck_arguments": 0,
+              "ai_arguments": 0,
+              "ai_accepted": 0,
+              "ai_struck": 0,
+              "rule_arguments": 0
+            },
+            "dossier": {
+              "mode": "court",
+              "ai_mode": "ai",
+              "input": {
+                "claim": "Coffee stunts growth in children.",
+                "source_name": "live fixture",
+                "source_sha256": "1efdf507c30c00f7b589f8676b088d9e1c92975ef8a15e4b14488cfa7e4ad3a0"
+              },
+              "source": {
+                "source_id": "S1",
+                "name": "live fixture",
+                "sha256": "1efdf507c30c00f7b589f8676b088d9e1c92975ef8a15e4b14488cfa7e4ad3a0",
+                "chars": 49,
+                "sentences": 1
+              },
+              "atoms": [
+                {
+                  "atom_id": "A1",
+                  "claim": "Coffee stunts growth in children.",
+                  "verdict": "not_in_source",
+                  "reason": "No verified quotation states this proposition in the supplied source.",
+                  "accepted_argument_ids": [],
+                  "struck_argument_ids": [],
+                  "evidence_ids": [],
+                  "nearest": {
+                    "quote": "Vitamin D is important for bone health in adults.",
+                    "coverage": 0.0,
+                    "evidence_id": "S1-P1",
+                    "char_start": 0,
+                    "char_end": 49
+                  },
+                  "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+                }
+              ],
+              "arguments": [],
+              "summary": {
+                "claims": 1,
+                "supported": 0,
+                "refuted": 0,
+                "not_in_source": 1,
+                "conflict": 0,
+                "accepted_arguments": 0,
+                "struck_arguments": 0,
+                "ai_arguments": 0,
+                "ai_accepted": 0,
+                "ai_struck": 0,
+                "rule_arguments": 0
+              },
+              "receipt": {
+                "run_id": "b92cbe6c0e15744b",
+                "generated_at": "2026-11-20T20:15:12.642588+00:00",
+                "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                "engine": "deterministic judge + AI advocates"
+              },
+              "trace": [
+                {
+                  "step": "advocates",
+                  "meta": {
+                    "prosecution": {
+                      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 568,
+                      "usage": {
+                        "prompt_tokens": 411,
+                        "completion_tokens": 2,
+                        "total_tokens": 413
+                      },
+                      "role": "prosecution",
+                      "arguments": 0,
+                      "output_format": "array"
+                    },
+                    "defense": {
+                      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 567,
+                      "usage": {
+                        "prompt_tokens": 410,
+                        "completion_tokens": 2,
+                        "total_tokens": 412
+                      },
+                      "role": "defense",
+                      "arguments": 0,
+                      "output_format": "array"
+                    },
+                    "available": true,
+                    "parallel": true
+                  }
+                }
+              ],
+              "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+              "__source": "Vitamin D is important for bone health in adults.",
+              "replay_mode": "live-run-recording",
+              "demo_label": "RECORDED LIVE AI RUN · qwen2.5-1.5b-instruct-q4_k_m.gguf"
+            }
+          },
+          "model_meta": {
+            "prosecution": {
+              "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 568,
+              "usage": {
+                "prompt_tokens": 411,
+                "completion_tokens": 2,
+                "total_tokens": 413
+              },
+              "role": "prosecution",
+              "arguments": 0,
+              "output_format": "array"
+            },
+            "defense": {
+              "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 567,
+              "usage": {
+                "prompt_tokens": 410,
+                "completion_tokens": 2,
+                "total_tokens": 412
+              },
+              "role": "defense",
+              "arguments": 0,
+              "output_format": "array"
+            },
+            "available": true,
+            "parallel": true
+          }
+        },
+        {
+          "id": "court-04-quantity-mismatch",
+          "replay_key": "quantity_mismatch",
+          "claim": "Adults need 150 minutes of moderate exercise per week.",
+          "source": "Adults should get at least 60 minutes of moderate exercise per week.",
+          "expected": [
+            "not_in_source"
+          ],
+          "rules": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "87694504a320280c"
+          },
+          "live": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "2a78553f01fe3dd1",
+            "arguments": [],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 0,
+              "not_in_source": 1,
+              "conflict": 0,
+              "accepted_arguments": 0,
+              "struck_arguments": 0,
+              "ai_arguments": 0,
+              "ai_accepted": 0,
+              "ai_struck": 0,
+              "rule_arguments": 0
+            },
+            "dossier": {
+              "mode": "court",
+              "ai_mode": "ai",
+              "input": {
+                "claim": "Adults need 150 minutes of moderate exercise per week.",
+                "source_name": "live fixture",
+                "source_sha256": "0c3d82c02ed2df30406e7b226f4b5cf3904e9604483142218c764c3a6580f9a3"
+              },
+              "source": {
+                "source_id": "S1",
+                "name": "live fixture",
+                "sha256": "0c3d82c02ed2df30406e7b226f4b5cf3904e9604483142218c764c3a6580f9a3",
+                "chars": 68,
+                "sentences": 1
+              },
+              "atoms": [
+                {
+                  "atom_id": "A1",
+                  "claim": "Adults need 150 minutes of moderate exercise per week.",
+                  "verdict": "not_in_source",
+                  "reason": "No verified quotation states this proposition in the supplied source.",
+                  "accepted_argument_ids": [],
+                  "struck_argument_ids": [],
+                  "evidence_ids": [],
+                  "nearest": {
+                    "quote": "Adults should get at least 60 minutes of moderate exercise per week.",
+                    "coverage": 0.6,
+                    "evidence_id": "S1-P1",
+                    "char_start": 0,
+                    "char_end": 68
+                  },
+                  "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+                }
+              ],
+              "arguments": [],
+              "summary": {
+                "claims": 1,
+                "supported": 0,
+                "refuted": 0,
+                "not_in_source": 1,
+                "conflict": 0,
+                "accepted_arguments": 0,
+                "struck_arguments": 0,
+                "ai_arguments": 0,
+                "ai_accepted": 0,
+                "ai_struck": 0,
+                "rule_arguments": 0
+              },
+              "receipt": {
+                "run_id": "2a78553f01fe3dd1",
+                "generated_at": "2026-11-20T20:15:13.304381+00:00",
+                "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                "engine": "deterministic judge + AI advocates"
+              },
+              "trace": [
+                {
+                  "step": "advocates",
+                  "meta": {
+                    "prosecution": {
+                      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 650,
+                      "usage": {
+                        "prompt_tokens": 423,
+                        "completion_tokens": 2,
+                        "total_tokens": 425
+                      },
+                      "role": "prosecution",
+                      "arguments": 0,
+                      "output_format": "array"
+                    },
+                    "defense": {
+                      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 650,
+                      "usage": {
+                        "prompt_tokens": 422,
+                        "completion_tokens": 2,
+                        "total_tokens": 424
+                      },
+                      "role": "defense",
+                      "arguments": 0,
+                      "output_format": "array"
+                    },
+                    "available": true,
+                    "parallel": true
+                  }
+                }
+              ],
+              "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+              "__source": "Adults should get at least 60 minutes of moderate exercise per week.",
+              "replay_mode": "live-run-recording",
+              "demo_label": "RECORDED LIVE AI RUN · qwen2.5-1.5b-instruct-q4_k_m.gguf"
+            }
+          },
+          "model_meta": {
+            "prosecution": {
+              "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 650,
+              "usage": {
+                "prompt_tokens": 423,
+                "completion_tokens": 2,
+                "total_tokens": 425
+              },
+              "role": "prosecution",
+              "arguments": 0,
+              "output_format": "array"
+            },
+            "defense": {
+              "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 650,
+              "usage": {
+                "prompt_tokens": 422,
+                "completion_tokens": 2,
+                "total_tokens": 424
+              },
+              "role": "defense",
+              "arguments": 0,
+              "output_format": "array"
+            },
+            "available": true,
+            "parallel": true
+          }
+        },
+        {
+          "id": "court-05-population-mismatch",
+          "replay_key": "population_mismatch",
+          "claim": "Children need 150 minutes of moderate exercise per week.",
+          "source": "Adults need 150 minutes of moderate exercise per week.",
+          "expected": [
+            "not_in_source"
+          ],
+          "rules": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "bb02bd75565c55a8"
+          },
+          "live": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "7f2f5b42521e85da",
+            "arguments": [
+              {
+                "argument_id": "P-A1-S1-P1-dd86c2",
+                "side": "prosecution",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "supports",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "Adults need 150 minutes of moderate exercise per week.",
+                "quote_sha256": "dd86c214d5ea3c52e3ac865d3c0af38f0f1d649ddbde6d890f14fb52c1676237",
+                "char_start": 0,
+                "char_end": 54,
+                "rationale": "The evidence directly contradicts the claim that children need 150 minutes of moderate exercise per week.",
+                "status": "struck",
+                "strike_codes": [
+                  "population_mismatch"
+                ],
+                "strike_reason": "quotation is about a different population",
+                "checks": {
+                  "quote_exact": true,
+                  "relation": true,
+                  "subject": true,
+                  "population": false,
+                  "object": true,
+                  "endpoint": true,
+                  "quantity": true,
+                  "strength": true,
+                  "polarity": true
+                },
+                "coverage": 0.7778
+              }
+            ],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 0,
+              "not_in_source": 1,
+              "conflict": 0,
+              "accepted_arguments": 0,
+              "struck_arguments": 1,
+              "ai_arguments": 1,
+              "ai_accepted": 0,
+              "ai_struck": 1,
+              "rule_arguments": 0
+            },
+            "dossier": {
+              "mode": "court",
+              "ai_mode": "ai",
+              "input": {
+                "claim": "Children need 150 minutes of moderate exercise per week.",
+                "source_name": "live fixture",
+                "source_sha256": "dd86c214d5ea3c52e3ac865d3c0af38f0f1d649ddbde6d890f14fb52c1676237"
+              },
+              "source": {
+                "source_id": "S1",
+                "name": "live fixture",
+                "sha256": "dd86c214d5ea3c52e3ac865d3c0af38f0f1d649ddbde6d890f14fb52c1676237",
+                "chars": 54,
+                "sentences": 1
+              },
+              "atoms": [
+                {
+                  "atom_id": "A1",
+                  "claim": "Children need 150 minutes of moderate exercise per week.",
+                  "verdict": "not_in_source",
+                  "reason": "No verified quotation states this proposition in the supplied source.",
+                  "accepted_argument_ids": [],
+                  "struck_argument_ids": [
+                    "P-A1-S1-P1-dd86c2"
+                  ],
+                  "evidence_ids": [],
+                  "nearest": {
+                    "quote": "Adults need 150 minutes of moderate exercise per week.",
+                    "coverage": 0.7778,
+                    "evidence_id": "S1-P1",
+                    "char_start": 0,
+                    "char_end": 54
+                  },
+                  "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+                }
+              ],
+              "arguments": [
+                {
+                  "argument_id": "P-A1-S1-P1-dd86c2",
+                  "side": "prosecution",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "supports",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "Adults need 150 minutes of moderate exercise per week.",
+                  "quote_sha256": "dd86c214d5ea3c52e3ac865d3c0af38f0f1d649ddbde6d890f14fb52c1676237",
+                  "char_start": 0,
+                  "char_end": 54,
+                  "rationale": "The evidence directly contradicts the claim that children need 150 minutes of moderate exercise per week.",
+                  "status": "struck",
+                  "strike_codes": [
+                    "population_mismatch"
+                  ],
+                  "strike_reason": "quotation is about a different population",
+                  "checks": {
+                    "quote_exact": true,
+                    "relation": true,
+                    "subject": true,
+                    "population": false,
+                    "object": true,
+                    "endpoint": true,
+                    "quantity": true,
+                    "strength": true,
+                    "polarity": true
+                  },
+                  "coverage": 0.7778
+                }
+              ],
+              "summary": {
+                "claims": 1,
+                "supported": 0,
+                "refuted": 0,
+                "not_in_source": 1,
+                "conflict": 0,
+                "accepted_arguments": 0,
+                "struck_arguments": 1,
+                "ai_arguments": 1,
+                "ai_accepted": 0,
+                "ai_struck": 1,
+                "rule_arguments": 0
+              },
+              "receipt": {
+                "run_id": "7f2f5b42521e85da",
+                "generated_at": "2026-11-20T20:15:17.821323+00:00",
+                "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                "engine": "deterministic judge + AI advocates"
+              },
+              "trace": [
+                {
+                  "step": "advocates",
+                  "meta": {
+                    "prosecution": {
+                      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 4504,
+                      "usage": {
+                        "prompt_tokens": 420,
+                        "completion_tokens": 65,
+                        "total_tokens": 485
+                      },
+                      "role": "prosecution",
+                      "arguments": 1,
+                      "output_format": "array"
+                    },
+                    "defense": {
+                      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 631,
+                      "usage": {
+                        "prompt_tokens": 419,
+                        "completion_tokens": 2,
+                        "total_tokens": 421
+                      },
+                      "role": "defense",
+                      "arguments": 0,
+                      "output_format": "array"
+                    },
+                    "available": true,
+                    "parallel": true
+                  }
+                }
+              ],
+              "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+              "__source": "Adults need 150 minutes of moderate exercise per week.",
+              "replay_mode": "live-run-recording",
+              "demo_label": "RECORDED LIVE AI RUN · qwen2.5-1.5b-instruct-q4_k_m.gguf"
+            }
+          },
+          "model_meta": {
+            "prosecution": {
+              "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 4504,
+              "usage": {
+                "prompt_tokens": 420,
+                "completion_tokens": 65,
+                "total_tokens": 485
+              },
+              "role": "prosecution",
+              "arguments": 1,
+              "output_format": "array"
+            },
+            "defense": {
+              "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 631,
+              "usage": {
+                "prompt_tokens": 419,
+                "completion_tokens": 2,
+                "total_tokens": 421
+              },
+              "role": "defense",
+              "arguments": 0,
+              "output_format": "array"
+            },
+            "available": true,
+            "parallel": true
+          }
+        },
+        {
+          "id": "court-06-relation-mismatch",
+          "replay_key": "relation_mismatch",
+          "claim": "Vitamin C cures the common cold.",
+          "source": "Vitamin C does not prevent the common cold.",
+          "expected": [
+            "not_in_source"
+          ],
+          "rules": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "6767ec0a496217b1"
+          },
+          "live": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "1f3bee9b3025de1b",
+            "arguments": [
+              {
+                "argument_id": "P-A1-S1-P1-967b6f",
+                "side": "prosecution",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "contradicts",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "Vitamin C does not prevent the common cold.",
+                "quote_sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558",
+                "char_start": 0,
+                "char_end": 43,
+                "rationale": "The evidence directly contradicts the claim that Vitamin C cures the common cold.",
+                "status": "struck",
+                "strike_codes": [
+                  "endpoint_mismatch",
+                  "low_coverage",
+                  "relation_mismatch"
+                ],
+                "strike_reason": "quotation answers a different endpoint",
+                "checks": {
+                  "quote_exact": true,
+                  "relation": false,
+                  "subject": true,
+                  "population": true,
+                  "object": true,
+                  "endpoint": false,
+                  "quantity": true,
+                  "strength": true,
+                  "polarity": true
+                },
+                "coverage": 0.6
+              }
+            ],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 0,
+              "not_in_source": 1,
+              "conflict": 0,
+              "accepted_arguments": 0,
+              "struck_arguments": 1,
+              "ai_arguments": 1,
+              "ai_accepted": 0,
+              "ai_struck": 1,
+              "rule_arguments": 0
+            },
+            "dossier": {
+              "mode": "court",
+              "ai_mode": "ai",
+              "input": {
+                "claim": "Vitamin C cures the common cold.",
+                "source_name": "live fixture",
+                "source_sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558"
+              },
+              "source": {
+                "source_id": "S1",
+                "name": "live fixture",
+                "sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558",
+                "chars": 43,
+                "sentences": 1
+              },
+              "atoms": [
+                {
+                  "atom_id": "A1",
+                  "claim": "Vitamin C cures the common cold.",
+                  "verdict": "not_in_source",
+                  "reason": "No verified quotation states this proposition in the supplied source.",
+                  "accepted_argument_ids": [],
+                  "struck_argument_ids": [
+                    "P-A1-S1-P1-967b6f"
+                  ],
+                  "evidence_ids": [],
+                  "nearest": {
+                    "quote": "Vitamin C does not prevent the common cold.",
+                    "coverage": 0.6,
+                    "evidence_id": "S1-P1",
+                    "char_start": 0,
+                    "char_end": 43
+                  },
+                  "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+                }
+              ],
+              "arguments": [
+                {
+                  "argument_id": "P-A1-S1-P1-967b6f",
+                  "side": "prosecution",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "contradicts",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "Vitamin C does not prevent the common cold.",
+                  "quote_sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558",
+                  "char_start": 0,
+                  "char_end": 43,
+                  "rationale": "The evidence directly contradicts the claim that Vitamin C cures the common cold.",
+                  "status": "struck",
+                  "strike_codes": [
+                    "endpoint_mismatch",
+                    "low_coverage",
+                    "relation_mismatch"
+                  ],
+                  "strike_reason": "quotation answers a different endpoint",
+                  "checks": {
+                    "quote_exact": true,
+                    "relation": false,
+                    "subject": true,
+                    "population": true,
+                    "object": true,
+                    "endpoint": false,
+                    "quantity": true,
+                    "strength": true,
+                    "polarity": true
+                  },
+                  "coverage": 0.6
+                }
+              ],
+              "summary": {
+                "claims": 1,
+                "supported": 0,
+                "refuted": 0,
+                "not_in_source": 1,
+                "conflict": 0,
+                "accepted_arguments": 0,
+                "struck_arguments": 1,
+                "ai_arguments": 1,
+                "ai_accepted": 0,
+                "ai_struck": 1,
+                "rule_arguments": 0
+              },
+              "receipt": {
+                "run_id": "1f3bee9b3025de1b",
+                "generated_at": "2026-11-20T20:15:21.842939+00:00",
+                "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                "engine": "deterministic judge + AI advocates"
+              },
+              "trace": [
+                {
+                  "step": "advocates",
+                  "meta": {
+                    "prosecution": {
+                      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 4009,
+                      "usage": {
+                        "prompt_tokens": 412,
+                        "completion_tokens": 56,
+                        "total_tokens": 468
+                      },
+                      "role": "prosecution",
+                      "arguments": 1,
+                      "output_format": "array"
+                    },
+                    "defense": {
+                      "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 629,
+                      "usage": {
+                        "prompt_tokens": 411,
+                        "completion_tokens": 2,
+                        "total_tokens": 413
+                      },
+                      "role": "defense",
+                      "arguments": 0,
+                      "output_format": "array"
+                    },
+                    "available": true,
+                    "parallel": true
+                  }
+                }
+              ],
+              "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+              "__source": "Vitamin C does not prevent the common cold.",
+              "replay_mode": "live-run-recording",
+              "demo_label": "RECORDED LIVE AI RUN · qwen2.5-1.5b-instruct-q4_k_m.gguf"
+            }
+          },
+          "model_meta": {
+            "prosecution": {
+              "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 4009,
+              "usage": {
+                "prompt_tokens": 412,
+                "completion_tokens": 56,
+                "total_tokens": 468
+              },
+              "role": "prosecution",
+              "arguments": 1,
+              "output_format": "array"
+            },
+            "defense": {
+              "model": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 629,
+              "usage": {
+                "prompt_tokens": 411,
+                "completion_tokens": 2,
+                "total_tokens": 413
+              },
+              "role": "defense",
+              "arguments": 0,
+              "output_format": "array"
+            },
+            "available": true,
+            "parallel": true
+          }
+        }
+      ]
+    },
+    {
+      "model_key": "3b",
+      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "provider": "local-llama.cpp",
+      "generated_at": "2026-11-21T10:47:42.594613+00:00",
+      "mode": "live AI advocates + deterministic judge",
+      "summary": {
+        "cases": 6,
+        "rules_accuracy": 1.0,
+        "live_accuracy": 1.0,
+        "accepted_arguments": 2,
+        "struck_arguments": 7,
+        "uplift": 0.0
+      },
+      "cases": [
+        {
+          "id": "court-01-refuted-flu",
+          "replay_key": "refuted_flu",
+          "claim": "Getting a flu vaccine gives you the flu.",
+          "source": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+          "expected": [
+            "refuted"
+          ],
+          "rules": {
+            "verdicts": [
+              "refuted"
+            ],
+            "run_id": "f0baf4ed9efafda8"
+          },
+          "live": {
+            "verdicts": [
+              "refuted"
+            ],
+            "run_id": "af0cbdbbcc699320",
+            "arguments": [
+              {
+                "argument_id": "P-A1-S1-P1-13b95a",
+                "side": "prosecution",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "contradicts",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+                "quote_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+                "char_start": 0,
+                "char_end": 108,
+                "rationale": "The evidence states that the vaccine does not contain live virus, contradicting the claim that getting a flu vaccine gives you the flu.",
+                "status": "accepted",
+                "strike_codes": [],
+                "strike_reason": null,
+                "checks": {
+                  "quote_exact": true,
+                  "relation": true,
+                  "subject": true,
+                  "population": true,
+                  "object": true,
+                  "endpoint": true,
+                  "quantity": true,
+                  "strength": true,
+                  "polarity": true
+                },
+                "coverage": 1.0,
+                "bridge": null,
+                "anchors_requested": [
+                  [
+                    "flu",
+                    "influenza"
+                  ],
+                  [
+                    "vaccine",
+                    "injected vaccine"
+                  ],
+                  [
+                    "Getting",
+                    "get influenza"
+                  ]
+                ]
+              },
+              {
+                "argument_id": "D-A1-S1-P1-13b95a",
+                "side": "defense",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "contradicts",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+                "quote_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+                "char_start": 0,
+                "char_end": 108,
+                "rationale": "The quote states that the vaccine does not contain live virus, contradicting the claim that getting a flu vaccine gives you the flu.",
+                "status": "struck",
+                "strike_codes": [
+                  "side_mismatch"
+                ],
+                "strike_reason": "quotation points the other way",
+                "checks": {
+                  "quote_exact": true,
+                  "relation": true,
+                  "subject": true,
+                  "population": true,
+                  "object": true,
+                  "endpoint": true,
+                  "quantity": true,
+                  "strength": true,
+                  "polarity": true
+                },
+                "coverage": 1.0,
+                "bridge": null,
+                "anchors_requested": [
+                  [
+                    "flu",
+                    "influenza"
+                  ],
+                  [
+                    "vaccine",
+                    "injected vaccine"
+                  ],
+                  [
+                    "Getting",
+                    "get influenza"
+                  ]
+                ]
+              }
+            ],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 1,
+              "not_in_source": 0,
+              "conflict": 0,
+              "accepted_arguments": 1,
+              "struck_arguments": 1,
+              "ai_arguments": 2,
+              "ai_accepted": 1,
+              "ai_struck": 1,
+              "ai_bridges": 0,
+              "rule_arguments": 0
+            },
+            "dossier": {
+              "mode": "court",
+              "ai_mode": "ai",
+              "input": {
+                "claim": "Getting a flu vaccine gives you the flu.",
+                "source_name": "live fixture",
+                "source_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f"
+              },
+              "source": {
+                "source_id": "S1",
+                "name": "live fixture",
+                "sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+                "chars": 108,
+                "sentences": 1
+              },
+              "atoms": [
+                {
+                  "atom_id": "A1",
+                  "claim": "Getting a flu vaccine gives you the flu.",
+                  "verdict": "refuted",
+                  "reason": "A verified quotation states the same proposition with the opposite polarity.",
+                  "accepted_argument_ids": [
+                    "P-A1-S1-P1-13b95a"
+                  ],
+                  "struck_argument_ids": [
+                    "D-A1-S1-P1-13b95a"
+                  ],
+                  "bridge_argument_ids": [],
+                  "evidence_ids": [
+                    "S1-P1"
+                  ],
+                  "nearest": {
+                    "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+                    "coverage": 1.0,
+                    "evidence_id": "S1-P1",
+                    "char_start": 0,
+                    "char_end": 108
+                  },
+                  "what_would_change_it": "A source sentence asserting the same proposition would change this verdict."
+                }
+              ],
+              "arguments": [
+                {
+                  "argument_id": "P-A1-S1-P1-13b95a",
+                  "side": "prosecution",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "contradicts",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+                  "quote_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+                  "char_start": 0,
+                  "char_end": 108,
+                  "rationale": "The evidence states that the vaccine does not contain live virus, contradicting the claim that getting a flu vaccine gives you the flu.",
+                  "status": "accepted",
+                  "strike_codes": [],
+                  "strike_reason": null,
+                  "checks": {
+                    "quote_exact": true,
+                    "relation": true,
+                    "subject": true,
+                    "population": true,
+                    "object": true,
+                    "endpoint": true,
+                    "quantity": true,
+                    "strength": true,
+                    "polarity": true
+                  },
+                  "coverage": 1.0,
+                  "bridge": null,
+                  "anchors_requested": [
+                    [
+                      "flu",
+                      "influenza"
+                    ],
+                    [
+                      "vaccine",
+                      "injected vaccine"
+                    ],
+                    [
+                      "Getting",
+                      "get influenza"
+                    ]
+                  ]
+                },
+                {
+                  "argument_id": "D-A1-S1-P1-13b95a",
+                  "side": "defense",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "contradicts",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+                  "quote_sha256": "13b95aaa1ef7d038b3aa9a3624745c285d186c807323a0240bc3143866d2fb8f",
+                  "char_start": 0,
+                  "char_end": 108,
+                  "rationale": "The quote states that the vaccine does not contain live virus, contradicting the claim that getting a flu vaccine gives you the flu.",
+                  "status": "struck",
+                  "strike_codes": [
+                    "side_mismatch"
+                  ],
+                  "strike_reason": "quotation points the other way",
+                  "checks": {
+                    "quote_exact": true,
+                    "relation": true,
+                    "subject": true,
+                    "population": true,
+                    "object": true,
+                    "endpoint": true,
+                    "quantity": true,
+                    "strength": true,
+                    "polarity": true
+                  },
+                  "coverage": 1.0,
+                  "bridge": null,
+                  "anchors_requested": [
+                    [
+                      "flu",
+                      "influenza"
+                    ],
+                    [
+                      "vaccine",
+                      "injected vaccine"
+                    ],
+                    [
+                      "Getting",
+                      "get influenza"
+                    ]
+                  ]
+                }
+              ],
+              "summary": {
+                "claims": 1,
+                "supported": 0,
+                "refuted": 1,
+                "not_in_source": 0,
+                "conflict": 0,
+                "accepted_arguments": 1,
+                "struck_arguments": 1,
+                "ai_arguments": 2,
+                "ai_accepted": 1,
+                "ai_struck": 1,
+                "ai_bridges": 0,
+                "rule_arguments": 0
+              },
+              "receipt": {
+                "run_id": "af0cbdbbcc699320",
+                "generated_at": "2026-11-21T10:46:30.398627+00:00",
+                "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                "engine": "deterministic judge + AI advocates"
+              },
+              "trace": [
+                {
+                  "step": "advocates",
+                  "meta": {
+                    "prosecution": {
+                      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 16515,
+                      "usage": {
+                        "prompt_tokens": 631,
+                        "completion_tokens": 94,
+                        "total_tokens": 725
+                      },
+                      "role": "prosecution",
+                      "anchor_fill": [
+                        {
+                          "atom_id": "A1",
+                          "anchors": [
+                            [
+                              "flu",
+                              "influenza"
+                            ],
+                            [
+                              "vaccine",
+                              "injected vaccine"
+                            ],
+                            [
+                              "Getting",
+                              "get influenza"
+                            ]
+                          ],
+                          "errors": null
+                        }
+                      ],
+                      "arguments": 1,
+                      "output_format": "object"
+                    },
+                    "defense": {
+                      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 16516,
+                      "usage": {
+                        "prompt_tokens": 630,
+                        "completion_tokens": 94,
+                        "total_tokens": 724
+                      },
+                      "role": "defense",
+                      "anchor_fill": [
+                        {
+                          "atom_id": "A1",
+                          "anchors": [
+                            [
+                              "flu",
+                              "influenza"
+                            ],
+                            [
+                              "vaccine",
+                              "injected vaccine"
+                            ],
+                            [
+                              "Getting",
+                              "get influenza"
+                            ]
+                          ],
+                          "errors": null
+                        }
+                      ],
+                      "arguments": 1,
+                      "output_format": "object"
+                    },
+                    "available": true,
+                    "parallel": true
+                  }
+                }
+              ],
+              "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+              "__source": "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.",
+              "replay_mode": "live-run-recording",
+              "demo_label": "RECORDED LIVE AI RUN · qwen2.5-3b-instruct-q4_k_m.gguf"
+            }
+          },
+          "model_meta": {
+            "prosecution": {
+              "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 16515,
+              "usage": {
+                "prompt_tokens": 631,
+                "completion_tokens": 94,
+                "total_tokens": 725
+              },
+              "role": "prosecution",
+              "anchor_fill": [
+                {
+                  "atom_id": "A1",
+                  "anchors": [
+                    [
+                      "flu",
+                      "influenza"
+                    ],
+                    [
+                      "vaccine",
+                      "injected vaccine"
+                    ],
+                    [
+                      "Getting",
+                      "get influenza"
+                    ]
+                  ],
+                  "errors": null
+                }
+              ],
+              "arguments": 1,
+              "output_format": "object"
+            },
+            "defense": {
+              "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 16516,
+              "usage": {
+                "prompt_tokens": 630,
+                "completion_tokens": 94,
+                "total_tokens": 724
+              },
+              "role": "defense",
+              "anchor_fill": [
+                {
+                  "atom_id": "A1",
+                  "anchors": [
+                    [
+                      "flu",
+                      "influenza"
+                    ],
+                    [
+                      "vaccine",
+                      "injected vaccine"
+                    ],
+                    [
+                      "Getting",
+                      "get influenza"
+                    ]
+                  ],
+                  "errors": null
+                }
+              ],
+              "arguments": 1,
+              "output_format": "object"
+            },
+            "available": true,
+            "parallel": true
+          }
+        },
+        {
+          "id": "court-02-supported-eiffel",
+          "replay_key": "supported_eiffel",
+          "claim": "The Eiffel Tower is located in Paris.",
+          "source": "The Eiffel Tower is located in Paris, France.",
+          "expected": [
+            "supported"
+          ],
+          "rules": {
+            "verdicts": [
+              "supported"
+            ],
+            "run_id": "1d2d9fbb31dec0e0"
+          },
+          "live": {
+            "verdicts": [
+              "supported"
+            ],
+            "run_id": "dbbd8f647e8be64f",
+            "arguments": [
+              {
+                "argument_id": "P-A1-S1-P1-27dfce",
+                "side": "prosecution",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "supports",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "The Eiffel Tower is located in Paris, France.",
+                "quote_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+                "char_start": 0,
+                "char_end": 45,
+                "rationale": "The evidence directly confirms the claim by specifying the location of the Eiffel Tower in Paris, France.",
+                "status": "struck",
+                "strike_codes": [
+                  "side_mismatch"
+                ],
+                "strike_reason": "quotation points the other way",
+                "checks": {
+                  "quote_exact": true,
+                  "relation": true,
+                  "subject": true,
+                  "population": true,
+                  "object": true,
+                  "endpoint": true,
+                  "quantity": true,
+                  "strength": true,
+                  "polarity": true
+                },
+                "coverage": 1.0,
+                "bridge": null,
+                "anchors_requested": [
+                  [
+                    "The Eiffel Tower",
+                    "The Eiffel Tower"
+                  ],
+                  [
+                    "Paris",
+                    "Paris, France"
+                  ],
+                  [
+                    "Paris",
+                    "Paris"
+                  ]
+                ]
+              },
+              {
+                "argument_id": "D-A1-S1-P1-27dfce",
+                "side": "defense",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "supports",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "The Eiffel Tower is located in Paris, France.",
+                "quote_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+                "char_start": 0,
+                "char_end": 45,
+                "rationale": "The evidence directly states that the Eiffel Tower is located in Paris, which matches the claim.",
+                "status": "accepted",
+                "strike_codes": [],
+                "strike_reason": null,
+                "checks": {
+                  "quote_exact": true,
+                  "relation": true,
+                  "subject": true,
+                  "population": true,
+                  "object": true,
+                  "endpoint": true,
+                  "quantity": true,
+                  "strength": true,
+                  "polarity": true
+                },
+                "coverage": 1.0,
+                "bridge": null,
+                "anchors_requested": [
+                  [
+                    "The Eiffel Tower",
+                    "Eiffel Tower"
+                  ],
+                  [
+                    "Paris",
+                    "Paris, France"
+                  ],
+                  [
+                    "The Eiffel Tower",
+                    "The Eiffel Tower"
+                  ],
+                  [
+                    "Paris",
+                    "Paris"
+                  ]
+                ]
+              }
+            ],
+            "summary": {
+              "claims": 1,
+              "supported": 1,
+              "refuted": 0,
+              "not_in_source": 0,
+              "conflict": 0,
+              "accepted_arguments": 1,
+              "struck_arguments": 1,
+              "ai_arguments": 2,
+              "ai_accepted": 1,
+              "ai_struck": 1,
+              "ai_bridges": 0,
+              "rule_arguments": 0
+            },
+            "dossier": {
+              "mode": "court",
+              "ai_mode": "ai",
+              "input": {
+                "claim": "The Eiffel Tower is located in Paris.",
+                "source_name": "live fixture",
+                "source_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b"
+              },
+              "source": {
+                "source_id": "S1",
+                "name": "live fixture",
+                "sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+                "chars": 45,
+                "sentences": 1
+              },
+              "atoms": [
+                {
+                  "atom_id": "A1",
+                  "claim": "The Eiffel Tower is located in Paris.",
+                  "verdict": "supported",
+                  "reason": "A verified quotation states the same proposition with the same polarity.",
+                  "accepted_argument_ids": [
+                    "D-A1-S1-P1-27dfce"
+                  ],
+                  "struck_argument_ids": [
+                    "P-A1-S1-P1-27dfce"
+                  ],
+                  "bridge_argument_ids": [],
+                  "evidence_ids": [
+                    "S1-P1"
+                  ],
+                  "nearest": {
+                    "quote": "The Eiffel Tower is located in Paris, France.",
+                    "coverage": 1.0,
+                    "evidence_id": "S1-P1",
+                    "char_start": 0,
+                    "char_end": 45
+                  },
+                  "what_would_change_it": "A source sentence asserting the same proposition with the opposite polarity would change this verdict."
+                }
+              ],
+              "arguments": [
+                {
+                  "argument_id": "P-A1-S1-P1-27dfce",
+                  "side": "prosecution",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "supports",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "The Eiffel Tower is located in Paris, France.",
+                  "quote_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+                  "char_start": 0,
+                  "char_end": 45,
+                  "rationale": "The evidence directly confirms the claim by specifying the location of the Eiffel Tower in Paris, France.",
+                  "status": "struck",
+                  "strike_codes": [
+                    "side_mismatch"
+                  ],
+                  "strike_reason": "quotation points the other way",
+                  "checks": {
+                    "quote_exact": true,
+                    "relation": true,
+                    "subject": true,
+                    "population": true,
+                    "object": true,
+                    "endpoint": true,
+                    "quantity": true,
+                    "strength": true,
+                    "polarity": true
+                  },
+                  "coverage": 1.0,
+                  "bridge": null,
+                  "anchors_requested": [
+                    [
+                      "The Eiffel Tower",
+                      "The Eiffel Tower"
+                    ],
+                    [
+                      "Paris",
+                      "Paris, France"
+                    ],
+                    [
+                      "Paris",
+                      "Paris"
+                    ]
+                  ]
+                },
+                {
+                  "argument_id": "D-A1-S1-P1-27dfce",
+                  "side": "defense",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "supports",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "The Eiffel Tower is located in Paris, France.",
+                  "quote_sha256": "27dfce3b87229e59f268c64d50e954a6d7b640bd75557ed0185b622284d0ec1b",
+                  "char_start": 0,
+                  "char_end": 45,
+                  "rationale": "The evidence directly states that the Eiffel Tower is located in Paris, which matches the claim.",
+                  "status": "accepted",
+                  "strike_codes": [],
+                  "strike_reason": null,
+                  "checks": {
+                    "quote_exact": true,
+                    "relation": true,
+                    "subject": true,
+                    "population": true,
+                    "object": true,
+                    "endpoint": true,
+                    "quantity": true,
+                    "strength": true,
+                    "polarity": true
+                  },
+                  "coverage": 1.0,
+                  "bridge": null,
+                  "anchors_requested": [
+                    [
+                      "The Eiffel Tower",
+                      "Eiffel Tower"
+                    ],
+                    [
+                      "Paris",
+                      "Paris, France"
+                    ],
+                    [
+                      "The Eiffel Tower",
+                      "The Eiffel Tower"
+                    ],
+                    [
+                      "Paris",
+                      "Paris"
+                    ]
+                  ]
+                }
+              ],
+              "summary": {
+                "claims": 1,
+                "supported": 1,
+                "refuted": 0,
+                "not_in_source": 0,
+                "conflict": 0,
+                "accepted_arguments": 1,
+                "struck_arguments": 1,
+                "ai_arguments": 2,
+                "ai_accepted": 1,
+                "ai_struck": 1,
+                "ai_bridges": 0,
+                "rule_arguments": 0
+              },
+              "receipt": {
+                "run_id": "dbbd8f647e8be64f",
+                "generated_at": "2026-11-21T10:46:49.652903+00:00",
+                "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                "engine": "deterministic judge + AI advocates"
+              },
+              "trace": [
+                {
+                  "step": "advocates",
+                  "meta": {
+                    "prosecution": {
+                      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 14988,
+                      "usage": {
+                        "prompt_tokens": 625,
+                        "completion_tokens": 85,
+                        "total_tokens": 710
+                      },
+                      "role": "prosecution",
+                      "anchor_fill": [
+                        {
+                          "atom_id": "A1",
+                          "anchors": [
+                            [
+                              "The Eiffel Tower",
+                              "The Eiffel Tower"
+                            ],
+                            [
+                              "Paris",
+                              "Paris, France"
+                            ],
+                            [
+                              "Paris",
+                              "Paris"
+                            ]
+                          ],
+                          "errors": null
+                        }
+                      ],
+                      "arguments": 1,
+                      "output_format": "object"
+                    },
+                    "defense": {
+                      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 13973,
+                      "usage": {
+                        "prompt_tokens": 624,
+                        "completion_tokens": 83,
+                        "total_tokens": 707
+                      },
+                      "role": "defense",
+                      "anchor_fill": [
+                        {
+                          "atom_id": "A1",
+                          "anchors": [
+                            [
+                              "The Eiffel Tower",
+                              "Eiffel Tower"
+                            ],
+                            [
+                              "Paris",
+                              "Paris, France"
+                            ],
+                            [
+                              "The Eiffel Tower",
+                              "The Eiffel Tower"
+                            ],
+                            [
+                              "Paris",
+                              "Paris"
+                            ]
+                          ],
+                          "errors": null
+                        }
+                      ],
+                      "arguments": 1,
+                      "output_format": "object"
+                    },
+                    "available": true,
+                    "parallel": true
+                  }
+                }
+              ],
+              "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+              "__source": "The Eiffel Tower is located in Paris, France.",
+              "replay_mode": "live-run-recording",
+              "demo_label": "RECORDED LIVE AI RUN · qwen2.5-3b-instruct-q4_k_m.gguf"
+            }
+          },
+          "model_meta": {
+            "prosecution": {
+              "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 14988,
+              "usage": {
+                "prompt_tokens": 625,
+                "completion_tokens": 85,
+                "total_tokens": 710
+              },
+              "role": "prosecution",
+              "anchor_fill": [
+                {
+                  "atom_id": "A1",
+                  "anchors": [
+                    [
+                      "The Eiffel Tower",
+                      "The Eiffel Tower"
+                    ],
+                    [
+                      "Paris",
+                      "Paris, France"
+                    ],
+                    [
+                      "Paris",
+                      "Paris"
+                    ]
+                  ],
+                  "errors": null
+                }
+              ],
+              "arguments": 1,
+              "output_format": "object"
+            },
+            "defense": {
+              "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 13973,
+              "usage": {
+                "prompt_tokens": 624,
+                "completion_tokens": 83,
+                "total_tokens": 707
+              },
+              "role": "defense",
+              "anchor_fill": [
+                {
+                  "atom_id": "A1",
+                  "anchors": [
+                    [
+                      "The Eiffel Tower",
+                      "Eiffel Tower"
+                    ],
+                    [
+                      "Paris",
+                      "Paris, France"
+                    ],
+                    [
+                      "The Eiffel Tower",
+                      "The Eiffel Tower"
+                    ],
+                    [
+                      "Paris",
+                      "Paris"
+                    ]
+                  ],
+                  "errors": null
+                }
+              ],
+              "arguments": 1,
+              "output_format": "object"
+            },
+            "available": true,
+            "parallel": true
+          }
+        },
+        {
+          "id": "court-03-not-in-source-coffee",
+          "replay_key": "not_in_source_coffee",
+          "claim": "Coffee stunts growth in children.",
+          "source": "Vitamin D is important for bone health in adults.",
+          "expected": [
+            "not_in_source"
+          ],
+          "rules": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "f9e9bf61027d4bb4"
+          },
+          "live": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "b92cbe6c0e15744b",
+            "arguments": [],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 0,
+              "not_in_source": 1,
+              "conflict": 0,
+              "accepted_arguments": 0,
+              "struck_arguments": 0,
+              "ai_arguments": 0,
+              "ai_accepted": 0,
+              "ai_struck": 0,
+              "ai_bridges": 0,
+              "rule_arguments": 0
+            },
+            "dossier": {
+              "mode": "court",
+              "ai_mode": "ai",
+              "input": {
+                "claim": "Coffee stunts growth in children.",
+                "source_name": "live fixture",
+                "source_sha256": "1efdf507c30c00f7b589f8676b088d9e1c92975ef8a15e4b14488cfa7e4ad3a0"
+              },
+              "source": {
+                "source_id": "S1",
+                "name": "live fixture",
+                "sha256": "1efdf507c30c00f7b589f8676b088d9e1c92975ef8a15e4b14488cfa7e4ad3a0",
+                "chars": 49,
+                "sentences": 1
+              },
+              "atoms": [
+                {
+                  "atom_id": "A1",
+                  "claim": "Coffee stunts growth in children.",
+                  "verdict": "not_in_source",
+                  "reason": "No verified quotation states this proposition in the supplied source.",
+                  "accepted_argument_ids": [],
+                  "struck_argument_ids": [],
+                  "bridge_argument_ids": [],
+                  "evidence_ids": [],
+                  "nearest": {
+                    "quote": "Vitamin D is important for bone health in adults.",
+                    "coverage": 0.0,
+                    "evidence_id": "S1-P1",
+                    "char_start": 0,
+                    "char_end": 49
+                  },
+                  "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+                }
+              ],
+              "arguments": [],
+              "summary": {
+                "claims": 1,
+                "supported": 0,
+                "refuted": 0,
+                "not_in_source": 1,
+                "conflict": 0,
+                "accepted_arguments": 0,
+                "struck_arguments": 0,
+                "ai_arguments": 0,
+                "ai_accepted": 0,
+                "ai_struck": 0,
+                "ai_bridges": 0,
+                "rule_arguments": 0
+              },
+              "receipt": {
+                "run_id": "b92cbe6c0e15744b",
+                "generated_at": "2026-11-21T10:46:55.088829+00:00",
+                "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                "engine": "deterministic judge + AI advocates"
+              },
+              "trace": [
+                {
+                  "step": "advocates",
+                  "meta": {
+                    "prosecution": {
+                      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 1161,
+                      "usage": {
+                        "prompt_tokens": 621,
+                        "completion_tokens": 2,
+                        "total_tokens": 623
+                      },
+                      "role": "prosecution",
+                      "anchor_fallback": {
+                        "anchors": [],
+                        "errors": null
+                      },
+                      "arguments": 0,
+                      "output_format": "array"
+                    },
+                    "defense": {
+                      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 1161,
+                      "usage": {
+                        "prompt_tokens": 620,
+                        "completion_tokens": 2,
+                        "total_tokens": 622
+                      },
+                      "role": "defense",
+                      "anchor_fallback": {
+                        "anchors": [],
+                        "errors": null
+                      },
+                      "arguments": 0,
+                      "output_format": "array"
+                    },
+                    "available": true,
+                    "parallel": true
+                  }
+                }
+              ],
+              "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+              "__source": "Vitamin D is important for bone health in adults.",
+              "replay_mode": "live-run-recording",
+              "demo_label": "RECORDED LIVE AI RUN · qwen2.5-3b-instruct-q4_k_m.gguf"
+            }
+          },
+          "model_meta": {
+            "prosecution": {
+              "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 1161,
+              "usage": {
+                "prompt_tokens": 621,
+                "completion_tokens": 2,
+                "total_tokens": 623
+              },
+              "role": "prosecution",
+              "anchor_fallback": {
+                "anchors": [],
+                "errors": null
+              },
+              "arguments": 0,
+              "output_format": "array"
+            },
+            "defense": {
+              "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 1161,
+              "usage": {
+                "prompt_tokens": 620,
+                "completion_tokens": 2,
+                "total_tokens": 622
+              },
+              "role": "defense",
+              "anchor_fallback": {
+                "anchors": [],
+                "errors": null
+              },
+              "arguments": 0,
+              "output_format": "array"
+            },
+            "available": true,
+            "parallel": true
+          }
+        },
+        {
+          "id": "court-04-quantity-mismatch",
+          "replay_key": "quantity_mismatch",
+          "claim": "Adults need 150 minutes of moderate exercise per week.",
+          "source": "Adults should get at least 60 minutes of moderate exercise per week.",
+          "expected": [
+            "not_in_source"
+          ],
+          "rules": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "87694504a320280c"
+          },
+          "live": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "3a793dd797284e40",
+            "arguments": [
+              {
+                "argument_id": "P-A1-S1-P1-0c3d82",
+                "side": "prosecution",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "supports",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "Adults should get at least 60 minutes of moderate exercise per week.",
+                "quote_sha256": "0c3d82c02ed2df30406e7b226f4b5cf3904e9604483142218c764c3a6580f9a3",
+                "char_start": 0,
+                "char_end": 68,
+                "rationale": "The claim requires 150 minutes of moderate exercise per week, while the evidence states at least 60 minutes, contradicting the claim.",
+                "status": "struck",
+                "strike_codes": [
+                  "anchor_no_effect"
+                ],
+                "strike_reason": "the bridge does not make the quotation state the claim",
+                "checks": {},
+                "coverage": 0.0,
+                "bridge": null,
+                "anchors_requested": [
+                  [
+                    "Adults",
+                    "Adults"
+                  ]
+                ]
+              },
+              {
+                "argument_id": "D-A1-S1-P1-0c3d82",
+                "side": "defense",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "supports",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "Adults should get at least 60 minutes of moderate exercise per week.",
+                "quote_sha256": "0c3d82c02ed2df30406e7b226f4b5cf3904e9604483142218c764c3a6580f9a3",
+                "char_start": 0,
+                "char_end": 68,
+                "rationale": "The quote suggests a minimum of 60 minutes, which is less than the claimed 150 minutes of moderate exercise per week.",
+                "status": "struck",
+                "strike_codes": [
+                  "anchor_no_effect"
+                ],
+                "strike_reason": "the bridge does not make the quotation state the claim",
+                "checks": {},
+                "coverage": 0.0,
+                "bridge": null,
+                "anchors_requested": [
+                  [
+                    "Adults",
+                    "Adults"
+                  ]
+                ]
+              }
+            ],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 0,
+              "not_in_source": 1,
+              "conflict": 0,
+              "accepted_arguments": 0,
+              "struck_arguments": 2,
+              "ai_arguments": 2,
+              "ai_accepted": 0,
+              "ai_struck": 2,
+              "ai_bridges": 0,
+              "rule_arguments": 0
+            },
+            "dossier": {
+              "mode": "court",
+              "ai_mode": "ai",
+              "input": {
+                "claim": "Adults need 150 minutes of moderate exercise per week.",
+                "source_name": "live fixture",
+                "source_sha256": "0c3d82c02ed2df30406e7b226f4b5cf3904e9604483142218c764c3a6580f9a3"
+              },
+              "source": {
+                "source_id": "S1",
+                "name": "live fixture",
+                "sha256": "0c3d82c02ed2df30406e7b226f4b5cf3904e9604483142218c764c3a6580f9a3",
+                "chars": 68,
+                "sentences": 1
+              },
+              "atoms": [
+                {
+                  "atom_id": "A1",
+                  "claim": "Adults need 150 minutes of moderate exercise per week.",
+                  "verdict": "not_in_source",
+                  "reason": "No verified quotation states this proposition in the supplied source.",
+                  "accepted_argument_ids": [],
+                  "struck_argument_ids": [
+                    "P-A1-S1-P1-0c3d82",
+                    "D-A1-S1-P1-0c3d82"
+                  ],
+                  "bridge_argument_ids": [],
+                  "evidence_ids": [],
+                  "nearest": {
+                    "quote": "Adults should get at least 60 minutes of moderate exercise per week.",
+                    "coverage": 0.6,
+                    "evidence_id": "S1-P1",
+                    "char_start": 0,
+                    "char_end": 68
+                  },
+                  "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+                }
+              ],
+              "arguments": [
+                {
+                  "argument_id": "P-A1-S1-P1-0c3d82",
+                  "side": "prosecution",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "supports",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "Adults should get at least 60 minutes of moderate exercise per week.",
+                  "quote_sha256": "0c3d82c02ed2df30406e7b226f4b5cf3904e9604483142218c764c3a6580f9a3",
+                  "char_start": 0,
+                  "char_end": 68,
+                  "rationale": "The claim requires 150 minutes of moderate exercise per week, while the evidence states at least 60 minutes, contradicting the claim.",
+                  "status": "struck",
+                  "strike_codes": [
+                    "anchor_no_effect"
+                  ],
+                  "strike_reason": "the bridge does not make the quotation state the claim",
+                  "checks": {},
+                  "coverage": 0.0,
+                  "bridge": null,
+                  "anchors_requested": [
+                    [
+                      "Adults",
+                      "Adults"
+                    ]
+                  ]
+                },
+                {
+                  "argument_id": "D-A1-S1-P1-0c3d82",
+                  "side": "defense",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "supports",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "Adults should get at least 60 minutes of moderate exercise per week.",
+                  "quote_sha256": "0c3d82c02ed2df30406e7b226f4b5cf3904e9604483142218c764c3a6580f9a3",
+                  "char_start": 0,
+                  "char_end": 68,
+                  "rationale": "The quote suggests a minimum of 60 minutes, which is less than the claimed 150 minutes of moderate exercise per week.",
+                  "status": "struck",
+                  "strike_codes": [
+                    "anchor_no_effect"
+                  ],
+                  "strike_reason": "the bridge does not make the quotation state the claim",
+                  "checks": {},
+                  "coverage": 0.0,
+                  "bridge": null,
+                  "anchors_requested": [
+                    [
+                      "Adults",
+                      "Adults"
+                    ]
+                  ]
+                }
+              ],
+              "summary": {
+                "claims": 1,
+                "supported": 0,
+                "refuted": 0,
+                "not_in_source": 1,
+                "conflict": 0,
+                "accepted_arguments": 0,
+                "struck_arguments": 2,
+                "ai_arguments": 2,
+                "ai_accepted": 0,
+                "ai_struck": 2,
+                "ai_bridges": 0,
+                "rule_arguments": 0
+              },
+              "receipt": {
+                "run_id": "3a793dd797284e40",
+                "generated_at": "2026-11-21T10:47:14.480747+00:00",
+                "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                "engine": "deterministic judge + AI advocates"
+              },
+              "trace": [
+                {
+                  "step": "advocates",
+                  "meta": {
+                    "prosecution": {
+                      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 16695,
+                      "usage": {
+                        "prompt_tokens": 633,
+                        "completion_tokens": 91,
+                        "total_tokens": 724
+                      },
+                      "role": "prosecution",
+                      "anchor_fill": [
+                        {
+                          "atom_id": "A1",
+                          "anchors": [
+                            [
+                              "Adults",
+                              "Adults"
+                            ]
+                          ],
+                          "errors": null
+                        }
+                      ],
+                      "arguments": 1,
+                      "output_format": "object"
+                    },
+                    "defense": {
+                      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 15743,
+                      "usage": {
+                        "prompt_tokens": 632,
+                        "completion_tokens": 89,
+                        "total_tokens": 721
+                      },
+                      "role": "defense",
+                      "anchor_fill": [
+                        {
+                          "atom_id": "A1",
+                          "anchors": [
+                            [
+                              "Adults",
+                              "Adults"
+                            ]
+                          ],
+                          "errors": null
+                        }
+                      ],
+                      "arguments": 1,
+                      "output_format": "object"
+                    },
+                    "available": true,
+                    "parallel": true
+                  }
+                }
+              ],
+              "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+              "__source": "Adults should get at least 60 minutes of moderate exercise per week.",
+              "replay_mode": "live-run-recording",
+              "demo_label": "RECORDED LIVE AI RUN · qwen2.5-3b-instruct-q4_k_m.gguf"
+            }
+          },
+          "model_meta": {
+            "prosecution": {
+              "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 16695,
+              "usage": {
+                "prompt_tokens": 633,
+                "completion_tokens": 91,
+                "total_tokens": 724
+              },
+              "role": "prosecution",
+              "anchor_fill": [
+                {
+                  "atom_id": "A1",
+                  "anchors": [
+                    [
+                      "Adults",
+                      "Adults"
+                    ]
+                  ],
+                  "errors": null
+                }
+              ],
+              "arguments": 1,
+              "output_format": "object"
+            },
+            "defense": {
+              "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 15743,
+              "usage": {
+                "prompt_tokens": 632,
+                "completion_tokens": 89,
+                "total_tokens": 721
+              },
+              "role": "defense",
+              "anchor_fill": [
+                {
+                  "atom_id": "A1",
+                  "anchors": [
+                    [
+                      "Adults",
+                      "Adults"
+                    ]
+                  ],
+                  "errors": null
+                }
+              ],
+              "arguments": 1,
+              "output_format": "object"
+            },
+            "available": true,
+            "parallel": true
+          }
+        },
+        {
+          "id": "court-05-population-mismatch",
+          "replay_key": "population_mismatch",
+          "claim": "Children need 150 minutes of moderate exercise per week.",
+          "source": "Adults need 150 minutes of moderate exercise per week.",
+          "expected": [
+            "not_in_source"
+          ],
+          "rules": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "bb02bd75565c55a8"
+          },
+          "live": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "abe930a5fa213a8b",
+            "arguments": [
+              {
+                "argument_id": "P-A1-S1-P1-dd86c2",
+                "side": "prosecution",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "supports",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "Adults need 150 minutes of moderate exercise per week.",
+                "quote_sha256": "dd86c214d5ea3c52e3ac865d3c0af38f0f1d649ddbde6d890f14fb52c1676237",
+                "char_start": 0,
+                "char_end": 54,
+                "rationale": "The quote states that adults need 150 minutes of moderate exercise per week, contradicting the claim that children need the same amount.",
+                "status": "struck",
+                "strike_codes": [
+                  "side_mismatch"
+                ],
+                "strike_reason": "quotation points the other way",
+                "checks": {
+                  "quote_exact": true,
+                  "relation": true,
+                  "subject": true,
+                  "population": true,
+                  "object": true,
+                  "endpoint": true,
+                  "quantity": true,
+                  "strength": true,
+                  "polarity": true
+                },
+                "coverage": 1.0,
+                "bridge": {
+                  "original_claim": "Children need 150 minutes of moderate exercise per week.",
+                  "bridged_claim": "Adults need 150 minutes of moderate exercise per week.",
+                  "anchors": [
+                    [
+                      "Children",
+                      "Adults"
+                    ]
+                  ]
+                },
+                "anchors_requested": [
+                  [
+                    "Children",
+                    "Adults"
+                  ]
+                ]
+              }
+            ],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 0,
+              "not_in_source": 1,
+              "conflict": 0,
+              "accepted_arguments": 0,
+              "struck_arguments": 1,
+              "ai_arguments": 1,
+              "ai_accepted": 0,
+              "ai_struck": 1,
+              "ai_bridges": 0,
+              "rule_arguments": 0
+            },
+            "dossier": {
+              "mode": "court",
+              "ai_mode": "ai",
+              "input": {
+                "claim": "Children need 150 minutes of moderate exercise per week.",
+                "source_name": "live fixture",
+                "source_sha256": "dd86c214d5ea3c52e3ac865d3c0af38f0f1d649ddbde6d890f14fb52c1676237"
+              },
+              "source": {
+                "source_id": "S1",
+                "name": "live fixture",
+                "sha256": "dd86c214d5ea3c52e3ac865d3c0af38f0f1d649ddbde6d890f14fb52c1676237",
+                "chars": 54,
+                "sentences": 1
+              },
+              "atoms": [
+                {
+                  "atom_id": "A1",
+                  "claim": "Children need 150 minutes of moderate exercise per week.",
+                  "verdict": "not_in_source",
+                  "reason": "No verified quotation states this proposition in the supplied source.",
+                  "accepted_argument_ids": [],
+                  "struck_argument_ids": [
+                    "P-A1-S1-P1-dd86c2"
+                  ],
+                  "bridge_argument_ids": [],
+                  "evidence_ids": [],
+                  "nearest": {
+                    "quote": "Adults need 150 minutes of moderate exercise per week.",
+                    "coverage": 0.7778,
+                    "evidence_id": "S1-P1",
+                    "char_start": 0,
+                    "char_end": 54
+                  },
+                  "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+                }
+              ],
+              "arguments": [
+                {
+                  "argument_id": "P-A1-S1-P1-dd86c2",
+                  "side": "prosecution",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "supports",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "Adults need 150 minutes of moderate exercise per week.",
+                  "quote_sha256": "dd86c214d5ea3c52e3ac865d3c0af38f0f1d649ddbde6d890f14fb52c1676237",
+                  "char_start": 0,
+                  "char_end": 54,
+                  "rationale": "The quote states that adults need 150 minutes of moderate exercise per week, contradicting the claim that children need the same amount.",
+                  "status": "struck",
+                  "strike_codes": [
+                    "side_mismatch"
+                  ],
+                  "strike_reason": "quotation points the other way",
+                  "checks": {
+                    "quote_exact": true,
+                    "relation": true,
+                    "subject": true,
+                    "population": true,
+                    "object": true,
+                    "endpoint": true,
+                    "quantity": true,
+                    "strength": true,
+                    "polarity": true
+                  },
+                  "coverage": 1.0,
+                  "bridge": {
+                    "original_claim": "Children need 150 minutes of moderate exercise per week.",
+                    "bridged_claim": "Adults need 150 minutes of moderate exercise per week.",
+                    "anchors": [
+                      [
+                        "Children",
+                        "Adults"
+                      ]
+                    ]
+                  },
+                  "anchors_requested": [
+                    [
+                      "Children",
+                      "Adults"
+                    ]
+                  ]
+                }
+              ],
+              "summary": {
+                "claims": 1,
+                "supported": 0,
+                "refuted": 0,
+                "not_in_source": 1,
+                "conflict": 0,
+                "accepted_arguments": 0,
+                "struck_arguments": 1,
+                "ai_arguments": 1,
+                "ai_accepted": 0,
+                "ai_struck": 1,
+                "ai_bridges": 0,
+                "rule_arguments": 0
+              },
+              "receipt": {
+                "run_id": "abe930a5fa213a8b",
+                "generated_at": "2026-11-21T10:47:27.382902+00:00",
+                "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                "engine": "deterministic judge + AI advocates"
+              },
+              "trace": [
+                {
+                  "step": "advocates",
+                  "meta": {
+                    "prosecution": {
+                      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 11769,
+                      "usage": {
+                        "prompt_tokens": 630,
+                        "completion_tokens": 83,
+                        "total_tokens": 713
+                      },
+                      "role": "prosecution",
+                      "anchor_fill": [
+                        {
+                          "atom_id": "A1",
+                          "anchors": [
+                            [
+                              "Children",
+                              "Adults"
+                            ]
+                          ],
+                          "errors": null
+                        }
+                      ],
+                      "arguments": 1,
+                      "output_format": "object"
+                    },
+                    "defense": {
+                      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 1279,
+                      "usage": {
+                        "prompt_tokens": 629,
+                        "completion_tokens": 2,
+                        "total_tokens": 631
+                      },
+                      "role": "defense",
+                      "anchor_fallback": {
+                        "anchors": [],
+                        "errors": null
+                      },
+                      "arguments": 0,
+                      "output_format": "array"
+                    },
+                    "available": true,
+                    "parallel": true
+                  }
+                }
+              ],
+              "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+              "__source": "Adults need 150 minutes of moderate exercise per week.",
+              "replay_mode": "live-run-recording",
+              "demo_label": "RECORDED LIVE AI RUN · qwen2.5-3b-instruct-q4_k_m.gguf"
+            }
+          },
+          "model_meta": {
+            "prosecution": {
+              "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 11769,
+              "usage": {
+                "prompt_tokens": 630,
+                "completion_tokens": 83,
+                "total_tokens": 713
+              },
+              "role": "prosecution",
+              "anchor_fill": [
+                {
+                  "atom_id": "A1",
+                  "anchors": [
+                    [
+                      "Children",
+                      "Adults"
+                    ]
+                  ],
+                  "errors": null
+                }
+              ],
+              "arguments": 1,
+              "output_format": "object"
+            },
+            "defense": {
+              "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 1279,
+              "usage": {
+                "prompt_tokens": 629,
+                "completion_tokens": 2,
+                "total_tokens": 631
+              },
+              "role": "defense",
+              "anchor_fallback": {
+                "anchors": [],
+                "errors": null
+              },
+              "arguments": 0,
+              "output_format": "array"
+            },
+            "available": true,
+            "parallel": true
+          }
+        },
+        {
+          "id": "court-06-relation-mismatch",
+          "replay_key": "relation_mismatch",
+          "claim": "Vitamin C cures the common cold.",
+          "source": "Vitamin C does not prevent the common cold.",
+          "expected": [
+            "not_in_source"
+          ],
+          "rules": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "6767ec0a496217b1"
+          },
+          "live": {
+            "verdicts": [
+              "not_in_source"
+            ],
+            "run_id": "ece0faec71d20635",
+            "arguments": [
+              {
+                "argument_id": "P-A1-S1-P1-967b6f",
+                "side": "prosecution",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "supports",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "Vitamin C does not prevent the common cold.",
+                "quote_sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558",
+                "char_start": 0,
+                "char_end": 43,
+                "rationale": "The evidence directly contradicts the claim by stating Vitamin C does not prevent the common cold.",
+                "status": "struck",
+                "strike_codes": [
+                  "anchor_no_effect"
+                ],
+                "strike_reason": "the bridge does not make the quotation state the claim",
+                "checks": {},
+                "coverage": 0.0,
+                "bridge": null,
+                "anchors_requested": [
+                  [
+                    "Vitamin C",
+                    "Vitamin C"
+                  ]
+                ]
+              },
+              {
+                "argument_id": "D-A1-S1-P1-967b6f",
+                "side": "defense",
+                "origin": "ai",
+                "atom_id": "A1",
+                "relation": "supports",
+                "evidence_id": "S1-P1",
+                "source_name": "live fixture",
+                "quote": "Vitamin C does not prevent the common cold.",
+                "quote_sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558",
+                "char_start": 0,
+                "char_end": 43,
+                "rationale": "The evidence states that Vitamin C does not prevent the common cold, contradicting the claim that it cures it.",
+                "status": "struck",
+                "strike_codes": [
+                  "anchor_no_effect"
+                ],
+                "strike_reason": "the bridge does not make the quotation state the claim",
+                "checks": {},
+                "coverage": 0.0,
+                "bridge": null,
+                "anchors_requested": [
+                  [
+                    "Vitamin C",
+                    "Vitamin C"
+                  ]
+                ]
+              }
+            ],
+            "summary": {
+              "claims": 1,
+              "supported": 0,
+              "refuted": 0,
+              "not_in_source": 1,
+              "conflict": 0,
+              "accepted_arguments": 0,
+              "struck_arguments": 2,
+              "ai_arguments": 2,
+              "ai_accepted": 0,
+              "ai_struck": 2,
+              "ai_bridges": 0,
+              "rule_arguments": 0
+            },
+            "dossier": {
+              "mode": "court",
+              "ai_mode": "ai",
+              "input": {
+                "claim": "Vitamin C cures the common cold.",
+                "source_name": "live fixture",
+                "source_sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558"
+              },
+              "source": {
+                "source_id": "S1",
+                "name": "live fixture",
+                "sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558",
+                "chars": 43,
+                "sentences": 1
+              },
+              "atoms": [
+                {
+                  "atom_id": "A1",
+                  "claim": "Vitamin C cures the common cold.",
+                  "verdict": "not_in_source",
+                  "reason": "No verified quotation states this proposition in the supplied source.",
+                  "accepted_argument_ids": [],
+                  "struck_argument_ids": [
+                    "P-A1-S1-P1-967b6f",
+                    "D-A1-S1-P1-967b6f"
+                  ],
+                  "bridge_argument_ids": [],
+                  "evidence_ids": [],
+                  "nearest": {
+                    "quote": "Vitamin C does not prevent the common cold.",
+                    "coverage": 0.6,
+                    "evidence_id": "S1-P1",
+                    "char_start": 0,
+                    "char_end": 43
+                  },
+                  "what_would_change_it": "A sentence, in this source, that states the same subject, quantity and strength as the claim would change this result."
+                }
+              ],
+              "arguments": [
+                {
+                  "argument_id": "P-A1-S1-P1-967b6f",
+                  "side": "prosecution",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "supports",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "Vitamin C does not prevent the common cold.",
+                  "quote_sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558",
+                  "char_start": 0,
+                  "char_end": 43,
+                  "rationale": "The evidence directly contradicts the claim by stating Vitamin C does not prevent the common cold.",
+                  "status": "struck",
+                  "strike_codes": [
+                    "anchor_no_effect"
+                  ],
+                  "strike_reason": "the bridge does not make the quotation state the claim",
+                  "checks": {},
+                  "coverage": 0.0,
+                  "bridge": null,
+                  "anchors_requested": [
+                    [
+                      "Vitamin C",
+                      "Vitamin C"
+                    ]
+                  ]
+                },
+                {
+                  "argument_id": "D-A1-S1-P1-967b6f",
+                  "side": "defense",
+                  "origin": "ai",
+                  "atom_id": "A1",
+                  "relation": "supports",
+                  "evidence_id": "S1-P1",
+                  "source_name": "live fixture",
+                  "quote": "Vitamin C does not prevent the common cold.",
+                  "quote_sha256": "967b6f1e9688acbc55d1909320d2387f92815715d8caaa02997c3fc253583558",
+                  "char_start": 0,
+                  "char_end": 43,
+                  "rationale": "The evidence states that Vitamin C does not prevent the common cold, contradicting the claim that it cures it.",
+                  "status": "struck",
+                  "strike_codes": [
+                    "anchor_no_effect"
+                  ],
+                  "strike_reason": "the bridge does not make the quotation state the claim",
+                  "checks": {},
+                  "coverage": 0.0,
+                  "bridge": null,
+                  "anchors_requested": [
+                    [
+                      "Vitamin C",
+                      "Vitamin C"
+                    ]
+                  ]
+                }
+              ],
+              "summary": {
+                "claims": 1,
+                "supported": 0,
+                "refuted": 0,
+                "not_in_source": 1,
+                "conflict": 0,
+                "accepted_arguments": 0,
+                "struck_arguments": 2,
+                "ai_arguments": 2,
+                "ai_accepted": 0,
+                "ai_struck": 2,
+                "ai_bridges": 0,
+                "rule_arguments": 0
+              },
+              "receipt": {
+                "run_id": "ece0faec71d20635",
+                "generated_at": "2026-11-21T10:47:42.593601+00:00",
+                "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                "engine": "deterministic judge + AI advocates"
+              },
+              "trace": [
+                {
+                  "step": "advocates",
+                  "meta": {
+                    "prosecution": {
+                      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 12655,
+                      "usage": {
+                        "prompt_tokens": 622,
+                        "completion_tokens": 72,
+                        "total_tokens": 694
+                      },
+                      "role": "prosecution",
+                      "anchor_fill": [
+                        {
+                          "atom_id": "A1",
+                          "anchors": [
+                            [
+                              "Vitamin C",
+                              "Vitamin C"
+                            ]
+                          ],
+                          "errors": null
+                        }
+                      ],
+                      "arguments": 1,
+                      "output_format": "object"
+                    },
+                    "defense": {
+                      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+                      "provider": "local-llama.cpp",
+                      "latency_ms": 14504,
+                      "usage": {
+                        "prompt_tokens": 621,
+                        "completion_tokens": 81,
+                        "total_tokens": 702
+                      },
+                      "role": "defense",
+                      "anchor_fill": [
+                        {
+                          "atom_id": "A1",
+                          "anchors": [
+                            [
+                              "Vitamin C",
+                              "Vitamin C"
+                            ]
+                          ],
+                          "errors": null
+                        }
+                      ],
+                      "arguments": 1,
+                      "output_format": "object"
+                    },
+                    "available": true,
+                    "parallel": true
+                  }
+                }
+              ],
+              "disclaimer": "The court decides whether the supplied source states the claim. It is not an authoritative fact-check, and `not_in_source` is a finding about this source, not a claim that the statement is false.",
+              "__source": "Vitamin C does not prevent the common cold.",
+              "replay_mode": "live-run-recording",
+              "demo_label": "RECORDED LIVE AI RUN · qwen2.5-3b-instruct-q4_k_m.gguf"
+            }
+          },
+          "model_meta": {
+            "prosecution": {
+              "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 12655,
+              "usage": {
+                "prompt_tokens": 622,
+                "completion_tokens": 72,
+                "total_tokens": 694
+              },
+              "role": "prosecution",
+              "anchor_fill": [
+                {
+                  "atom_id": "A1",
+                  "anchors": [
+                    [
+                      "Vitamin C",
+                      "Vitamin C"
+                    ]
+                  ],
+                  "errors": null
+                }
+              ],
+              "arguments": 1,
+              "output_format": "object"
+            },
+            "defense": {
+              "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+              "provider": "local-llama.cpp",
+              "latency_ms": 14504,
+              "usage": {
+                "prompt_tokens": 621,
+                "completion_tokens": 81,
+                "total_tokens": 702
+              },
+              "role": "defense",
+              "anchor_fill": [
+                {
+                  "atom_id": "A1",
+                  "anchors": [
+                    [
+                      "Vitamin C",
+                      "Vitamin C"
+                    ]
+                  ],
+                  "errors": null
+                }
+              ],
+              "arguments": 1,
+              "output_format": "object"
+            },
+            "available": true,
+            "parallel": true
+          }
+        }
+      ]
+    }
+  ],
+  "models": [
+    "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "qwen2.5-3b-instruct-q4_k_m.gguf"
+  ],
+  "summary_by_model": {
+    "1.5b": {
+      "cases": 6,
+      "rules_accuracy": 1.0,
+      "live_accuracy": 1.0,
+      "accepted_arguments": 2,
+      "struck_arguments": 3,
+      "uplift": 0.0
+    },
+    "3b": {
+      "cases": 6,
+      "rules_accuracy": 1.0,
+      "live_accuracy": 1.0,
+      "accepted_arguments": 2,
+      "struck_arguments": 7,
+      "uplift": 0.0
+    }
+  },
+  "note": "`cases` is the 1.5B run used by the recorded static replay. `runs` records both local models; the 3B run is not substituted into the replay."
+}

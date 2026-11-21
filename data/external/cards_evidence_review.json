@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "method": "manual_same_page_confirmation/v1",
+    "reviewed_at": "2026-11-20",
+    "reviewer": "in-repo curation pass",
+    "rule": "A paragraph may be attached only if it sits on the card's own source page and literally addresses the claim (agreement or contradiction). No cross-source paragraph is attached, and no threshold is changed.",
+    "context": "The data-supply matcher resolved 75/100 cards. This review re-read the same pages and recovered ten cards whose wording did not clear the 0.50 threshold, then added two explicit page-status flags. A second pass re-read the remaining unresolved pages and recovered four more; the other twelve were left unresolved because the archived page is a hub, a table the extractor does not turn into paragraphs, or a Chinese edition. No threshold was lowered."
+  },
+  "confirmed": [
+    {
+      "card_id": "E013",
+      "source_id": "CDC-COLD",
+      "paragraph_index": 6,
+      "relation": "supports",
+      "note": "Page sentence: 'The common cold has no cure but should improve on its own.' This is the card's claim in the page's own words."
+    },
+    {
+      "card_id": "E020",
+      "source_id": "WHO-MYTH",
+      "paragraph_index": 20,
+      "relation": "refutes",
+      "note": "WHO myth-buster: spread on shoes is 'very low'; the card's claim asserts a high-probability route."
+    },
+    {
+      "card_id": "E043",
+      "source_id": "CDC-MMR",
+      "paragraph_index": 30,
+      "relation": "refutes",
+      "note": "'No published scientific evidence shows any benefit in separating the combination MMR vaccine into three individual shots.'"
+    },
+    {
+      "card_id": "E029",
+      "source_id": "NASA-ROUND",
+      "paragraph_index": 5,
+      "relation": "refutes",
+      "note": "'Mercury and Venus are the roundest of all.' The card names Saturn; the same page later says Saturn bulges the most."
+    },
+    {
+      "card_id": "E032",
+      "source_id": "FDA-MW",
+      "paragraph_index": 19,
+      "relation": "refutes",
+      "note": "FDA: microwave cooking 'does not reduce the nutritional value of foods any more than conventional cooking'."
+    },
+    {
+      "card_id": "E046",
+      "source_id": "FDA-MW",
+      "paragraph_index": 19,
+      "relation": "refutes",
+      "note": "Same FDA paragraph, second phrasing of the same claim."
+    },
+    {
+      "card_id": "E011",
+      "source_id": "WHO-FLU-5M",
+      "paragraph_index": 2,
+      "relation": "refutes",
+      "note": "The page lists this as 'Myth 1: Influenza is not serious so I don't need the vaccine'; the answering paragraph reads 'Fact: As many as 650 000 people a year can die of the flu. This only represents respiratory deaths, so the likely impact is even higher.'"
+    },
+    {
+      "card_id": "E024",
+      "source_id": "WHO-PUB",
+      "paragraph_index": 133,
+      "relation": "supports",
+      "note": "'Regularly and thoroughly clean your hands with either an alcohol-based hand rub or soap and water. This eliminates germs that may be on your hands, including viruses.'"
+    },
+    {
+      "card_id": "E049",
+      "source_id": "NASA-EARTH",
+      "paragraph_index": 15,
+      "relation": "supports",
+      "note": "'Even though our planet is a sphere, it is not a perfect sphere.' The card says sphere, not perfect sphere; the paragraph states the sphere explicitly."
+    },
+    {
+      "card_id": "E112",
+      "source_id": "CDC-MEASLES-VAX",
+      "paragraph_index": 6,
+      "relation": "refutes",
+      "note": "'Measles is very contagious and can cause serious health complications.' The card asserts the opposite."
+    }
+  ],
+  "flagged": [
+    {
+      "card_id": "E061",
+      "status": "source_changed",
+      "source_id": "CDC-AUT",
+      "paragraph_index": 6,
+      "note": "The archived page now carries a revised statement introduced under a data-quality process ('the claim ... is not an evidence-based claim'). The card is a deliberate conflicting-group card and takes no position; the snapshot records the current wording instead of pretending nothing changed."
+    },
+    {
+      "card_id": "E079",
+      "status": "page_changed",
+      "source_id": "NCI-ALK",
+      "paragraph_index": 0,
+      "note": "The archived page now serves an agency-wide notice banner ('Per Executive Order 14434 ...'), not the alkaline-diet entry. A single 193-character paragraph is the whole page; the card's claim is not locatable."
+    }
+  ]
+}

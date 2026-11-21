@@ -1,0 +1,158 @@
+{
+  "run_tag": "v8r",
+  "llm_mode": "Offline deterministic core (degraded)",
+  "passed": 31,
+  "total": 31,
+  "all_pass": true,
+  "results": {
+    "A1_no_evidence_refusal": {
+      "pass": true,
+      "detail": "2 claims with no evidence, 0 verdicts leaked"
+    },
+    "A2_citations_required": {
+      "pass": true,
+      "detail": "14 verdicts checked, 0 with missing citation"
+    },
+    "A3_decomposition": {
+      "pass": true,
+      "detail": "comma input -> 3 atoms; enumeration input -> 3 atoms"
+    },
+    "A4_audit_chain": {
+      "pass": true,
+      "detail": "steps=['decompose', 'negation', 'retrieve', 'semantic', 'adjudicate', 'negation', 'retrieve', 'semantic', 'adjudicate']; per-claim traces complete=True"
+    },
+    "A5_instant_play": {
+      "pass": true,
+      "detail": "index.html present and self-contained=True"
+    },
+    "A6_failure_reproducible": {
+      "pass": true,
+      "detail": "DEMO-3 all refused=True"
+    },
+    "A7_offline_deterministic": {
+      "pass": true,
+      "detail": "two offline runs field-for-field identical=True"
+    },
+    "A8_no_secrets": {
+      "pass": true,
+      "detail": "real key patterns found=0",
+      "hits": []
+    },
+    "A9_honesty_statement": {
+      "pass": true,
+      "detail": "README states limitations and non-authoritative scope=True"
+    },
+    "A10_corpus_coverage": {
+      "pass": true,
+      "detail": "75 cards (>=40), 31 sources (>=8), 0 off-whitelist URLs, 0 without status"
+    },
+    "A11_golden_accuracy": {
+      "pass": true,
+      "detail": "accuracy 100.0% (68/68); distribution={'refuted': 33, 'supported': 20, 'undetermined': 15}; false refusals=0; illegal citations=0",
+      "accuracy": 1.0,
+      "distribution": {
+        "refuted": 33,
+        "supported": 20,
+        "undetermined": 15
+      }
+    },
+    "A12_paraphrase_robust": {
+      "pass": true,
+      "detail": "consistency 100.0% (12/12); verdicts dropped to refusal=0"
+    },
+    "A13_ai_anti_overreach": {
+      "pass": true,
+      "detail": "zero evidence + AI says supported -> undetermined; evidence + AI says refuted -> supported"
+    },
+    "A14_frontend_backend_sync": {
+      "pass": true,
+      "detail": "68 golden + 24 paraphrase pairs compared; 0 mismatches",
+      "mismatches": []
+    },
+    "A15_citation_relevance": {
+      "pass": true,
+      "detail": "3 guard inputs checked; 0 unrelated sources entered citations"
+    },
+    "A16_polarity_correctness": {
+      "pass": true,
+      "detail": "6 polarity fixtures checked; 0 wrong",
+      "bad": []
+    },
+    "A17_hygiene_doc_code_sync": {
+      "pass": true,
+      "detail": "keys=0, CJK files=0, dangling doc paths=0",
+      "cjk": [],
+      "dangling": []
+    },
+    "A18_ai_semantic_recall": {
+      "pass": true,
+      "detail": "4 recall guards checked (real id / stored stance / citation / relevance); 0 violations",
+      "bad": []
+    },
+    "A19_recorded_replay_integrity": {
+      "pass": true,
+      "detail": "14 recorded cases cross-checked against the live benchmark; 0 violations; tampered counterexample rejected=True",
+      "bad": []
+    },
+    "A20_coverage_transparency": {
+      "pass": true,
+      "detail": "browser lists 75/75 cards, 14 replay chips, 3 refusal renders; 0 violations; tampered counterexample rejected=True",
+      "bad": []
+    },
+    "A21_unreadable_input_gate": {
+      "pass": true,
+      "detail": "3 unreadable inputs refused with a full notice (kind/title/body/action), 0 verdicts leaked; front-end renders the same notice; English control still decides; 0 violations; tampered counterexample rejected=True",
+      "bad": []
+    },
+    "A22_adversarial_input_discipline": {
+      "pass": true,
+      "detail": "3 injection payloads kept their verdict; 7700 chars refused as too_long; prompt data-quoted; 0 violations",
+      "bad": []
+    },
+    "A23_offline_isolation": {
+      "pass": true,
+      "detail": "3 claims analysed with sockets blocked in a child process; verdicts identical=True; a forced model call returned llm_unavailable; 0 violations",
+      "bad": []
+    },
+    "A24_precision_traps": {
+      "pass": true,
+      "detail": "7 traps (contradiction / kept object list / reversed causation / adjacent product / adjacent outcome / quantifier / anti-refuse control); front-end parity on all 7; 0 violations",
+      "bad": []
+    },
+    "A25_population_scope": {
+      "pass": true,
+      "detail": "5 scope probes (5 narrowed claims refused, 3 matched-population controls decided); front-end parity on all 8; 0 violations",
+      "bad": []
+    },
+    "A26_negation_property": {
+      "pass": true,
+      "detail": "32 affirmative golden claims inverted and flipped; 8 double-negated claims refused; identity negator rejected; 0 violations",
+      "bad": []
+    },
+    "A27_citation_receipts": {
+      "pass": true,
+      "detail": "3 probes: every citation names shared vocabulary; rendered 'Matched on' in the page; front-end parity; 0 violations",
+      "bad": []
+    },
+    "A28_refusal_diagnosis": {
+      "pass": true,
+      "detail": "5 probes: closest card named with the guard that stopped it (4 with a near-miss, 1 with none); front-end parity; 0 violations",
+      "bad": []
+    },
+    "A29_dose_and_efficacy_scope": {
+      "pass": true,
+      "detail": "6 probes (2 dose mismatches and 1 relation mismatch refused, 3 controls decided); front-end parity; 0 violations",
+      "bad": []
+    },
+    "A30_cross_atom_consistency": {
+      "pass": true,
+      "detail": "5 submissions: 3 contradictions labelled with their basis, 2 controls left unlabelled; front-end parity; 0 violations",
+      "bad": []
+    },
+    "A31_stance_and_separator_parity": {
+      "pass": true,
+      "detail": "4 probes: a thousands separator stays in the number, an object word does not create a relation match, a prohibition is not a negation, and a control still decides; front-end parity; 0 violations",
+      "bad": []
+    }
+  }
+}

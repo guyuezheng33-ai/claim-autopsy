@@ -1,0 +1,76 @@
+{
+  "T1_lineage": {
+    "rows": 400,
+    "orphan_rows": 0,
+    "orphan_ids": [],
+    "bad_tier_or_mode": 0,
+    "pass": true
+  },
+  "T2_drift": {
+    "len_ks": 0.21,
+    "len_p50_fact": 44,
+    "len_p50_synth": 51,
+    "number_rate_fact": 0.1867,
+    "number_rate_synth": 0.1725,
+    "number_rate_abs_diff": 0.0142,
+    "domain_tv": 0.0558,
+    "thresholds": {
+      "len_ks_max": 0.1711,
+      "number_rate_max": 0.0392,
+      "domain_tv_max": 0.1
+    },
+    "threshold_rationale": "n=400 时 KS 95% 临界值 = 1.36*sqrt((n1+n2)/(n1*n2))；数字率按二项 2sd；领域 TV 取 0.10 覆盖 18 个稀疏领域的抽样噪声",
+    "pass": false
+  },
+  "T3_cross_batch": {
+    "len_ks_b1_b2": 0.0575,
+    "label_tv_b1_b2": 0.03,
+    "thresholds": {
+      "len_ks_max": 0.1711,
+      "label_tv_max": 0.08
+    },
+    "threshold_rationale": "同一 seed 不同批次只差 batch_index，允许的差异上限按 n=400 抽样噪声给出",
+    "pass": true
+  },
+  "replay": {
+    "sha_regen": "fb1587827a7ab7e4b8095f204949cfdfab6595a8bbbc6bfc73a8e08a8a6dcc59",
+    "sha_file": "fb1587827a7ab7e4b8095f204949cfdfab6595a8bbbc6bfc73a8e08a8a6dcc59",
+    "pass": true
+  },
+  "batches": {
+    "b1": "D:\\桌面\\数据Agent工程化\\data\\claim\\synth\\claim_b1.jsonl",
+    "b2": "D:\\桌面\\数据Agent工程化\\data\\claim\\synth\\claim_b2.jsonl"
+  },
+  "calibration": {
+    "n_facts": 75,
+    "label_share": {
+      "supported": 0.32,
+      "refuted": 0.68
+    },
+    "len_p50": 44,
+    "len_p10": 26,
+    "len_p90": 64,
+    "number_rate": 0.1867,
+    "domain_share": {
+      "exercise": 0.04,
+      "skin": 0.0267,
+      "cancer": 0.12,
+      "nutrition": 0.0667,
+      "covid-19": 0.1333,
+      "microwave": 0.0667,
+      "antibiotics": 0.08,
+      "vaccine": 0.1467,
+      "earth": 0.08,
+      "vision": 0.0267,
+      "dental": 0.0267,
+      "food safety": 0.0533,
+      "hygiene": 0.0267,
+      "food": 0.0133,
+      "planets": 0.0133,
+      "smoking": 0.0533,
+      "product claim": 0.0133,
+      "cold": 0.0133
+    }
+  },
+  "pass_all": false
+}
