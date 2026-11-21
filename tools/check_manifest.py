@@ -20,6 +20,7 @@ SKIP_FILES = {
     "evidence/serve_stderr.log",
     "evidence/llama_stdout.log",
     "evidence/llama_stderr.log",
+    "evidence/local_llm.log",
 }
 
 

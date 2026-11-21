@@ -1,0 +1,3 @@
+# Freeze exact bytes: disable Git EOL conversion so FINAL_MANIFEST.md hashes
+# survive a fresh clone on Windows (default core.autocrlf=true rewrites LF to CRLF).
+* -text
