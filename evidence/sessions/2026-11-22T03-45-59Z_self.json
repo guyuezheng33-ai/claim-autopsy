@@ -1,0 +1,63 @@
+{
+  "schema": "claim-autopsy/session/1",
+  "operator": "self",
+  "channel": "cli",
+  "note": "Acceptance recheck after kernel refactor; rules-only replay.",
+  "reviewer": null,
+  "started_at": "2026-11-22T03:45:59Z",
+  "environment": {
+    "kernel": {
+      "core/evidence.py": "8897247eb4dcb7db522fa32c32e5a22a31d81689eac856e4fac3cdaa553c0033",
+      "core/decompose.py": "6888d52d70ebbc923967cd7b4021be8dba7a1a95be1e7d7b0390180ca49084b0",
+      "core/pipeline.py": "78ec484310f2446e1cfe7c3fdc6bef34adc474fcec14d45a87b7b11545a57325",
+      "core/adjudicate.py": "910e59c341d71ed58777892ecf74abc28ed1b6392ba19812db1e585ae2022116",
+      "core/negation.py": "66d32f992a548b0a4d874f5f3ea98f159e010cf6bc64b7d660448ed015caf1b1",
+      "core/semantic.py": "320fe9fa0f4af8b3ffbdf589f836c6aae2f88b2c9fd73191512c0df3e35d4356",
+      "core/snapshots.py": "10ebb6756a44d41d9ebd1fcf2179f6a0244bf607b115d0b5cb328631711ee20e"
+    },
+    "corpus_sha256": "0c96925411fed34a68461b488c7125dd78641216fc9a0fcef81e05e5914a3017",
+    "python": "3.13.18"
+  },
+  "turns": [
+    {
+      "input": "Antibiotics cannot treat a common cold.",
+      "verdicts": [
+        {
+          "claim": "Antibiotics cannot treat a common cold.",
+          "verdict": "supported",
+          "sources": [
+            "CDC-ABX"
+          ],
+          "reason": "Negation detected (cannot); evidence stance was inverted for scoring. An authoritative source in this corpus supports the claim."
+        }
+      ],
+      "claims_detected": 0,
+      "unsupported_input": null,
+      "runtime_ms": 35
+    },
+    {
+      "input": "The Earth is round.",
+      "verdicts": [
+        {
+          "claim": "The Earth is round.",
+          "verdict": "supported",
+          "sources": [
+            "NASA-EARTH"
+          ],
+          "reason": "An authoritative source in this corpus supports the claim."
+        }
+      ],
+      "claims_detected": 0,
+      "unsupported_input": null,
+      "runtime_ms": 5
+    }
+  ],
+  "summary": {
+    "inputs": 2,
+    "atoms": 2,
+    "answered_atoms": 2,
+    "undetermined_atoms": 0,
+    "no_claim_inputs": 2
+  },
+  "session_id": "5f4e2a620353257bc26457f95de3ca5d"
+}

@@ -629,18 +629,30 @@ def run_fixtures(path=None):
 
 
 def main(argv=None):
+    import argparse
     import sys
     argv = argv or sys.argv[1:]
-    if "--fixtures" in argv:
+    ap = argparse.ArgumentParser(
+        prog="python -m core.court",
+        description="Deterministic citation court: replay fixtures or run the live docket.",
+    )
+    sub = ap.add_subparsers(dest="command")
+    sub.add_parser("fixtures", help="run the frozen fixture docket")
+    sub.add_parser("live", help="run the live docket against the local model")
+    ap.add_argument("--fixtures", action="store_true", help=argparse.SUPPRESS)
+    ap.add_argument("--live", action="store_true", help=argparse.SUPPRESS)
+    ns = ap.parse_args(argv)
+    command = ns.command or ("fixtures" if ns.fixtures else "live" if ns.live else "")
+    if command == "fixtures":
         out = run_fixtures()
         print(json.dumps(out, ensure_ascii=False, indent=2))
         return 0 if out["all_pass"] else 1
-    if "--live" in argv:
+    if command == "live":
         from . import court_live
         out = court_live.run()
         print(json.dumps(out, ensure_ascii=False, indent=2))
         return 0 if out.get("ok") else 1
-    print("usage: python -m core.court --fixtures | --live")
+    ap.print_help()
     return 2
 
 

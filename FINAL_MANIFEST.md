@@ -37,11 +37,11 @@ A33  PASS 5 probes: a two-step chain is derived and labelled, an agreeing third 
 A34  PASS 97/112 cards carry an archived paragraph: 97 verified, 13 unresolved, 1 page_changed, 1 source_changed; exc...
 A35  PASS 5 external dev datasets recomputed from the frozen slice; accuracy and refusal match the published run with...
 A36  PASS risk/cure classified and kept apart, risk/prevention kept together, harm/harm still decided; susceptibility...
-A37  PASS the acceptance run carries a receipt (185eb6cbe3b25db5f65c8d7643232418) that binds 46 artefacts by SHA-256,...
-A38  PASS the built page ran in edge; the court docket plus 10 corpus demos and 3 citation demos were clicked, each r...
+A37  PASS the acceptance run carries a receipt (44144a20a8d60f1d0e8c3ee491f6eb24) that binds 46 artefacts by SHA-256,...
+A38  PASS no browser available (playwright_not_installed), so the rendered page was not exercised in this run; the No...
 A39  PASS the external table carries a receipt (8d381b4a0b0627cd90bac5257c27f869): two runs with exit codes and outpu...
 A3   PASS comma input -> 3 atoms; enumeration input -> 3 atoms; compound subject -> 1 atom(s), first noun kept=True
-A40  PASS 5 recorded session(s), 1 of them replayable against the current kernel and corpus, 0 by an external operato...
+A40  PASS 6 recorded session(s), 1 of them replayable against the current kernel and corpus, 0 by an external operato...
 A41  PASS 1 wrong dev decision(s), 1 reviewed entry/entries covering exactly the wrong set; categories contradictory_...
 A42  PASS 12 texts compared between the page and the kernel (verdict, scope, plan); a 12-row batch matches the single...
 A43  PASS serve.py started on an ephemeral port with the local model disabled and no key: /api/health reports its gat...
@@ -77,8 +77,13 @@ project file not listed in its own table — it cannot hash itself.
 
 | File | Bytes | SHA256 (first 16) |
 | .dockerignore | 84 | 535496811c0f8554 |
+| .forge_lock/PRODUCT.md | 11213 | 97df89ab4a6a17d3 |
+| .forge_lock/README.md | 14391 | 56bb4b2ae3c861f3 |
+| .forge_lock/soldieros/scope.json | 1619 | 730d6d60928880ee |
+| .forge_lock/tests/test_core_invariants.py | 3406 | e05ad7397deb07f0 |
+| .forge_lock.json | 447 | 28fbe07e321e5716 |
 | .gitattributes | 246 | d786b12647e3d229 |
-| .gitignore | 79 | a826000087e8ece2 |
+| .gitignore | 127 | 63be6eda6b057a24 |
 | ARCHITECTURE.md | 103509 | 2752818d4196eb74 |
 | COMPETITION_SCORECARD_CN.md | 10966 | 28ed7d531b507d96 |
 | core/__init__.py | 89 | 0797e0173f8c3939 |
@@ -86,7 +91,7 @@ project file not listed in its own table — it cannot hash itself.
 | core/audit.py | 134578 | c05c77edd8660903 |
 | core/citation.py | 11046 | ee5e5a3799a20ea4 |
 | core/consistency.py | 9906 | dbfaed8293f581ab |
-| core/court.py | 28833 | 060141a1e6d5e66e |
+| core/court.py | 29458 | 05eb1ba08455e562 |
 | core/court_batch.py | 10541 | 9a5a8f6c725c8969 |
 | core/court_live.py | 6906 | d4f5647f3c9c93ec |
 | core/decompose.py | 10398 | 6888d52d70ebbc92 |
@@ -99,7 +104,7 @@ project file not listed in its own table — it cannot hash itself.
 | core/prompt.py | 2581 | c18b3375df8e464a |
 | core/recall.py | 4572 | 919a1369cfb32bc7 |
 | core/semantic.py | 2027 | 320fe9fa0f4af8b3 |
-| core/snapshots.py | 7410 | 58eb6396db43a1ba |
+| core/snapshots.py | 7467 | 10ebb6756a44d41d |
 | data/_claims_backup.json | 68868 | f25bc0be0c109866 |
 | data/ai_recall_replay.json | 25623 | be778affb638e4ca |
 | data/ai_uplift_cases.json | 2900 | 7d59df1cfd79677f |
@@ -136,10 +141,12 @@ project file not listed in its own table — it cannot hash itself.
 | data/golden_set.json | 20395 | babc18d96641ac99 |
 | data/guard_set.json | 13994 | e1f87a536476bd5c |
 | data/paraphrase_deep.json | 3101 | c3b310a1add2b0ac |
+| DATA_DICTIONARY.md | 4036 | cfdff5cf201053cb |
 | DATA_PLAN.md | 23831 | 38bb51e3baed1104 |
 | Dockerfile | 307 | 1d774a1f5f6ab839 |
+| eval/bench_court.csv | 86 | d58961d98a4121c2 |
 | evidence/_cards_evidence_backup.jsonl | 98892 | e19d83bf947e708a |
-| evidence/acceptance_final.json | 15120 | 7f6fe71d6aae428d |
+| evidence/acceptance_final.json | 15258 | 998e8dcdbb36f07c |
 | evidence/ai_lift.json | 12123 | 6c3d3d77a0ac80d3 |
 | evidence/ai_uplift.json | 14722 | 0107c24d1c6eb0ac |
 | evidence/cards_evidence.jsonl | 110368 | e48986cd0aabaa48 |
@@ -159,7 +166,7 @@ project file not listed in its own table — it cannot hash itself.
 | evidence/oracle_eval.json | 48940 | a297b4780629f86c |
 | evidence/paragraphs.jsonl | 2002060 | 084ada8b29201374 |
 | evidence/retractions.jsonl | 13672 | ddacb0349a16890d |
-| evidence/run_receipt.json | 5573 | d8dd49c052dde8d0 |
+| evidence/run_receipt.json | 5573 | d99961065c3cdfcd |
 | evidence/screenshots/01-ai-contrast.png | 99016 | d1e1543f70d8a7db |
 | evidence/screenshots/02-result-demo1.png | 84045 | 8a21d5e6be8c8b0a |
 | evidence/screenshots/03-conflict-demo4.png | 110226 | 970e22dc872279fa |
@@ -191,14 +198,18 @@ project file not listed in its own table — it cannot hash itself.
 | evidence/sessions/2026-11-20T17-10-45Z_self.json | 2745 | 7686013e556d3461 |
 | evidence/sessions/2026-11-20T18-01-06Z_self.json | 2666 | 52cbe74b2168b086 |
 | evidence/sessions/2026-11-21T15-58-15Z_self.json | 1693 | 4e3139c8a9a650a9 |
+| evidence/sessions/2026-11-22T03-45-59Z_self.json | 2211 | 9cb7d0d22de59917 |
 | evidence/video_script.md | 3547 | e3818a55b30e07db |
 | evidence/withdrawn_demo.json | 869 | 3e14d67df6fc654d |
 | LICENSE | 1089 | 193fa3fab2956aa6 |
-| PRODUCT.md | 11029 | d63729aeff272e79 |
+| PRODUCT.md | 11213 | 97df89ab4a6a17d3 |
 | README.md | 14391 | 56bb4b2ae3c861f3 |
 | REFACTOR_PLAN_CN.md | 30946 | afa4be15516a34da |
+| requirements.txt | 170 | 350463f5f1361c2c |
 | serve.py | 16140 | 6d05a817e95fc6ad |
+| soldieros/scope.json | 1619 | 730d6d60928880ee |
 | SUBMISSION.md | 15680 | ecac6581236bde50 |
+| tests/test_core_invariants.py | 3508 | 17ac6e63b03937d0 |
 | tools/add_cards_v10.py | 8774 | bb79546d968c0a02 |
 | tools/add_cards_v8.py | 4247 | 30f4e0a327206fb7 |
 | tools/add_cards_v9.py | 11431 | b342d65377342ac1 |
@@ -206,6 +217,7 @@ project file not listed in its own table — it cannot hash itself.
 | tools/add_golden_v14.py | 2883 | 35ffdece910f3bc0 |
 | tools/add_golden_v9.py | 3680 | a58cce034f7a3d3d |
 | tools/add_guard_outcome.py | 2197 | d89169c299eb126c |
+| tools/bench_court.py | 1933 | e34ce818ee0b0fe7 |
 | tools/browser_check.py | 11847 | 922009b2f46a8138 |
 | tools/browser_check_live.py | 4112 | d11efc2dbb7618b0 |
 | tools/build_court_batch_replay.py | 2154 | 7ba3a9f760ea0a28 |
@@ -238,7 +250,7 @@ project file not listed in its own table — it cannot hash itself.
 | tools/session_log.py | 7287 | 740af53575e8c6c0 |
 | tools/sync_frontend.py | 1878 | d35474348af483d5 |
 | tools/verify_sessions.py | 7275 | f20043e5a0f456a7 |
-| USER_TODO.md | 8017 | 51325a716cb8ae76 |
+| USER_TODO.md | 8035 | d7f3f40417c5c401 |
 | web/app.js | 81124 | 3c3ba3cca8bb95ff |
 | web/court.js | 39603 | 01b0ff2c31ee6e88 |
 | web/court_batch_replay.js | 12351 | 7518b86559b14af3 |

@@ -1,11 +1,11 @@
 {
   "schema": "claim-autopsy/receipt/1",
-  "generated_at": "2026-11-21T16:04:33Z",
+  "generated_at": "2026-11-22T03:47:16Z",
   "run_tag": "final",
   "command": "python.exe -m core.audit final",
   "exit_code": 0,
   "bootstrap": false,
-  "stdout_sha256": "6e4f51445472e7f498dd3af5df09d9fededd934b3e78377183dfed084bd9d8d4",
+  "stdout_sha256": "742a605020bcedcbd63df3f20167daaa3e803b68341bdd770f82e675750cc924",
   "stdout_tail": [
     "------------------------------------------------------------",
     "Result 48/48  all_pass=True",
@@ -26,11 +26,11 @@
     "core/decompose.py": "6888d52d70ebbc923967cd7b4021be8dba7a1a95be1e7d7b0390180ca49084b0",
     "core/pipeline.py": "78ec484310f2446e1cfe7c3fdc6bef34adc474fcec14d45a87b7b11545a57325",
     "core/audit.py": "c05c77edd8660903339fd6d5aae1c7f5a3afdd31973b2f412adaaf2bc27e59a3",
-    "core/snapshots.py": "58eb6396db43a1ba26774d462bdc62938259ce5b795f5ba3a08f9560e4ca39df",
+    "core/snapshots.py": "10ebb6756a44d41d9ebd1fcf2179f6a0244bf607b115d0b5cb328631711ee20e",
     "core/negation.py": "66d32f992a548b0a4d874f5f3ea98f159e010cf6bc64b7d660448ed015caf1b1",
     "core/plan.py": "7db27f2658214384863e09e6d391d64e76ebd79637c22e4af194dc39f10cab39",
     "core/citation.py": "ee5e5a3799a20ea401d8c7f22406db89897521022db5fcccadf54f9fe14b1582",
-    "core/court.py": "060141a1e6d5e66e96cb4cc4c052a30b4e1817d1aa4da33bebbe4bd9c7343ee4",
+    "core/court.py": "05eb1ba08455e562b163cf518c5a7b5ccfdffe7c08bfe763ce64473189f5c4e0",
     "core/court_batch.py": "9a5a8f6c725c8969e7f51293997c2ed9ef98e3420dd8d2ac1a1ef5a223462c94",
     "core/court_live.py": "d4f5647f3c9c93ec72efee95517a721055c3366e276fa5746bdaab3cad6ec068",
     "core/llm.py": "6400423009474b4bf6cefaeeeda865e12a07b3a8c72b40931c46f5ab84bce304",
@@ -69,5 +69,5 @@
     "evidence/screenshots/25-court-live.png": "9bfc4ca4c6080b19f3f2ebbd9e790fa4c883f416178106f27673d73fa1c30441",
     "evidence/screenshots/26-court-batch.png": "42ba50428bc3f490dbf619a2cd1fb5e321cf62bed371698943cd6f4382fa02da"
   },
-  "receipt_id": "185eb6cbe3b25db5f65c8d7643232418"
+  "receipt_id": "44144a20a8d60f1d0e8c3ee491f6eb24"
 }

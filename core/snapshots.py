@@ -18,6 +18,7 @@ No status ever upgrades a verdict: a card with no snapshot is still cited, and t
 reader sees that its source could not be re-verified. That is the honest failure
 mode, not a hidden one.
 """
+import functools
 import hashlib
 import json
 import os
@@ -35,13 +36,8 @@ STATUS_TEXT = {
     "hash_mismatch": "Snapshot hash does not match the stored paragraph",
 }
 
-_CACHE = None
-
-
 def _sha(text):
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
-
-
 def _read_jsonl(path):
     with open(path, "r", encoding="utf-8") as f:
         return [json.loads(line) for line in f if line.strip()]
@@ -96,12 +92,9 @@ def _record(row, status, note="", method=None):
     }
 
 
-def load():
+@functools.lru_cache(maxsize=1)
+def _load():
     """Return {card_id: snapshot record}. Computed once per process."""
-    global _CACHE
-    if _CACHE is not None:
-        return _CACHE
-
     rows = {r["card_id"]: r for r in _read_jsonl(CARDS)}
     paragraphs = {}
     if os.path.exists(PARAGRAPHS):
@@ -155,8 +148,12 @@ def load():
                 rec["status_text"] = STATUS_TEXT["hash_mismatch"]
                 rec["note"] = "recomputed hash differs from the stored paragraph hash"
 
-    _CACHE = snap
     return snap
+
+
+def load():
+    """Public read: process-local memoisation, no module-level mutable state."""
+    return _load()
 
 
 def get(card_id):

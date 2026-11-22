@@ -1,0 +1,56 @@
+{
+ "schema": "soldieros/scope@1",
+ "problem": "Decide whether each atom of a claim is supported by the cited source, with a verifiable quotation and character offsets",
+ "sample": {
+  "rule": [
+   "data/claims.json",
+   "data/golden_set.json",
+   "evidence/acceptance_final.json"
+  ],
+  "files": [
+   {
+    "rel": "data/claims.json",
+    "sha256": "0c96925411fed34a68461b488c7125dd78641216fc9a0fcef81e05e5914a3017",
+    "rows": null,
+    "columns": null
+   },
+   {
+    "rel": "data/golden_set.json",
+    "sha256": "babc18d96641ac996833d1d2c02c089b27102201819275985cae729ebe2d6282",
+    "rows": null,
+    "columns": null
+   },
+   {
+    "rel": "evidence/acceptance_final.json",
+    "sha256": "998e8dcdbb36f07ccb29374ced09269270881bf87a961133946870835db739fe",
+    "rows": null,
+    "columns": null
+   }
+  ],
+  "count": 3
+ },
+ "output": {
+  "fields": [
+   "verdict",
+   "reason",
+   "coverage",
+   "source_sentence",
+   "char_offset"
+  ],
+  "format": "json"
+ },
+ "digest": "b470dcff19ee366406347fb05c7135e65b83ef3a0ae87d83f0db5b88bdcd9533",
+ "history": [
+  {
+   "prevDigest": "0a242d4c5e1f6de1d6b497459654492137afb04e246ccbbfce33524fce45361b",
+   "sign": "AI assistant, initial freeze language correction; user requested full acceptance",
+   "at": "2026-11-22T11:45:33"
+  },
+  {
+   "prevDigest": "c4dd0c118a829ca2e3a3c60395beb29cc13ccd7ff947ba19e56279c8b44cc023",
+   "sign": "AI assistant, initial freeze; re-frozen after acceptance_final 48/48",
+   "at": "2026-11-22T11:47:56"
+  }
+ ],
+ "sign": "AI assistant, initial freeze; re-frozen after acceptance_final 48/48"
+}

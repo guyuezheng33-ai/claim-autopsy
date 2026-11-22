@@ -6,8 +6,8 @@ screen / reviewer access. The local product is already built and verified.
 **Current state**
 
 - `python -m core.audit final` → **48/48, all_pass=True**
-- run receipt → `381962469c3fb77140ef05664b5edc20`, **46 artefacts**, exit 0
-- `FINAL_MANIFEST.md` → **168 files**, 0 problems
+- run receipt → `44144a20a8d60f1d0e8c3ee491f6eb24`, **46 artefacts**, exit 0
+- `FINAL_MANIFEST.md` → **0 problems** (row count is in the file)
 - court fixtures → **33/33**; batch fixtures → **6/6**; browser checks → static **ok**, live **ok**
 - live 3B → **20–35 s** per docket; the page shows four real stages instead of a blank spinner
 - 7B → **explicitly out of scope for this build**
@@ -35,7 +35,7 @@ does not see it on `PATH`, so in a terminal either reopen the terminal or use th
 & 'C:\Program Files\Git\cmd\git.exe' --version
 ```
 
-1.3 The local repository is already initialized on `main` with commit `08a1660`, author
+1.3 The local repository is already initialized on `main` with an existing commit, author
 `HUCHAOZHENG <guyuezheng33@gmail.com>`. Do **not** run `git init` again. Verify it is clean:
 
 ```powershell
@@ -44,7 +44,7 @@ python -m core.audit final
 ```
 
 `git status --short` should print nothing. Expect **48/48**, including `A8_no_secrets keys=0` and
-`A37_run_receipt` with receipt `381962469c3fb77140ef05664b5edc20`.
+`A37_run_receipt` with receipt `44144a20a8d60f1d0e8c3ee491f6eb24`.
 
 1.4 Create the empty public repo at `https://github.com/new` (name `claim-autopsy`, Public, no
 README), then add the remote and push:

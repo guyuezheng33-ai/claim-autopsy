@@ -1,5 +1,7 @@
 # Claim Autopsy — product brief
 
+Claim Autopsy is a CLI citation-audit tool: each atom gets supported/refuted/not_in_source with exact quote; accepted only at 100% of 48 gates, 840 claims, 11 answered, 10 correct.
+
 This file exists because the engineering is documented everywhere else and the commercial
 argument is documented nowhere. It is deliberately short and deliberately unfashionable: no
 market-size estimate, no traction claim, no roadmap slide. Everything below is either a fact

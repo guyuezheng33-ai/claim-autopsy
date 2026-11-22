@@ -1,0 +1,3 @@
+# Runtime: Python 3.13 standard library only; serve.py has no third-party imports.
+# The pin below is the test runner used by tests/ (development only).
+pytest==9.2.0

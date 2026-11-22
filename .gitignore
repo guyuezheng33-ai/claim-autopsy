@@ -6,3 +6,6 @@ __pycache__/
 Thumbs.db
 *.log
 serve.pid
+.pytest_cache/
+.forge_lock.json
+.forge_lock/
