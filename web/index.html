@@ -257,6 +257,46 @@
   .court-hero p{font-size:15px;line-height:1.6;color:var(--ink2);margin:0;max-width:680px}
   .court-hero .court-pitch{display:inline-block;margin-top:12px;font-size:12px;color:var(--ink2);
     border-left:3px solid var(--brand);padding:5px 0 5px 10px}
+  .court-proof{margin:0 0 18px;padding:18px 20px;border-radius:14px;color:#fff;
+    background:linear-gradient(135deg,#1f2430 0%,#2b3345 60%,#273a4a 100%);
+    box-shadow:0 1px 2px rgba(20,30,60,.08),0 16px 38px rgba(20,30,60,.16)}
+  .court-proof-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .court-proof-kicker{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#b9c4ff;font-weight:700}
+  .court-proof-free{font-size:11px;color:#c7ccdf}
+  .court-proof-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:14px 0 12px}
+  .court-proof-step{display:flex;gap:9px;align-items:flex-start;background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:10px 11px;min-width:0}
+  .court-proof-step b{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.14);
+    display:inline-flex;align-items:center;justify-content:center;font-size:10.5px;flex:0 0 auto;margin-top:1px}
+  .court-proof-step strong{display:block;font-size:11px;letter-spacing:.02em;color:#fff}
+  .court-proof-step span{display:block;font-size:11.5px;line-height:1.45;color:#d7dbea;margin-top:2px}
+  .court-proof-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .court-proof-actions .primary{background:#fff;border-color:#fff;color:#1f2430;padding:9px 16px;font-weight:650}
+  .court-proof-actions .primary:hover{background:#eef1fa;color:#1f2430}
+  .court-proof-actions button{background:transparent;border-color:rgba(255,255,255,.3);color:#fff}
+  .court-proof-actions button:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.08)}
+  .court-proof-note{font-size:10.8px;line-height:1.5;color:#b9c1d6;margin:10px 0 0}
+  .court-own-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;
+    margin:0 0 12px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+  .court-own-head strong{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink2)}
+  .court-own-head span{font-size:11px;color:var(--ink3)}
+  .court-own-head code{font-size:10.5px;background:#f3f5fa;border:1px solid var(--line);border-radius:4px;padding:1px 4px}
+  .court-setup{margin:-6px 0 18px;border:1px solid var(--line);border-radius:10px;background:#fbfbfc;padding:10px 13px}
+  .court-setup summary{cursor:pointer;font-size:11.5px;color:var(--ink2)}
+  .court-setup p{font-size:11.5px;color:var(--ink3);line-height:1.55;margin:8px 0 5px}
+  .court-setup pre{margin:5px 0 0;padding:8px 10px;background:#fff;border:1px solid var(--line);border-radius:6px;
+    font-size:11px;line-height:1.5;color:var(--ink2);overflow:auto;white-space:pre-wrap}
+  .court-proof-verdict{border:1px solid #e8c9c3;background:#fffafa;border-radius:12px;padding:13px 15px;margin:0 0 14px}
+  .court-proof-verdict h4{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--no);margin:0 0 9px}
+  .court-proof-verdict .pv-row{display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px;padding:7px 0;border-top:1px dashed #eed4cf}
+  .court-proof-verdict .pv-row:first-of-type{border-top:0;padding-top:0}
+  .court-proof-verdict .pv-label{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);font-weight:700}
+  .court-proof-verdict .pv-row.bad q{color:var(--no);text-decoration:line-through;text-decoration-color:#d9a7a0}
+  .court-proof-verdict .pv-row.good q{color:var(--ok)}
+  .court-proof-verdict q{font-size:12.5px;line-height:1.5;quotes:none}
+  .court-proof-verdict .pv-code{font-size:10.5px;color:var(--no);font-family:ui-monospace,monospace;margin-left:4px}
+  .court-proof-verdict .pv-verdict{font-size:12px;color:var(--ink2);line-height:1.55}
+  .court-proof-verdict .pv-verdict b{color:var(--no);text-transform:uppercase;letter-spacing:.04em}
   .court-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;
     box-shadow:0 1px 2px rgba(20,30,60,.05),0 14px 40px rgba(20,30,60,.07);padding:18px;margin-bottom:18px}
   .court-card label{display:block;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;
@@ -391,6 +431,7 @@
   .court-disclaimer{font-size:11.5px;color:var(--ink3);line-height:1.6;margin-top:12px}
   @media (max-width:840px){
     .court-hero h1{font-size:30px}
+    .court-proof-steps{grid-template-columns:1fr}
     .court-cols{grid-template-columns:1fr}
     .court-col{border-right:0;border-bottom:1px solid var(--line)}
     .court-col:last-child{border-bottom:0}
@@ -422,7 +463,28 @@
       <span class="court-pitch"><b>AI argues. Evidence decides.</b> The model never owns the verdict.</span>
     </div>
 
+    <div class="court-proof" id="courtProofPanel">
+      <div class="court-proof-top">
+        <span class="court-proof-kicker">The 10-second proof</span>
+        <span class="court-proof-free">No install · runs in this page</span>
+      </div>
+      <div class="court-proof-steps">
+        <div class="court-proof-step"><b>1</b><div><strong>AI proposes</strong><span>“The flu vaccine contains live virus and causes influenza.”</span></div></div>
+        <div class="court-proof-step"><b>2</b><div><strong>Judge checks</strong><span>Every character against the supplied source.</span></div></div>
+        <div class="court-proof-step"><b>3</b><div><strong>Evidence decides</strong><span>Quote not found → strike. The verdict stays with the source.</span></div></div>
+      </div>
+      <div class="court-proof-actions">
+        <button class="primary" type="button" id="courtProofRun">Show the fabricated quote →</button>
+        <button type="button" id="courtProofReal">Show a real model mistake</button>
+      </div>
+      <p class="court-proof-note">First case is an adversarial fixture, not a model run. Second case is an actual recorded 1.5B run. Both use the same deterministic judge.</p>
+    </div>
+
     <div class="court-card">
+      <div class="court-own-head">
+        <strong>Your own citation</strong>
+        <span>Static page replays recorded cases · live AI: <code>python serve.py</code></span>
+      </div>
       <div class="court-mode" id="courtSwitch">
         <button type="button" class="active" id="courtModeSingle">One source</button>
         <button type="button" id="courtModeMulti">Batch sources</button>
@@ -468,6 +530,13 @@
       </div>
       <div class="court-chips" id="courtExamples"></div>
     </div>
+
+    <details class="court-setup" id="courtSetup">
+      <summary>Want live AI on your own text?</summary>
+      <p>The static page cannot call a model. On this machine, start the local server; it uses the installed Qwen model with no API key.</p>
+      <pre>python serve.py
+# open http://127.0.0.1:8765</pre>
+    </details>
 
     <div class="court-error" id="courtError" style="display:none"></div>
     <div id="courtResult"></div>

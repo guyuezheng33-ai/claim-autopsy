@@ -1,81 +1,87 @@
-# Claim Autopsy — 60-second screen-recording script
+# Claim Autopsy - 60-second screen-recording script
 
-No presenter needed. Record the browser window only, 1920×1080, at about 110% zoom.
+No presenter needed. Record the browser window only, 1920x1080, at about 110% zoom.
 Six shots, six voiceover lines. Total about 60 seconds.
 
 The static page is a recording. The live court is `python serve.py`. Do not call the static page
-live; the badges must say `RECORDED LIVE AI RUN` and `LIVE AI` respectively.
+live; the badges must say `RECORDED LIVE AI RUN`, `ADVERSARIAL FIXTURE`, and `LIVE AI` respectively.
+
+Start from the zero-install link, not the repository:
+
+`https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?demo=struck`
 
 ---
 
-### Shot 1 — Opening, static court (0:00–0:08)
+### Shot 1 - The trap, no install (0:00-0:10)
 
-**Screen**: Open `web/index.html`. Hold on the court header, the title “Was this claim ever in the
-source?”, the line “AI argues. Evidence decides.” and the four example chips. Keep the badge
-`RECORDED LIVE AI RUN` visible.
+**Screen**: Open the link above. The page is already on the adversarial case. Click **Show the
+fabricated quote**. Hold on the trap banner: the red struck quotation with `quote_not_found`, the
+green source sentence, and the judge's `refuted` line. Keep the badge `ADVERSARIAL FIXTURE` visible.
 
-**Voiceover**: “This is Claim Autopsy. It does not ask a model for the truth. AI argues both sides,
-and a deterministic judge checks every quotation against the source.”
+**Voiceover**: "No install. A model can invent a quotation. This judge checks every character
+against the source, strikes this one as `quote_not_found`, and the verdict stays with the evidence."
 
 ---
 
-### Shot 2 — Live run and real progress (0:08–0:22)
+### Shot 2 - The same judge on a real model mistake (0:10-0:20)
 
-**Screen**: Open the live page from `python serve.py` at `127.0.0.1:8765`. Click “Open the trial”.
+**Screen**: Click **Show a real model mistake**. Show the badge `RECORDED LIVE AI RUN`, the 1.5B
+model name, the struck card with `side_mismatch`, and the same source quotation on the judge's side.
+
+**Voiceover**: "This one is a real recorded model run, not a fixture. The model used a true
+quotation on the wrong side; the judge struck it. The badge tells you which is recorded and which
+is a test."
+
+---
+
+### Shot 3 - Live run and real progress (0:20-0:34)
+
+**Screen**: Open the live page from `python serve.py` at `127.0.0.1:8765`. Click **Open the trial**.
 Show the progress panel moving through `Rules triage`, `Evidence packet` and `AI advocates`.
-Keep 3–4 seconds of the AI stage with the elapsed counter, then jump-cut to `Judge verified`.
+Keep 3-4 seconds of the AI stage with the elapsed counter, then jump-cut to `Judge verified`.
 Do not speed up or fake the run; say the CPU time out loud.
 
-**Voiceover**: “On CPU this run takes about twenty seconds. The page shows which stage is running,
-with a real elapsed clock, then hands the docket to the judge.”
+**Voiceover**: "On CPU this takes about twenty seconds. The page shows which stage is running,
+with a real clock, then hands the docket to the judge. The model argues; it never writes the verdict."
 
 ---
 
-### Shot 3 — A struck argument (0:22–0:34)
+### Shot 4 - The judge accepts a grounded argument (0:34-0:46)
 
-**Screen**: Scroll to the prosecution column. Point at the red `STRUCK` card and its reason
-`quote_not_found`. Hold so the fabricated quotation and the judge’s rule are both readable.
+**Screen**: Show an accepted argument beside the judge's ruling. Open the `Flu vaccine - refuted`
+case. Hold on the exact quote, `chars 0-108`, and the highlighted source span.
 
-**Voiceover**: “The prosecution invented a quotation. The judge strikes it, records the reason,
-and the verdict does not move. The model never owns the verdict.”
-
----
-
-### Shot 4 — The judge accepts a grounded argument (0:34–0:44)
-
-**Screen**: Show the green `ACCEPTED` defence card beside the judge’s ruling, with the exact quote
-and character offsets. If using the Aspirin case, show the semantic bridge line as well.
-
-**Voiceover**: “A grounded quotation is accepted with its character offsets. When the wording
-differs, AI can propose a bridge; the judge re-runs the structural checks before it changes anything.”
+**Voiceover**: "A grounded quotation is accepted with its character offsets, and the exact span is
+highlighted in the source. When the wording differs, AI can propose a bridge; the judge re-runs
+the structural checks before anything changes."
 
 ---
 
-### Shot 5 — One claim × four sources (0:44–0:54)
+### Shot 5 - One claim x four sources (0:46-0:54)
 
-**Screen**: Click “Load recorded 4-source batch” and run it. Show the four rows, the
-`cross-source conflict` row and the summary counts. Do not open every row.
+**Screen**: Click **Load recorded 4-source batch**. Show the four rows, the `cross-source conflict`
+row and the summary counts. Do not open every row.
 
-**Voiceover**: “For multiple sources, rules triage first and AI is spent only where rules cannot
-settle. Support and refutation can coexist; the page reports the conflict and does not pick a winner.”
+**Voiceover**: "For multiple sources, rules triage first and AI is spent only where rules cannot
+settle. Support and refutation can coexist; the page reports the conflict and does not pick a winner."
 
 ---
 
-### Shot 6 — Receipt and close (0:54–1:00)
+### Shot 6 - Receipt and close (0:54-1:00)
 
-**Screen**: Click “Copy JSON receipt” or open the receipt block. Show `run_id`, the source hash, the
-accepted quote offsets and the struck reason. End on the line “every accepted argument has an exact
-quotation.”
+**Screen**: Click **Copy JSON receipt** or open the receipt block. Show `run_id`, the source hash,
+the accepted quote offsets and the struck reason. End on "every accepted argument has an exact
+quotation."
 
-**Voiceover**: “Every docket leaves a receipt: the source hash, the exact span, what was accepted,
-what was struck. Evidence, not answers.”
+**Voiceover**: "Every docket leaves a receipt: the source hash, the exact span, what was accepted,
+what was struck. Evidence, not answers."
 
 ---
 
 Recording notes:
 
+- Open with the deep link; it removes the setup step and lands on the proof.
 - Use Edge or Chrome, notifications off, cursor parked between actions.
 - Export MP4 / H.264 / 1080p, under 60 seconds.
-- Upload unlisted, then test the link signed out.
-- If the 3B wait is too long for the edit, keep the progress panel visible and jump-cut; never
-  present a recorded run as live.
+- Upload to YouTube unlisted or Vimeo; do not use a short-lived signed CDN link.
+- The static page is recorded; only `serve.py` is live. Keep that distinction visible.

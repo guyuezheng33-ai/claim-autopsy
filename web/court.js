@@ -19,6 +19,21 @@
   var liveProgress = null;
   var liveTimer = null;
   var liveToken = 0;
+  var PROOF_CASES = {
+    fake: { key: "struck", label: "Fabricated quote · adversarial fixture" },
+    real: { key: "eiffel", label: "Real model mistake · wrong side" }
+  };
+  var DEMO_ALIASES = {
+    fake: "struck", struck: "struck",
+    real: "eiffel", eiffel: "eiffel",
+    flu: "flu", coffee: "coffee", population: "population"
+  };
+  var queryDemo = null;
+  try {
+    queryDemo = new URLSearchParams(location.search).get("demo");
+  } catch (e) {
+    queryDemo = null;
+  }
 
   function isRecording(d) {
     return d && d.replay_mode === "live-run-recording";
@@ -222,6 +237,31 @@
       "</div>";
   }
 
+  function trapBanner(d) {
+    var struck = (d.arguments || []).filter(function (a) {
+      return a.status === "struck" && (a.strike_codes || []).length;
+    })[0];
+    if (!struck) return "";
+    var accepted = (d.arguments || []).filter(function (a) {
+      return a.status === "accepted";
+    })[0];
+    var atom = (d.atoms || [])[0] || {};
+    var sourceQuote = accepted ? accepted.quote :
+      (atom.nearest && atom.nearest.quote) || "No accepted quotation.";
+    var code = (struck.strike_codes || []).join(", ");
+    var reason = struck.strike_reason || "quotation cannot be verified";
+    var verdict = String(atom.verdict || "undetermined").replace(/_/g, " ");
+    var fixture = d.receipt && d.receipt.model === "adversarial fixture";
+    return '<div class="court-proof-verdict" id="courtProofVerdict">' +
+      '<h4>' + (fixture ? "Adversarial trap · one fabricated quotation" : "Judge strike · what the model got wrong") + '</h4>' +
+      '<div class="pv-row bad"><span class="pv-label">AI proposed</span><div><q>' + esc(struck.quote) +
+      '</q><span class="pv-code">' + esc(code) + '</span></div></div>' +
+      '<div class="pv-row good"><span class="pv-label">Source says</span><div><q>' + esc(sourceQuote) + '</q></div></div>' +
+      '<div class="pv-row"><span class="pv-label">Judge</span><div class="pv-verdict"><b>' + esc(verdict) +
+      '</b> — ' + esc(reason) + '. The strike does not change the verdict; the source does.</div></div>' +
+      '</div>';
+  }
+
   function render(d, key) {
     var root = document.getElementById("courtResult");
     var err = document.getElementById("courtError");
@@ -281,7 +321,7 @@
       marked = esc(sourceText);
     }
 
-    root.innerHTML = summary + aiStrip(d) + atoms +
+    root.innerHTML = trapBanner(d) + summary + aiStrip(d) + atoms +
       '<div class="court-source"><h4>Source · exact span highlighted</h4><p>' + (marked || esc("(source not shown in replay)")) + "</p></div>" +
       '<div class="court-foot"><span>receipt ' + esc((d.receipt || {}).run_id || "") + " · " +
       esc((d.receipt || {}).engine || "") + (d.receipt && d.receipt.model ? " · model " + esc(d.receipt.model) : "") +
@@ -498,7 +538,7 @@
     });
   }
 
-  function fill(example) {
+  function fill(example, renderNow) {
     hideProgress();
     setMode(false);
     var d = (window.COURT_REPLAY && window.COURT_REPLAY.cases || {})[example.key];
@@ -507,7 +547,7 @@
     document.getElementById("courtSource").value = d.__source || "";
     var note = document.getElementById("courtFileName");
     if (note) note.textContent = "or paste the source above · 20,000 character limit";
-    render(d, example.key);
+    if (renderNow !== false) render(d, example.key);
     activeKey = example.key;
   }
 
@@ -795,6 +835,18 @@
     });
   }
 
+  function showProof(kind) {
+    var ex = PROOF_CASES[kind];
+    if (!ex) return;
+    fill(ex);
+    var root = document.getElementById("courtResult");
+    if (root) {
+      setTimeout(function () {
+        root.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 80);
+    }
+  }
+
   function init() {
     var chips = document.getElementById("courtExamples");
     if (chips) {
@@ -810,8 +862,24 @@
         chips.appendChild(b);
       });
     }
-    fill(EXAMPLES[0]);
+    var initial = EXAMPLES[0];
+    if (queryDemo) {
+      var wanted = DEMO_ALIASES[queryDemo] || queryDemo;
+      var found = EXAMPLES.filter(function (ex) { return ex.key === wanted; })[0];
+      if (found) initial = found;
+    }
+    if (queryDemo) {
+      fill(initial, false);
+      var proofStatus = document.getElementById("courtStatus");
+      if (proofStatus) proofStatus.textContent = "Proof loaded · click Show the fabricated quote";
+    } else {
+      fill(initial);
+    }
     bindSourceFile();
+    var proofBtn = document.getElementById("courtProofRun");
+    if (proofBtn) proofBtn.addEventListener("click", function () { showProof("fake"); });
+    var proofReal = document.getElementById("courtProofReal");
+    if (proofReal) proofReal.addEventListener("click", function () { showProof("real"); });
     var singleBtn = document.getElementById("courtModeSingle");
     var multiBtn = document.getElementById("courtModeMulti");
     if (singleBtn) singleBtn.addEventListener("click", function () { setMode(false); });
@@ -833,8 +901,12 @@
       fetch("/api/status").then(function (r) { return r.json(); }).then(function (s) {
         if (s && s.ai_available) {
           document.getElementById("courtLive").style.display = "inline-block";
-          document.getElementById("courtStatus").textContent = "Local AI ready · running the first docket…";
-          runLive(true);
+          if (queryDemo) {
+            document.getElementById("courtStatus").textContent = "Recorded proof loaded · click Open the trial for live AI";
+          } else {
+            document.getElementById("courtStatus").textContent = "Local AI ready · running the first docket…";
+            runLive(true);
+          }
         } else {
           document.getElementById("courtStatus").textContent = "Server ready · rules-only (no local model or key)";
         }

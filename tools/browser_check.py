@@ -58,6 +58,7 @@ READ_COURT = """() => {
     badge: badge ? badge.textContent : '',
     strip: strip ? strip.textContent : '',
     status: status ? status.textContent : '',
+    trap: (document.getElementById('courtProofVerdict') || {}).textContent || '',
     accepted: document.querySelectorAll('#courtResult .court-arg.accepted').length,
     struck: document.querySelectorAll('#courtResult .court-arg.struck').length,
     atoms: document.querySelectorAll('#courtResult .court-atom').length,
@@ -133,6 +134,22 @@ def main():
         # model run, not a rules-only placeholder and not a fake "live" badge.
         court_default = page.evaluate(READ_COURT)
         court_receipt = page.evaluate("() => window.COURT_RECEIPT ? window.COURT_RECEIPT() : ''")
+        page.click("#courtProofRun")
+        page.wait_for_timeout(300)
+        proof_fake = page.evaluate(READ_COURT)
+        page.click("#courtProofReal")
+        page.wait_for_timeout(300)
+        proof_real = page.evaluate(READ_COURT)
+        proof_ok = (
+            "ADVERSARIAL FIXTURE" in proof_fake["badge"]
+            and proof_fake["struck"] >= 1
+            and "quote_not_found" in proof_fake["trap"]
+            and "The flu vaccine contains live virus" in proof_fake["trap"]
+            and "REFUTED" in proof_fake["trap"].upper()
+            and "RECORDED LIVE AI RUN" in proof_real["badge"]
+            and proof_real["struck"] >= 1
+            and "side_mismatch" in proof_real["trap"]
+        )
         court_cases = []
         upload_text = "The Eiffel Tower is located in Paris, France. It opened in 1889."
         upload_path = os.path.join(tempfile.gettempdir(), "claim-autopsy-upload.txt")
@@ -230,6 +247,9 @@ def main():
         "corpus_items": corpus,
         "court_default": court_default,
         "court_cases": court_cases,
+        "proof_fake": proof_fake,
+        "proof_real": proof_real,
+        "proof_ok": proof_ok,
         "court_receipt_chars": len(court_receipt),
         "court_upload": court_upload,
         "court_ok": court_ok,
@@ -238,7 +258,7 @@ def main():
         "batch_ok": batch_ok,
         "page_errors": errors,
         "external_requests": requests,
-        "ok": not bad and not cit_bad and court_ok and batch_ok and not errors and not requests and corpus == 112,
+        "ok": not bad and not cit_bad and court_ok and proof_ok and batch_ok and not errors and not requests and corpus == 112,
     }
     print(json.dumps(payload, ensure_ascii=False))
     return 0 if payload["ok"] else 1

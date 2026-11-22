@@ -6,7 +6,7 @@ screen / reviewer access. The local product is already built and verified.
 **Current state**
 
 - `python -m core.audit final` → **48/48, all_pass=True**
-- run receipt → `44144a20a8d60f1d0e8c3ee491f6eb24`, **46 artefacts**, exit 0
+- run receipt → `6bc6cc10a55cadabf28137bb1547199a`, **46 artefacts**, exit 0
 - `FINAL_MANIFEST.md` → **0 problems** (row count is in the file)
 - court fixtures → **33/33**; batch fixtures → **6/6**; browser checks → static **ok**, live **ok**
 - live 3B → **20–35 s** per docket; the page shows four real stages instead of a blank spinner
@@ -44,7 +44,7 @@ python -m core.audit final
 ```
 
 `git status --short` should print nothing. Expect **48/48**, including `A8_no_secrets keys=0` and
-`A37_run_receipt` with receipt `44144a20a8d60f1d0e8c3ee491f6eb24`.
+`A37_run_receipt` with receipt `6bc6cc10a55cadabf28137bb1547199a`.
 
 1.4 Create the empty public repo at `https://github.com/new` (name `claim-autopsy`, Public, no
 README), then add the remote and push:
@@ -194,7 +194,7 @@ Numbers to paste, exactly:
 | Court fixtures | 33/33 |
 | Batch fixtures | 6/6 |
 | Run receipt | 46 artefacts |
-| Final manifest | 168 files |
+| Final manifest | row count is in the file |
 
 Do not round these into larger claims. Do not describe the static court as live.
 

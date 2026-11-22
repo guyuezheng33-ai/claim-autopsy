@@ -151,8 +151,10 @@ Python, `llama.cpp`, Qwen2.5-3B-Instruct-GGUF, HTML, CSS, JavaScript, SHA-256 co
 ## 14. Try it
 
 - Repository: `https://github.com/guyuezheng33-ai/claim-autopsy`
-- Live demo: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html`
+- Public recorded demo: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?demo=struck`
 - Video: `https://aka.doubaocdn.com/s/OVFalOSwhn`
+
+The demo link opens on the 10-second proof: the adversarial fabricated quotation is shown, the judge strikes it as `quote_not_found`, and the verdict remains with the source. The page labels that fixture as a fixture; a second button shows a real recorded 1.5B mistake.
 
 These are the only three fields that require the author's accounts. No URL is fabricated.
 Devpost normally embeds video only from YouTube or Vimeo; the event text also accepts a visual
