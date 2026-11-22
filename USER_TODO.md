@@ -6,7 +6,7 @@ screen / reviewer access. The local product is already built and verified.
 **Current state**
 
 - `python -m core.audit final` → **48/48, all_pass=True**
-- run receipt → `cf1712b836791dbb88a9d4480f870b7a`, **46 artefacts**, exit 0
+- run receipt → `aa9f955c630d786ad231215f82651de4`, **46 artefacts**, exit 0
 - `FINAL_MANIFEST.md` → **0 problems** (row count is in the file)
 - court fixtures → **33/33**; batch fixtures → **6/6**; browser checks → static **ok**, live **ok**
 - live 3B → **20–35 s** per docket; the page shows four real stages instead of a blank spinner
@@ -44,7 +44,7 @@ python -m core.audit final
 ```
 
 `git status --short` should print nothing. Expect **48/48**, including `A8_no_secrets keys=0` and
-`A37_run_receipt` with receipt `cf1712b836791dbb88a9d4480f870b7a`.
+`A37_run_receipt` with receipt `aa9f955c630d786ad231215f82651de4`.
 
 1.4 Create the empty public repo at `https://github.com/new` (name `claim-autopsy`, Public, no
 README), then add the remote and push:

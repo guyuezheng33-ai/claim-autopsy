@@ -5,6 +5,11 @@
  */
 /* __DATA_PLACEHOLDER__ */
 
+const LOCAL_SERVER = typeof location !== "undefined" &&
+  (location.protocol === "http:" || location.protocol === "https:") &&
+  (location.hostname === "127.0.0.1" || location.hostname === "localhost" ||
+   location.hostname === "[::1]" || location.port === "8765");
+
 const CONNECTORS = ["and","also","but","plus","however","moreover","in addition"];
 const NO_SPLIT = ["and","but","because","so","otherwise","which","that","besides"];
 const MIN_SCORE = 1.2, CONFLICT = 0.45, ANCHOR_MIN = 0.42;
@@ -1188,7 +1193,7 @@ function jumpToCorpus(idx){
   if(card.scrollIntoView) card.scrollIntoView({behavior:"smooth",block:"start"});
 }
 async function probeMode(){
-  if(typeof location==="undefined" || location.protocol==="file:") return;
+  if(!LOCAL_SERVER) return;
   try {
     const r = await fetch("/api/status", {cache:"no-store"});
     if(r.ok){
@@ -1256,7 +1261,7 @@ function render(r, mode){
 
 let API_OK = null;
 async function apiReady(){
-  if (location.protocol === "file:") return false;
+  if (!LOCAL_SERVER) return false;
   if (API_OK !== null) return API_OK;
   try { const r = await fetch("/api/status", {cache:"no-store"}); API_OK = r.ok; }
   catch(e){ API_OK = false; }

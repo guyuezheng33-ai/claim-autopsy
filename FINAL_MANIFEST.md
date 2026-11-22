@@ -37,7 +37,7 @@ A33  PASS 5 probes: a two-step chain is derived and labelled, an agreeing third 
 A34  PASS 97/112 cards carry an archived paragraph: 97 verified, 13 unresolved, 1 page_changed, 1 source_changed; exc...
 A35  PASS 5 external dev datasets recomputed from the frozen slice; accuracy and refusal match the published run with...
 A36  PASS risk/cure classified and kept apart, risk/prevention kept together, harm/harm still decided; susceptibility...
-A37  PASS the acceptance run carries a receipt (cf1712b836791dbb88a9d4480f870b7a) that binds 46 artefacts by SHA-256,...
+A37  PASS the acceptance run carries a receipt (aa9f955c630d786ad231215f82651de4) that binds 46 artefacts by SHA-256,...
 A38  PASS the built page ran in edge; the court docket plus 10 corpus demos and 3 citation demos were clicked, each r...
 A39  PASS the external table carries a receipt (8d381b4a0b0627cd90bac5257c27f869): two runs with exit codes and outpu...
 A3   PASS comma input -> 3 atoms; enumeration input -> 3 atoms; compound subject -> 1 atom(s), first noun kept=True
@@ -90,7 +90,7 @@ project file not listed in its own table — it cannot hash itself.
 | README.md | 15573 | 158685ad3f072a17 |
 | REFACTOR_PLAN_CN.md | 30946 | afa4be15516a34da |
 | SUBMISSION.md | 15976 | 612d25bc5f6cfd93 |
-| USER_TODO.md | 8050 | d857db94a7d879e9 |
+| USER_TODO.md | 8050 | de9be8d59853a4a2 |
 | core/__init__.py | 89 | 0797e0173f8c3939 |
 | core/adjudicate.py | 9736 | 910e59c341d71ed5 |
 | core/audit.py | 134578 | c05c77edd8660903 |
@@ -149,7 +149,7 @@ project file not listed in its own table — it cannot hash itself.
 | eval/bench_court.csv | 86 | d58961d98a4121c2 |
 | evidence/DATA_STATUS.md | 28296 | 39200846e0129189 |
 | evidence/_cards_evidence_backup.jsonl | 98892 | e19d83bf947e708a |
-| evidence/acceptance_final.json | 15509 | 061402691695e830 |
+| evidence/acceptance_final.json | 15509 | 5c1f7133c3748564 |
 | evidence/ai_lift.json | 12123 | 6c3d3d77a0ac80d3 |
 | evidence/ai_uplift.json | 14722 | 0107c24d1c6eb0ac |
 | evidence/cards_evidence.jsonl | 110368 | e48986cd0aabaa48 |
@@ -168,7 +168,7 @@ project file not listed in its own table — it cannot hash itself.
 | evidence/oracle_eval.json | 48940 | a297b4780629f86c |
 | evidence/paragraphs.jsonl | 2002060 | 084ada8b29201374 |
 | evidence/retractions.jsonl | 13672 | ddacb0349a16890d |
-| evidence/run_receipt.json | 5573 | ad8784cb11a6365b |
+| evidence/run_receipt.json | 5573 | 6fc26e7311fd0800 |
 | evidence/screenshots/01-ai-contrast.png | 99016 | d1e1543f70d8a7db |
 | evidence/screenshots/02-result-demo1.png | 84045 | 8a21d5e6be8c8b0a |
 | evidence/screenshots/03-conflict-demo4.png | 110226 | 970e22dc872279fa |
@@ -247,8 +247,8 @@ project file not listed in its own table — it cannot hash itself.
 | tools/session_log.py | 7287 | 740af53575e8c6c0 |
 | tools/sync_frontend.py | 1878 | d35474348af483d5 |
 | tools/verify_sessions.py | 7275 | f20043e5a0f456a7 |
-| web/app.js | 81124 | 3c3ba3cca8bb95ff |
+| web/app.js | 81334 | cdd5e2cb9b7edf11 |
 | web/court.js | 43143 | 7ac72eacd77bf673 |
 | web/court_batch_replay.js | 12351 | 7518b86559b14af3 |
 | web/court_replay.js | 31239 | 989e2c890efc8ea8 |
-| web/index.html | 231701 | f28f9f12d93e4fff |
+| web/index.html | 231866 | 78c59fbbf3201d0b |

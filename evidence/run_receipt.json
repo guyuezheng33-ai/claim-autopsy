@@ -1,11 +1,11 @@
 {
   "schema": "claim-autopsy/receipt/1",
-  "generated_at": "2026-11-22T15:24:37Z",
+  "generated_at": "2026-11-22T15:29:37Z",
   "run_tag": "final",
   "command": "python.exe -m core.audit final",
   "exit_code": 0,
   "bootstrap": false,
-  "stdout_sha256": "2d3c931292485ec4e7a667f1838387b057647be15e1406271ede48efa75e5689",
+  "stdout_sha256": "91b9f5339e71481cf47ad866c87001b8560cbfe37e35b47fcd7b73f604356fd9",
   "stdout_tail": [
     "------------------------------------------------------------",
     "Result 48/48  all_pass=True",
@@ -48,8 +48,8 @@
     "evidence/paragraphs.jsonl": "084ada8b292013747f433b4003ff88d6154749bdd68decc1e288931fc74b4881",
     "evidence/court_live.json": "2c0e6d63c2920e618f5e0035359865225edf2d5f03f558e47beec69fb197aaf1",
     "evidence/ai_uplift.json": "0107c24d1c6eb0ac096d306a2cfc545a77fe211f6611dd7cf6b8665e8f49e262",
-    "web/index.html": "f28f9f12d93e4ffffb3e0573ce03dcd1d19954737be192dd08f3c6fd0bd65aa3",
-    "web/app.js": "3c3ba3cca8bb95ffd4ec0c86a8fa88907dede29e7ba56ff1e04f3f2e9b61e929",
+    "web/index.html": "78c59fbbf3201d0bbc983dfafdab01e4ab2f1961afb9966668b2cf69a60119fe",
+    "web/app.js": "cdd5e2cb9b7edf110c7998f9ebcfe04151d77efb380736c79edf47885c05bd3e",
     "web/court.js": "7ac72eacd77bf67305644fce28aa05218ac0a92b344252de1a7d97e05399cb06",
     "web/court_replay.js": "989e2c890efc8ea8ae312dd8c3b7b1c5b956c32210a099098d04dbe85db8bdf6",
     "web/court_batch_replay.js": "7518b86559b14af340534456efa7a00e8f892954fb8b8aabe870ce25b22057c5",
@@ -69,5 +69,5 @@
     "evidence/screenshots/25-court-live.png": "9bfc4ca4c6080b19f3f2ebbd9e790fa4c883f416178106f27673d73fa1c30441",
     "evidence/screenshots/26-court-batch.png": "42ba50428bc3f490dbf619a2cd1fb5e321cf62bed371698943cd6f4382fa02da"
   },
-  "receipt_id": "cf1712b836791dbb88a9d4480f870b7a"
+  "receipt_id": "aa9f955c630d786ad231215f82651de4"
 }
