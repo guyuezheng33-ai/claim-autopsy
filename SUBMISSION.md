@@ -2,7 +2,7 @@
 
 Paste-ready English copy for the Devpost fields. Numbers match the current repository; do not replace them with rounder numbers.
 
-> **Judge shortcut:** open `...?judge=1`, then click **Next →** five times. The path is trap → real recorded mistake → accepted quote → four-source conflict → receipt for the struck quote. A 57.4s captioned screen recording is at `evidence/demo_60s.mp4`.
+> **Judge shortcut:** open `...?judge=1`, then click **Next →** five times. The path is trap → real recorded mistake → accepted quote → four-source conflict → receipt for the struck quote. A 57.4s captioned screen recording is at `evidence/demo_60s.mp4`, and `web/demo.html` embeds it as a public visual walkthrough.
 
 ---
 
@@ -155,8 +155,9 @@ Python, `llama.cpp`, Qwen2.5-3B-Instruct-GGUF, HTML, CSS, JavaScript, SHA-256 co
 - Repository: `https://github.com/guyuezheng33-ai/claim-autopsy`
 - Public recorded demo, judge mode: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?judge=1`
 - Shorter proof-only link: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?demo=struck`
+- Public visual walkthrough: `https://guyuezheng33-ai.github.io/claim-autopsy/web/demo.html` — embeds the 57.4s captioned MP4 and the five steps.
 - Video file: [`evidence/demo_60s.mp4`](evidence/demo_60s.mp4) — 57.4s, 1280×720, captioned, silent; five steps end on the struck-quote receipt.
-- Public video URL: `<upload evidence/demo_60s.mp4 to YouTube unlisted or Vimeo; paste the URL here before submitting>`
+- Devpost video field: use the public visual-walkthrough URL above. For a native YouTube/Vimeo embed, upload `evidence/demo_60s.mp4` and paste the platform URL.
 
 The judge-mode link hides the free-form form, starts on step 1, and exposes a five-step rail:
 trap, real model mistake, accepted quote, four-source conflict, receipt. The page labels the
@@ -203,7 +204,7 @@ Numbers used in the Devpost form:
 | Acceptance gates | 48/48 |
 | Court fixtures | 33/33 |
 | Batch fixtures | 6/6 |
-| Run receipt | 55 artefacts |
+| Run receipt | 56 artefacts |
 | Final manifest | 0 problems; row count is in `FINAL_MANIFEST.md` |
 
 The static page is a recording; the live court is `python serve.py`. Do not describe the static
@@ -226,7 +227,8 @@ LLM coding assistance was used for refactoring and test scaffolding. Every behav
 - [x] Public repository URL and license visible
 - [x] Hosted demo URL, or explicit “run locally” instruction
 - [x] 60-second captioned screen recording: `evidence/demo_60s.mp4` (57.4s)
-- [ ] Public YouTube unlisted / Vimeo URL pasted into the Devpost video field
+- [x] Public visual walkthrough: `web/demo.html` embeds the MP4 with no external player
+- [ ] Optional native YouTube unlisted / Vimeo embed URL pasted into the Devpost video field
 - [x] Screenshots: judge path, struck, real model mistake, supported, not-in-source, conflict, receipt
 - [ ] Devpost team fields and eligibility
 - [x] No API keys, private data or reviewer-only links

@@ -7,7 +7,7 @@ and verified.
 **Current state**
 
 - `python -m core.audit final` → **48/48, all_pass=True**
-- run receipt → `28e230bc51bdb18031b5a1e567fde8ef`, **55 artefacts**, exit 0
+- run receipt → `ec73045a6a4ab396c62c9266270a1951`, **56 artefacts**, exit 0
 - `FINAL_MANIFEST.md` → **0 problems** (row count is in the file)
 - court fixtures → **33/33**; batch fixtures → **6/6**; browser checks → static **ok**, live **ok**
 - judge path → `?judge=1`, five steps, 390px mobile assertion, **Full product →** exit
@@ -47,7 +47,7 @@ python -m core.audit final
 ```
 
 `git status --short` should print nothing. Expect **48/48**, including `A8_no_secrets keys=0` and
-`A37_run_receipt` with receipt `28e230bc51bdb18031b5a1e567fde8ef`.
+`A37_run_receipt` with receipt `ec73045a6a4ab396c62c9266270a1951`.
 
 1.4 Create the empty public repo at `https://github.com/new` (name `claim-autopsy`, Public, no
 README), then add the remote and push:
@@ -128,16 +128,16 @@ restart `serve.py`. Do not use a GPU backend; this build is pinned to `-ngl 0`.
 
 ---
 
-## Step 4. Upload the encoded 60-second video (10–15 min)
+## Step 4. Share the encoded 60-second video (10–15 min, optional platform upload)
 
 The captioned screen recording is already built: `evidence/demo_60s.mp4` — 57.4 s, 1280×720,
 five judge-path steps, silent with burned-in captions. It ends on the struck-quote receipt.
-Re-record only if you want a voiceover; `evidence/video_script.md` still has the six English lines.
+It is also embedded in the public visual walkthrough: `web/demo.html` on Pages.
 
-Upload to **Vimeo (free)** or **YouTube (unlisted)**; do not upload a raw MP4 as the only copy. Devpost
-normally embeds video only from YouTube or Vimeo. The event text also accepts a “visual walkthrough”,
-so a captioned screenshot walkthrough on Pages is a fallback if the form allows it, but check the
-actual Devpost field before relying on that. Paste the public link into `SUBMISSION.md` section 14.
+For a native Devpost embed, upload to **Vimeo (free)** or **YouTube (unlisted)**. Devpost normally
+embeds video only from YouTube or Vimeo. The public `demo.html` URL is a visual-walkthrough fallback
+and works without any platform account. Paste the platform link into `SUBMISSION.md` section 14 if
+you upload one.
 
 ---
 
@@ -193,7 +193,7 @@ Numbers to paste, exactly:
 | Acceptance gates | 48/48 |
 | Court fixtures | 33/33 |
 | Batch fixtures | 6/6 |
-| Run receipt | 55 artefacts |
+| Run receipt | 56 artefacts |
 | Final manifest | row count is in the file |
 
 Do not round these into larger claims. Do not describe the static court as live.

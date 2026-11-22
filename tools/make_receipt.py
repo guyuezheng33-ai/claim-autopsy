@@ -59,6 +59,7 @@ ARTEFACTS = [
     "evidence/ai_uplift.json",
     # the second implementation the browser runs
     "web/index.html",
+    "web/demo.html",
     "web/app.js",
     "web/court.js",
     "web/court_replay.js",

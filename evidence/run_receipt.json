@@ -1,11 +1,11 @@
 {
   "schema": "claim-autopsy/receipt/1",
-  "generated_at": "2026-11-22T16:06:45Z",
+  "generated_at": "2026-11-22T16:13:38Z",
   "run_tag": "final",
   "command": "python.exe -m core.audit final",
   "exit_code": 0,
   "bootstrap": false,
-  "stdout_sha256": "56156c260a700e5546adeac878147507432a326590157a60fbad51e7f3c34041",
+  "stdout_sha256": "a270a8c98704af04dbb5a23d822251be44d1dc20281ce75051033132cf8603c4",
   "stdout_tail": [
     "------------------------------------------------------------",
     "Result 48/48  all_pass=True",
@@ -49,6 +49,7 @@
     "evidence/court_live.json": "2c0e6d63c2920e618f5e0035359865225edf2d5f03f558e47beec69fb197aaf1",
     "evidence/ai_uplift.json": "fcc39e4e6bba89bc8b64aae07092bd52f36b3a3ad970b57b52b41058c6a3a863",
     "web/index.html": "8204fcf4cc6a77e9b755d38bf85f82592686799b49bd21638ee12bafd567809b",
+    "web/demo.html": "3485f76e00426da819af2b2549c5b1a5cc1f11657793e93328cbe335f0ea0182",
     "web/app.js": "cdd5e2cb9b7edf110c7998f9ebcfe04151d77efb380736c79edf47885c05bd3e",
     "web/court.js": "a1a6f1b917aecdb19f765f0fe42f31583066f7f549de127dae444a4931854174",
     "web/court_replay.js": "989e2c890efc8ea8ae312dd8c3b7b1c5b956c32210a099098d04dbe85db8bdf6",
@@ -61,10 +62,10 @@
     "tools/build_court_replay.py": "95415271c6c51eb399d48f42b771c5a57298d1c6ac11dee5f681b2228a88f6e9",
     "tools/build_court_batch_replay.py": "7ba3a9f760ea0a2832b9c75368acefd7e09dc5b38af3b60abec599790678962a",
     "tools/run_ai_uplift.py": "9ca2057d0bf8c3fb298c5729f4ccff5498121d206a2680b630e196c93e5d8ca9",
-    "README.md": "7a82a3665726bea185b0964c90302692016aad8f74dd57fb5ff422c6763ab97e",
-    "SUBMISSION.md": "797be815ecfa2a4424da0c8ac1ffd1636d2f029d6d73800eb7d07d544bcf426a",
-    "COMPETITION_SCORECARD_CN.md": "4539ddd12cd05a4675c003a1621ba72d2a35b7beb5db29b0d6eeb5b4707a4aec",
-    "JUDGE_PATH.md": "c3b6493a8d6a1891d3806bafda712dd0c8f262127c1b6699dedc7e7ec4ede29f",
+    "README.md": "db0bc2c05ecb4f80654bebb43522f78427bd280627dd856cebf83249cffc0733",
+    "SUBMISSION.md": "d0577dc00ac8feebcb5f1fe095abad6ee2961477b386ef1e8a620a45aad76538",
+    "COMPETITION_SCORECARD_CN.md": "9213ba51a1657593b2c9ffa7322d3b2f2b7eb3a1264fe329b8ffc0753cacbf1d",
+    "JUDGE_PATH.md": "ba922faaedd5882beca7ddd1a5f3a95a69d01e8301a6357c4aab72edc0950721",
     "evidence/screenshots/01-judge-path.png": "08df4d656bc55cbbbdfb731983324ec5ab8836633793f181a42f6f1783bb6ebb",
     "evidence/screenshots/02-real-model-mistake.png": "f91cd662172b45f67137b2286b32a3a7f5710e01d24bed5ad6f169929456b9a3",
     "evidence/screenshots/03-accepted-quote.png": "4712e17859c0dcb2444d541266ef5c462012fb3684910473937266f631a0c279",
@@ -78,5 +79,5 @@
     "evidence/screenshots/25-court-live.png": "9bfc4ca4c6080b19f3f2ebbd9e790fa4c883f416178106f27673d73fa1c30441",
     "evidence/screenshots/26-court-batch.png": "42ba50428bc3f490dbf619a2cd1fb5e321cf62bed371698943cd6f4382fa02da"
   },
-  "receipt_id": "28e230bc51bdb18031b5a1e567fde8ef"
+  "receipt_id": "ec73045a6a4ab396c62c9266270a1951"
 }

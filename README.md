@@ -49,6 +49,8 @@ Open the public recorded demo in judge mode:
 
 `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?judge=1`
 
+Public 57.4-second visual walkthrough (embeds the captioned MP4): `https://guyuezheng33-ai.github.io/claim-autopsy/web/demo.html`
+
 The page starts on step 1 and hides the free-form form. Use the rail, or **Next →**:
 
 1. **1 · Trap** — the adversarial quotation is struck as `quote_not_found`; the verdict stays `refuted`.

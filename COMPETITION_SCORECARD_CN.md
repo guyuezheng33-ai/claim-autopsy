@@ -49,7 +49,7 @@
 - `python -m core.court --fixtures` → **33/33**：12 个判决、13 个论据、5 个锚点、3 个输入。
 - `python -c "from core.court_batch import run_fixtures; ..."` → **6/6** 批量夹具：去重、跨源冲突、8 源上限、第 9 源拒绝、全未述、空 claim。
 - `python tools/run_ai_uplift.py` → 参考锚点 **8/8**；`--live` 3B **8/8**，去除锚点控制 **8/8** 回到 `not_in_source`。
-- `evidence/run_receipt.json`：正式收据，`exit=0`，55 个 artefact（代码、数据、页面、文档、7 张截图、57.4 秒视频）逐一绑定 SHA-256。
+- `evidence/run_receipt.json`：正式收据，`exit=0`，56 个 artefact（代码、数据、页面、文档、7 张截图、57.4 秒视频、公开 walkthrough）逐一绑定 SHA-256。
 - `evidence/ai_uplift.json`：3B live 8 案例基准 **8/8**；`evidence/court_live.json` 的 `runs` 同时保留 1.5B 与 3B 各 6 案例，根 `cases` 仍是 1.5B 静态回放。
 - `python tools/browser_check.py`：Edge 实测 10 个 corpus demo + 3 个 citation demo + court 静态 recorded + 4 源批量 + **`?judge=1` 五步路径**；**0 JS 异常、0 外网请求、112 卡**，`judge_path_ok=true`。
 - 公开仓库 `https://github.com/guyuezheng33-ai/claim-autopsy` 与 Pages 已上线；Pages 返回 200，页面资源无 `/api/status` 404。
@@ -116,10 +116,10 @@
 - 测试不是“跑通一个 demo”：包含伪造引文、未知 evidence、prompt injection、双否定、数量/人群/关系不符、空来源、超长输入、跨源冲突。
 - `tools/browser_check.py` 把 `?judge=1` 纳入自动验收：body judge mode、step 1 `quote_not_found`、step 2 `side_mismatch`、step 4 `rows=4/conflicts=1`、step 5 回到 trap 且 receipt pulse，并额外断言 390px 手机无横向溢出。
 - `evidence/demo_60s.mp4`：57.4 秒、1280×720、带字幕的五步 walkthrough；最后一帧是 struck quote 的 receipt。
+- `web/demo.html`：公开、零外链的 visual walkthrough 页，内嵌同一 MP4 并列出五步；不需要 YouTube/Vimeo 账号也能播放。
 
 **扣掉的 1 分**
 
-- 视频文件已编码，但还没有公开的 YouTube unlisted / Vimeo URL；Devpost 的 video 字段仍需要作者上传后回填。
 - 没有 3 条真人外部会话；A40 仍是 `6 recorded, 1 replayable, 0 external operators`。
 - 3B 模型在这 8 个真同义案例上已 8/8，但锚点补全增加了延迟；开放域召回仍不能承诺。
 
@@ -135,7 +135,7 @@
 | 实用/UX 24/25 | 24/25 | 达标 |
 | 测试沟通 19/20 | 19/20 | 达标 |
 
-**这不是“靠视频/链接补分”的 96。** 96 里只有 1 分来自测试沟通的公开材料缺口；核心分仍来自产品本身：48 门禁、五步 judge path、浏览器实测、57.4 秒成片、7 张截图和可复算收据。
+**这不是“靠视频/链接补分”的 96。** 96 里只有 1 分卡在“3 条真人外部会话”这一项；核心分仍来自产品本身：48 门禁、五步 judge path、浏览器实测、57.4 秒成片 + 公开 walkthrough、7 张截图和可复算收据。
 
 ---
 
@@ -143,7 +143,7 @@
 
 1. **公开 demo + judge mode**：已交付（`?judge=1` 五步路径、`?demo=struck` 短链、Pages 200、0 外网请求）。
 2. **7 张截图**：已交付（`evidence/screenshots/`），覆盖 judge path、真实模型错误、accepted quote、4 源冲突、receipt、supported、not-in-source。
-3. **60 秒视频**：成片已交付（`evidence/demo_60s.mp4`，57.4s，带字幕）；仍缺公开的 YouTube unlisted/Vimeo URL，Devpost 字段需要作者上传后回填。
+3. **60 秒视频 + 公开 walkthrough**：已交付（`evidence/demo_60s.mp4`，57.4s；`web/demo.html` 内嵌播放）；YouTube/Vimeo 原生嵌入只是可选增强。
 4. **3 条外部会话**：仍缺；A40 的 `external operators` 还是 0。
 
 产品分已到 96；剩余 1 分只应来自真实外部用户证据和稳定视频，不应继续堆功能。

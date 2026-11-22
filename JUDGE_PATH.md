@@ -82,6 +82,10 @@ If you only want the proof panel without judge mode, use the shorter deep link:
 
 `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?demo=struck`
 
+If you cannot click through five steps, the 57.4-second captioned visual walkthrough is public:
+
+`https://guyuezheng33-ai.github.io/claim-autopsy/web/demo.html`
+
 ## Optional live path
 
 The public page is a recording. For live AI on any text:
