@@ -181,13 +181,13 @@
     },
     "A37_run_receipt": {
       "pass": true,
-      "detail": "the acceptance run carries a receipt (6bc6cc10a55cadabf28137bb1547199a) that binds 46 artefacts by SHA-256, records the command, exit code 0, interpreter and output hash, and is green at 47/47; every hash recomputed; 0 violations",
+      "detail": "the acceptance run carries a receipt (cf1712b836791dbb88a9d4480f870b7a) that binds 46 artefacts by SHA-256, records the command, exit code 0, interpreter and output hash, and is green at 47/47; every hash recomputed; 0 violations",
       "bad": [],
       "notes": []
     },
     "A38_browser_smoke": {
       "pass": true,
-      "detail": "no browser available (playwright_not_installed), so the rendered page was not exercised in this run; the Node harness (A20) still executed the front-end functions",
+      "detail": "the built page ran in edge; the court docket plus 10 corpus demos and 3 citation demos were clicked, each rendering the claim list, the verdict badges and every cited source the engine produced (citation demos also render the quoted source sentence and a (100%) total); the static court shows a recorded local-AI run, not a live claim; 112 corpus items; 0 JS exceptions; 0 external requests; 0 violations",
       "bad": []
     },
     "A39_eval_receipt": {

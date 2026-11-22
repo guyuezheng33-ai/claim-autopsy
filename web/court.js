@@ -15,7 +15,9 @@
   var currentMulti = null;
   var batchMode = false;
   var maxSources = 8;
-  var isHttp = location.protocol === "http:" || location.protocol === "https:";
+  var isLocalServer = (location.protocol === "http:" || location.protocol === "https:") &&
+    (location.hostname === "127.0.0.1" || location.hostname === "localhost" ||
+     location.hostname === "[::1]" || location.port === "8765");
   var liveProgress = null;
   var liveTimer = null;
   var liveToken = 0;
@@ -186,7 +188,7 @@
       el.textContent = "LIVE AI · JUDGE VERIFIED";
     } else {
       el.className = "court-badge replay";
-      el.textContent = isHttp ? "RULES-ONLY DOCKET" : "RECORDED · RULES-ONLY";
+      el.textContent = isLocalServer ? "RULES-ONLY DOCKET" : "RECORDED · RULES-ONLY";
     }
   }
 
@@ -412,7 +414,7 @@
     if (run) run.textContent = batchMode ? "Audit all sources →" : "Open the trial →";
     if (st) st.textContent = batchMode
       ? "One claim against up to 8 sources · rules triage first, AI only on unsettled sources"
-      : (isHttp ? "Live judge · local AI advocates" : "Static demo · recorded rules-only dossier");
+      : (isLocalServer ? "Live judge · local AI advocates" : "Static demo · recorded rules-only dossier");
     if (batchMode && document.getElementById("courtSourceRows") &&
         !document.getElementById("courtSourceRows").children.length) {
       sourceRow("Source 1", "");
@@ -509,7 +511,7 @@
         return;
       }
     }
-    if (!isHttp) {
+    if (!isLocalServer) {
       var replay = window.COURT_BATCH_REPLAY;
       if (replay && replay.cases && replay.cases[claim]) {
         renderMulti(replay.cases[claim]);
@@ -791,7 +793,7 @@
       err2.textContent = "Source is " + source.length.toLocaleString() + " characters; the court accepts up to 20,000. Trim to the passage the claim cites.";
       return;
     }
-    if (!isHttp) {
+    if (!isLocalServer) {
       var d = localExample(claim, source);
       if (d) { d.demo_label = "RECORDED DOSSIER · no model called"; render(d, activeKey); }
       else {
@@ -857,7 +859,7 @@
         b.textContent = ex.label;
         b.addEventListener("click", function () {
           fill(ex);
-          if (isHttp) runLive(true);
+          if (isLocalServer) runLive(true);
         });
         chips.appendChild(b);
       });
@@ -897,7 +899,7 @@
       shell.style.display = showing ? "block" : "none";
       this.textContent = showing ? "Legacy audit" : "Back to court";
     });
-    if (isHttp) {
+    if (isLocalServer) {
       fetch("/api/status").then(function (r) { return r.json(); }).then(function (s) {
         if (s && s.ai_available) {
           document.getElementById("courtLive").style.display = "inline-block";
