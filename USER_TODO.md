@@ -7,7 +7,7 @@ and verified.
 **Current state**
 
 - `python -m core.audit final` → **48/48, all_pass=True**
-- run receipt → `ec73045a6a4ab396c62c9266270a1951`, **56 artefacts**, exit 0
+- run receipt → `d191a3624950efe8998fcf7d77b767ff`, **56 artefacts**, exit 0
 - `FINAL_MANIFEST.md` → **0 problems** (row count is in the file)
 - court fixtures → **33/33**; batch fixtures → **6/6**; browser checks → static **ok**, live **ok**
 - judge path → `?judge=1`, five steps, 390px mobile assertion, **Full product →** exit
@@ -139,24 +139,52 @@ embeds video only from YouTube or Vimeo. The public `demo.html` URL is a visual-
 and works without any platform account. Paste the platform link into `SUBMISSION.md` section 14 if
 you upload one.
 
+Upload kit:
+
+```text
+Title: Claim Autopsy — AI argues. Evidence decides. (57s)
+Description: A citation court. The AI prosecutor and defence propose arguments; a deterministic
+judge checks every quotation character by character and strikes anything that is not in the
+source. Five steps: trap, real model mistake, accepted quote, four-source conflict, receipt.
+Repo: https://github.com/guyuezheng33-ai/claim-autopsy
+Demo: https://guyuezheng33-ai.github.io/claim-autopsy/web/demo.html
+Tags: AI, fact-checking, citations, hackathon, local-first
+Visibility: Unlisted (not private; Devpost reviewers need the link)
+```
+
 ---
 
-## Step 5. External reviewer sessions (optional, 30–45 min)
+## Step 5. External reviewer sessions (12–15 min per person, 2–3 people)
 
-Current A40 external-operator count is **0**. This is a testing-evidence gap, not a product-score
-gap; it does not change the 94/100 product score by itself.
+Current A40 external-operator count is **0**. This is the remaining Testing & Communication gap:
+the independent judge scored **16/20** partly because all six recorded sessions are `operator=self`.
+It does not change the 96/100 internal product score, but it is visible to a reviewer.
 
-Rehearse first:
+Run one rehearsal first:
 
 ```powershell
 python tools/run_external_session.py --rehearse
 ```
 
-Then run 2–3 sessions with people who are not you:
+Then run 2–3 sessions with people who are not you. Each person gets the same three claims
+(refuted, supported, refused) and four questions; no training and no scripts:
 
 ```powershell
 python tools/run_external_session.py --operator external-reviewer --channel screen-share
 ```
+
+What the reviewer does (12–15 min):
+
+1. Open the live page or the recorded judge path; paste the three claims when asked.
+2. Say whether they would keep, drop, rephrase or have no opinion on each verdict.
+3. Answer the two questions at the end: one sentence why, and would they pay.
+4. You type their words; do not clean them up or answer for them.
+
+Copy-paste invite:
+
+> Can you spare 12 minutes to try a citation-checking demo? I need one external reviewer for a
+> student hackathon. You will check three short claims, say whether you would use or discard the
+> result, and answer two questions. No install and no personal data; the demo runs locally.
 
 Record what they actually did, including “discarded” or “re_prompted”. Then:
 

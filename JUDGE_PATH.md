@@ -86,14 +86,22 @@ If you cannot click through five steps, the 57.4-second captioned visual walkthr
 
 `https://guyuezheng33-ai.github.io/claim-autopsy/web/demo.html`
 
-## Optional live path
+## Optional live path (if you want to test the AI, not the recording)
 
-The public page is a recording. For live AI on any text:
+The public page is a recording. For live AI on any text, from the repo root:
 
 ```text
-python serve.py
-# open http://127.0.0.1:8765
+python tools/get_model.py --size 3b   # one-time, 2.0 GB
+python serve.py                       # starts llama.cpp + the HTTP server
+# open http://127.0.0.1:8765/?judge=1
 ```
 
-The local 3B model runs on CPU with no API key. First docket is about 20-35 seconds.
-The page shows four real stages and then `LIVE AI - JUDGE VERIFIED`.
+What to verify:
+
+- the badge changes from `RECORDED LIVE AI RUN` to `LIVE AI - JUDGE VERIFIED`;
+- the four phases stream (rules -> evidence -> AI advocates -> judge), not a blank spinner;
+- paste your own claim/source; the first 3B docket is about 20-35 seconds;
+- if the model is missing, the page says `RULES-ONLY DOCKET`; it never fakes AI.
+
+This is the only path that exercises the model live. The public Pages link is intentionally a
+recorded run, so a reviewer with no local setup can still see the product's central moment.

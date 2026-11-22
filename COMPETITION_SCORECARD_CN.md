@@ -31,7 +31,7 @@
 
 - 主路径不是“AI 可选增强”。用户提交 claim + source 后，控方和辩方各自调用本地 Qwen2.5-3B，提出带 `atom_id` / `evidence_id` / 原文引文 / 关系的论据。
 - AI 现在能改变判决：当规则因术语差异判 `not_in_source` 时，模型可提出 `anchors`（如 `Aspirin → acetylsalicylic acid`）；法官用桥接后的 claim 重跑全部结构检查，通过后接受论据。AI 仍不能写 verdict。
-- `evidence/ai_uplift.json`：8 个“规则必失”案例，固定参考锚点 **8/8** 让法官从 `not_in_source` 改判；3B live **8/8** 自己提出锚点并改判，**8/8** 去掉锚点后回到 `not_in_source`，证明增量来自桥而不是放水。
+- `evidence/ai_uplift.json`：8 个“规则必失”案例，固定参考锚点 **8/8** 让法官从 `not_in_source` 改判；3B live **8/8** 自己提出锚点并改判，**8/8** 去掉锚点后回到 `not_in_source`，证明增量来自桥而不是放水。收据字段：`model_live=true`、`model_uplift=8`、`anchor_causal=8`、`without_anchors_still_not_in_source=8`，模型 `qwen2.5-3b-instruct-q4_k_m.gguf`；每个案例保留 latency、accepted/struck 台账与 bridge。
 - 页面直接显示模型名、总延迟、AI 提出数、法官接受数、击落数；不是藏在日志里。
 - 没有 AI 时，规则论据仍能出判决，但页面会明确标 `RULES-ONLY DOCKET`；有 AI 时才标 `LIVE AI` 或 `RECORDED LIVE AI RUN`。
 - 法官拥有唯一判决权：AI 不能写 `verdict`，伪造引文会被 `quote_not_found` 击落，未知 evidence 会被 `unknown_evidence` 击落，未落地锚点会被 `anchor_not_grounded` 击落。
@@ -45,12 +45,12 @@
 
 **证据**
 
-- `python -m core.audit final` → **48/48 all_pass=True**。
+- `python -m core.audit final` → **48/48 all_pass=True**（48 个验收 gate，不是 48 条单元测试；`tests/` 下另有 10 个 pytest，10 passed）。
 - `python -m core.court --fixtures` → **33/33**：12 个判决、13 个论据、5 个锚点、3 个输入。
 - `python -c "from core.court_batch import run_fixtures; ..."` → **6/6** 批量夹具：去重、跨源冲突、8 源上限、第 9 源拒绝、全未述、空 claim。
-- `python tools/run_ai_uplift.py` → 参考锚点 **8/8**；`--live` 3B **8/8**，去除锚点控制 **8/8** 回到 `not_in_source`。
+- `python tools/run_ai_uplift.py` → 参考锚点 **8/8**；`--live` 3B **8/8**，去除锚点控制 **8/8** 回到 `not_in_source`。`evidence/ai_uplift.json` 的 summary 与逐案例字段一致，`model_live=true`。
 - `evidence/run_receipt.json`：正式收据，`exit=0`，56 个 artefact（代码、数据、页面、文档、7 张截图、57.4 秒视频、公开 walkthrough）逐一绑定 SHA-256。
-- `evidence/ai_uplift.json`：3B live 8 案例基准 **8/8**；`evidence/court_live.json` 的 `runs` 同时保留 1.5B 与 3B 各 6 案例，根 `cases` 仍是 1.5B 静态回放。
+- `evidence/ai_uplift.json`：3B live 8 案例基准 **8/8**，含 8/8 去锚控制；`evidence/court_live.json` 的 `runs` 同时保留 1.5B 与 3B 各 6 案例，根 `cases` 仍是 1.5B 静态回放。
 - `python tools/browser_check.py`：Edge 实测 10 个 corpus demo + 3 个 citation demo + court 静态 recorded + 4 源批量 + **`?judge=1` 五步路径**；**0 JS 异常、0 外网请求、112 卡**，`judge_path_ok=true`。
 - 公开仓库 `https://github.com/guyuezheng33-ai/claim-autopsy` 与 Pages 已上线；Pages 返回 200，页面资源无 `/api/status` 404。
 - `evidence/screenshots/` 有 7 张 1440×900 截图，覆盖 judge path、真实模型错误、accepted quote、4 源冲突、receipt、supported、not-in-source。

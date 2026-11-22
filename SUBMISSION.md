@@ -24,6 +24,12 @@ Claim Autopsy narrows the question to one a reader can verify:
 
 That question has a checkable answer. The product returns a per-atom finding, the exact sentence and character range, the arguments that were accepted or struck, and a citation receipt. It does not decide whether the source itself is right, and it does not pretend to check the open web.
 
+**Why this is not another fact-checker:**
+
+- It does not output a truth label. It outputs a receipt a reader can re-check: quote, character range, strike code, verdict.
+- The model is allowed to lose. The visible product moment is a plausible AI argument being struck because the source does not contain it.
+- The same quotation, the same judge, only the bridge changes: the 8-case uplift baseline is a controlled test of whether AI contributed anything, not a demo of a confident answer.
+
 ## 4. What it does
 
 1. You paste a claim and the source you think supports it — or load a `.txt`/`.md` source, with a character count and a pre-run limit check.
@@ -48,7 +54,7 @@ The visible product moment is a struck argument: a quotation that looks right, d
 
 Without the model, the product still runs a rules-only docket. It can still reach a verdict, but it cannot show two adversarial cases, cannot surface a plausible fabricated quotation, and cannot show what a model would have claimed. With the model, the central experience exists. The AI is not a wrapper around a classifier: it produces the arguments the judge cross-examines.
 
-**The honest increment test:** `evidence/ai_uplift.json` holds 8 pairs where the rules docket returns `not_in_source`. With fixed reference anchors, the same judge verifies the same quotation in 8/8. A live local 3B run is reported separately and is never substituted for the fixed-anchor proof: it also reaches 8/8 after forced anchor completion, while failed attempts stay in the file. The control removes anchors from the model's own arguments and the verdict returns to `not_in_source`, so the change is caused by the bridge, not by a looser judge.
+**The honest increment test:** `evidence/ai_uplift.json` holds 8 pairs where the rules docket returns `not_in_source`. With fixed reference anchors, the same judge verifies the same quotation in 8/8. The live local 3B run is recorded separately and is never substituted for the fixed-anchor proof: `summary.model_live=true`, `model_uplift=8`, `anchor_causal=8`, `without_anchors_still_not_in_source=8`, model `qwen2.5-3b-instruct-q4_k_m.gguf`; each case keeps its own latency, accepted/struck ledger and bridge. The control removes anchors from the model's own arguments and the verdict returns to `not_in_source`, so the change is caused by the bridge, not by a looser judge.
 
 Method: one call per side, strict JSON, at most 3 arguments per atom per side, at most 8 atoms, 240-second timeout, parallel execution, no cloud dependency when the local model is installed. Unknown evidence ids, unknown atoms, bad JSON and invented quotes are discarded before the judge sees them. When the source uses a true synonym, the model may return `anchors`; the judge rewrites the claim with those terms and reruns every check. The live path also forces an anchor-only pass and asks one focused question per missing content phrase; a reversed pair is orientation-corrected but still verified. Anchors may not touch negation, relation verbs or numbers, and an ungrounded anchor is struck.
 
@@ -98,13 +104,13 @@ A second real case: `The Eiffel Tower is located in Paris.` against `The Eiffel 
 - **Local AI:** `llama.cpp` `llama-server` with `Qwen/Qwen2.5-3B-Instruct-GGUF` Q4_K_M, 2.0 GB, CPU-only `-ngl 0`, loopback port 8099. No API key and no outbound request are needed. A 1.5B fast profile and a 7B profile are configured; 3B is the measured default.
 - **Front end:** static HTML, CSS and vanilla JS. `web/court.js` renders the dossier and consumes the live phase stream. `web/court_replay.js` holds recorded dossiers. The static page works from `file://`; live inference requires `python serve.py`. The live panel shows four real phases, elapsed time and the final accepted/struck/bridge count.
 - **Data:** 33 court fixtures (12 verdict + 13 argument + 5 anchor + 3 input), 6 batch fixtures, 12 citation fixtures, 112 evidence cards from 41 authoritative sources for the legacy corpus audit.
-- **Testing:** 48 acceptance gates, SHA-256 run receipts binding every code/data/UI artefact, a real Edge browser check of single-source and batch court modes, 33/33 court fixtures and 6/6 batch fixtures, and an 8-case rules-lose / anchored-AI-wins baseline.
+- **Testing:** 48 acceptance gates (not 48 unit tests), 10 pytest unit tests, SHA-256 run receipts binding every code/data/UI artefact, a real Edge browser check of single-source and batch court modes, 33/33 court fixtures and 6/6 batch fixtures, and an 8-case rules-lose / live-3B / anchor-causal baseline.
 
 ## 8. Testing, failure cases and limits
 
 1. **Fabricated quotation.** The adversarial fixture invents “The flu vaccine contains live virus and causes influenza.” The judge strikes it with `quote_not_found`; it never enters the verdict. Gate A46 enforces the same path.
 2. **Vulkan backend produced garbage.** Qwen emitted repeated garbled tokens (`GGGG…` / `UmbGGGG…`) instead of JSON when layer 0 went to Vulkan. The fix is `-ngl 0` on CPU; `serve.py` sets it. This is a real environment bug, not a hypothetical.
-3. **A 3B model is not a reliable opponent.** It sometimes labels its relation incorrectly, returns an empty list on an unrelated source, or proposes only one anchor in the full argument schema. The judge catches these; that is the product working. Forced anchor completion raises the fixed 8-case live set to 8/8, but that is not a guarantee of open-domain recall or eloquence.
+3. **A 3B model is not a reliable opponent.** It sometimes labels its relation incorrectly, returns an empty list on an unrelated source, or proposes only one anchor in the full argument schema. The judge catches these; that is the product working. Forced anchor completion raises the fixed 8-case live set to 8/8 (`evidence/ai_uplift.json`, `model_live=true`), but that is not a guarantee of open-domain recall or eloquence.
 4. **No key and no model means rules-only.** The page says `RULES-ONLY DOCKET`; it does not fake AI. A static `file://` page says `RECORDED LIVE AI RUN`, never `LIVE`.
 5. **One source, English-first.** Heavy paraphrase or a source in another language can return `not_in_source`. This is a finding about the supplied source, not a claim that the statement is false.
 6. **Not an authoritative fact-check.** The judge checks whether the source states the claim, not whether the source is correct.
@@ -134,7 +140,7 @@ python tools/make_receipt.py final
 - The product has a zero-model fallback that is still useful and still honest.
 - A real local model runs the main path on CPU, with no key and no network.
 - The static page shows a real AI docket instead of a rules-only placeholder, and does not call it live.
-- 33/33 court fixtures, 6/6 batch fixtures, 8/8 fixed-anchor uplift cases, 8/8 live 3B uplift cases, 48 gates, full-artefact SHA-256 receipt.
+- 33/33 court fixtures, 6/6 batch fixtures, 8/8 fixed-anchor uplift cases, 8/8 live 3B uplift cases, 8/8 anchor-causal control, 48 gates, full-artefact SHA-256 receipt.
 
 ## 11. What we learned
 

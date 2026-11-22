@@ -7,7 +7,7 @@ that passed the acceptance suite, so a later change is detectable instead of bei
 hand, so the summary below cannot drift from the run it describes):
 
 ```
-total=48  passed=48  all_pass=True  run_tag=final  llm_mode="Local Qwen2.5-3B found, server not running"
+total=48  passed=48  all_pass=True  run_tag=final  llm_mode="Local Qwen2.5-3B · llama.cpp CPU"
 A10  PASS 112 cards (>=40), 41 sources (>=8), 0 off-whitelist URLs, 0 without status
 A11  PASS accuracy 100.0% (93/93); distribution={'refuted': 41, 'supported': 37, 'undetermined': 15}; false refusals=...
 A12  PASS consistency 100.0% (12/12); verdicts dropped to refusal=0
@@ -37,7 +37,7 @@ A33  PASS 5 probes: a two-step chain is derived and labelled, an agreeing third 
 A34  PASS 97/112 cards carry an archived paragraph: 97 verified, 13 unresolved, 1 page_changed, 1 source_changed; exc...
 A35  PASS 5 external dev datasets recomputed from the frozen slice; accuracy and refusal match the published run with...
 A36  PASS risk/cure classified and kept apart, risk/prevention kept together, harm/harm still decided; susceptibility...
-A37  PASS the acceptance run carries a receipt (ec73045a6a4ab396c62c9266270a1951) that binds 56 artefacts by SHA-256,...
+A37  PASS the acceptance run carries a receipt (d191a3624950efe8998fcf7d77b767ff) that binds 56 artefacts by SHA-256,...
 A38  PASS the built page ran in edge; the court docket plus 10 corpus demos and 3 citation demos were clicked, each r...
 A39  PASS the external table carries a receipt (8d381b4a0b0627cd90bac5257c27f869): two runs with exit codes and outpu...
 A3   PASS comma input -> 3 atoms; enumeration input -> 3 atoms; compound subject -> 1 atom(s), first noun kept=True
@@ -80,17 +80,17 @@ project file not listed in its own table — it cannot hash itself.
 | .gitattributes | 246 | d786b12647e3d229 |
 | .gitignore | 127 | 63be6eda6b057a24 |
 | ARCHITECTURE.md | 103509 | 2752818d4196eb74 |
-| COMPETITION_SCORECARD_CN.md | 12408 | 9213ba51a1657593 |
+| COMPETITION_SCORECARD_CN.md | 12837 | 883910ac0ac8671b |
 | DATA_DICTIONARY.md | 4036 | cfdff5cf201053cb |
 | DATA_PLAN.md | 23831 | 38bb51e3baed1104 |
 | Dockerfile | 307 | 1d774a1f5f6ab839 |
-| JUDGE_PATH.md | 3512 | ba922faaedd5882b |
+| JUDGE_PATH.md | 4082 | a7fc6319316b7b76 |
 | LICENSE | 1089 | 193fa3fab2956aa6 |
 | PRODUCT.md | 11213 | 97df89ab4a6a17d3 |
-| README.md | 15931 | db0bc2c05ecb4f80 |
+| README.md | 16031 | 9426e8e96954963e |
 | REFACTOR_PLAN_CN.md | 30989 | a34e55143e1fb0eb |
-| SUBMISSION.md | 18064 | d0577dc00ac8feeb |
-| USER_TODO.md | 8015 | b75b7100df0de115 |
+| SUBMISSION.md | 18807 | 691c08ce33a0bc38 |
+| USER_TODO.md | 9585 | 8f67d6c5b6e93f19 |
 | core/__init__.py | 89 | 0797e0173f8c3939 |
 | core/adjudicate.py | 9736 | 910e59c341d71ed5 |
 | core/audit.py | 134578 | c05c77edd8660903 |
@@ -149,9 +149,9 @@ project file not listed in its own table — it cannot hash itself.
 | eval/bench_court.csv | 86 | d58961d98a4121c2 |
 | evidence/DATA_STATUS.md | 28296 | 39200846e0129189 |
 | evidence/_cards_evidence_backup.jsonl | 98892 | e19d83bf947e708a |
-| evidence/acceptance_final.json | 15509 | 360ea429d7b66c57 |
+| evidence/acceptance_final.json | 15500 | 724a85c6e371e047 |
 | evidence/ai_lift.json | 12123 | 6c3d3d77a0ac80d3 |
-| evidence/ai_uplift.json | 6113 | fcc39e4e6bba89bc |
+| evidence/ai_uplift.json | 14508 | b153e186bf354249 |
 | evidence/cards_evidence.jsonl | 110368 | e48986cd0aabaa48 |
 | evidence/corpus_v10_expansion.json | 4508 | 51936372d3653713 |
 | evidence/court_live.json | 177238 | 2c0e6d63c2920e61 |
@@ -169,7 +169,7 @@ project file not listed in its own table — it cannot hash itself.
 | evidence/oracle_eval.json | 48940 | a297b4780629f86c |
 | evidence/paragraphs.jsonl | 2002060 | 084ada8b29201374 |
 | evidence/retractions.jsonl | 13672 | ddacb0349a16890d |
-| evidence/run_receipt.json | 6677 | 5259ccf1f5938ed8 |
+| evidence/run_receipt.json | 6677 | 21035f27e56bfa23 |
 | evidence/screenshots/01-ai-contrast.png | 99016 | d1e1543f70d8a7db |
 | evidence/screenshots/01-judge-path.png | 195194 | 08df4d656bc55cbb |
 | evidence/screenshots/02-real-model-mistake.png | 89405 | f91cd662172b45f6 |
