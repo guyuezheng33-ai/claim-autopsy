@@ -473,7 +473,7 @@
         </div>
       </div>
       <div class="court-top-right">
-        <span class="court-badge replay" id="courtModeBadge">RECORDED</span>
+        <span class="court-badge live" id="courtModeBadge">LIVE · CONNECTING</span>
         <a class="court-ghost" id="courtJudgeEnter" href="?judge=1">3-minute judge path</a>
         <button class="court-ghost" id="courtLive" style="display:none">Run live AI</button>
         <button class="court-ghost" id="showLegacy">Legacy audit</button>
@@ -501,7 +501,7 @@
         <button class="primary" type="button" id="courtProofRun">Show the fabricated quote →</button>
         <button type="button" id="courtProofReal">Show a real model mistake</button>
       </div>
-      <p class="court-proof-note">First case is an adversarial fixture, not a model run. Second case is an actual recorded 1.5B run. Both use the same deterministic judge.</p>
+      <p class="court-proof-note">First case is an adversarial fixture, not a model run. Second case is an actual recorded 1.5B run. For a fresh 3B run on your own citation, use the live panel below.</p>
       <div class="court-judge-rail" id="courtJudgeRail" aria-label="Three-minute judge path">
         <span class="jr-label">3-minute judge path</span>
         <button type="button" class="jr-step" data-judge-step="0">1 · Trap</button>
@@ -517,7 +517,7 @@
     <div class="court-card">
       <div class="court-own-head">
         <strong>Your own citation</strong>
-        <span>Static page replays recorded cases · live AI: <code>python serve.py</code></span>
+        <span>Hosted Qwen2.5-3B · your text goes to the Space only for this run · no install</span>
       </div>
       <div class="court-mode" id="courtSwitch">
         <button type="button" class="active" id="courtModeSingle">One source</button>
@@ -546,7 +546,7 @@
       </div>
       <div class="court-row">
         <button class="primary" id="courtRun">Open the trial →</button>
-        <span class="court-status" id="courtStatus">Static demo · recorded rules-only dossier</span>
+        <span class="court-status" id="courtStatus">Hosted live demo · click Open the trial</span>
       </div>
       <div class="court-progress" id="courtProgress" style="display:none" role="status" aria-live="polite">
         <div class="court-progress-head">
@@ -567,9 +567,10 @@
 
     <details class="court-setup" id="courtSetup">
       <summary>Want live AI on your own text?</summary>
-      <p>The static page cannot call a model. On this machine, start the local server; it uses the installed Qwen model with no API key.</p>
-      <pre>python serve.py
-# open http://127.0.0.1:8765</pre>
+      <p>This page calls a hosted Qwen2.5-3B Space for any claim you paste. The model runs on the Space; no API key is stored in your browser. For a fully local run, start <code>python serve.py</code> and open the same page on localhost.</p>
+      <pre># hosted: open the public page and click Open the trial
+# local-only: python serve.py
+# then: http://127.0.0.1:8765</pre>
     </details>
 
     <div class="court-error" id="courtError" style="display:none"></div>
@@ -650,7 +651,7 @@ Vitamin D prevents COVID-19."></textarea>
         <h2>Where the AI earns its place</h2>
         <p class="hint">One claim, two engines. Deep restatements share almost no vocabulary with the corpus, so lexical rules find nothing. AI same-proposition recall finds the real card — and the citation gate still owns the verdict.</p>
       </div>
-      <span class="rec-badge">● RECORDED · NOT LIVE</span>
+      <span class="rec-badge">● RECORDED CONTRAST · NOT A LIVE RUN</span>
     </div>
     <div class="ai-headline" id="aiHeadline"></div>
     <div class="chips" id="replayChips"></div>
@@ -695,7 +696,7 @@ Vitamin D prevents COVID-19."></textarea>
   </div>
 
   <div class="foot" style="margin-top:16px">
-    <b style="color:var(--ink)">What this is:</b> a product demonstration of evidence consistency and refusal. A verdict means consistency <i>given this built-in corpus</i>, not truth, and it is not an authoritative fact-check. "Undetermined" does not mean the claim is false. Every snippet is a human-written paraphrase — open the source link to verify the original. The AI contrast above replays real recorded API calls; this static page does not call a model live. Examples are public common claims plus labelled synthetic demos; no private data is used.
+    <b style="color:var(--ink)">What this is:</b> a product demonstration of evidence consistency and refusal. A verdict means consistency <i>given this built-in corpus</i>, not truth, and it is not an authoritative fact-check. "Undetermined" does not mean the claim is false. Every snippet is a human-written paraphrase — open the source link to verify the original. The AI contrast above replays real recorded API calls; the citation court above can call the hosted 3B model live on your own text. Examples are public common claims plus labelled synthetic demos; no private data is used.
   </div>
 </div>
 
@@ -828,10 +829,22 @@ const DATA = {
 };
 
 
-const LOCAL_SERVER = typeof location !== "undefined" &&
+// The public page can be a live client: on GitHub Pages it calls the hosted
+// Space; on the Space itself (or localhost) it uses the same origin. `?api=`
+// is an explicit override for local and staging checks.
+const HOSTED_API_BASE = "https://bali-drive-install-hiking.trycloudflare.com";
+let API_QUERY = "";
+try { API_QUERY = new URLSearchParams(location.search).get("api") || ""; } catch (e) {}
+const API_BASE = (API_QUERY || (location.hostname.endsWith(".github.io") ? HOSTED_API_BASE : ""))
+  .replace(/\/+$/, "");
+const API = p => API_BASE + p;
+const SAME_ORIGIN_API = typeof location !== "undefined" &&
   (location.protocol === "http:" || location.protocol === "https:") &&
   (location.hostname === "127.0.0.1" || location.hostname === "localhost" ||
-   location.hostname === "[::1]" || location.port === "8765");
+   location.hostname === "[::1]" || location.port === "8765" ||
+   location.hostname.endsWith(".hf.space"));
+const LOCAL_SERVER = SAME_ORIGIN_API || !!API_BASE;
+window.CLAIM_API_BASE = API_BASE;
 
 const CONNECTORS = ["and","also","but","plus","however","moreover","in addition"];
 const NO_SPLIT = ["and","but","because","so","otherwise","which","that","besides"];
@@ -2018,7 +2031,7 @@ function jumpToCorpus(idx){
 async function probeMode(){
   if(!LOCAL_SERVER) return;
   try {
-    const r = await fetch("/api/status", {cache:"no-store"});
+    const r = await fetch(API("/api/status"), {cache:"no-store"});
     if(r.ok){
       const d = await r.json();
       document.getElementById("modeLabel").textContent = d.ai_available ? "deterministic + live AI" : "deterministic (offline)";
@@ -2086,7 +2099,7 @@ let API_OK = null;
 async function apiReady(){
   if (!LOCAL_SERVER) return false;
   if (API_OK !== null) return API_OK;
-  try { const r = await fetch("/api/status", {cache:"no-store"}); API_OK = r.ok; }
+  try { const r = await fetch(API("/api/status"), {cache:"no-store"}); API_OK = r.ok; }
   catch(e){ API_OK = false; }
   return API_OK;
 }
@@ -2114,7 +2127,7 @@ async function runCitation(claim){
   let result = null;
   if (await apiReady()){
     try {
-      const r = await fetch("/api/citation", {method:"POST", headers:{"Content-Type":"application/json"},
+      const r = await fetch(API("/api/citation"), {method:"POST", headers:{"Content-Type":"application/json"},
         body:JSON.stringify({claim:claim, source:source, source_name:"pasted source"})});
       if (r.ok){ result = await r.json(); }
     } catch(e){ /* fall back to the local kernel */ }
@@ -2136,7 +2149,7 @@ async function run(text){
   let result = null, mode = "";
   if (await apiReady()){
     try {
-      const r = await fetch("/api/analyze", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({text:text})});
+      const r = await fetch(API("/api/analyze"), {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({text:text})});
       if (r.ok){ result = await r.json(); mode = result.mode || "Online core"; }
     } catch(e){ /* fall back explicitly, never silently */ }
   }

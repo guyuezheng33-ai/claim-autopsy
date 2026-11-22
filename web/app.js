@@ -5,10 +5,22 @@
  */
 /* __DATA_PLACEHOLDER__ */
 
-const LOCAL_SERVER = typeof location !== "undefined" &&
+// The public page can be a live client: on GitHub Pages it calls the hosted
+// Space; on the Space itself (or localhost) it uses the same origin. `?api=`
+// is an explicit override for local and staging checks.
+const HOSTED_API_BASE = "https://bali-drive-install-hiking.trycloudflare.com";
+let API_QUERY = "";
+try { API_QUERY = new URLSearchParams(location.search).get("api") || ""; } catch (e) {}
+const API_BASE = (API_QUERY || (location.hostname.endsWith(".github.io") ? HOSTED_API_BASE : ""))
+  .replace(/\/+$/, "");
+const API = p => API_BASE + p;
+const SAME_ORIGIN_API = typeof location !== "undefined" &&
   (location.protocol === "http:" || location.protocol === "https:") &&
   (location.hostname === "127.0.0.1" || location.hostname === "localhost" ||
-   location.hostname === "[::1]" || location.port === "8765");
+   location.hostname === "[::1]" || location.port === "8765" ||
+   location.hostname.endsWith(".hf.space"));
+const LOCAL_SERVER = SAME_ORIGIN_API || !!API_BASE;
+window.CLAIM_API_BASE = API_BASE;
 
 const CONNECTORS = ["and","also","but","plus","however","moreover","in addition"];
 const NO_SPLIT = ["and","but","because","so","otherwise","which","that","besides"];
@@ -1195,7 +1207,7 @@ function jumpToCorpus(idx){
 async function probeMode(){
   if(!LOCAL_SERVER) return;
   try {
-    const r = await fetch("/api/status", {cache:"no-store"});
+    const r = await fetch(API("/api/status"), {cache:"no-store"});
     if(r.ok){
       const d = await r.json();
       document.getElementById("modeLabel").textContent = d.ai_available ? "deterministic + live AI" : "deterministic (offline)";
@@ -1263,7 +1275,7 @@ let API_OK = null;
 async function apiReady(){
   if (!LOCAL_SERVER) return false;
   if (API_OK !== null) return API_OK;
-  try { const r = await fetch("/api/status", {cache:"no-store"}); API_OK = r.ok; }
+  try { const r = await fetch(API("/api/status"), {cache:"no-store"}); API_OK = r.ok; }
   catch(e){ API_OK = false; }
   return API_OK;
 }
@@ -1291,7 +1303,7 @@ async function runCitation(claim){
   let result = null;
   if (await apiReady()){
     try {
-      const r = await fetch("/api/citation", {method:"POST", headers:{"Content-Type":"application/json"},
+      const r = await fetch(API("/api/citation"), {method:"POST", headers:{"Content-Type":"application/json"},
         body:JSON.stringify({claim:claim, source:source, source_name:"pasted source"})});
       if (r.ok){ result = await r.json(); }
     } catch(e){ /* fall back to the local kernel */ }
@@ -1313,7 +1325,7 @@ async function run(text){
   let result = null, mode = "";
   if (await apiReady()){
     try {
-      const r = await fetch("/api/analyze", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({text:text})});
+      const r = await fetch(API("/api/analyze"), {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({text:text})});
       if (r.ok){ result = await r.json(); mode = result.mode || "Online core"; }
     } catch(e){ /* fall back explicitly, never silently */ }
   }

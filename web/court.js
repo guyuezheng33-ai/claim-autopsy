@@ -15,9 +15,12 @@
   var currentMulti = null;
   var batchMode = false;
   var maxSources = 8;
-  var isLocalServer = (location.protocol === "http:" || location.protocol === "https:") &&
+  var API_BASE = (window.CLAIM_API_BASE || "").replace(/\/+$/, "");
+  function apiUrl(path) { return API_BASE + path; }
+  var isLocalServer = !!API_BASE || ((location.protocol === "http:" || location.protocol === "https:") &&
     (location.hostname === "127.0.0.1" || location.hostname === "localhost" ||
-     location.hostname === "[::1]" || location.port === "8765");
+     location.hostname === "[::1]" || location.port === "8765" ||
+     location.hostname.endsWith(".hf.space")));
   var liveProgress = null;
   var liveTimer = null;
   var liveToken = 0;
@@ -429,7 +432,9 @@
     if (run) run.textContent = batchMode ? "Audit all sources →" : "Open the trial →";
     if (st) st.textContent = batchMode
       ? "One claim against up to 8 sources · rules triage first, AI only on unsettled sources"
-      : (isLocalServer ? "Live judge · local AI advocates" : "Static demo · recorded rules-only dossier");
+      : (isLocalServer
+        ? (API_BASE ? "Hosted 3B ready · click Open the trial" : "Live judge · local AI advocates")
+        : "Static demo · recorded rules-only dossier");
     if (batchMode && document.getElementById("courtSourceRows") &&
         !document.getElementById("courtSourceRows").children.length) {
       sourceRow("Source 1", "");
@@ -539,7 +544,7 @@
       return;
     }
     if (st) st.textContent = "Rules triage on " + sources.length + " sources; AI only on unsettled ones…";
-    fetch("/api/trial_multi", {
+    fetch(apiUrl("/api/trial_multi"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ claim: claim, sources: sources, live: true, ai_limit: 3 })
@@ -742,7 +747,7 @@
 
   function streamTrial(claim, source) {
     if (!window.fetch || !window.TextDecoder) return Promise.reject(new Error("stream_unavailable"));
-    return fetch("/api/trial_stream", {
+    return fetch(apiUrl("/api/trial_stream"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ claim: claim, source: source, live: true })
@@ -773,7 +778,7 @@
   }
 
   function plainTrial(claim, source, force) {
-    return fetch("/api/trial", {
+    return fetch(apiUrl("/api/trial"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ claim: claim, source: source, live: !!force })
@@ -907,6 +912,79 @@
     judgeStep(judgeStepIndex >= JUDGE_STEPS.length - 1 ? 0 : judgeStepIndex + 1);
   }
 
+  var statusTimer = null;
+  var statusAttempt = 0;
+
+  function setHostedBadge(text, cls) {
+    var el = document.getElementById("courtModeBadge");
+    if (!el) return;
+    el.className = "court-badge " + (cls || "live");
+    el.textContent = text;
+  }
+
+  function setHostedStatus(text) {
+    var el = document.getElementById("courtStatus");
+    if (el) el.textContent = text;
+  }
+
+  function checkHostedStatus() {
+    if (!isLocalServer) return;
+    if (statusTimer) { clearTimeout(statusTimer); statusTimer = null; }
+    statusAttempt += 1;
+    if (statusAttempt <= 2) setHostedBadge("HOSTED · CONNECTING", "live");
+    else setHostedBadge("HOSTED · WAKING 3B", "live");
+    var ctrl = null;
+    var timer = null;
+    try {
+      if (typeof AbortController !== "undefined") {
+        ctrl = new AbortController();
+        timer = setTimeout(function () { ctrl.abort(); }, 12000);
+      }
+    } catch (e) { ctrl = null; }
+    fetch(apiUrl("/api/status"), { cache: "no-store", signal: ctrl ? ctrl.signal : undefined })
+      .then(function (r) {
+        if (!r.ok) throw new Error("status_" + r.status);
+        return r.json();
+      })
+      .then(function (s) {
+        if (timer) clearTimeout(timer);
+        if (s && s.ai_available) {
+          statusAttempt = 0;
+          var liveBtn = document.getElementById("courtLive");
+          if (liveBtn) liveBtn.style.display = "inline-block";
+          setHostedBadge(API_BASE ? "HOSTED LIVE · 3B" : "LIVE AI · LOCAL 3B", "live");
+          if (queryDemo) {
+            setHostedStatus("Recorded proof loaded · click Open the trial for live AI");
+          } else if (API_BASE) {
+            setHostedStatus("Hosted Qwen2.5-3B ready · paste any claim and source, then Open the trial");
+          } else {
+            setHostedStatus("Local AI ready · running the first docket…");
+            runLive(true);
+          }
+          return;
+        }
+        if (statusAttempt < 12) {
+          setHostedBadge("HOSTED · MODEL LOADING", "live");
+          setHostedStatus("Hosted Qwen2.5-3B is starting; CPU cold start can take up to a minute. Retrying…");
+          statusTimer = setTimeout(checkHostedStatus, 5000);
+        } else {
+          setHostedBadge("HOSTED · RULES ONLY", "replay");
+          setHostedStatus("Hosted server is up, but the 3B model did not become ready. Click Run live AI to retry.");
+        }
+      })
+      .catch(function () {
+        if (timer) clearTimeout(timer);
+        if (statusAttempt < 12) {
+          setHostedBadge("HOSTED · CONNECTING", "live");
+          setHostedStatus("Contacting the hosted 3B service (cold start can take up to a minute)…");
+          statusTimer = setTimeout(checkHostedStatus, 5000);
+        } else {
+          setHostedBadge("HOSTED API OFFLINE", "replay");
+          setHostedStatus("Could not reach the hosted 3B service. Check the network, then click Run live AI to retry.");
+        }
+      });
+  }
+
   function init() {
     var chips = document.getElementById("courtExamples");
     if (chips) {
@@ -973,21 +1051,16 @@
       this.textContent = showing ? "Legacy audit" : "Back to court";
     });
     if (isLocalServer) {
-      fetch("/api/status").then(function (r) { return r.json(); }).then(function (s) {
-        if (s && s.ai_available) {
-          document.getElementById("courtLive").style.display = "inline-block";
-          if (queryDemo) {
-            document.getElementById("courtStatus").textContent = "Recorded proof loaded · click Open the trial for live AI";
-          } else {
-            document.getElementById("courtStatus").textContent = "Local AI ready · running the first docket…";
-            runLive(true);
-          }
-        } else {
-          document.getElementById("courtStatus").textContent = "Server ready · rules-only (no local model or key)";
-        }
-      }).catch(function () {});
+      var hostedRunBtn = document.getElementById("courtLive");
+      if (hostedRunBtn) hostedRunBtn.style.display = "inline-block";
+      checkHostedStatus();
       document.getElementById("courtLive").addEventListener("click", function () {
-        if (batchMode) runBatch(); else runLive(true);
+        if (batchMode) runBatch();
+        else {
+          if (statusTimer) { clearTimeout(statusTimer); statusTimer = null; }
+          setHostedStatus("Contacting the hosted 3B service and starting your trial…");
+          runLive(true);
+        }
       });
     }
     if (queryJudge) judgeStep(0);

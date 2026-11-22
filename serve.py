@@ -30,12 +30,48 @@ PORT = int(os.environ.get("PORT", "8765"))
 # A local demo binds the loopback interface; a container host needs the
 # process reachable from outside, so HOST is explicit and defaults to loopback.
 HOST = os.environ.get("HOST", "127.0.0.1")
+PUBLIC_HOSTED = os.environ.get("PUBLIC_HOSTED") == "1"
+
+# A public endpoint accepts arbitrary text; cap the body before parsing so a
+# single request cannot turn into an unbounded parse or model call.
+MAX_BODY = 256 * 1024
+MAX_CLAIM = 4000
+MAX_SOURCE = 20000
+MAX_BATCH_SOURCES = 8
 
 # One shared counter per client, 60 requests a minute. A demo endpoint that
 # accepts arbitrary text should not be an unbounded compute tap.
 WINDOW = 60.0
 BURST = 60
 _hits = {}
+
+
+def _client_key(handler):
+    """Use the proxy's client address when HF Spaces forwards the request."""
+    forwarded = handler.headers.get("X-Forwarded-For", "")
+    if forwarded:
+        first = forwarded.split(",")[0].strip()
+        if first:
+            return first
+    return handler.client_address[0]
+
+
+def _too_long(value, limit):
+    return isinstance(value, str) and len(value) > limit
+
+
+def _status_payload():
+    model = llm.active_model()
+    live = bool(model) and llm.available()
+    return {
+        "mode": llm.mode_label(),
+        "ai_available": live,
+        "model": model,
+        "model_live": live,
+        "hosted": PUBLIC_HOSTED,
+        "note": "AI is advisory only; the deterministic gate owns the three-state verdict.",
+    }
+
 
 
 def _allow(ip):
@@ -72,10 +108,24 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", ctype)
         self.send_header("Content-Length", str(len(data)))
         self.send_header("Cache-Control", "no-store")
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("Referrer-Policy", "no-referrer")
         self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.end_headers()
         self.wfile.write(data)
+
+    def do_OPTIONS(self):
+        # GitHub Pages -> HF Space is cross-origin; JSON POSTs need a preflight.
+        self.send_response(204)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Max-Age", "86400")
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+
 
     def _stream_start(self):
         self.send_response(200)
@@ -112,11 +162,7 @@ class Handler(BaseHTTPRequestHandler):
             except OSError:
                 self._send(404, json.dumps({"error": "static_missing"}))
         elif path == "/api/status":
-            self._send(200, json.dumps({
-                "mode": llm.mode_label(),
-                "ai_available": llm.available(),
-                "note": "AI is advisory only; the deterministic gate owns the three-state verdict.",
-            }, ensure_ascii=False))
+            self._send(200, json.dumps(_status_payload(), ensure_ascii=False))
         elif path == "/api/health":
             gates = {"passed": None, "total": None}
             try:
@@ -127,8 +173,11 @@ class Handler(BaseHTTPRequestHandler):
                          "total": len(results), "all_pass": acc.get("all_pass")}
             except (OSError, ValueError):
                 pass
+            status = _status_payload()
             self._send(200, json.dumps({
-                "status": "ok", "mode": llm.mode_label(), "gates": gates,
+                "status": "ok", "hosted": PUBLIC_HOSTED,
+                "mode": status["mode"], "model": status["model"],
+                "model_live": status["model_live"], "gates": gates,
                 "endpoints": ["/api/status", "/api/health", "/api/corpus",
                               "/api/analyze", "/api/batch", "/api/citation",
                               "/api/trial", "/api/trial_stream", "/api/trial_multi"],
@@ -148,18 +197,24 @@ class Handler(BaseHTTPRequestHandler):
                         "/api/trial_stream", "/api/trial_multi"):
             self._send(404, json.dumps({"error": "not_found"}))
             return
-        ip = self.client_address[0]
+        ip = _client_key(self)
         if not _allow(ip):
             self._send(429, json.dumps({"error": "rate_limited", "limit": BURST,
                                         "window_seconds": int(WINDOW)}))
             return
         try:
             n = int(self.headers.get("Content-Length", "0"))
+            if n <= 0 or n > MAX_BODY:
+                self._send(413, json.dumps({"error": "body_too_large", "limit": MAX_BODY}))
+                return
             payload = json.loads(self.rfile.read(n).decode("utf-8"))
             if path == "/api/analyze":
                 text = str(payload.get("text", "")).strip()
                 if not text:
                     self._send(400, json.dumps({"error": "empty_text"}))
+                    return
+                if _too_long(text, MAX_CLAIM):
+                    self._send(413, json.dumps({"error": "text_too_large", "limit": MAX_CLAIM}))
                     return
                 self._send(200, json.dumps(analyze(text, use_llm=True), ensure_ascii=False))
                 return
@@ -168,6 +223,11 @@ class Handler(BaseHTTPRequestHandler):
                 source = str(payload.get("source", "")).strip()
                 if not claim or not source:
                     self._send(400, json.dumps({"error": "empty_claim_or_source"}))
+                    return
+                if _too_long(claim, MAX_CLAIM) or _too_long(source, MAX_SOURCE):
+                    self._send(413, json.dumps({"error": "claim_or_source_too_large",
+                                                "claim_limit": MAX_CLAIM,
+                                                "source_limit": MAX_SOURCE}))
                     return
                 res = citation_audit(claim, source, payload.get("source_name") or "provided source")
                 if res.get("error"):
@@ -181,6 +241,16 @@ class Handler(BaseHTTPRequestHandler):
                 if not claim or not isinstance(sources, list) or not sources:
                     self._send(400, json.dumps({"error": "empty_claim_or_sources"}))
                     return
+                if _too_long(claim, MAX_CLAIM) or len(sources) > MAX_BATCH_SOURCES:
+                    self._send(413, json.dumps({"error": "claim_or_sources_too_large",
+                                                "claim_limit": MAX_CLAIM,
+                                                "source_limit": MAX_BATCH_SOURCES}))
+                    return
+                for item in sources:
+                    if isinstance(item, dict) and _too_long(str(item.get("text", "")), MAX_SOURCE):
+                        self._send(413, json.dumps({"error": "source_too_large",
+                                                    "source_limit": MAX_SOURCE}))
+                        return
                 live = bool(payload.get("live", True)) and llm.available()
                 res = run_batch(claim, sources, live=live,
                                 ai_limit=payload.get("ai_limit", 3),
@@ -197,6 +267,11 @@ class Handler(BaseHTTPRequestHandler):
                 source = str(payload.get("source", "")).strip()
                 if not claim or not source:
                     self._send(400, json.dumps({"error": "empty_claim_or_source"}))
+                    return
+                if _too_long(claim, MAX_CLAIM) or _too_long(source, MAX_SOURCE):
+                    self._send(413, json.dumps({"error": "claim_or_source_too_large",
+                                                "claim_limit": MAX_CLAIM,
+                                                "source_limit": MAX_SOURCE}))
                     return
                 started = time.time()
                 live = bool(payload.get("live", True)) and llm.available()
@@ -294,6 +369,11 @@ class Handler(BaseHTTPRequestHandler):
                 if not claim or not source:
                     self._send(400, json.dumps({"error": "empty_claim_or_source"}))
                     return
+                if _too_long(claim, MAX_CLAIM) or _too_long(source, MAX_SOURCE):
+                    self._send(413, json.dumps({"error": "claim_or_source_too_large",
+                                                "claim_limit": MAX_CLAIM,
+                                                "source_limit": MAX_SOURCE}))
+                    return
                 live = bool(payload.get("live", True)) and llm.available()
                 ai_args, meta = None, {"available": False, "reason": "rules_only"}
                 if live:
@@ -320,6 +400,11 @@ class Handler(BaseHTTPRequestHandler):
             if not [t for t in texts if t.strip()]:
                 self._send(400, json.dumps({"error": "empty_batch"}))
                 return
+            if len(texts) > MAX_BATCH_SOURCES or any(_too_long(t, MAX_CLAIM) for t in texts):
+                self._send(413, json.dumps({"error": "batch_too_large",
+                                            "batch_limit": MAX_BATCH_SOURCES,
+                                            "claim_limit": MAX_CLAIM}))
+                return
             self._send(200, json.dumps(analyze_many(texts, use_llm=True), ensure_ascii=False))
         except Exception as exc:
             # generic error only; never leak exception text or credentials
@@ -329,8 +414,9 @@ class Handler(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     ready = llm.ensure_local_server()
     srv = ThreadingHTTPServer((HOST, PORT), Handler)
+    srv.daemon_threads = True
     print("Claim Autopsy running at http://%s:%d" % (HOST, PORT))
-    print("Mode: %s" % llm.mode_label())
+    print("Mode: %s%s" % (llm.mode_label(), " · hosted" if PUBLIC_HOSTED else ""))
     if ready:
         print("Local AI: %s via llama.cpp on CPU (no API key, no outbound request)." % llm.mode_label())
     else:
