@@ -229,6 +229,74 @@ def main():
                 "quotes_match": quotes_ok,
                 "total_100": "(100%)" in got["meta"],
             })
+
+        # Judge mode: a fresh page with ?judge=1 must hide the form, start on
+        # step 1, and let one Next click reach the recorded 1.5B mistake.
+        judge_page = browser.new_page(viewport={"width": 1200, "height": 900})
+        judge_page.on("pageerror", lambda e: errors.append(str(e)))
+        judge_page.on("request", lambda r: requests.append(r.url)
+                      if r.url.startswith(("http://", "https://")) else None)
+        judge_page.goto(PAGE + "?judge=1")
+        judge_page.wait_for_timeout(700)
+        judge_initial = judge_page.evaluate("""() => ({
+            mode: document.body.className,
+            cardHidden: getComputedStyle(document.querySelector('.court-card')).display === 'none',
+            active: (document.querySelector('[data-judge-step].active') || {}).textContent || '',
+            trap: (document.getElementById('courtProofVerdict') || {}).textContent || '',
+            exitLink: (() => {
+                const a = document.getElementById('courtJudgeExit');
+                return !!a && a.getAttribute('href') === 'index.html';
+            })()
+        })""")
+        judge_page.click("#courtJudgeNext")
+        judge_page.wait_for_timeout(350)
+        judge_second = judge_page.evaluate("""() => ({
+            active: (document.querySelector('[data-judge-step].active') || {}).textContent || '',
+            code: (document.querySelector('#courtProofVerdict .pv-code') || {}).textContent || ''
+        })""")
+        judge_page.click("[data-judge-step='3']")
+        judge_page.wait_for_timeout(400)
+        judge_conflict = judge_page.evaluate("""() => ({
+            active: (document.querySelector('[data-judge-step].active') || {}).textContent || '',
+            rows: document.querySelectorAll('#courtResult .court-batch-row').length,
+            conflicts: document.querySelectorAll('#courtResult .court-conflict').length
+        })""")
+        judge_page.click("[data-judge-step='4']")
+        judge_page.wait_for_timeout(400)
+        judge_receipt = judge_page.evaluate("""() => ({
+            active: (document.querySelector('[data-judge-step].active') || {}).textContent || '',
+            actions: !!document.querySelector('#courtResult .court-actions'),
+            pulse: !!document.querySelector('#courtResult .court-actions.receipt-pulse'),
+            trap: document.getElementById('courtProofVerdict') ? document.getElementById('courtProofVerdict').textContent : ''
+        })""")
+        judge_page.set_viewport_size({"width": 390, "height": 844})
+        judge_page.reload()
+        judge_page.wait_for_timeout(700)
+        judge_mobile = judge_page.evaluate("""() => ({
+            active: (document.querySelector('[data-judge-step].active') || {}).textContent || '',
+            railVisible: (() => {
+                const r = document.getElementById('courtJudgeRail');
+                return !!r && r.getBoundingClientRect().height > 0;
+            })(),
+            overflow: document.documentElement.scrollWidth - window.innerWidth
+        })""")
+        judge_page.close()
+        judge_path_ok = (
+            "court-judge-mode" in judge_initial["mode"]
+            and judge_initial["cardHidden"]
+            and judge_initial["active"].startswith("1")
+            and "quote_not_found" in judge_initial["trap"]
+            and judge_initial["exitLink"]
+            and judge_second["active"].startswith("2")
+            and judge_second["code"] == "side_mismatch"
+            and judge_conflict["active"].startswith("4")
+            and judge_conflict["rows"] == 4 and judge_conflict["conflicts"] == 1
+            and judge_receipt["active"].startswith("5")
+            and judge_receipt["actions"] and judge_receipt["pulse"]
+            and "quote_not_found" in judge_receipt["trap"]
+            and judge_mobile["active"].startswith("1")
+            and judge_mobile["railVisible"] and judge_mobile["overflow"] <= 1
+        )
         browser.close()
 
     bad = [c for c in cases if not (c["claims_match"] and c["badges_match"]
@@ -256,9 +324,15 @@ def main():
         "batch": batch,
         "batch_receipt_chars": len(batch_receipt),
         "batch_ok": batch_ok,
+        "judge_path_initial": judge_initial,
+        "judge_path_second": judge_second,
+        "judge_path_conflict": judge_conflict,
+        "judge_path_receipt": judge_receipt,
+        "judge_path_mobile": judge_mobile,
+        "judge_path_ok": judge_path_ok,
         "page_errors": errors,
         "external_requests": requests,
-        "ok": not bad and not cit_bad and court_ok and proof_ok and batch_ok and not errors and not requests and corpus == 112,
+        "ok": not bad and not cit_bad and court_ok and proof_ok and batch_ok and judge_path_ok and not errors and not requests and corpus == 112,
     }
     print(json.dumps(payload, ensure_ascii=False))
     return 0 if payload["ok"] else 1

@@ -25,16 +25,31 @@
     fake: { key: "struck", label: "Fabricated quote · adversarial fixture" },
     real: { key: "eiffel", label: "Real model mistake · wrong side" }
   };
+  var JUDGE_STEPS = [
+    { label: "Trap", run: function () { showProof("fake"); } },
+    { label: "Real model mistake", run: function () { showProof("real"); } },
+    { label: "Accepted quote", run: function () { fill(EXAMPLES[1]); scrollToResult(); } },
+    { label: "Four-source conflict", run: function () { loadBatchExample(); scrollToResult(); } },
+    { label: "Receipt", run: function () {
+      showProof("fake");
+      scrollToReceipt();
+    } }
+  ];
+  var judgeStepIndex = -1;
   var DEMO_ALIASES = {
     fake: "struck", struck: "struck",
     real: "eiffel", eiffel: "eiffel",
     flu: "flu", coffee: "coffee", population: "population"
   };
   var queryDemo = null;
+  var queryJudge = false;
   try {
-    queryDemo = new URLSearchParams(location.search).get("demo");
+    var params = new URLSearchParams(location.search);
+    queryDemo = params.get("demo");
+    queryJudge = params.get("judge") === "1";
   } catch (e) {
     queryDemo = null;
+    queryJudge = false;
   }
 
   function isRecording(d) {
@@ -849,6 +864,49 @@
     }
   }
 
+  function scrollToResult() {
+    setTimeout(function () {
+      var root = document.getElementById("courtResult");
+      if (root) root.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  }
+
+  function scrollToReceipt() {
+    setTimeout(function () {
+      var actions = document.querySelector("#courtResult .court-actions");
+      if (!actions) return;
+      actions.scrollIntoView({ behavior: "smooth", block: "center" });
+      actions.classList.add("receipt-pulse");
+      setTimeout(function () { actions.classList.remove("receipt-pulse"); }, 1600);
+    }, 140);
+  }
+
+  function markJudgeStep(i) {
+    var buttons = document.querySelectorAll("[data-judge-step]");
+    for (var n = 0; n < buttons.length; n++) {
+      var idx = parseInt(buttons[n].getAttribute("data-judge-step"), 10);
+      buttons[n].classList.toggle("active", idx === i);
+      buttons[n].classList.toggle("done", idx < i);
+    }
+    var next = document.getElementById("courtJudgeNext");
+    if (next) next.textContent = i >= JUDGE_STEPS.length - 1 ? "Restart ↺" : "Next →";
+    var status = document.getElementById("courtStatus");
+    if (status) {
+      status.textContent = "Judge path " + (i + 1) + "/5 · " + JUDGE_STEPS[i].label;
+    }
+  }
+
+  function judgeStep(i) {
+    if (i < 0 || i >= JUDGE_STEPS.length) return;
+    JUDGE_STEPS[i].run();
+    judgeStepIndex = i;
+    markJudgeStep(i);
+  }
+
+  function judgeNext() {
+    judgeStep(judgeStepIndex >= JUDGE_STEPS.length - 1 ? 0 : judgeStepIndex + 1);
+  }
+
   function init() {
     var chips = document.getElementById("courtExamples");
     if (chips) {
@@ -870,7 +928,14 @@
       var found = EXAMPLES.filter(function (ex) { return ex.key === wanted; })[0];
       if (found) initial = found;
     }
-    if (queryDemo) {
+    if (queryJudge) {
+      document.body.classList.add("court-judge-mode");
+      var enter = document.getElementById("courtJudgeEnter");
+      if (enter) {
+        enter.textContent = "Full demo";
+        enter.setAttribute("href", "?demo=struck");
+      }
+    } else if (queryDemo) {
       fill(initial, false);
       var proofStatus = document.getElementById("courtStatus");
       if (proofStatus) proofStatus.textContent = "Proof loaded · click Show the fabricated quote";
@@ -882,6 +947,14 @@
     if (proofBtn) proofBtn.addEventListener("click", function () { showProof("fake"); });
     var proofReal = document.getElementById("courtProofReal");
     if (proofReal) proofReal.addEventListener("click", function () { showProof("real"); });
+    var judgeButtons = document.querySelectorAll("[data-judge-step]");
+    for (var jb = 0; jb < judgeButtons.length; jb++) {
+      judgeButtons[jb].addEventListener("click", function () {
+        judgeStep(parseInt(this.getAttribute("data-judge-step"), 10));
+      });
+    }
+    var judgeNextBtn = document.getElementById("courtJudgeNext");
+    if (judgeNextBtn) judgeNextBtn.addEventListener("click", judgeNext);
     var singleBtn = document.getElementById("courtModeSingle");
     var multiBtn = document.getElementById("courtModeMulti");
     if (singleBtn) singleBtn.addEventListener("click", function () { setMode(false); });
@@ -917,6 +990,7 @@
         if (batchMode) runBatch(); else runLive(true);
       });
     }
+    if (queryJudge) judgeStep(0);
   }
 
   if (document.readyState === "loading") {

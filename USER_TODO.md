@@ -1,14 +1,17 @@
 # Claim Autopsy — user handoff checklist
 
-Freeze point: **2026-11-21**. This file lists only the steps that need your GitHub / hosting /
-screen / reviewer access. The local product is already built and verified.
+Freeze point: **2026-11-22**. This file lists only the steps that need your GitHub / hosting /
+screen / reviewer access. The local product and the 57.4-second captioned video are already built
+and verified.
 
 **Current state**
 
 - `python -m core.audit final` → **48/48, all_pass=True**
-- run receipt → `aa9f955c630d786ad231215f82651de4`, **46 artefacts**, exit 0
+- run receipt → `28e230bc51bdb18031b5a1e567fde8ef`, **55 artefacts**, exit 0
 - `FINAL_MANIFEST.md` → **0 problems** (row count is in the file)
 - court fixtures → **33/33**; batch fixtures → **6/6**; browser checks → static **ok**, live **ok**
+- judge path → `?judge=1`, five steps, 390px mobile assertion, **Full product →** exit
+- video → `evidence/demo_60s.mp4`, 57.4 s, 1280×720, captioned; public URL still needs your upload
 - live 3B → **20–35 s** per docket; the page shows four real stages instead of a blank spinner
 - 7B → **explicitly out of scope for this build**
 
@@ -44,7 +47,7 @@ python -m core.audit final
 ```
 
 `git status --short` should print nothing. Expect **48/48**, including `A8_no_secrets keys=0` and
-`A37_run_receipt` with receipt `aa9f955c630d786ad231215f82651de4`.
+`A37_run_receipt` with receipt `28e230bc51bdb18031b5a1e567fde8ef`.
 
 1.4 Create the empty public repo at `https://github.com/new` (name `claim-autopsy`, Public, no
 README), then add the remote and push:
@@ -125,14 +128,11 @@ restart `serve.py`. Do not use a GPU backend; this build is pinned to `-ngl 0`.
 
 ---
 
-## Step 4. Record the 60-second video (45–60 min)
+## Step 4. Upload the encoded 60-second video (10–15 min)
 
-Follow `evidence/video_script.md`; it contains the six English voiceover lines. The current script is
-written for the court, not the old legacy screen. Record browser-only at 1920×1080, notifications
-off. No face camera is required; speak the six English lines or put them on screen as captions.
-
-If you record a full 3B wait, keep 3–4 seconds of the progress panel and jump-cut to the completed
-docket. Say “about 20 seconds on CPU” rather than speeding up the UI.
+The captioned screen recording is already built: `evidence/demo_60s.mp4` — 57.4 s, 1280×720,
+five judge-path steps, silent with burned-in captions. It ends on the struck-quote receipt.
+Re-record only if you want a voiceover; `evidence/video_script.md` still has the six English lines.
 
 Upload to **Vimeo (free)** or **YouTube (unlisted)**; do not upload a raw MP4 as the only copy. Devpost
 normally embeds video only from YouTube or Vimeo. The event text also accepts a “visual walkthrough”,
@@ -193,7 +193,7 @@ Numbers to paste, exactly:
 | Acceptance gates | 48/48 |
 | Court fixtures | 33/33 |
 | Batch fixtures | 6/6 |
-| Run receipt | 46 artefacts |
+| Run receipt | 55 artefacts |
 | Final manifest | row count is in the file |
 
 Do not round these into larger claims. Do not describe the static court as live.

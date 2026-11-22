@@ -56,7 +56,7 @@ def digest(rel):
 
 HEAD = """# Final manifest — what "final" means, and how to prove it later
 
-Freeze point: **2026-11-21** (project root `claim-autopsy/`). This file records the exact byte state
+Freeze point: **2026-11-22** (project root `claim-autopsy/`). This file records the exact byte state
 that passed the acceptance suite, so a later change is detectable instead of being a matter of memory.
 
 **Gate result at this freeze point** (generated from `evidence/acceptance_final.json`, never typed by
@@ -75,8 +75,8 @@ state is untouched; if a row differs, that file changed after the freeze — re-
 `python -m core.audit final` before claiming the numbers again.
 
 **Intentionally not final** (these are outputs of the submitter's own actions, not unfinished work):
-the public repository URL, the hosted demo URL, the 60-second video, and the Devpost form.
-`USER_TODO.md` holds those four steps in order. `LICENSE` carries the placeholder holder
+the public repository URL, the hosted demo URL, the public YouTube/Vimeo URL for the already-encoded
+`evidence/demo_60s.mp4`, and the Devpost form. `USER_TODO.md` holds those steps in order. `LICENSE` carries the placeholder holder
 "Claim Autopsy authors" — change it to your legal name before publishing if you prefer.
 
 `evidence/history/` is deliberately excluded from the table below: it holds superseded

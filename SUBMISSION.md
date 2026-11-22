@@ -2,6 +2,8 @@
 
 Paste-ready English copy for the Devpost fields. Numbers match the current repository; do not replace them with rounder numbers.
 
+> **Judge shortcut:** open `...?judge=1`, then click **Next →** five times. The path is trap → real recorded mistake → accepted quote → four-source conflict → receipt for the struck quote. A 57.4s captioned screen recording is at `evidence/demo_60s.mp4`.
+
 ---
 
 ## 1. Project title
@@ -151,14 +153,32 @@ Python, `llama.cpp`, Qwen2.5-3B-Instruct-GGUF, HTML, CSS, JavaScript, SHA-256 co
 ## 14. Try it
 
 - Repository: `https://github.com/guyuezheng33-ai/claim-autopsy`
-- Public recorded demo: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?demo=struck`
-- Video: `https://aka.doubaocdn.com/s/OVFalOSwhn`
+- Public recorded demo, judge mode: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?judge=1`
+- Shorter proof-only link: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?demo=struck`
+- Video file: [`evidence/demo_60s.mp4`](evidence/demo_60s.mp4) — 57.4s, 1280×720, captioned, silent; five steps end on the struck-quote receipt.
+- Public video URL: `<upload evidence/demo_60s.mp4 to YouTube unlisted or Vimeo; paste the URL here before submitting>`
 
-The demo link opens on the 10-second proof: the adversarial fabricated quotation is shown, the judge strikes it as `quote_not_found`, and the verdict remains with the source. The page labels that fixture as a fixture; a second button shows a real recorded 1.5B mistake.
+The judge-mode link hides the free-form form, starts on step 1, and exposes a five-step rail:
+trap, real model mistake, accepted quote, four-source conflict, receipt. The page labels the
+fixture, the recorded 1.5B run and the static recording separately. Step 5 returns to the trap
+case so the struck quotation and its receipt are visible in the same pass. The shorter link preloads
+only the 10-second proof.
 
-These are the only three fields that require the author's accounts. No URL is fabricated.
-Devpost normally embeds video only from YouTube or Vimeo; the event text also accepts a visual
-walkthrough, so a Pages walkthrough is a fallback if the form allows it.
+These are the only fields that require the author's accounts. No URL is fabricated.
+Devpost normally embeds video only from YouTube or Vimeo; a stable video URL is still required
+before the final submission.
+
+### Screenshots
+
+Seven 1440×900 screenshots are committed under `evidence/screenshots/`:
+
+- [`01-judge-path.png`](evidence/screenshots/01-judge-path.png) — the 5-step rail plus the struck quotation
+- [`02-real-model-mistake.png`](evidence/screenshots/02-real-model-mistake.png) — recorded 1.5B `side_mismatch`
+- [`03-accepted-quote.png`](evidence/screenshots/03-accepted-quote.png) — accepted quote `chars 0-108` and source highlight
+- [`04-four-source-conflict.png`](evidence/screenshots/04-four-source-conflict.png) — 4-source conflict, no winner
+- [`05-receipt.png`](evidence/screenshots/05-receipt.png) — receipt actions and run id
+- [`06-supported.png`](evidence/screenshots/06-supported.png) — supported verdict
+- [`07-not-in-source.png`](evidence/screenshots/07-not-in-source.png) — `not_in_source` with nearest sentence
 
 Local:
 
@@ -170,7 +190,7 @@ python serve.py
 
 No API key is required for the local path. The first run downloads a 2.0 GB model once. If the
 judge prefers not to run Python, `web/index.html` opens directly and shows a recorded local-AI
-docket with the `RECORDED LIVE AI RUN` badge.
+docket with the `RECORDED LIVE AI RUN` badge; `?judge=1` is the five-step path.
 
 Numbers used in the Devpost form:
 
@@ -183,8 +203,8 @@ Numbers used in the Devpost form:
 | Acceptance gates | 48/48 |
 | Court fixtures | 33/33 |
 | Batch fixtures | 6/6 |
-| Run receipt | 46 artefacts |
-| Final manifest | 168 files |
+| Run receipt | 55 artefacts |
+| Final manifest | 0 problems; row count is in `FINAL_MANIFEST.md` |
 
 The static page is a recording; the live court is `python serve.py`. Do not describe the static
 page as a live model call.
@@ -203,9 +223,10 @@ LLM coding assistance was used for refactoring and test scaffolding. Every behav
 
 ## 18. Submission checklist
 
-- [ ] Public repository URL and license visible
-- [ ] Hosted demo URL, or explicit “run locally” instruction
-- [ ] 60-second video with the live court, a struck argument and the receipt
-- [ ] Screenshots: landing, refuted, supported, not-in-source, struck
+- [x] Public repository URL and license visible
+- [x] Hosted demo URL, or explicit “run locally” instruction
+- [x] 60-second captioned screen recording: `evidence/demo_60s.mp4` (57.4s)
+- [ ] Public YouTube unlisted / Vimeo URL pasted into the Devpost video field
+- [x] Screenshots: judge path, struck, real model mistake, supported, not-in-source, conflict, receipt
 - [ ] Devpost team fields and eligibility
-- [ ] No API keys, private data or reviewer-only links
+- [x] No API keys, private data or reviewer-only links

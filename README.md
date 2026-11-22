@@ -33,7 +33,7 @@ python serve.py
 
 You can also open `web/index.html` directly. It works without a server and without a model, but it is a **recording**: the default docket is a real local Qwen run recorded into `data/court_replay.json`, labelled `RECORDED LIVE AI RUN`. Only `serve.py` can produce `LIVE AI · JUDGE VERIFIED`.
 
-For the fastest zero-install review, open `web/index.html?demo=struck`: one click shows an adversarial fabricated quotation being struck as `quote_not_found` before the judge's verdict. The page labels that case as a fixture, not a model run; the next button shows a real recorded 1.5B mistake (`side_mismatch`).
+For the fastest zero-install review, open `web/index.html?judge=1`: judge mode hides the free-form form, starts on step 1, and gives a five-step rail. Step 1 is an adversarial fabricated quotation struck as `quote_not_found`; step 2 is a real recorded 1.5B mistake (`side_mismatch`); the last step pulses the receipt actions. The shorter `web/index.html?demo=struck` link preloads only the proof.
 
 If you have a cloud key, the same code path uses it:
 
@@ -45,15 +45,17 @@ LLM_API_KEY=... python serve.py
 
 ## Three-minute judge path
 
-Open the public recorded demo with the proof preloaded:
+Open the public recorded demo in judge mode:
 
-`https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?demo=struck`
+`https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?judge=1`
 
-1. Click **Show the fabricated quote**: the adversarial quotation is struck as `quote_not_found`; the verdict stays `refuted`.
-2. Click **Show a real model mistake**: a recorded 1.5B run is struck as `side_mismatch`.
-3. Click **Flu vaccine - refuted**: the accepted quotation, offsets `0-108`, and the source highlight are the judge's finding.
-4. Load the four-source batch: one `cross-source conflict`, no winner picked.
-5. Copy or download the receipt: source hash, accepted span, struck reason, and run id.
+The page starts on step 1 and hides the free-form form. Use the rail, or **Next →**:
+
+1. **1 · Trap** — the adversarial quotation is struck as `quote_not_found`; the verdict stays `refuted`.
+2. **2 · Real mistake** — a recorded 1.5B run is struck as `side_mismatch`.
+3. **3 · Accepted quote** — the flu case shows the accepted quotation, offsets `0-108`, and the source highlight.
+4. **4 · Conflict** — one claim against four sources shows `cross-source conflict` without picking a winner.
+5. **5 · Receipt** — returns to the struck trap case, then scrolls to and pulses the JSON/Markdown receipt actions, closing the loop with `quote_not_found`.
 
 The full click-by-click script is in [`JUDGE_PATH.md`](JUDGE_PATH.md). The first case is an
 adversarial fixture; the second is a real recorded model run. The page labels both.

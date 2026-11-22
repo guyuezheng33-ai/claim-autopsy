@@ -51,7 +51,7 @@
 | 首屏 | 已改 | claim + source 两个输入、载入 `.txt/.md`、一个主按钮、示例、三栏判决、AI strip |
 | 静态页 | 已改 | 默认展示**真实本地 AI 运行的录像**，badge 明确 `RECORDED LIVE AI RUN`；HTTP 才显示 `LIVE AI`；批量有 4 源回放 |
 | 门禁 | 48 项 | 48/48 all_pass；A45–A48 已加 |
-| 运行收据 | 已重铸 | 46 个 artefact 的 SHA-256（代码、数据、页面、文档、截图）；A37 自排除后 47/47 attest；正式 receipt exit=0 |
+| 运行收据 | 已重铸 | 55 个 artefact 的 SHA-256（代码、数据、页面、文档、7 张截图、57.4 秒视频）；A37 自排除后 47/47 attest；正式 receipt exit=0 |
 | 卷宗导出 | 已落地 | 页面可复制 JSON 收据、下载 Markdown 收据；多源收据逐源列出 verdict / SHA-256 / bridge |
 | 来源载入 | 已落地 | `.txt/.md` 文件选择与拖放、字符计数、20,000 上限前置报错；A38 浏览器实测 |
 
@@ -548,5 +548,5 @@ What would change it: a source saying the injected vaccine contains live virus.
 4. 接 AI 控方/辩方与语义桥，跑 A45–A48。
 5. 改首屏与法庭 UI（单源/批量）。
 6. 用本地 Qwen 1.5B 录制 6 个卷宗、用 3B 跑 8 案例增量基准，接 replay，并把静态默认页标成 recorded。
-7. 重跑 48 门禁，重铸 46 artefact receipt。
+7. 重跑 48 门禁，重铸 55 artefact receipt。
 8. 按评分表打分；不够继续。

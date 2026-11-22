@@ -1,6 +1,6 @@
 # Final manifest — what "final" means, and how to prove it later
 
-Freeze point: **2026-11-21** (project root `claim-autopsy/`). This file records the exact byte state
+Freeze point: **2026-11-22** (project root `claim-autopsy/`). This file records the exact byte state
 that passed the acceptance suite, so a later change is detectable instead of being a matter of memory.
 
 **Gate result at this freeze point** (generated from `evidence/acceptance_final.json`, never typed by
@@ -37,7 +37,7 @@ A33  PASS 5 probes: a two-step chain is derived and labelled, an agreeing third 
 A34  PASS 97/112 cards carry an archived paragraph: 97 verified, 13 unresolved, 1 page_changed, 1 source_changed; exc...
 A35  PASS 5 external dev datasets recomputed from the frozen slice; accuracy and refusal match the published run with...
 A36  PASS risk/cure classified and kept apart, risk/prevention kept together, harm/harm still decided; susceptibility...
-A37  PASS the acceptance run carries a receipt (aa9f955c630d786ad231215f82651de4) that binds 46 artefacts by SHA-256,...
+A37  PASS the acceptance run carries a receipt (eb8a50d8f073e721fd6a20f5e394ee96) that binds 55 artefacts by SHA-256,...
 A38  PASS the built page ran in edge; the court docket plus 10 corpus demos and 3 citation demos were clicked, each r...
 A39  PASS the external table carries a receipt (8d381b4a0b0627cd90bac5257c27f869): two runs with exit codes and outpu...
 A3   PASS comma input -> 3 atoms; enumeration input -> 3 atoms; compound subject -> 1 atom(s), first noun kept=True
@@ -67,8 +67,8 @@ state is untouched; if a row differs, that file changed after the freeze — re-
 `python -m core.audit final` before claiming the numbers again.
 
 **Intentionally not final** (these are outputs of the submitter's own actions, not unfinished work):
-the public repository URL, the hosted demo URL, the 60-second video, and the Devpost form.
-`USER_TODO.md` holds those four steps in order. `LICENSE` carries the placeholder holder
+the public repository URL, the hosted demo URL, the public YouTube/Vimeo URL for the already-encoded
+`evidence/demo_60s.mp4`, and the Devpost form. `USER_TODO.md` holds those steps in order. `LICENSE` carries the placeholder holder
 "Claim Autopsy authors" — change it to your legal name before publishing if you prefer.
 
 `evidence/history/` is deliberately excluded from the table below: it holds superseded
@@ -80,17 +80,17 @@ project file not listed in its own table — it cannot hash itself.
 | .gitattributes | 246 | d786b12647e3d229 |
 | .gitignore | 127 | 63be6eda6b057a24 |
 | ARCHITECTURE.md | 103509 | 2752818d4196eb74 |
-| COMPETITION_SCORECARD_CN.md | 10966 | 28ed7d531b507d96 |
+| COMPETITION_SCORECARD_CN.md | 12358 | 4539ddd12cd05a46 |
 | DATA_DICTIONARY.md | 4036 | cfdff5cf201053cb |
 | DATA_PLAN.md | 23831 | 38bb51e3baed1104 |
 | Dockerfile | 307 | 1d774a1f5f6ab839 |
-| JUDGE_PATH.md | 2791 | e0d031abe74cc2d3 |
+| JUDGE_PATH.md | 3350 | c3b6493a8d6a1891 |
 | LICENSE | 1089 | 193fa3fab2956aa6 |
 | PRODUCT.md | 11213 | 97df89ab4a6a17d3 |
-| README.md | 15573 | 158685ad3f072a17 |
-| REFACTOR_PLAN_CN.md | 30946 | afa4be15516a34da |
-| SUBMISSION.md | 15976 | 612d25bc5f6cfd93 |
-| USER_TODO.md | 8050 | de9be8d59853a4a2 |
+| README.md | 15798 | 7a82a3665726bea1 |
+| REFACTOR_PLAN_CN.md | 30968 | 0907e59a2d9a4568 |
+| SUBMISSION.md | 17708 | 797be815ecfa2a44 |
+| USER_TODO.md | 8103 | 3bbbef36e2456b81 |
 | core/__init__.py | 89 | 0797e0173f8c3939 |
 | core/adjudicate.py | 9736 | 910e59c341d71ed5 |
 | core/audit.py | 134578 | c05c77edd8660903 |
@@ -149,13 +149,14 @@ project file not listed in its own table — it cannot hash itself.
 | eval/bench_court.csv | 86 | d58961d98a4121c2 |
 | evidence/DATA_STATUS.md | 28296 | 39200846e0129189 |
 | evidence/_cards_evidence_backup.jsonl | 98892 | e19d83bf947e708a |
-| evidence/acceptance_final.json | 15509 | 5c1f7133c3748564 |
+| evidence/acceptance_final.json | 15509 | b541543077c83351 |
 | evidence/ai_lift.json | 12123 | 6c3d3d77a0ac80d3 |
-| evidence/ai_uplift.json | 14722 | 0107c24d1c6eb0ac |
+| evidence/ai_uplift.json | 6113 | fcc39e4e6bba89bc |
 | evidence/cards_evidence.jsonl | 110368 | e48986cd0aabaa48 |
 | evidence/corpus_v10_expansion.json | 4508 | 51936372d3653713 |
 | evidence/court_live.json | 177238 | 2c0e6d63c2920e61 |
 | evidence/coverage_headroom.json | 10510 | e3a03eaa486f2396 |
+| evidence/demo_60s.mp4 | 1488985 | a3e18beffe4d29b7 |
 | evidence/eval_receipt.json | 6465 | 93c884d324acf739 |
 | evidence/external_dev_detail.json | 308648 | b6fff9d8545acd73 |
 | evidence/external_eval_holdback.json | 7909 | 3e28d0465a407849 |
@@ -168,14 +169,21 @@ project file not listed in its own table — it cannot hash itself.
 | evidence/oracle_eval.json | 48940 | a297b4780629f86c |
 | evidence/paragraphs.jsonl | 2002060 | 084ada8b29201374 |
 | evidence/retractions.jsonl | 13672 | ddacb0349a16890d |
-| evidence/run_receipt.json | 5573 | 6fc26e7311fd0800 |
+| evidence/run_receipt.json | 6587 | 60e969e6c4b4e5bb |
 | evidence/screenshots/01-ai-contrast.png | 99016 | d1e1543f70d8a7db |
+| evidence/screenshots/01-judge-path.png | 195194 | 08df4d656bc55cbb |
+| evidence/screenshots/02-real-model-mistake.png | 89405 | f91cd662172b45f6 |
 | evidence/screenshots/02-result-demo1.png | 84045 | 8a21d5e6be8c8b0a |
+| evidence/screenshots/03-accepted-quote.png | 140467 | 4712e17859c0dcb2 |
 | evidence/screenshots/03-conflict-demo4.png | 110226 | 970e22dc872279fa |
+| evidence/screenshots/04-four-source-conflict.png | 99798 | 948310c3a101f1fe |
 | evidence/screenshots/04-refusal-demo3.png | 140129 | 6e60050ab2b741d0 |
 | evidence/screenshots/05-audit-demo6.png | 133306 | 5238ba5afc9241f5 |
+| evidence/screenshots/05-receipt.png | 81846 | ace644d50c3fc0f1 |
 | evidence/screenshots/06-coverage-demo7.png | 124881 | af9c34a71d585a1f |
+| evidence/screenshots/06-supported.png | 86362 | 482102a19b142b07 |
 | evidence/screenshots/07-corpus-browser.png | 52764 | 3acd137f172e54fb |
+| evidence/screenshots/07-not-in-source.png | 72604 | 9b53a8a710eaa1bd |
 | evidence/screenshots/08-scope-refusal.png | 92625 | 72f21891c6ee8603 |
 | evidence/screenshots/09-contradictory-atoms.png | 91187 | 45f7920a4488ab08 |
 | evidence/screenshots/10-chain-conflict.png | 221045 | 0dd4917c5f2c38e0 |
@@ -215,14 +223,14 @@ project file not listed in its own table — it cannot hash itself.
 | tools/add_golden_v9.py | 3680 | a58cce034f7a3d3d |
 | tools/add_guard_outcome.py | 2197 | d89169c299eb126c |
 | tools/bench_court.py | 1933 | e34ce818ee0b0fe7 |
-| tools/browser_check.py | 12775 | bc662a1d1ffab1f7 |
+| tools/browser_check.py | 17046 | 74af46275051475c |
 | tools/browser_check_live.py | 4112 | d11efc2dbb7618b0 |
 | tools/build_court_batch_replay.py | 2154 | 7ba3a9f760ea0a28 |
 | tools/build_court_replay.py | 2622 | 95415271c6c51eb3 |
 | tools/build_frontend.py | 4479 | 7ea739687409a62d |
 | tools/check_label_noise.py | 5069 | a28b138b2a2c381f |
 | tools/check_links.py | 6084 | 66019380e615d19c |
-| tools/check_manifest.py | 5862 | e5406873bdb47711 |
+| tools/check_manifest.py | 5914 | 16b065699d35381c |
 | tools/check_retractions.py | 978 | 2e9a406f94a491ca |
 | tools/coverage_headroom.py | 5772 | 254fb5f874dc02fa |
 | tools/eval_external.py | 8752 | 09b6bf185fd7c714 |
@@ -238,7 +246,7 @@ project file not listed in its own table — it cannot hash itself.
 | tools/make_eval_receipt.py | 7318 | c5018f2abc7fb775 |
 | tools/make_guard_set.py | 10580 | 2829844a43877aa0 |
 | tools/make_holdout2.py | 9517 | b2af8a7f53438e93 |
-| tools/make_receipt.py | 7122 | e9bd3fc1d30ff35c |
+| tools/make_receipt.py | 7524 | 15a6250280c6a108 |
 | tools/make_screenshots.py | 6267 | d9e7f77ff26e33ab |
 | tools/measure_ai_lift.py | 4687 | 8eb35b0c73e7741b |
 | tools/restate_vitd_card.py | 1465 | d76288481191203a |
@@ -248,7 +256,7 @@ project file not listed in its own table — it cannot hash itself.
 | tools/sync_frontend.py | 1878 | d35474348af483d5 |
 | tools/verify_sessions.py | 7275 | f20043e5a0f456a7 |
 | web/app.js | 81334 | cdd5e2cb9b7edf11 |
-| web/court.js | 43143 | 7ac72eacd77bf673 |
+| web/court.js | 46051 | a1a6f1b917aecdb1 |
 | web/court_batch_replay.js | 12351 | 7518b86559b14af3 |
 | web/court_replay.js | 31239 | 989e2c890efc8ea8 |
-| web/index.html | 231866 | 78c59fbbf3201d0b |
+| web/index.html | 234466 | 8204fcf4cc6a77e9 |
