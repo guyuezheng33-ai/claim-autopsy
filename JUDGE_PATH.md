@@ -26,7 +26,7 @@ Run the same check yourself:
 python tools/check_hosted_live.py
 ```
 
-Use `--base https://your-space.hf.space` after a Hugging Face Space replaces the tunnel.
+Use `--base https://<your-service>.run.app` after a permanent endpoint replaces the tunnel.
 The checker never trusts the page badge: it calls `/api/status`, sends an `Origin` header,
 performs a real CORS preflight, runs a live trial, and reads the receipt model name.
 

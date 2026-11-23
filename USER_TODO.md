@@ -1,8 +1,8 @@
 # Claim Autopsy — user handoff checklist
 
 Freeze point: **2026-11-23**. This file lists only the steps that need your GitHub / hosting /
-screen / reviewer access. The local product, hosted live endpoint and the 57.4-second captioned
-video are already built and verified.
+screen / reviewer access. The local product and the 57.4-second captioned video are built and
+verified; the permanent hosted endpoint is the remaining deploy in Step 2.5.
 
 **Current state**
 
@@ -11,7 +11,9 @@ video are already built and verified.
 - `FINAL_MANIFEST.md` → **0 problems**, **194 files**
 - court fixtures → **33/33**; batch fixtures → **6/6**; browser checks → static **ok**, live **ok**
 - judge path → `?judge=1`, five steps, 390px mobile assertion, **Test your own claim** exit
-- hosted live → public page calls a 3B endpoint; black-box `evidence/hosted_live.json`, run `8b65d66160855ed5`, 18.9 s
+- hosted live → **not deployed yet**. The public page degrades to `HOSTED API OFFLINE`;
+  `evidence/hosted_live.json` records the earlier temporary tunnel run (do not present it as a
+  permanent URL). Step 2.5 turns this into a permanent endpoint.
 - video → `evidence/demo_60s.mp4`, 57.4 s, 1280×720, captioned; public URL still needs your upload
 - live 3B → **20–35 s** per docket; the page shows four real stages instead of a blank spinner
 - 7B → **explicitly out of scope for this build**
@@ -80,7 +82,7 @@ https://<your-username>.github.io/claim-autopsy/web/index.html
 
 Keep the `/web/` segment. Do not move or delete `web/index.html`.
 
-2.3 Wait 1–3 minutes, then open the URL in a signed-out/incognito window and check:
+2.3 Once the Step 2.5 endpoint is live, open the URL in a signed-out/incognito window and check:
 
 - the court badge reads **`HOSTED LIVE · 3B`**, and the status says **Hosted Qwen2.5-3B ready**;
 - paste a new claim/source and click **Open the trial**; the result must say `LIVE AI · JUDGE VERIFIED`
@@ -95,6 +97,62 @@ Keep the `/web/` segment. Do not move or delete `web/index.html`.
 The public page calls the hosted 3B endpoint for the free-form trial. The `?judge=1` five-step rail
 is the labelled recording; its top-right link says **Test your own claim** and returns to the live
 form. Do not call the rail a live model call.
+
+---
+
+## Step 2.5. Deploy a permanent hosted endpoint (owner: you, ~30 min)
+
+Why this is parked here: the HF free tier cannot create a Docker Space (402, PRO $9/mo);
+Render/Koyeb/Railway free RAM is 512 MB–1 GB and cannot hold the 2.1 GB 3B weight. Chosen route is
+**Google Cloud Run Always Free**: scale-to-zero, up to 32 GiB memory allowance, no charge inside
+free quota; a billing card is required but quota usage does not bill.
+
+Prerequisites in the Console (browser): finish 2SV on `guyuezheng33@gmail.com`, create a project,
+link a billing account with free-tier alerts on. No API key leaves this repo; the container bakes the
+GGUF from Hugging Face at build time.
+
+Option A — gcloud (SDK already installed; `gcloud.cmd` under `AppData\Local\Google\Cloud SDK`):
+
+```powershell
+gcloud auth login
+gcloud config set project <PROJECT_ID>
+gcloud services enable run.googleapis.com cloudbuild.googleapis.com artifactregistry.googleapis.com
+gcloud run deploy claim-autopsy `
+  --source . `
+  --region asia-southeast1 `
+  --dockerfile deploy/cloudrun/Dockerfile `
+  --port 8080 --cpu 1 --memory 2Gi --timeout 300 `
+  --min-instances 0 --max-instances 1 --concurrency 80 `
+  --allow-unauthenticated
+```
+
+Option B — Console: Cloud Run → Create service → deploy from source (repo zip), Dockerfile path
+`deploy/cloudrun/Dockerfile`, same region / CPU / memory / port / concurrency, allow public access.
+
+Expected URL: `https://claim-autopsy-<hash>-asia-southeast1.run.app`. A cold scale-to-zero start can
+take 30–60 s; the page shows `HOSTED · WAKING 3B` and retries instead of faking live.
+
+Then backfill the permanent URL, in this order:
+
+1. Black-box check and rewrite the receipt:
+   ```powershell
+   python tools/check_hosted_live.py --base https://<service>.run.app --write
+   ```
+   It must print `"pass": true`, `failures: []`, and model `qwen2.5-3b-instruct-q4_k_m.gguf`.
+2. Replace the old tunnel in `web/app.js` (`HOSTED_API_BASE`, ~line 11) and in
+   `tools/check_hosted_live.py` (`DEFAULT_BASE`) with the new URL.
+3. Rebuild the page: `python tools/build_frontend.py`.
+4. Re-mint receipt and manifest:
+   ```powershell
+   python tools/make_receipt.py final --bootstrap
+   python tools/make_receipt.py final
+   python -m core.audit final
+   python tools/check_manifest.py --write
+   ```
+5. Commit and push; reopen Pages in incognito and confirm the 2.3 checks above.
+
+Note: `deploy/cloudrun/start.sh` assumes the llama.cpp base image binary is `/app/llama-server`. If
+that layout differs, inspect the base image first and fix the path before deploying.
 
 ---
 

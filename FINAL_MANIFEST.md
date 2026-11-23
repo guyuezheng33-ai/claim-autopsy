@@ -37,7 +37,7 @@ A33  PASS 5 probes: a two-step chain is derived and labelled, an agreeing third 
 A34  PASS 97/112 cards carry an archived paragraph: 97 verified, 13 unresolved, 1 page_changed, 1 source_changed; exc...
 A35  PASS 5 external dev datasets recomputed from the frozen slice; accuracy and refusal match the published run with...
 A36  PASS risk/cure classified and kept apart, risk/prevention kept together, harm/harm still decided; susceptibility...
-A37  PASS the acceptance run carries a receipt (92fb82fd9eb339474b33ead8c5d507a6) that binds 66 artefacts by SHA-256,...
+A37  PASS the acceptance run carries a receipt (864743e1148ed589acc1638806bbaa84) that binds 66 artefacts by SHA-256,...
 A38  PASS the built page ran in edge; the court docket plus 10 corpus demos and 3 citation demos were clicked, each r...
 A39  PASS the external table carries a receipt (8d381b4a0b0627cd90bac5257c27f869): two runs with exit codes and outpu...
 A3   PASS comma input -> 3 atoms; enumeration input -> 3 atoms; compound subject -> 1 atom(s), first noun kept=True
@@ -84,13 +84,13 @@ project file not listed in its own table — it cannot hash itself.
 | DATA_DICTIONARY.md | 4036 | cfdff5cf201053cb |
 | DATA_PLAN.md | 23831 | 38bb51e3baed1104 |
 | Dockerfile | 307 | 1d774a1f5f6ab839 |
-| JUDGE_PATH.md | 4532 | c6a9b89d191157d3 |
+| JUDGE_PATH.md | 4535 | 9ebd52fb825e7c9f |
 | LICENSE | 1089 | 193fa3fab2956aa6 |
 | PRODUCT.md | 11213 | 97df89ab4a6a17d3 |
 | README.md | 16918 | f6f2e3557f4afec3 |
 | REFACTOR_PLAN_CN.md | 30989 | a34e55143e1fb0eb |
-| SUBMISSION.md | 19566 | 60009c44210244b4 |
-| USER_TODO.md | 10160 | 15595dc1940813d9 |
+| SUBMISSION.md | 19559 | 845bc2da171d2a21 |
+| USER_TODO.md | 12967 | 4cfe4739060d8241 |
 | core/__init__.py | 89 | 0797e0173f8c3939 |
 | core/adjudicate.py | 9736 | 910e59c341d71ed5 |
 | core/audit.py | 134593 | 815bcec5e5fd2998 |
@@ -155,7 +155,7 @@ project file not listed in its own table — it cannot hash itself.
 | eval/bench_court.csv | 86 | d58961d98a4121c2 |
 | evidence/DATA_STATUS.md | 28296 | 39200846e0129189 |
 | evidence/_cards_evidence_backup.jsonl | 98892 | e19d83bf947e708a |
-| evidence/acceptance_final.json | 15509 | 600df96807fcb216 |
+| evidence/acceptance_final.json | 15509 | 92ed34774647630d |
 | evidence/ai_lift.json | 12123 | 6c3d3d77a0ac80d3 |
 | evidence/ai_uplift.json | 14508 | b153e186bf354249 |
 | evidence/cards_evidence.jsonl | 110368 | e48986cd0aabaa48 |
@@ -176,7 +176,7 @@ project file not listed in its own table — it cannot hash itself.
 | evidence/oracle_eval.json | 48940 | a297b4780629f86c |
 | evidence/paragraphs.jsonl | 2002060 | 084ada8b29201374 |
 | evidence/retractions.jsonl | 13672 | ddacb0349a16890d |
-| evidence/run_receipt.json | 7702 | 2f752144e8023011 |
+| evidence/run_receipt.json | 7702 | 57c6d682335dc52b |
 | evidence/screenshots/01-ai-contrast.png | 99016 | d1e1543f70d8a7db |
 | evidence/screenshots/01-judge-path.png | 195194 | 08df4d656bc55cbb |
 | evidence/screenshots/02-real-model-mistake.png | 89405 | f91cd662172b45f6 |

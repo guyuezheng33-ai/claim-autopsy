@@ -150,7 +150,7 @@ The interesting part of AI fact-checking is not generating an answer; it is maki
 
 - Multi-source dossiers and cross-source conflicts shipped; the next step is N claims × N sources rather than one claim × N sources.
 - Better paraphrase recall on the measured 3B path. 7B is explicitly out of scope for this build; a larger model is not assumed to improve the product score.
-- A public hosted endpoint now runs the same 3B CPU model; the next step is a permanent Hugging Face Space URL and a measured cold-start budget on free CPU.
+- A permanent hosted endpoint runs the same 3B CPU model behind a scale-to-zero container; the next step is a measured cold-start budget on free CPU.
 
 ## 13. Built with
 
