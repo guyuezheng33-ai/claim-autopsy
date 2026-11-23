@@ -18,7 +18,10 @@ RUN mkdir -p /app/models \
     https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf \
  && test -s /app/models/qwen2.5-3b-instruct-q4_k_m.gguf
 
-ENV HOST=0.0.0.0 \
+# The base image keeps its shared llama.cpp libraries under /app; export the
+# path so llama-server can resolve libllama-common.so at container start.
+ENV LD_LIBRARY_PATH=/app \
+    HOST=0.0.0.0 \
     PORT=8080 \
     PUBLIC_HOSTED=1 \
     LOCAL_LLM_MODEL=/app/models/qwen2.5-3b-instruct-q4_k_m.gguf \

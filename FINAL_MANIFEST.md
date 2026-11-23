@@ -7,7 +7,7 @@ that passed the acceptance suite, so a later change is detectable instead of bei
 hand, so the summary below cannot drift from the run it describes):
 
 ```
-total=48  passed=48  all_pass=True  run_tag=final  llm_mode="Local Qwen2.5-3B · llama.cpp CPU"
+total=48  passed=48  all_pass=True  run_tag=final  llm_mode="Local Qwen2.5-3B found, server not running"
 A10  PASS 112 cards (>=40), 41 sources (>=8), 0 off-whitelist URLs, 0 without status
 A11  PASS accuracy 100.0% (93/93); distribution={'refuted': 41, 'supported': 37, 'undetermined': 15}; false refusals=...
 A12  PASS consistency 100.0% (12/12); verdicts dropped to refusal=0
@@ -37,7 +37,7 @@ A33  PASS 5 probes: a two-step chain is derived and labelled, an agreeing third 
 A34  PASS 97/112 cards carry an archived paragraph: 97 verified, 13 unresolved, 1 page_changed, 1 source_changed; exc...
 A35  PASS 5 external dev datasets recomputed from the frozen slice; accuracy and refusal match the published run with...
 A36  PASS risk/cure classified and kept apart, risk/prevention kept together, harm/harm still decided; susceptibility...
-A37  PASS the acceptance run carries a receipt (d191a3624950efe8998fcf7d77b767ff) that binds 56 artefacts by SHA-256,...
+A37  PASS the acceptance run carries a receipt (92fb82fd9eb339474b33ead8c5d507a6) that binds 66 artefacts by SHA-256,...
 A38  PASS the built page ran in edge; the court docket plus 10 corpus demos and 3 citation demos were clicked, each r...
 A39  PASS the external table carries a receipt (8d381b4a0b0627cd90bac5257c27f869): two runs with exit codes and outpu...
 A3   PASS comma input -> 3 atoms; enumeration input -> 3 atoms; compound subject -> 1 atom(s), first noun kept=True
@@ -76,24 +76,24 @@ run credentials kept for traceability, not part of the deliverable. This manifes
 project file not listed in its own table — it cannot hash itself.
 
 | File | Bytes | SHA256 (first 16) |
-| .dockerignore | 84 | 535496811c0f8554 |
+| .dockerignore | 463 | 82c87b1792faebf9 |
 | .gitattributes | 246 | d786b12647e3d229 |
 | .gitignore | 127 | 63be6eda6b057a24 |
-| ARCHITECTURE.md | 103509 | 2752818d4196eb74 |
-| COMPETITION_SCORECARD_CN.md | 12837 | 883910ac0ac8671b |
+| ARCHITECTURE.md | 103494 | 58c799af1bb644ec |
+| COMPETITION_SCORECARD_CN.md | 13341 | 5d53e9bac74c4cd9 |
 | DATA_DICTIONARY.md | 4036 | cfdff5cf201053cb |
 | DATA_PLAN.md | 23831 | 38bb51e3baed1104 |
 | Dockerfile | 307 | 1d774a1f5f6ab839 |
-| JUDGE_PATH.md | 4082 | a7fc6319316b7b76 |
+| JUDGE_PATH.md | 4532 | c6a9b89d191157d3 |
 | LICENSE | 1089 | 193fa3fab2956aa6 |
 | PRODUCT.md | 11213 | 97df89ab4a6a17d3 |
-| README.md | 16031 | 9426e8e96954963e |
+| README.md | 16918 | f6f2e3557f4afec3 |
 | REFACTOR_PLAN_CN.md | 30989 | a34e55143e1fb0eb |
-| SUBMISSION.md | 18807 | 691c08ce33a0bc38 |
-| USER_TODO.md | 9585 | 8f67d6c5b6e93f19 |
+| SUBMISSION.md | 19566 | 60009c44210244b4 |
+| USER_TODO.md | 10160 | 15595dc1940813d9 |
 | core/__init__.py | 89 | 0797e0173f8c3939 |
 | core/adjudicate.py | 9736 | 910e59c341d71ed5 |
-| core/audit.py | 134578 | c05c77edd8660903 |
+| core/audit.py | 134593 | 815bcec5e5fd2998 |
 | core/citation.py | 11046 | ee5e5a3799a20ea4 |
 | core/consistency.py | 9906 | dbfaed8293f581ab |
 | core/court.py | 29458 | 05eb1ba08455e562 |
@@ -111,7 +111,7 @@ project file not listed in its own table — it cannot hash itself.
 | core/semantic.py | 2027 | 320fe9fa0f4af8b3 |
 | core/snapshots.py | 7467 | 10ebb6756a44d41d |
 | data/_claims_backup.json | 68868 | f25bc0be0c109866 |
-| data/ai_recall_replay.json | 25623 | be778affb638e4ca |
+| data/ai_recall_replay.json | 25703 | 40d5d8f86916a105 |
 | data/ai_uplift_cases.json | 2900 | 7d59df1cfd79677f |
 | data/citation_cases.json | 2953 | fb4d7913d0fa6123 |
 | data/claims.json | 75184 | 0c96925411fed34a |
@@ -146,10 +146,16 @@ project file not listed in its own table — it cannot hash itself.
 | data/golden_set.json | 20395 | babc18d96641ac99 |
 | data/guard_set.json | 13994 | e1f87a536476bd5c |
 | data/paraphrase_deep.json | 3101 | c3b310a1add2b0ac |
+| deploy/cloudrun/Dockerfile | 1555 | b1cb5b6bae48b39e |
+| deploy/cloudrun/start.sh | 1331 | c986893e5d0fa2d2 |
+| deploy/hf-space/.gitattributes | 168 | 4a37c7eeeb2f076f |
+| deploy/hf-space/Dockerfile | 1391 | 90dabfb056fd2613 |
+| deploy/hf-space/README.md | 946 | c0fd14b241e158ee |
+| deploy/hf-space/start.sh | 1332 | a92615146085da06 |
 | eval/bench_court.csv | 86 | d58961d98a4121c2 |
 | evidence/DATA_STATUS.md | 28296 | 39200846e0129189 |
 | evidence/_cards_evidence_backup.jsonl | 98892 | e19d83bf947e708a |
-| evidence/acceptance_final.json | 15500 | 724a85c6e371e047 |
+| evidence/acceptance_final.json | 15509 | 600df96807fcb216 |
 | evidence/ai_lift.json | 12123 | 6c3d3d77a0ac80d3 |
 | evidence/ai_uplift.json | 14508 | b153e186bf354249 |
 | evidence/cards_evidence.jsonl | 110368 | e48986cd0aabaa48 |
@@ -164,12 +170,13 @@ project file not listed in its own table — it cannot hash itself.
 | evidence/external_eval_v3.json | 7904 | 6401a3a1e1b8ca2f |
 | evidence/external_eval_v4.json | 8805 | 6c20141135970da2 |
 | evidence/holdback_ledger.json | 998 | b183e15b298a151d |
+| evidence/hosted_live.json | 2905 | 37dee0cdfdb28622 |
 | evidence/label_conflicts.json | 53977 | 9c776ba54d443594 |
 | evidence/link_check.json | 12476 | 1d05cf321aa418f1 |
 | evidence/oracle_eval.json | 48940 | a297b4780629f86c |
 | evidence/paragraphs.jsonl | 2002060 | 084ada8b29201374 |
 | evidence/retractions.jsonl | 13672 | ddacb0349a16890d |
-| evidence/run_receipt.json | 6677 | 21035f27e56bfa23 |
+| evidence/run_receipt.json | 7702 | 2f752144e8023011 |
 | evidence/screenshots/01-ai-contrast.png | 99016 | d1e1543f70d8a7db |
 | evidence/screenshots/01-judge-path.png | 195194 | 08df4d656bc55cbb |
 | evidence/screenshots/02-real-model-mistake.png | 89405 | f91cd662172b45f6 |
@@ -212,7 +219,7 @@ project file not listed in its own table — it cannot hash itself.
 | evidence/video_script.md | 3919 | 3f2f73342a3b71a5 |
 | evidence/withdrawn_demo.json | 869 | 3e14d67df6fc654d |
 | requirements.txt | 170 | 350463f5f1361c2c |
-| serve.py | 16140 | 6d05a817e95fc6ad |
+| serve.py | 20380 | c80e9675af3820ef |
 | soldieros/scope.json | 1619 | 730d6d60928880ee |
 | tests/test_core_invariants.py | 3508 | 17ac6e63b03937d0 |
 | tools/add_cards_v10.py | 8774 | bb79546d968c0a02 |
@@ -228,6 +235,7 @@ project file not listed in its own table — it cannot hash itself.
 | tools/build_court_batch_replay.py | 2154 | 7ba3a9f760ea0a28 |
 | tools/build_court_replay.py | 2622 | 95415271c6c51eb3 |
 | tools/build_frontend.py | 4479 | 7ea739687409a62d |
+| tools/check_hosted_live.py | 6534 | 9e26fd6200f85e90 |
 | tools/check_label_noise.py | 5069 | a28b138b2a2c381f |
 | tools/check_links.py | 6084 | 66019380e615d19c |
 | tools/check_manifest.py | 5914 | 16b065699d35381c |
@@ -246,18 +254,19 @@ project file not listed in its own table — it cannot hash itself.
 | tools/make_eval_receipt.py | 7318 | c5018f2abc7fb775 |
 | tools/make_guard_set.py | 10580 | 2829844a43877aa0 |
 | tools/make_holdout2.py | 9517 | b2af8a7f53438e93 |
-| tools/make_receipt.py | 7546 | 9d4c7bef74bee6c0 |
+| tools/make_receipt.py | 7891 | a48856617213373e |
 | tools/make_screenshots.py | 6267 | d9e7f77ff26e33ab |
 | tools/measure_ai_lift.py | 4687 | 8eb35b0c73e7741b |
 | tools/restate_vitd_card.py | 1465 | d76288481191203a |
 | tools/run_ai_uplift.py | 5901 | 9ca2057d0bf8c3fb |
 | tools/run_external_session.py | 8164 | b6e31ec2a6b4ed7d |
 | tools/session_log.py | 7287 | 740af53575e8c6c0 |
+| tools/stage_hf_space.py | 2799 | cbf12bbdd8dcb6aa |
 | tools/sync_frontend.py | 1878 | d35474348af483d5 |
 | tools/verify_sessions.py | 7275 | f20043e5a0f456a7 |
-| web/app.js | 81334 | cdd5e2cb9b7edf11 |
-| web/court.js | 46051 | a1a6f1b917aecdb1 |
+| web/app.js | 82235 | 01e2b434c1f9f9d3 |
+| web/court.js | 49006 | 7eb324c9add0ff62 |
 | web/court_batch_replay.js | 12351 | 7518b86559b14af3 |
 | web/court_replay.js | 31239 | 989e2c890efc8ea8 |
 | web/demo.html | 4767 | 3485f76e00426da8 |
-| web/index.html | 234466 | 8204fcf4cc6a77e9 |
+| web/index.html | 235706 | e7df8c6cb9622bb7 |

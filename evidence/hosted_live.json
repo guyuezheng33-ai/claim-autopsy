@@ -1,0 +1,108 @@
+{
+  "checked_at": "2026-11-22T17:29:46.083439+00:00",
+  "public_page": "https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html",
+  "endpoint": "https://bali-drive-install-hiking.trycloudflare.com",
+  "origin_header": "https://guyuezheng33-ai.github.io",
+  "status": {
+    "http": 200,
+    "seconds": 1.064,
+    "hosted": true,
+    "model_live": true,
+    "mode": "Local Qwen2.5-3B · llama.cpp CPU",
+    "model": "qwen2.5-3b-instruct-q4_k_m.gguf"
+  },
+  "cors_preflight": {
+    "http": 204,
+    "allow_origin": "*",
+    "allow_methods": "GET, POST, OPTIONS"
+  },
+  "trial": {
+    "http": 200,
+    "seconds": 18.859,
+    "claim": "Venus is the hottest planet in the Solar System.",
+    "source_sha256": "921934c06f652e43be53b394170fc1a8c02358d24062b745d04bbb261c24f2db",
+    "run_id": "8b65d66160855ed5",
+    "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+    "engine": "deterministic judge + AI advocates",
+    "verdict": "supported",
+    "summary": {
+      "claims": 1,
+      "supported": 1,
+      "refuted": 0,
+      "not_in_source": 0,
+      "conflict": 0,
+      "accepted_arguments": 1,
+      "struck_arguments": 1,
+      "ai_arguments": 2,
+      "ai_accepted": 1,
+      "ai_struck": 1,
+      "ai_bridges": 1,
+      "rule_arguments": 0
+    },
+    "ai_available": true,
+    "ai_meta": {
+      "prosecution": {
+        "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+        "provider": "local-llama.cpp",
+        "latency_ms": 12671,
+        "usage": {
+          "prompt_tokens": 630,
+          "completion_tokens": 90,
+          "total_tokens": 720
+        },
+        "role": "prosecution",
+        "anchor_fill": [
+          {
+            "atom_id": "A1",
+            "anchors": [
+              [
+                "Venus",
+                "Venus"
+              ],
+              [
+                "hottest",
+                "mean surface temperature"
+              ]
+            ],
+            "errors": null
+          }
+        ],
+        "arguments": 1,
+        "output_format": "object"
+      },
+      "defense": {
+        "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+        "provider": "local-llama.cpp",
+        "latency_ms": 11528,
+        "usage": {
+          "prompt_tokens": 629,
+          "completion_tokens": 88,
+          "total_tokens": 717
+        },
+        "role": "defense",
+        "anchor_fill": [
+          {
+            "atom_id": "A1",
+            "anchors": [
+              [
+                "Venus",
+                "Venus"
+              ],
+              [
+                "hottest",
+                "mean surface temperature"
+              ]
+            ],
+            "errors": null
+          }
+        ],
+        "arguments": 1,
+        "output_format": "object"
+      },
+      "available": true,
+      "parallel": true
+    }
+  },
+  "failures": [],
+  "pass": true
+}

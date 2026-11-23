@@ -2,7 +2,7 @@
 
 Paste-ready English copy for the Devpost fields. Numbers match the current repository; do not replace them with rounder numbers.
 
-> **Judge shortcut:** open `...?judge=1`, then click **Next →** five times. The path is trap → real recorded mistake → accepted quote → four-source conflict → receipt for the struck quote. A 57.4s captioned screen recording is at `evidence/demo_60s.mp4`, and `web/demo.html` embeds it as a public visual walkthrough.
+> **Judge shortcut:** open `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html`, paste any claim and source, then click **Open the trial**. This page calls a hosted Qwen2.5-3B live; `evidence/hosted_live.json` records an 18.9s black-box run. For a stable five-step read, open `.../index.html?judge=1` and click **Next →** five times. A 57.4s captioned screen recording is at `evidence/demo_60s.mp4`.
 
 ---
 
@@ -102,7 +102,7 @@ A second real case: `The Eiffel Tower is located in Paris.` against `The Eiffel 
 
 - **Backend:** Python 3.13 standard library. `core/court.py` is the judge and dossier builder. `core/llm.py` owns the model provider, local server lifecycle and strict advocate protocol. `serve.py` is a stdlib HTTP server with nine endpoints; `/api/trial_stream` returns ordered NDJSON phase events (rules → evidence → AI advocates, with heartbeats → judge) so a slow CPU run is observable rather than a blank wait.
 - **Local AI:** `llama.cpp` `llama-server` with `Qwen/Qwen2.5-3B-Instruct-GGUF` Q4_K_M, 2.0 GB, CPU-only `-ngl 0`, loopback port 8099. No API key and no outbound request are needed. A 1.5B fast profile and a 7B profile are configured; 3B is the measured default.
-- **Front end:** static HTML, CSS and vanilla JS. `web/court.js` renders the dossier and consumes the live phase stream. `web/court_replay.js` holds recorded dossiers. The static page works from `file://`; live inference requires `python serve.py`. The live panel shows four real phases, elapsed time and the final accepted/struck/bridge count.
+- **Front end:** static HTML, CSS and vanilla JS. `web/court.js` renders the dossier and consumes the live phase stream. `web/court_replay.js` holds recorded dossiers. On GitHub Pages the page calls the hosted Qwen2.5-3B endpoint; on localhost it calls same-origin `serve.py`; a `file://` copy stays in labelled recorded mode. The live panel shows four real phases, elapsed time and the final accepted/struck/bridge count.
 - **Data:** 33 court fixtures (12 verdict + 13 argument + 5 anchor + 3 input), 6 batch fixtures, 12 citation fixtures, 112 evidence cards from 41 authoritative sources for the legacy corpus audit.
 - **Testing:** 48 acceptance gates (not 48 unit tests), 10 pytest unit tests, SHA-256 run receipts binding every code/data/UI artefact, a real Edge browser check of single-source and batch court modes, 33/33 court fixtures and 6/6 batch fixtures, and an 8-case rules-lose / live-3B / anchor-causal baseline.
 
@@ -111,7 +111,7 @@ A second real case: `The Eiffel Tower is located in Paris.` against `The Eiffel 
 1. **Fabricated quotation.** The adversarial fixture invents “The flu vaccine contains live virus and causes influenza.” The judge strikes it with `quote_not_found`; it never enters the verdict. Gate A46 enforces the same path.
 2. **Vulkan backend produced garbage.** Qwen emitted repeated garbled tokens (`GGGG…` / `UmbGGGG…`) instead of JSON when layer 0 went to Vulkan. The fix is `-ngl 0` on CPU; `serve.py` sets it. This is a real environment bug, not a hypothetical.
 3. **A 3B model is not a reliable opponent.** It sometimes labels its relation incorrectly, returns an empty list on an unrelated source, or proposes only one anchor in the full argument schema. The judge catches these; that is the product working. Forced anchor completion raises the fixed 8-case live set to 8/8 (`evidence/ai_uplift.json`, `model_live=true`), but that is not a guarantee of open-domain recall or eloquence.
-4. **No key and no model means rules-only.** The page says `RULES-ONLY DOCKET`; it does not fake AI. A static `file://` page says `RECORDED LIVE AI RUN`, never `LIVE`.
+4. **No key and no model means rules-only.** The page says `RULES-ONLY DOCKET`; it does not fake AI. The public GitHub Pages page calls the hosted 3B endpoint; a `file://` copy has no API and shows `RECORDED LIVE AI RUN`, never `LIVE`.
 5. **One source, English-first.** Heavy paraphrase or a source in another language can return `not_in_source`. This is a finding about the supplied source, not a claim that the statement is false.
 6. **Not an authoritative fact-check.** The judge checks whether the source states the claim, not whether the source is correct.
 
@@ -132,14 +132,14 @@ python tools/make_receipt.py final
 - **Separating argument from judgment.** The first temptation is to let the model produce a verdict. That makes the product indistinguishable from a chatbot and removes the only thing a skeptical reader can verify. The judge had to own every decision, and the AI had to be reduced to a witness whose claims can be struck.
 - **Making the judge fair without making it lenient.** The synonym floor for `cure` / `treat` was initially too broad and let `green` / `blue` through. It is now predicate-scoped: synonyms may pass only when every structural check passes and the predicates are in the same class. The 33 fixtures pin both directions.
 - **Running AI without a key.** The environment had no API key. A local model was found, but the Vulkan path produced garbage. Pure CPU fixed it. This is why the demo can show live AI without an external account.
-- **Honest recorded vs live.** A static page cannot call a model. The page now shows a real recorded run, labelled as recorded, and the HTTP page shows live. The distinction is enforced in the badge logic and tested in the browser.
+- **Honest recorded vs live.** The public page has two surfaces: a hosted live form that calls Qwen2.5-3B on any pasted citation, and a five-step rail that replays a labelled real run. A `file://` copy never claims live. The badge is driven by `/api/status` and the receipt model name, not by page copy.
 
 ## 10. Accomplishments
 
 - The judge is genuinely independent: a model that says `supported` cannot make the verdict `supported` unless the quotation passes every check.
 - The product has a zero-model fallback that is still useful and still honest.
 - A real local model runs the main path on CPU, with no key and no network.
-- The static page shows a real AI docket instead of a rules-only placeholder, and does not call it live.
+- The public page can call a hosted 3B live on arbitrary text; the five-step rail stays a labelled recording. A `file://` copy is recorded and says so.
 - 33/33 court fixtures, 6/6 batch fixtures, 8/8 fixed-anchor uplift cases, 8/8 live 3B uplift cases, 8/8 anchor-causal control, 48 gates, full-artefact SHA-256 receipt.
 
 ## 11. What we learned
@@ -150,7 +150,7 @@ The interesting part of AI fact-checking is not generating an answer; it is maki
 
 - Multi-source dossiers and cross-source conflicts shipped; the next step is N claims × N sources rather than one claim × N sources.
 - Better paraphrase recall on the measured 3B path. 7B is explicitly out of scope for this build; a larger model is not assumed to improve the product score.
-- A hosted demo that preserves the same live/recorded distinction.
+- A public hosted endpoint now runs the same 3B CPU model; the next step is a permanent Hugging Face Space URL and a measured cold-start budget on free CPU.
 
 ## 13. Built with
 
@@ -159,17 +159,16 @@ Python, `llama.cpp`, Qwen2.5-3B-Instruct-GGUF, HTML, CSS, JavaScript, SHA-256 co
 ## 14. Try it
 
 - Repository: `https://github.com/guyuezheng33-ai/claim-autopsy`
-- Public recorded demo, judge mode: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?judge=1`
+- Public hosted live page: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html`
+- Five-step judge mode: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?judge=1`
 - Shorter proof-only link: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?demo=struck`
 - Public visual walkthrough: `https://guyuezheng33-ai.github.io/claim-autopsy/web/demo.html` — embeds the 57.4s captioned MP4 and the five steps.
 - Video file: [`evidence/demo_60s.mp4`](evidence/demo_60s.mp4) — 57.4s, 1280×720, captioned, silent; five steps end on the struck-quote receipt.
 - Devpost video field: use the public visual-walkthrough URL above. For a native YouTube/Vimeo embed, upload `evidence/demo_60s.mp4` and paste the platform URL.
+- Hosted black-box receipt: [`evidence/hosted_live.json`](evidence/hosted_live.json) — 204 CORS preflight, 18.9s trial, run `8b65d66160855ed5`, model `qwen2.5-3b-instruct-q4_k_m.gguf`.
+- Re-run the hosted check: `python tools/check_hosted_live.py`
 
-The judge-mode link hides the free-form form, starts on step 1, and exposes a five-step rail:
-trap, real model mistake, accepted quote, four-source conflict, receipt. The page labels the
-fixture, the recorded 1.5B run and the static recording separately. Step 5 returns to the trap
-case so the struck quotation and its receipt are visible in the same pass. The shorter link preloads
-only the 10-second proof.
+The hosted page does not hide the free-form form. The judge-mode link hides it for a stable five-step rail: trap, real model mistake, accepted quote, four-source conflict, receipt. In judge mode the top-right link becomes **Test your own claim** and returns to the live form. The page labels the fixture, the recorded 1.5B run and the hosted 3B run separately.
 
 These are the only fields that require the author's accounts. No URL is fabricated.
 Devpost normally embeds video only from YouTube or Vimeo; a stable video URL is still required
@@ -196,8 +195,8 @@ python serve.py
 ```
 
 No API key is required for the local path. The first run downloads a 2.0 GB model once. If the
-judge prefers not to run Python, `web/index.html` opens directly and shows a recorded local-AI
-docket with the `RECORDED LIVE AI RUN` badge; `?judge=1` is the five-step path.
+judge prefers not to run Python, the public GitHub Pages page calls the hosted 3B endpoint; a
+`file://` copy stays in labelled recorded mode. `?judge=1` is the five-step rail.
 
 Numbers used in the Devpost form:
 
@@ -210,11 +209,11 @@ Numbers used in the Devpost form:
 | Acceptance gates | 48/48 |
 | Court fixtures | 33/33 |
 | Batch fixtures | 6/6 |
-| Run receipt | 56 artefacts |
-| Final manifest | 0 problems; row count is in `FINAL_MANIFEST.md` |
+| Run receipt | 66 artefacts |
+| Final manifest | 0 problems; 194 files |
 
-The static page is a recording; the live court is `python serve.py`. Do not describe the static
-page as a live model call.
+The public GitHub Pages page calls the hosted 3B endpoint for any pasted citation; the five-step
+rail is a labelled recording. Do not describe the five-step rail as a live model call.
 
 ## 15. Team
 

@@ -1,60 +1,70 @@
-# Claim Autopsy - three-minute judge path
+# Claim Autopsy — three-minute judge path and live test
 
-No install is required for the recorded demo. Open this link:
+## Primary: hosted live, no install
+
+Open the public page:
+
+`https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html`
+
+Paste any claim and the source you want to check, then click **Open the trial**. The page calls a
+hosted endpoint that runs **Qwen2.5-3B-Instruct Q4_K_M** on CPU. The badge reads
+`HOSTED LIVE · 3B` only after `/api/status` confirms `ai_available=true`. A cold model can take
+up to a minute to load; the page shows `HOSTED · WAKING 3B` and retries instead of pretending to
+be live.
+
+A verified black-box run is in `evidence/hosted_live.json`:
+
+- public page: `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html`
+- endpoint: `https://bali-drive-install-hiking.trycloudflare.com`
+- CORS preflight: `204`, `Access-Control-Allow-Origin: *`
+- trial: `18.9s`, model `qwen2.5-3b-instruct-q4_k_m.gguf`, run `8b65d66160855ed5`, verdict `supported`
+- receipt: 1 atom, 1 accepted argument, 1 struck argument, 1 semantic bridge
+
+Run the same check yourself:
+
+```bash
+python tools/check_hosted_live.py
+```
+
+Use `--base https://your-space.hf.space` after a Hugging Face Space replaces the tunnel.
+The checker never trusts the page badge: it calls `/api/status`, sends an `Origin` header,
+performs a real CORS preflight, runs a live trial, and reads the receipt model name.
+
+## Five-step rail (stable recording)
 
 `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?judge=1`
 
-The page enters **judge mode**: the free-form form is hidden, step 1 is already selected, and
-the five-step rail under **THE 10-SECOND PROOF** is the whole path. Click a step, or click
-**Next ->**. The last step changes the button to **Restart ↺**.
+The page enters judge mode and starts on step 1. Click a step or **Next →**. Step 5 changes the
+button to **Restart ↺**. In judge mode, the top-right link becomes **Test your own claim** and
+returns to the live form.
 
-The page labels the difference between a fixture, a recorded model run, and a live run.
-Do not call the static page live. Only `python serve.py` can call the model live.
-
-## 0:00-0:20 - Step 1: the trap
-
-The page opens on **1 · Trap**. Look at the proof panel, then at the verdict card:
+### 0:00–0:20 · Step 1 — the trap
 
 - badge `ADVERSARIAL FIXTURE`;
-- **AI proposed**: "The flu vaccine contains live virus and causes influenza." with `quote_not_found`;
-- **Source says**: "It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.";
+- **AI proposed**: “The flu vaccine contains live virus and causes influenza.” with `quote_not_found`;
+- **Source says**: “It is impossible to get influenza from the injected vaccine because the vaccine does not contain live virus.”;
 - **Judge**: `refuted`; the strike did not change the verdict.
 
-This is an adversarial fixture, not a model run. It proves the judge can reject a plausible
-fabrication. The page says so instead of pretending the fixture came from the model.
+This is a fixture, not a model run. It proves the judge rejects a plausible fabrication and says so.
 
-## 0:20-0:40 - Step 2: a real model mistake
-
-Click **2 · Real mistake**.
-
-You should see:
+### 0:20–0:40 · Step 2 — a real model mistake
 
 - badge `RECORDED LIVE AI RUN`;
 - model `qwen2.5-1.5b-instruct-q4_k_m.gguf`;
 - a struck argument with `side_mismatch`;
 - the same source quotation on the judge's side.
 
-This is an actual recorded local run. The model used a true quotation on the wrong side; the
-judge struck it. The verdict stayed with the evidence.
+This is an actual recorded 1.5B run, not a synthetic claim. The model used a true quotation on the
+wrong side; the judge struck it.
 
-## 0:40-1:20 - Step 3: a grounded argument
-
-Click **3 · Accepted quote**.
-
-You should see:
+### 0:40–1:20 · Step 3 — a grounded argument
 
 - `refuted` for the atom;
-- an accepted argument with the exact quotation and `chars 0-108`;
-- the source panel highlights that same span;
-- the receipt block with `run_id`, source hash, and the accepted and struck counts.
+- accepted argument with `chars 0–108`;
+- the source panel highlights the same span;
+- a receipt with `run_id`, source hash, accepted and struck counts.
 
-The accepted argument is not an opinion. It is a character-for-character match.
-
-## 1:20-2:00 - Step 4: one claim, four sources
-
-Click **4 · Conflict**.
-
-You should see:
+### 1:20–2:00 · Step 4 — one claim, four sources
 
 - four source rows;
 - one `cross-source conflict`;
@@ -63,45 +73,40 @@ You should see:
 
 Rules triage every source first. AI is spent only on sources the rules cannot settle.
 
-## 2:00-3:00 - Step 5: the receipt
+### 2:00–3:00 · Step 5 — the receipt
 
-Click **5 · Receipt**.
+The page returns to the struck trap case and scrolls to **Copy JSON receipt** /
+**Download Markdown receipt**. The receipt contains the claim and source hash, the accepted
+quote and character offsets, the struck quote with `quote_not_found`, and the model name or
+`adversarial fixture`.
 
-The page returns to the struck trap case, scrolls to **Copy JSON receipt** / **Download Markdown receipt**,
-and pulses the action row. Check that the receipt contains:
+## If the hosted endpoint is down
 
-- the claim and source hash;
-- the accepted quote and character offsets;
-- the struck quote and its reason code (`quote_not_found`);
-- the model name, or `adversarial fixture` when no model ran.
-
-The last step closes the loop: the same fabricated quotation that was struck at 0:00 is now traceable
-to a receipt. Click **Restart ↺** to return to step 1.
-
-If you only want the proof panel without judge mode, use the shorter deep link:
-
-`https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?demo=struck`
-
-If you cannot click through five steps, the 57.4-second captioned visual walkthrough is public:
-
-`https://guyuezheng33-ai.github.io/claim-autopsy/web/demo.html`
-
-## Optional live path (if you want to test the AI, not the recording)
-
-The public page is a recording. For live AI on any text, from the repo root:
+Run the same page locally with the 3B model:
 
 ```text
 python tools/get_model.py --size 3b   # one-time, 2.0 GB
 python serve.py                       # starts llama.cpp + the HTTP server
-# open http://127.0.0.1:8765/?judge=1
+# open http://127.0.0.1:8765/
 ```
 
-What to verify:
+The local path uses the same `/api/status`, `/api/trial_stream` and `/api/trial` contract. If no
+model is available, the page says `RULES-ONLY DOCKET`; it never fakes AI.
 
-- the badge changes from `RECORDED LIVE AI RUN` to `LIVE AI - JUDGE VERIFIED`;
-- the four phases stream (rules -> evidence -> AI advocates -> judge), not a blank spinner;
-- paste your own claim/source; the first 3B docket is about 20-35 seconds;
-- if the model is missing, the page says `RULES-ONLY DOCKET`; it never fakes AI.
+## Honesty labels
 
-This is the only path that exercises the model live. The public Pages link is intentionally a
-recorded run, so a reviewer with no local setup can still see the product's central moment.
+| What you see | What it is |
+|---|---|
+| `HOSTED LIVE · 3B` | Public page confirmed a live 3B endpoint through `/api/status` |
+| `LIVE AI · JUDGE VERIFIED` | This trial called the live model; the receipt names the 3B model |
+| `RECORDED LIVE AI RUN` | A frozen dossier from a real earlier run; no model called now |
+| `ADVERSARIAL FIXTURE` | Hand-written trap; no model called |
+| `HOSTED API OFFLINE` | The page could not reach the endpoint; it does not fall back silently |
+
+The recorded rail and the hosted trial are separate. The rail is stable for a three-minute read;
+the form is the part that must be live.
+
+## Video
+
+`https://guyuezheng33-ai.github.io/claim-autopsy/web/demo.html` embeds the 57.4-second captioned
+MP4 (`evidence/demo_60s.mp4`).

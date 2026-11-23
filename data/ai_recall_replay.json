@@ -1,13 +1,13 @@
 {
   "meta": {
-    "purpose": "Recorded dual-path evidence for the public static page: the offline core refuses low-overlap restatements, while AI same-proposition recall reaches a gated verdict with a real corpus card.",
+    "purpose": "Recorded contrast for the legacy AI-recall demo on the public page: the offline core refuses low-overlap restatements, while AI same-proposition recall reaches a gated verdict with a real corpus card.",
     "captured_at": "2026-11-20T00:09:35+08:00",
     "producer": "tools/export_ai_replay.py",
     "source": "Live API calls executed by the producer; no verdict or citation below is hand-written.",
     "provider": "DeepSeek",
     "requested_model": "deepseek-chat",
     "offline_engine": "Local deterministic core",
-    "honesty": "Recorded, not live. A static page cannot call a model; these are real recorded results, and the live AI path requires running serve.py with a key.",
+    "honesty": "Recorded, not live. This is the frozen DeepSeek contrast for the legacy AI-recall demo; the citation court above calls the hosted Qwen2.5-3B live on your own text. These are real recorded results, not hand-written.",
     "stance_rule": "Every stance is read from the stored evidence card; the AI never supplies or alters a stance or a verdict.",
     "case_count": 14,
     "gain_case_count": 11,

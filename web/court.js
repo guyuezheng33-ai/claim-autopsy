@@ -1010,8 +1010,8 @@
       document.body.classList.add("court-judge-mode");
       var enter = document.getElementById("courtJudgeEnter");
       if (enter) {
-        enter.textContent = "Full demo";
-        enter.setAttribute("href", "?demo=struck");
+        enter.textContent = "Test your own claim";
+        enter.setAttribute("href", location.pathname);
       }
     } else if (queryDemo) {
       fill(initial, false);

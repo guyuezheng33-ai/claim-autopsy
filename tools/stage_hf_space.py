@@ -50,6 +50,7 @@ def stage(out):
     shutil.copy2(os.path.join(HF, "Dockerfile"), os.path.join(out, "Dockerfile"))
     shutil.copy2(os.path.join(HF, "start.sh"), os.path.join(out, "start.sh"))
     shutil.copy2(os.path.join(HF, "README.md"), os.path.join(out, "README.md"))
+    shutil.copy2(os.path.join(HF, ".gitattributes"), os.path.join(out, ".gitattributes"))
 
     with open(os.path.join(out, ".dockerignore"), "w", encoding="utf-8") as f:
         f.write("models/\n__pycache__/\n*.pyc\n.git/\n.pytest_cache/\n")

@@ -52,6 +52,7 @@ ARTEFACTS = [
     "data/court_batch_cases.json",
     "data/court_replay.json",
     "data/court_batch_replay.json",
+    "data/ai_recall_replay.json",
     "data/ai_uplift_cases.json",
     "evidence/cards_evidence.jsonl",
     "evidence/paragraphs.jsonl",
@@ -72,6 +73,15 @@ ARTEFACTS = [
     "tools/build_court_replay.py",
     "tools/build_court_batch_replay.py",
     "tools/run_ai_uplift.py",
+    "tools/check_hosted_live.py",
+    "tools/stage_hf_space.py",
+    "evidence/hosted_live.json",
+    "deploy/hf-space/Dockerfile",
+    "deploy/hf-space/start.sh",
+    "deploy/hf-space/README.md",
+    "deploy/hf-space/.gitattributes",
+    "deploy/cloudrun/Dockerfile",
+    "deploy/cloudrun/start.sh",
     # documents and screenshots the reviewer actually reads: a stale number
     # should invalidate the receipt the same way stale code does
     "README.md",

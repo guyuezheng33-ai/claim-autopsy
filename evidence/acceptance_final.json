@@ -1,6 +1,6 @@
 {
   "run_tag": "final",
-  "llm_mode": "Local Qwen2.5-3B · llama.cpp CPU",
+  "llm_mode": "Local Qwen2.5-3B found, server not running",
   "passed": 48,
   "total": 48,
   "all_pass": true,
@@ -181,7 +181,7 @@
     },
     "A37_run_receipt": {
       "pass": true,
-      "detail": "the acceptance run carries a receipt (d191a3624950efe8998fcf7d77b767ff) that binds 56 artefacts by SHA-256, records the command, exit code 0, interpreter and output hash, and is green at 47/47; every hash recomputed; 0 violations",
+      "detail": "the acceptance run carries a receipt (92fb82fd9eb339474b33ead8c5d507a6) that binds 66 artefacts by SHA-256, records the command, exit code 0, interpreter and output hash, and is green at 47/47; every hash recomputed; 0 violations",
       "bad": [],
       "notes": []
     },

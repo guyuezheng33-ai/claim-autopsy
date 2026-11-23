@@ -1,0 +1,4 @@
+# Shell scripts must stay LF inside the Linux Space container; a CRLF checkout
+# would make /bin/sh fail on `\r` after each line.
+*.sh text eol=lf
+start.sh text eol=lf

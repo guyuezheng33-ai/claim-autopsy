@@ -31,9 +31,9 @@ python serve.py
 
 `serve.py` finds the model in `%LOCALAPPDATA%\claim-autopsy\models` or `models/`, starts `llama-server` on loopback, and waits for it. The model runs on CPU with `-ngl 0`; no API key and no outbound request are required. The measured 3B default takes about 20–35 seconds per docket on this CPU; the 1.5B fast profile takes about 8–12 seconds. The live page streams real stage updates (`/api/trial_stream`) so the wait shows rules triage, evidence packaging, AI advocacy and judge verification instead of a blank spinner.
 
-You can also open `web/index.html` directly. It works without a server and without a model, but it is a **recording**: the default docket is a real local Qwen run recorded into `data/court_replay.json`, labelled `RECORDED LIVE AI RUN`. Only `serve.py` can produce `LIVE AI · JUDGE VERIFIED`.
+You can also open `web/index.html` directly. It works without a server and without a model, but it is a **recording**: the default docket is a real local Qwen run recorded into `data/court_replay.json`, labelled `RECORDED LIVE AI RUN`. The public GitHub Pages page is different: it calls a hosted Qwen2.5-3B endpoint, so any pasted claim/source can be tested live. Only `/api/status` + a real trial receipt can produce `HOSTED LIVE · 3B` and `LIVE AI · JUDGE VERIFIED`.
 
-For the fastest zero-install review, open `web/index.html?judge=1`: judge mode hides the free-form form, starts on step 1, and gives a five-step rail. Step 1 is an adversarial fabricated quotation struck as `quote_not_found`; step 2 is a real recorded 1.5B mistake (`side_mismatch`); the last step pulses the receipt actions. The shorter `web/index.html?demo=struck` link preloads only the proof.
+For the fastest zero-install review, open `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html`, paste a claim and source, and click **Open the trial**. For a stable five-step read, use `web/index.html?judge=1`: judge mode hides the free-form form, starts on step 1, and gives a five-step rail. Step 1 is an adversarial fabricated quotation struck as `quote_not_found`; step 2 is a real recorded 1.5B mistake (`side_mismatch`); the last step pulses the receipt actions. The shorter `web/index.html?demo=struck` link preloads only the proof.
 
 If you have a cloud key, the same code path uses it:
 
@@ -45,13 +45,22 @@ LLM_API_KEY=... python serve.py
 
 ## Three-minute judge path
 
-Open the public recorded demo in judge mode:
+Open the public hosted page to test a claim live:
+
+`https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html`
+
+`?judge=1` is the stable five-step rail:
 
 `https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html?judge=1`
 
 Public 57.4-second visual walkthrough (embeds the captioned MP4): `https://guyuezheng33-ai.github.io/claim-autopsy/web/demo.html`
 
-The page starts on step 1 and hides the free-form form. Use the rail, or **Next →**:
+The hosted trial calls Qwen2.5-3B on CPU. A cold model can take up to a minute; the page shows
+`HOSTED · WAKING 3B` and retries, then `HOSTED API OFFLINE` rather than falling back silently.
+The black-box receipt is `evidence/hosted_live.json`; re-run it with
+`python tools/check_hosted_live.py`.
+
+On the `?judge=1` link, the page starts on step 1 and hides the free-form form. Use the rail, or **Next →**:
 
 1. **1 · Trap** — the adversarial quotation is struck as `quote_not_found`; the verdict stays `refuted`.
 2. **2 · Real mistake** — a recorded 1.5B run is struck as `side_mismatch`.
@@ -129,8 +138,8 @@ Key files:
 | `data/court_batch_cases.json` | 6 batch fixtures: duplicate, conflict, all-not-in-source, eight sources, ninth refused, empty |
 | `core/llm.py` | cloud/local provider, 3B/1.5B/7B profiles, llama-server lifecycle, strict advocate JSON, forced anchor completion and orientation repair |
 | `core/court_live.py` | records real model runs to `evidence/court_live.json`; keeps each local model under `runs`; refuses to write without a model |
-| `serve.py` | HTTP page, `/api/trial`, `/api/trial_stream` (ordered NDJSON progress), `/api/trial_multi`, `/api/status`, `/api/health`, static JS |
-| `web/court.js` | renders the dossier; single and batch modes; live only over HTTP; recorded AI is labelled as recorded |
+| `serve.py` | HTTP page, `/api/trial`, `/api/trial_stream` (ordered NDJSON progress), `/api/trial_multi`, `/api/status`, `/api/health`, static JS; public-hosted limits and CORS preflight |
+| `web/court.js` | renders the dossier; single and batch modes; hosted endpoint or local same-origin; recorded AI is labelled as recorded |
 | `web/court_replay.js` | recorded dossiers, including real local-AI runs and one labelled adversarial fixture |
 | `web/court_batch_replay.js` | one real recorded four-source batch for the static page |
 | `tools/build_court_replay.py` | merges recorded AI runs into the static replay without relabelling them live |
@@ -146,6 +155,7 @@ python -m core.court --fixtures      # 33/33 court fixtures
 python -m core.court --live          # real local model, writes evidence/court_live.json
 python tools/browser_check.py        # Edge: court, 10 legacy demos, 3 citation demos
 python tools/browser_check_live.py   # Edge: live /api/trial_stream progress panel
+python tools/check_hosted_live.py    # black-box public endpoint: status, CORS, real 3B trial
 python -m core.audit final           # 48 gates
 python tools/make_receipt.py final --bootstrap
 python tools/make_receipt.py final
@@ -179,7 +189,10 @@ These are real, not decorative.
 
 ## Honest limitations of the demo
 
-The strongest demo is the local HTTP page: `python serve.py`, then the first docket runs live. The strongest static evidence is the recorded local-AI docket in `web/index.html`. A judge without Python can still see the arguments, the struck quotation and the verdict; a judge with Python can reproduce the live run. The gap between those two experiences is stated on the page, not hidden.
+The strongest demo is the public hosted page: no install, paste any claim/source, and the hosted
+3B runs the trial. The local path (`python serve.py`) is the reproducible fallback. The five-step
+rail is a labelled recording, not a live model call. The gap between the hosted live form and the
+recorded rail is stated on the page, not hidden.
 
 ## License
 

@@ -1,16 +1,17 @@
 # Claim Autopsy — user handoff checklist
 
-Freeze point: **2026-11-22**. This file lists only the steps that need your GitHub / hosting /
-screen / reviewer access. The local product and the 57.4-second captioned video are already built
-and verified.
+Freeze point: **2026-11-23**. This file lists only the steps that need your GitHub / hosting /
+screen / reviewer access. The local product, hosted live endpoint and the 57.4-second captioned
+video are already built and verified.
 
 **Current state**
 
 - `python -m core.audit final` → **48/48, all_pass=True**
-- run receipt → `d191a3624950efe8998fcf7d77b767ff`, **56 artefacts**, exit 0
-- `FINAL_MANIFEST.md` → **0 problems** (row count is in the file)
+- run receipt → `evidence/run_receipt.json`, **66 artefacts**, exit 0 (id is inside the file)
+- `FINAL_MANIFEST.md` → **0 problems**, **194 files**
 - court fixtures → **33/33**; batch fixtures → **6/6**; browser checks → static **ok**, live **ok**
-- judge path → `?judge=1`, five steps, 390px mobile assertion, **Full product →** exit
+- judge path → `?judge=1`, five steps, 390px mobile assertion, **Test your own claim** exit
+- hosted live → public page calls a 3B endpoint; black-box `evidence/hosted_live.json`, run `8b65d66160855ed5`, 18.9 s
 - video → `evidence/demo_60s.mp4`, 57.4 s, 1280×720, captioned; public URL still needs your upload
 - live 3B → **20–35 s** per docket; the page shows four real stages instead of a blank spinner
 - 7B → **explicitly out of scope for this build**
@@ -21,7 +22,8 @@ Red lines:
 - Do not edit a bound file after publishing without re-minting the receipt and manifest. The order is:
   `python tools/make_receipt.py final --bootstrap` → `python tools/make_receipt.py final` →
   `python -m core.audit final` → `python tools/check_manifest.py --write`.
-- Say “recorded” for the static page and “live” only for `python serve.py`. Do not blur them.
+- Say “recorded” for the five-step rail and `file://` copy; say “hosted live” only when `/api/status`
+  confirms `ai_available=true` and the receipt names the 3B model. Do not blur them.
 
 ---
 
@@ -47,7 +49,7 @@ python -m core.audit final
 ```
 
 `git status --short` should print nothing. Expect **48/48**, including `A8_no_secrets keys=0` and
-`A37_run_receipt` with receipt `ec73045a6a4ab396c62c9266270a1951`.
+`A37_run_receipt` reading the id and artefact hashes from `evidence/run_receipt.json`.
 
 1.4 Create the empty public repo at `https://github.com/new` (name `claim-autopsy`, Public, no
 README), then add the remote and push:
@@ -80,16 +82,19 @@ Keep the `/web/` segment. Do not move or delete `web/index.html`.
 
 2.3 Wait 1–3 minutes, then open the URL in a signed-out/incognito window and check:
 
-- the court badge reads **`RECORDED LIVE AI RUN`**, never `LIVE AI`, on the static page;
-- the legacy panel reads **`RECORDED · NOT LIVE`**;
+- the court badge reads **`HOSTED LIVE · 3B`**, and the status says **Hosted Qwen2.5-3B ready**;
+- paste a new claim/source and click **Open the trial**; the result must say `LIVE AI · JUDGE VERIFIED`
+  and the receipt must name `qwen2.5-3b-instruct-q4_k_m.gguf`;
+- the legacy panel reads **`RECORDED CONTRAST · NOT A LIVE RUN`**;
 - the four court examples run (Eiffel, flu, guard, coffee);
 - the corpus browser shows **112 cards**;
 - a Chinese claim shows the “English only” notice, not a bare `Claims: 0`;
 - `A common cold can resolve on its own.` still shows the archived paragraph and its hash;
 - a 4-source batch shows one cross-source conflict without picking a winner.
 
-The static page cannot call a model. The live court requires `python serve.py`; say that explicitly
-in the submission instead of implying the hosted page is live.
+The public page calls the hosted 3B endpoint for the free-form trial. The `?judge=1` five-step rail
+is the labelled recording; its top-right link says **Test your own claim** and returns to the live
+form. Do not call the rail a live model call.
 
 ---
 
@@ -221,10 +226,10 @@ Numbers to paste, exactly:
 | Acceptance gates | 48/48 |
 | Court fixtures | 33/33 |
 | Batch fixtures | 6/6 |
-| Run receipt | 56 artefacts |
-| Final manifest | row count is in the file |
+| Run receipt | 66 artefacts |
+| Final manifest | 194 files |
 
-Do not round these into larger claims. Do not describe the static court as live.
+Do not round these into larger claims. Do not describe the five-step rail as live; the free-form hosted trial is the live part.
 
 ---
 

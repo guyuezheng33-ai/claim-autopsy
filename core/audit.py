@@ -508,7 +508,7 @@ def run(run_tag="default"):
     with open(html_path, "r", encoding="utf-8") as f:
         html_text = f.read()
     for marker in ('id="aiPanel"', 'id="replayChips"', 'id="corpusList"',
-                   'id="corpusSearch"', 'RECORDED · NOT LIVE'):
+                   'id="corpusSearch"', 'RECORDED CONTRAST · NOT A LIVE RUN'):
         if marker not in html_text:
             a20_bad.append("missing:" + marker)
     ui = {}

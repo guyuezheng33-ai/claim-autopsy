@@ -11,16 +11,19 @@
 const HOSTED_API_BASE = "https://bali-drive-install-hiking.trycloudflare.com";
 let API_QUERY = "";
 try { API_QUERY = new URLSearchParams(location.search).get("api") || ""; } catch (e) {}
-const API_BASE = (API_QUERY || (location.hostname.endsWith(".github.io") ? HOSTED_API_BASE : ""))
+const IS_GITHUB_PAGES = typeof location !== "undefined" && location.hostname &&
+  location.hostname.endsWith(".github.io");
+const API_BASE = (API_QUERY || (IS_GITHUB_PAGES ? HOSTED_API_BASE : ""))
   .replace(/\/+$/, "");
 const API = p => API_BASE + p;
 const SAME_ORIGIN_API = typeof location !== "undefined" &&
   (location.protocol === "http:" || location.protocol === "https:") &&
   (location.hostname === "127.0.0.1" || location.hostname === "localhost" ||
    location.hostname === "[::1]" || location.port === "8765" ||
-   location.hostname.endsWith(".hf.space"));
+   location.hostname.endsWith(".hf.space") ||
+   location.hostname.endsWith(".run.app"));
 const LOCAL_SERVER = SAME_ORIGIN_API || !!API_BASE;
-window.CLAIM_API_BASE = API_BASE;
+if (typeof window !== "undefined") window.CLAIM_API_BASE = API_BASE;
 
 const CONNECTORS = ["and","also","but","plus","however","moreover","in addition"];
 const NO_SPLIT = ["and","but","because","so","otherwise","which","that","besides"];

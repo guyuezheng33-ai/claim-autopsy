@@ -2,6 +2,24 @@ __pycache__/
 *.pyc
 .venv/
 .git/
+.forge_lock/
+.pytest_cache/
 .env
+models/
+
+# Docs and dev tooling are not needed inside the runtime container.
+*.md
+tools/
+tests/
+soldieros/
+
+# Heavy recorded media and local logs stay out of the image.
 evidence/screenshots/
-FINAL_MANIFEST.md
+evidence/history/
+evidence/sessions/
+evidence/*.log
+evidence/demo_60s.mp4
+evidence/ai_uplift_live_run.log
+
+# HF-specific staging is not used by the Cloud Run build.
+deploy/hf-space/
