@@ -1,0 +1,21 @@
+[project]
+name = "claim-autopsy"
+version = "1.0.0"
+description = "Citation court: AI prosecution and defence raise parameters; a deterministic gateway verifies quotations word by word and adjudicates"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.ruff]
+line-length = 110
+extend-exclude = [
+    ".venv",
+    ".venv-dev",
+    "**/__pycache__",
+    "models",
+]
+
+[tool.ruff.lint]
+# Gate keeps only rules that cause a runtime failure (syntax error, undefined
+# name, invalid comparison). Legacy style backlog (% alignment, bare except,
+# import order) is not gated; do not rewrite existing code just for style.
+select = ["E9", "F63", "F82"]

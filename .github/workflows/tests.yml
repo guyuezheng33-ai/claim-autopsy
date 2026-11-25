@@ -1,0 +1,26 @@
+name: tests
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      # Runtime is Python standard library only; no third-party install is
+      # required to run the invariant tests or the court fixtures.
+      - name: Core invariant tests
+        run: python -m unittest discover -s tests -t .
+      - name: Court fixtures (33 cases)
+        run: python -m core.court --fixtures

@@ -6,6 +6,8 @@ Claim Autopsy is a citation court. You paste a claim and the source you think su
 
 The product answers one narrow question: **does this source actually state this claim?** It is not an open-web fact checker and it does not decide whether a claim is true in the world. It decides whether the supplied text supports it, refutes it, or never says it.
 
+![Claim Autopsy citation court: claim and source on the left, prosecution / defence / judge ruling in three columns, with the citation receipt below](evidence/screenshots/20-court-landing.png)
+
 ## What a user gets
 
 - **A per-atom finding, never silence.** Every independently checkable atom receives `supported`, `refuted`, or `not_in_source`. If the source does not state it, the nearest sentence and its coverage are shown so the user can see why.
@@ -20,11 +22,17 @@ Who it is for: students and researchers checking a citation before submitting, e
 
 ## Quick start
 
+**Zero-install review (no clone, no model, no key):** open the public Pages page and paste any claim and source:
+
+`https://guyuezheng33-ai.github.io/claim-autopsy/web/index.html`
+
+**Local run (optional):** the runtime is Python standard library only. The 2.0 GB local model is **optional** — without it the court still runs as a rules-only docket and says so on the page; you do not need to download anything to review the kernel, fixtures or UI.
+
 ```bash
 # optional: download the local model once (2.0 GB, Q4_K_M; 1.5B and 7B profiles also exist)
 python tools/get_model.py --size 3b
 
-# start the page and the local AI
+# start the page; works rules-only if no model is present
 python serve.py
 # http://127.0.0.1:8765
 ```
@@ -147,6 +155,24 @@ Key files:
 | `tools/run_ai_uplift.py` | the rules-lose / anchored-AI-wins baseline, honest live results to `evidence/ai_uplift.json` |
 | `core/audit.py` | 48 gates, including A45 court floor, A46 firewall, A47 batch, A48 baseline |
 | `tools/make_receipt.py` | binds the green run to its artefact hashes |
+
+## Reproduce on a clean machine
+
+- **Requirements:** Python 3.11 or newer. The application runtime is the Python standard library only; there is no web framework, database or vector store. `pytest` in `requirements.txt` is a development-only convenience and is not needed to run the tests below.
+- **One command, invariant tests:**
+
+```bash
+python -m unittest discover -s tests -t .
+```
+
+- **Court fixtures (33 cases, headless):**
+
+```bash
+python -m core.court --fixtures
+```
+
+- **Local UI (optional model):** `python serve.py`; without a downloaded model it serves the rules-only docket.
+- **CI:** `.github/workflows/tests.yml` runs the invariant tests and the court fixtures on every push and pull request against Python 3.11 and 3.13; a red run blocks merge the same way a local failure does.
 
 ## What is tested
 

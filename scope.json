@@ -1,0 +1,13 @@
+{
+ "schema": "soldieros/scope@1",
+ "problem": "Audit a claim against its source in a citation court: AI prosecution and defence raise parameters from the source; a deterministic gateway verifies quotations word by word and returns a supported / refuted / unsupported verdict, evidence cards, and refusal records. No web retrieval, no general chat.",
+ "sample": {
+  "rule": ["data/*.json", "evidence/*.json"],
+  "note": "Samples are fixed in-repo case sets and replay receipts; external data collection is out of scope."
+ },
+ "output": {
+  "fields": ["verdict", "evidence", "citation", "refusal", "stage"],
+  "format": "json"
+ },
+ "note": "Scope contract added by forge GATE 3; problem, sample and output form follow PRODUCT.md / README.md. Problem is not narrowed, samples are not thinned, and the conclusion form is not loosened."
+}

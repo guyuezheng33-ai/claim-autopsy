@@ -181,7 +181,7 @@
     },
     "A37_run_receipt": {
       "pass": true,
-      "detail": "the acceptance run carries a receipt (864743e1148ed589acc1638806bbaa84) that binds 66 artefacts by SHA-256, records the command, exit code 0, interpreter and output hash, and is green at 47/47; every hash recomputed; 0 violations",
+      "detail": "the acceptance run carries a receipt (37308f4add2a09709a2e5fef8aa12e04) that binds 66 artefacts by SHA-256, records the command, exit code 0, interpreter and output hash, and is green at 47/47; every hash recomputed; 0 violations",
       "bad": [],
       "notes": []
     },
